@@ -86,8 +86,9 @@ emergency services nor a certified alert device. In an emergency, call **112**
 - A phone alone cannot recognise a crash for sure. It may **miss** a crash (a slow
   fall, the phone separated from the bike or rider, GPS lost, the phone damaged, a flat
   battery, the app closed) or **report one wrongly**.
-- When it believes you crashed, an alarm rings and a countdown starts. Without an
-  answer, a message with your location is prepared for your emergency contact. In the
+- When it believes you crashed, an alarm rings, at the phone's volume, and a countdown
+  starts. Without an answer, a message with your location is prepared for your
+  emergency contact. In the
   current version, someone has to tap "Send" for it to go: RideKit doesn't send texts
   on its own and **does not alert emergency services**. Sending also depends on the
   mobile network and your plan.

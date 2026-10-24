@@ -91,7 +91,8 @@ ni les secours ni un dispositif d'alerte homologué. En cas d'urgence, appelle l
 - Un téléphone seul ne peut pas reconnaître une chute à coup sûr. Elle peut **ne pas
   détecter** une chute (chute lente, téléphone détaché de la moto ou du pilote, GPS
   perdu, téléphone abîmé, batterie vide, app fermée) ou **en signaler une à tort**.
-- Quand elle pense que tu as chuté, une alarme sonne et un compte à rebours démarre.
+- Quand elle pense que tu as chuté, une alarme sonne, au volume du téléphone, et un
+  compte à rebours démarre.
   Sans réponse, un message avec ta position est préparé pour ton contact d'urgence.
   Dans la version actuelle, il faut qu'une personne appuie sur « Envoyer » pour
   qu'il parte : RideKit n'envoie pas de SMS toute seule et **n'alerte pas les

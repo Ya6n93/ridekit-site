@@ -124,19 +124,23 @@ that need it will stop working.
 
 Crash detection is **off by default**: you turn it on.
 
-- **What it reads.** During a guided ride only, the phone's accelerometer and GPS
-  speed, analysed on the phone. These readings are neither stored nor sent. RideKit
-  uses neither the gyroscope, nor the step counter, nor your health data.
+- **What it reads.** During a guided ride only, the phone's accelerometer and
+  gyroscope and the GPS speed, analysed on the phone. These readings are neither
+  stored nor sent. RideKit uses neither the step counter nor your health data.
 - **Your contact.** You pick them in the phone's contact picker, which gives RideKit
   only the contact chosen (name and number), or you type the number. It stays on your
   phone. RideKit doesn't read your address book and never writes to it.
-- **On an alert.** An alarm rings and a countdown starts. Without an answer from you, a
-  message is prepared for your contact: your nickname, the time, your last known
-  location (a Google Maps link and GPS coordinates). In the current version, this
-  message opens in the phone's messaging app and is only sent if someone taps "Send";
-  it then goes through your carrier, like any text. RideKit sends nothing to SZ CORP
-  and does not contact emergency services. If your contact opens the link, Google
-  receives the coordinates, under its own policy.
+- **On an alert.** An alarm rings and a countdown starts. Without an answer from you,
+  or if you ask for help, a message is prepared for your contact: your nickname, the
+  time of the impact, your speed just before, your last known location and how
+  precise it is (a Google Maps link and GPS coordinates), the phone's battery level.
+  In the current version, this message opens in the phone's messaging app and is only
+  sent if someone taps "Send"; it then goes through your carrier, like any text.
+  RideKit sends nothing to SZ CORP and does not contact emergency services. If your
+  contact opens the link, Google receives the coordinates, under its own policy.
+- **Telling your contact.** From the settings, you can send them a text saying they
+  are your emergency contact. It goes the same way: from your phone, when you tap
+  "Send".
 
 Should automatic sending ever be added, this page will say, before it goes live, what
 it sends, to whom and through which provider.

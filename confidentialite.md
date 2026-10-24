@@ -141,21 +141,26 @@ téléphone : les fonctions qui en dépendent ne marcheront plus.
 
 La détection de chute est **désactivée par défaut** : c'est toi qui l'actives.
 
-- **Ce qu'elle lit.** Pendant une balade guidée seulement, l'accéléromètre du
-  téléphone et la vitesse GPS, analysés sur le téléphone. Ces mesures ne sont ni
-  enregistrées ni envoyées. RideKit n'utilise ni le gyroscope, ni le podomètre, ni
-  tes données de santé.
+- **Ce qu'elle lit.** Pendant une balade guidée seulement, l'accéléromètre et le
+  gyroscope du téléphone et la vitesse GPS, analysés sur le téléphone. Ces mesures ne
+  sont ni enregistrées ni envoyées. RideKit n'utilise ni le podomètre, ni tes données
+  de santé.
 - **Ton contact.** Tu le choisis dans le sélecteur de contacts du téléphone, qui ne
   transmet à RideKit que le contact choisi (nom et numéro), ou tu tapes son numéro.
   Il reste sur ton téléphone. RideKit ne lit pas ton carnet d'adresses et n'y écrit
   jamais.
 - **En cas d'alerte.** Une alarme sonne et un compte à rebours démarre. Sans réponse
-  de ta part, un message est préparé pour ton contact : ton pseudo, l'heure, ta
-  dernière position connue (un lien Google Maps et les coordonnées GPS). Dans la
-  version actuelle, ce message s'ouvre dans l'app SMS du téléphone et ne part que
-  si quelqu'un appuie sur « Envoyer » ; il passe alors par ton opérateur, comme tout
-  SMS. RideKit n'envoie rien à SZ CORP et ne contacte pas les secours. Si ton contact
-  ouvre le lien, Google reçoit les coordonnées, selon sa propre politique.
+  de ta part, ou si tu demandes de l'aide, un message est préparé pour ton contact :
+  ton pseudo, l'heure du choc, ta vitesse juste avant, ta dernière position connue et
+  sa précision (un lien Google Maps et les coordonnées GPS), le niveau de batterie du
+  téléphone. Dans la version actuelle, ce message s'ouvre dans l'app SMS du téléphone
+  et ne part que si quelqu'un appuie sur « Envoyer » ; il passe alors par ton
+  opérateur, comme tout SMS. RideKit n'envoie rien à SZ CORP et ne contacte pas les
+  secours. Si ton contact ouvre le lien, Google reçoit les coordonnées, selon sa
+  propre politique.
+- **Prévenir ton contact.** Depuis les réglages, tu peux lui envoyer un SMS qui lui
+  dit qu'il est ton contact d'urgence. Il part de la même façon : de ton téléphone,
+  quand tu appuies sur « Envoyer ».
 
 Si un envoi automatique du message est ajouté un jour, cette page dira avant sa mise
 en service ce qu'il envoie, à qui et par quel prestataire.
