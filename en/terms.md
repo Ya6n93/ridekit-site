@@ -9,7 +9,7 @@ lang: en
 
 # Terms of Use
 
-*Last updated: 24 October 2026*
+*Last updated: 25 October 2026*
 
 RideKit is published by **SZ CORP**, the trade name of Yassine Latrach, sole
 proprietor (entrepreneur individuel, EI) — see the [legal notice](/mentions-legales/)
@@ -91,7 +91,7 @@ emergency services nor a certified alert device. In an emergency, call **112**
   contact. RideKit lets your close one know: it **does not alert emergency services**.
 - With automatic sending (mobile numbers in France, Belgium, Switzerland, Luxembourg
   and Canada), this text, a single one, goes by itself, through RideKit's server and
-  Twilio, if the phone has a network (mobile data); without one, the app keeps trying
+  Brevo, if the phone has a network (mobile data); without one, the app keeps trying
   for 5 minutes. Otherwise, or if that sending fails, the message is prepared in the
   messaging app and someone has to tap "Send" for it to go. In every case, sending
   depends on the mobile network, the battery, carriers and providers: a text may

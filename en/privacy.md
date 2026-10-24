@@ -9,7 +9,7 @@ lang: en
 
 # Privacy Policy
 
-*Last updated: 24 October 2026*
+*Last updated: 25 October 2026*
 
 RideKit is a motorcycle riding app: it draws loops and routes, guides you, shows the
 weather, and keeps your ride journal and your bike's records. This page says exactly
@@ -102,7 +102,7 @@ text.
 | **Unsplash** | Illustration photos on some screens | Nothing about you |
 | **Expo** (650 Industries, Inc., USA) | App updates | Technical details: system, app version, a technical installation identifier created by the update service |
 | **RideKit's alert server**, hosted by **Cloudflare** (Cloudflare, Inc., USA) | Automatic sending of the crash alert (section 6), if detection is on with a contact | When the contact is registered: their number, nothing else. On an alert or a test: their number, your nickname, the time of the impact and the phone's time zone, your speed just before, your location and how precise it is, the battery |
-| **Twilio** (Twilio Inc., USA), for the alert server | Sending RideKit's alert to your contact, as a single text | Your contact's number and the text: your nickname, the time, your location and how precise it is, the battery and, if there is room, your speed |
+| **Brevo** (Brevo SAS, formerly Sendinblue, France), for the alert server | Sending RideKit's alert to your contact, as a single text | Your contact's number and the text: your nickname, the time, your location and how precise it is, the battery and, if there is room, your speed |
 {: .services}
 
 A precise location can, combined with others, reveal places you go to: a loop often
@@ -119,7 +119,7 @@ Each of these services applies its own privacy policy, for instance
 (logs deleted after 90 days), [OpenFreeMap](https://openfreemap.org/privacy/) (logs
 deleted after 7 days), [Wikimedia](https://foundation.wikimedia.org/wiki/Policy:Privacy_policy),
 [Expo](https://expo.dev/privacy), [Cloudflare](https://www.cloudflare.com/privacypolicy/),
-[Twilio](https://www.twilio.com/en-us/legal/privacy).
+[Brevo](https://www.brevo.com/legal/privacypolicy/).
 
 ## 5. Your location
 
@@ -154,7 +154,7 @@ Crash detection is **off by default**: you turn it on.
   of the impact, your last known location and how precise it is (a Google Maps link,
   which carries the GPS coordinates), the phone's battery level and, if there is
   room, your speed just before. With automatic sending, it goes by itself, through
-  the alert server and Twilio. Without it, or if the server can't be reached or
+  the alert server and Brevo. Without it, or if the server can't be reached or
   refuses, the message opens in the phone's messaging app and is only sent if someone
   taps "Send"; it then goes through your carrier, like any text. RideKit lets your
   close one know: it does not call emergency services. If your contact opens the
@@ -172,23 +172,24 @@ Crash detection is **off by default**: you turn it on.
     server your contact's number, your nickname, the time of the impact and the
     phone's time zone, your speed just before, your location and how precise it is,
     the battery. The server checks it is the contact registered for your phone,
-    writes the text itself, a single one, and hands it to Twilio. Without a network,
+    writes the text itself, a single one, and hands it to Brevo. Without a network,
     the app keeps trying for 5 minutes.
   - *What is kept.* Neither your location, nor the texts, nor your nickname, nor your
     IP address. Only: your phone's token and the fingerprint of your contact's number;
     the day's counters (per phone, per number and IP address fingerprint, for the
     whole service), which cap sending against abuse and are deleted the next day; the
-    id of each of the day's alerts, so it is never sent twice; the id of each text,
-    long enough to have it deleted from Twilio's history, about an hour after it was
-    sent. The server's logs say what happened (sent, refused), with no number or
-    location, and are kept 3 days.
+    id of each of the day's alerts, so it is never sent twice. The server's logs say
+    what happened (sent, refused), with no number or location, and are kept 3 days.
   - *When it forgets.* Turn automatic sending off or remove your contact: the server
     forgets your contact. "Réinitialiser l'app" makes it forget your phone. Without
     news from your phone for 400 days, it forgets it by itself.
   - *Providers.* The server runs on Cloudflare, what it keeps being placed in the
-    European Union where Cloudflare offers it; texts go through Twilio. Both act on
-    behalf of SZ CORP. Twilio may keep technical records of each text (number, date,
-    status) under its own policy.
+    European Union where Cloudflare offers it; texts go through Brevo, in France,
+    which keeps its data in the European Union. Both act on behalf of SZ CORP. Brevo
+    keeps the log of each text (the number, the text, its status) for one month, then
+    deletes it. To deliver it, Brevo goes through partner carriers, some of them
+    American (to a Canadian mobile, Twilio), which may keep a technical record of it
+    under their own policy.
   - *Countries.* Automatic sending only goes to mobile numbers in France, Belgium,
     Switzerland, Luxembourg and Canada. For any other number, the text is prepared on
     your phone, as without the server.
@@ -258,20 +259,22 @@ They do not identify you.
   three years after our last exchange; and, if automatic sending is set up, what the
   alert server keeps (section 6): the token and your contact's number fingerprint as
   long as they are registered (at most 400 days without news), the counters until the
-  next day.
+  next day; at Brevo, on our behalf, the log of each text sent (number, text, status),
+  one month.
 - **At third-party services**: under their own policies (see section 4).
 
 ## 13. Where data goes
 
-IGN (France), TomTom (Netherlands), FOSSGIS (Germany), komoot (Germany) and OpenFreeMap (Hungary) are
-in the European Union; Open-Meteo is in Switzerland, which the EU recognises as
-providing adequate protection. Wikipedia, Expo, Unsplash, RainViewer, Open Topo Data,
-Cloudflare and Twilio (alert server and texts) and the delivery networks some of these
-services use may process data outside the EU, notably in the United States, where
-authorities may access it under their law.
+IGN (France), TomTom (Netherlands), FOSSGIS (Germany), komoot (Germany), OpenFreeMap (Hungary) and
+Brevo (France, the alert server's texts) are in the European Union; Open-Meteo is in
+Switzerland, which the EU recognises as providing adequate protection. Wikipedia,
+Expo, Unsplash, RainViewer, Open Topo Data, Cloudflare (alert server), the carriers
+Brevo delivers some texts through (to a Canadian mobile, Twilio) and the delivery
+networks some of these services use may process data outside the EU, notably in the
+United States, where authorities may access it under their law.
 
 These transfers rely, as the case may be, on an adequacy decision (for example the
-Data Privacy Framework for certified US companies, such as Cloudflare and Twilio), on
+Data Privacy Framework for certified US companies, such as Cloudflare), on
 the European Commission's standard contractual clauses, or on their necessity to
 provide the service you ask for (Art. 49 GDPR). For Québec, Switzerland and the rest of Canada:
 your information may therefore be communicated outside your province or country, to
@@ -289,7 +292,8 @@ in the app (section 3). For the rest, write to **contact@ridekit-app.com**: we a
 within one month. We have no copy of what the app sends to third-party services, and
 no way to link their requests to you; for that data, contact them directly. The alert
 server knows neither your name nor your contact's number in clear: to have it forget
-your contact, turn automatic sending off or reset the app.
+your contact, turn automatic sending off or reset the app. The log of an alert text at
+Brevo, we delete on request, without waiting for the month.
 
 You can also complain to your country's authority:
 

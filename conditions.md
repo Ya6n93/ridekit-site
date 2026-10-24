@@ -9,7 +9,7 @@ lang: fr
 
 # Conditions d'utilisation
 
-*Dernière mise à jour : 24 octobre 2026*
+*Dernière mise à jour : 25 octobre 2026*
 
 RideKit est éditée par **SZ CORP**, nom commercial de Yassine Latrach, entrepreneur
 individuel (EI) — voir les [mentions légales](/mentions-legales/). En installant ou
@@ -95,7 +95,7 @@ ni les secours ni un dispositif d'alerte homologué. En cas d'urgence, appelle l
   compte à rebours démarre. Sans réponse, un SMS avec ta position part pour ton
   contact d'urgence. RideKit prévient ton proche : elle **n'alerte pas les secours**.
 - Avec l'envoi automatique (mobiles de France, Belgique, Suisse, Luxembourg et
-  Canada), ce SMS, un seul, part tout seul, par le serveur de RideKit et Twilio, si
+  Canada), ce SMS, un seul, part tout seul, par le serveur de RideKit et Brevo, si
   le téléphone a du réseau (données mobiles) ; sans réseau, l'app réessaie pendant 5
   minutes. Sinon, ou si cet envoi échoue, le message est préparé dans l'app SMS et il
   faut qu'une personne appuie sur « Envoyer » pour qu'il parte. Dans tous les cas,

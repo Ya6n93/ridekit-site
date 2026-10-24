@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://ridekit-app.com/</loc><lastmod>2026-10-24</lastmod><changefreq>monthly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://ridekit-app.com/confidentialite/</loc><lastmod>2026-10-24</lastmod><changefreq>yearly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://ridekit-app.com/conditions/</loc><lastmod>2026-10-24</lastmod><changefreq>yearly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://ridekit-app.com/mentions-legales/</loc><lastmod>2026-10-24</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
-  <url><loc>https://ridekit-app.com/en/privacy/</loc><lastmod>2026-10-24</lastmod><changefreq>yearly</changefreq><priority>0.4</priority></url>
-  <url><loc>https://ridekit-app.com/en/terms/</loc><lastmod>2026-10-24</lastmod><changefreq>yearly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://ridekit-app.com/confidentialite/</loc><lastmod>2026-10-25</lastmod><changefreq>yearly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://ridekit-app.com/conditions/</loc><lastmod>2026-10-25</lastmod><changefreq>yearly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://ridekit-app.com/mentions-legales/</loc><lastmod>2026-10-25</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://ridekit-app.com/en/privacy/</loc><lastmod>2026-10-25</lastmod><changefreq>yearly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://ridekit-app.com/en/terms/</loc><lastmod>2026-10-25</lastmod><changefreq>yearly</changefreq><priority>0.4</priority></url>
 </urlset>

@@ -9,7 +9,7 @@ lang: fr
 
 # Politique de confidentialité
 
-*Dernière mise à jour : 24 octobre 2026*
+*Dernière mise à jour : 25 octobre 2026*
 
 RideKit est une application pour rouler à moto : elle trace des boucles et des
 itinéraires, te guide, affiche la météo, garde le carnet de tes balades et le suivi
@@ -115,7 +115,7 @@ le SMS.
 | **Unsplash** | Photos d'illustration de certains écrans | Rien te concernant |
 | **Expo** (650 Industries, Inc., États-Unis) | Mises à jour de l'application | Des informations techniques : système, version de l'app, identifiant technique de l'installation créé par le service de mise à jour |
 | **Serveur d'alerte de RideKit**, hébergé par **Cloudflare** (Cloudflare, Inc., États-Unis) | Envoi automatique de l'alerte chute (section 6), si la détection est activée avec un contact | À l'enregistrement du contact : son numéro, rien d'autre. Lors d'une alerte ou d'un test : son numéro, ton pseudo, l'heure du choc et le fuseau horaire du téléphone, ta vitesse juste avant, ta position et sa précision, la batterie |
-| **Twilio** (Twilio Inc., États-Unis), pour le serveur d'alerte | Envoi de l'alerte de RideKit à ton contact, en un seul SMS | Le numéro de ton contact et le texte du SMS : ton pseudo, l'heure, ta position et sa précision, la batterie et, s'il reste de la place, ta vitesse |
+| **Brevo** (Brevo SAS, anciennement Sendinblue, France), pour le serveur d'alerte | Envoi de l'alerte de RideKit à ton contact, en un seul SMS | Le numéro de ton contact et le texte du SMS : ton pseudo, l'heure, ta position et sa précision, la batterie et, s'il reste de la place, ta vitesse |
 {: .services}
 
 Une position précise peut, recoupée avec d'autres, révéler des lieux que tu
@@ -134,7 +134,7 @@ exemple : [TomTom](https://www.tomtom.com/privacy/),
 90 jours), [OpenFreeMap](https://openfreemap.org/privacy/) (journaux supprimés au
 bout de 7 jours), [Wikimedia](https://foundation.wikimedia.org/wiki/Policy:Privacy_policy),
 [Expo](https://expo.dev/privacy), [Cloudflare](https://www.cloudflare.com/privacypolicy/),
-[Twilio](https://www.twilio.com/en-us/legal/privacy).
+[Brevo](https://www.brevo.com/fr/legal/privacypolicy/).
 
 ## 5. Ta position
 
@@ -173,7 +173,7 @@ La détection de chute est **désactivée par défaut** : c'est toi qui l'activ
   ton pseudo, l'heure du choc, ta dernière position connue et sa précision (un lien
   Google Maps, qui porte les coordonnées GPS), le niveau de batterie du téléphone et,
   s'il reste de la place, ta vitesse juste avant. Avec l'envoi automatique, il part
-  tout seul, par le serveur d'alerte et Twilio. Sans lui, ou si le serveur ne peut
+  tout seul, par le serveur d'alerte et Brevo. Sans lui, ou si le serveur ne peut
   pas être joint ou refuse, le message s'ouvre dans l'app SMS du téléphone et ne part
   que si quelqu'un appuie sur « Envoyer » ; il passe alors par ton opérateur, comme
   tout SMS. RideKit prévient ton proche : il n'appelle pas les secours. Si ton
@@ -192,23 +192,24 @@ La détection de chute est **désactivée par défaut** : c'est toi qui l'activ
     l'heure du choc et le fuseau horaire du téléphone, ta vitesse juste avant, ta
     position et sa précision, la batterie. Le serveur vérifie que c'est le contact
     enregistré pour ton téléphone, écrit le SMS lui-même, un seul, et le confie à
-    Twilio. Sans réseau, l'app réessaie pendant 5 minutes.
+    Brevo. Sans réseau, l'app réessaie pendant 5 minutes.
   - *Ce qui est gardé.* Ni ta position, ni le texte des SMS, ni ton pseudo, ni ton
     adresse IP. Seulement : le jeton de ton téléphone et l'empreinte du numéro de ton
     contact ; des compteurs du jour (par téléphone, par empreinte de numéro et
     d'adresse IP, pour tout le service), qui limitent les envois contre les abus et
     s'effacent le lendemain ; l'identifiant de chaque alerte du jour, pour ne pas
-    l'envoyer deux fois ; l'identifiant de chaque SMS, le temps de le faire effacer de
-    l'historique de Twilio, environ une heure après l'envoi. Les journaux du serveur
-    disent ce qui s'est passé (envoyé, refusé), sans numéro ni position, et sont gardés
-    3 jours.
+    l'envoyer deux fois. Les journaux du serveur disent ce qui s'est passé (envoyé,
+    refusé), sans numéro ni position, et sont gardés 3 jours.
   - *Quand il oublie.* Coupe l'envoi automatique ou retire ton contact : le serveur
     oublie ton contact. « Réinitialiser l'app » lui fait oublier ton téléphone. Sans
     nouvelles de ton téléphone pendant 400 jours, il l'oublie de lui-même.
   - *Les prestataires.* Le serveur tourne chez Cloudflare, ce qu'il garde étant placé
-    dans l'Union européenne quand Cloudflare le propose ; les SMS partent par Twilio.
-    Tous deux agissent pour le compte de SZ CORP. Twilio peut garder des traces
-    techniques de chaque envoi (numéro, date, statut) selon sa propre politique.
+    dans l'Union européenne quand Cloudflare le propose ; les SMS partent par Brevo,
+    en France, qui garde ses données dans l'Union européenne. Tous deux agissent pour
+    le compte de SZ CORP. Brevo garde le journal de chaque SMS (le numéro, le texte,
+    son statut) un mois, puis l'efface. Pour l'acheminer, il passe par des opérateurs
+    partenaires, dont certains américains (vers un mobile canadien, Twilio), qui
+    peuvent en garder une trace technique selon leur propre politique.
   - *Les pays.* L'envoi automatique ne va que vers des mobiles de France, de Belgique,
     de Suisse, du Luxembourg et du Canada. Pour un autre numéro, le SMS est préparé sur
     ton téléphone, comme sans serveur.
@@ -285,22 +286,24 @@ permettent pas de t'identifier.
   puis au plus trois ans après notre dernier échange ; et, si l'envoi automatique est
   en place, ce que garde le serveur d'alerte (section 6) : le jeton et l'empreinte du
   numéro de ton contact tant qu'il est enregistré (400 jours au plus sans nouvelles),
-  les compteurs jusqu'au lendemain.
+  les compteurs jusqu'au lendemain ; chez Brevo, pour notre compte, le journal de
+  chaque SMS envoyé (numéro, texte, statut), un mois.
 - **Chez les services tiers** : selon leur propre politique (voir la section 4).
 
 ## 13. Où vont les données
 
-L'IGN (France), TomTom (Pays-Bas), FOSSGIS (Allemagne), komoot (Allemagne) et OpenFreeMap (Hongrie)
-sont dans l'Union européenne ; Open-Meteo est en Suisse, que l'Union européenne
-reconnaît comme offrant une protection adéquate. Wikipédia, Expo, Unsplash,
-RainViewer, Open Topo Data, Cloudflare et Twilio (serveur d'alerte et SMS) et les
-réseaux de diffusion qu'utilisent certains de ces services peuvent traiter des
-données hors de l'Union européenne, notamment aux États-Unis, où les autorités
-peuvent y avoir accès selon leur droit.
+L'IGN (France), TomTom (Pays-Bas), FOSSGIS (Allemagne), komoot (Allemagne), OpenFreeMap (Hongrie)
+et Brevo (France, SMS du serveur d'alerte) sont dans l'Union européenne ; Open-Meteo
+est en Suisse, que l'Union européenne reconnaît comme offrant une protection
+adéquate. Wikipédia, Expo, Unsplash, RainViewer, Open Topo Data, Cloudflare (serveur
+d'alerte), les opérateurs par lesquels Brevo achemine certains SMS (vers un mobile
+canadien, Twilio) et les réseaux de diffusion qu'utilisent certains de ces services
+peuvent traiter des données hors de l'Union européenne, notamment aux États-Unis, où
+les autorités peuvent y avoir accès selon leur droit.
 
 Ces transferts reposent, selon le cas, sur une décision d'adéquation (par exemple
 le Data Privacy Framework pour les entreprises américaines certifiées, comme
-Cloudflare et Twilio), sur les clauses contractuelles types de la Commission
+Cloudflare), sur les clauses contractuelles types de la Commission
 européenne, ou sur leur nécessité pour te fournir le service que tu demandes
 (article 49 du RGPD). Pour le Québec, la Suisse et le reste du Canada : tes
 renseignements peuvent ainsi être communiqués hors de ta province ou de ton pays,
@@ -319,7 +322,8 @@ nous répondons sous un mois. Nous n'avons aucune copie de ce que l'app envoie a
 services tiers, ni aucun moyen de relier leurs requêtes à toi ; pour ces données,
 adresse-toi directement à eux. Le serveur d'alerte ne connaît ni ton nom ni le numéro
 de ton contact en clair : pour qu'il oublie ton contact, coupe l'envoi automatique ou
-réinitialise l'app.
+réinitialise l'app. Le journal d'un SMS d'alerte chez Brevo, nous l'effaçons sur
+demande, sans attendre le mois.
 
 Tu peux aussi saisir l'autorité de ton pays :
 

@@ -8,7 +8,7 @@ lang: fr
 
 # Mentions légales
 
-*Dernière mise à jour : 24 octobre 2026*
+*Dernière mise à jour : 25 octobre 2026*
 
 ## Éditeur
 
@@ -36,8 +36,8 @@ Téléphone : +1 877 448 4820 — [github.com](https://github.com)
 101 Townsend Street, San Francisco, CA 94107, États-Unis<br>
 Téléphone : +1 888 993 5273 — [cloudflare.com](https://www.cloudflare.com)
 
-Ses SMS sont envoyés par **Twilio Inc.**, 101 Spear Street, San Francisco, CA 94105,
-États-Unis — [twilio.com](https://www.twilio.com).
+Ses SMS sont envoyés par **Brevo SAS** (anciennement Sendinblue), 9-17 rue Salneuve,
+75017 Paris, France — RCS Paris 498 019 298 — [brevo.com](https://www.brevo.com).
 
 ## Distribution de l'application
 

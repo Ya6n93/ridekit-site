@@ -27,7 +27,7 @@
 - **Détection de chute** : désactivée par défaut ; une aide, pas un service
   d'urgence. Après une chute probable et sans réponse, un SMS avec la position
   part tout seul vers le contact d'urgence, par le serveur d'alerte de RideKit
-  (Cloudflare, Twilio) ; sans réseau ou sans ce serveur, il est préparé sur le
+  (Cloudflare, Brevo) ; sans réseau ou sans ce serveur, il est préparé sur le
   téléphone, envoyé d'un appui. RideKit prévient un proche, pas les secours.
 - **Données** : aucun compte ; balades, moto, contact d'urgence et réglages restent
   sur le téléphone. Un seul serveur RideKit, pour l'alerte chute : il ne garde ni
