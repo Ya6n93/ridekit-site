@@ -90,21 +90,26 @@ emergency services nor a certified alert device. In an emergency, call **112**
   starts. Without an answer, a text with your location goes to your emergency
   contact. RideKit lets your close one know: it **does not alert emergency services**.
 - With automatic sending (mobile numbers in France, Belgium, Switzerland, Luxembourg
-  and Canada), this text goes by itself, through RideKit's server and Twilio, if the
-  phone has a network (mobile data); without one, the app keeps trying for 5 minutes.
-  Otherwise, or if that sending fails, the message is prepared in the messaging app
-  and someone has to tap "Send" for it to go. In every case, sending depends on the
-  mobile network, the battery, carriers and providers: a text may arrive late, or not
-  at all. The server caps the number of texts a day, against abuse.
-- Your contact gets a first text from RideKit when you register them. Tell them they
+  and Canada), this text, a single one, goes by itself, through RideKit's server and
+  Twilio, if the phone has a network (mobile data); without one, the app keeps trying
+  for 5 minutes. Otherwise, or if that sending fails, the message is prepared in the
+  messaging app and someone has to tap "Send" for it to go. In every case, sending
+  depends on the mobile network, the battery, carriers and providers: a text may
+  arrive late, or not at all. The server caps the number of texts a day, against
+  abuse.
+- RideKit doesn't text your contact when you register them: it is up to you to tell
+  them, with the text the app prepares for you, sent from your phone. Tell them they
   may receive an alert, check their number, and try the alert with the tests in the
-  app.
+  app; the test sent by RideKit's server ("Tester l'envoi automatique") is a RideKit
+  Pro feature.
 
 ## 6. RideKit Pro (subscription)
 
-RideKit is free, with a limited number of loops generated per month. RideKit Pro lifts
-this limit and may include other features, described in the app at the time of
-purchase. This section applies as soon as RideKit Pro is offered for purchase.
+RideKit is free, with a limited number of loops generated per month. RideKit Pro
+lifts this limit and unlocks the test of the crash alert's automatic sending ("Tester
+l'envoi automatique"; the alert itself goes out for everyone). It may include other
+features, described in the app at the time of purchase. This section applies as soon
+as RideKit Pro is offered for purchase.
 
 - **Plans and prices**: monthly or yearly, at the price shown in the app before you
   confirm the purchase, taxes included.

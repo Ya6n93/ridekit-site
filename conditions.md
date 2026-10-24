@@ -95,22 +95,26 @@ ni les secours ni un dispositif d'alerte homologué. En cas d'urgence, appelle l
   compte à rebours démarre. Sans réponse, un SMS avec ta position part pour ton
   contact d'urgence. RideKit prévient ton proche : elle **n'alerte pas les secours**.
 - Avec l'envoi automatique (mobiles de France, Belgique, Suisse, Luxembourg et
-  Canada), ce SMS part tout seul, par le serveur de RideKit et Twilio, si le téléphone
-  a du réseau (données mobiles) ; sans réseau, l'app réessaie pendant 5 minutes.
-  Sinon, ou si cet envoi échoue, le message est préparé dans l'app SMS et il faut
-  qu'une personne appuie sur « Envoyer » pour qu'il parte. Dans tous les cas, l'envoi
-  dépend du réseau mobile, de la batterie, des opérateurs et des prestataires : un SMS
-  peut arriver en retard, ou pas du tout. Le serveur limite le nombre d'envois par jour,
-  contre les abus.
-- Ton contact reçoit un premier SMS de RideKit quand tu l'enregistres. Dis-lui qu'il
-  peut recevoir une alerte, vérifie son numéro, et essaie l'alerte avec les tests
-  proposés dans l'app.
+  Canada), ce SMS, un seul, part tout seul, par le serveur de RideKit et Twilio, si
+  le téléphone a du réseau (données mobiles) ; sans réseau, l'app réessaie pendant 5
+  minutes. Sinon, ou si cet envoi échoue, le message est préparé dans l'app SMS et il
+  faut qu'une personne appuie sur « Envoyer » pour qu'il parte. Dans tous les cas,
+  l'envoi dépend du réseau mobile, de la batterie, des opérateurs et des
+  prestataires : un SMS peut arriver en retard, ou pas du tout. Le serveur limite le
+  nombre d'envois par jour, contre les abus.
+- RideKit n'écrit pas à ton contact quand tu l'enregistres : c'est à toi de le
+  prévenir, par le SMS que l'app te prépare et qui part de ton téléphone. Dis-lui
+  qu'il peut recevoir une alerte, vérifie son numéro, et essaie l'alerte avec les
+  tests proposés dans l'app ; le test envoyé par le serveur de RideKit (« Tester
+  l'envoi automatique ») est réservé à RideKit Pro.
 
 ## 6. RideKit Pro (abonnement)
 
 RideKit est gratuite, avec un nombre limité de boucles générées par mois. RideKit Pro
-lève cette limite et peut inclure d'autres fonctions, décrites dans l'app au moment
-de l'achat. Cet article s'applique dès que RideKit Pro est proposé à l'achat.
+lève cette limite et ouvre le test de l'envoi automatique de l'alerte chute (« Tester
+l'envoi automatique » ; l'alerte elle-même part pour tous). Il peut inclure d'autres
+fonctions, décrites dans l'app au moment de l'achat. Cet article s'applique dès que
+RideKit Pro est proposé à l'achat.
 
 - **Formules et prix** : mensuelle ou annuelle, au prix affiché dans l'app avant que
   tu confirmes l'achat, taxes comprises.

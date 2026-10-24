@@ -101,8 +101,8 @@ text.
 | **Bike database** (public file published by SZ CORP) | New edition of the motorcycle list, checked at most once a week | Nothing about you |
 | **Unsplash** | Illustration photos on some screens | Nothing about you |
 | **Expo** (650 Industries, Inc., USA) | App updates | Technical details: system, app version, a technical installation identifier created by the update service |
-| **RideKit's alert server**, hosted by **Cloudflare** (Cloudflare, Inc., USA) | Automatic sending of the crash alert (section 6), if detection is on with a contact | When the contact is registered: their number and your nickname. On an alert or a test: their number, your nickname, the time of the impact and the phone's time zone, your speed just before, your location and how precise it is, the battery |
-| **Twilio** (Twilio Inc., USA), for the alert server | Sending RideKit's texts to your contact | Your contact's number and the text: your nickname and, on an alert, the time, your speed, your location, the battery |
+| **RideKit's alert server**, hosted by **Cloudflare** (Cloudflare, Inc., USA) | Automatic sending of the crash alert (section 6), if detection is on with a contact | When the contact is registered: their number, nothing else. On an alert or a test: their number, your nickname, the time of the impact and the phone's time zone, your speed just before, your location and how precise it is, the battery |
+| **Twilio** (Twilio Inc., USA), for the alert server | Sending RideKit's alert to your contact, as a single text | Your contact's number and the text: your nickname, the time, your location and how precise it is, the battery and, if there is room, your speed |
 {: .services}
 
 A precise location can, combined with others, reveal places you go to: a loop often
@@ -150,29 +150,30 @@ Crash detection is **off by default**: you turn it on.
   phone; the alert server keeps only a fingerprint of it (below). RideKit doesn't read
   your address book and never writes to it.
 - **On an alert.** An alarm rings and a countdown starts. Without an answer from you,
-  or if you ask for help, a text goes to your contact: your nickname, the time of the
-  impact, your speed just before, your last known location and how precise it is (a
-  Google Maps link and GPS coordinates), the phone's battery level. With automatic
-  sending, it goes by itself, through the alert server and Twilio. Without it, or if
-  the server can't be reached or refuses, the message opens in the phone's messaging
-  app and is only sent if someone taps "Send"; it then goes through your carrier, like
-  any text. RideKit lets your close one know: it does not call emergency services. If
-  your contact opens the link, Google receives the coordinates, under its own policy.
+  or if you ask for help, a single text goes to your contact: your nickname, the time
+  of the impact, your last known location and how precise it is (a Google Maps link,
+  which carries the GPS coordinates), the phone's battery level and, if there is
+  room, your speed just before. With automatic sending, it goes by itself, through
+  the alert server and Twilio. Without it, or if the server can't be reached or
+  refuses, the message opens in the phone's messaging app and is only sent if someone
+  taps "Send"; it then goes through your carrier, like any text. RideKit lets your
+  close one know: it does not call emergency services. If your contact opens the
+  link, Google receives the coordinates, under its own policy.
 - **Automatic sending.** It comes with crash detection, and can be turned off on its
   own ("Envoi automatique", in Réglages › Détection de chute). On an installation from
   before it existed, it stays off until you turn it on.
   - *When your contact is registered*, as you pick them with detection on: the server
-    gives your phone a random token, then receives your contact's number and your
-    nickname. It has Twilio send your contact a text saying you chose them and what
-    would follow. It keeps a fingerprint of the number (a keyed HMAC, from which the
-    number can't be recovered), not the number itself, nor their name, nor your
-    nickname.
-  - *On an alert, or a test* ("Tester l'envoi automatique", once a day): the app sends
-    the server your contact's number, your nickname, the time of the impact and the
+    gives your phone a random token, then receives your contact's number, and only
+    that. It sends your contact nothing. It keeps a fingerprint of the number (a
+    keyed HMAC, from which the number can't be recovered), not the number itself, nor
+    their name.
+  - *On an alert, or a test* ("Tester l'envoi automatique", once a day, a RideKit Pro
+    feature; without Pro, the test text is prepared on your phone): the app sends the
+    server your contact's number, your nickname, the time of the impact and the
     phone's time zone, your speed just before, your location and how precise it is,
-    the battery. The server checks it is the contact registered for your phone, writes
-    the text itself and hands it to Twilio. Without a network, the app keeps trying
-    for 5 minutes.
+    the battery. The server checks it is the contact registered for your phone,
+    writes the text itself, a single one, and hands it to Twilio. Without a network,
+    the app keeps trying for 5 minutes.
   - *What is kept.* Neither your location, nor the texts, nor your nickname, nor your
     IP address. Only: your phone's token and the fingerprint of your contact's number;
     the day's counters (per phone, per number and IP address fingerprint, for the
@@ -191,12 +192,12 @@ Crash detection is **off by default**: you turn it on.
   - *Countries.* Automatic sending only goes to mobile numbers in France, Belgium,
     Switzerland, Luxembourg and Canada. For any other number, the text is prepared on
     your phone, as without the server.
-- **Your contact, informed.** RideKit's first text tells them who chose them and what
-  would follow. If they don't want any more, remove them or turn automatic sending
-  off; they can also write to us at **contact@ridekit-app.com**.
-- **Telling your contact yourself.** Without automatic sending, you can send them, from
-  the settings, a text saying they are your emergency contact. It goes from your
-  phone, when you tap "Send".
+- **Your contact, informed by you.** RideKit only texts them on an alert or a test.
+  You are the one who tells them: as soon as you pick them, the app prepares a text
+  saying they are your emergency contact and what would follow. It goes from your
+  phone, when you tap "Send". If they don't want to receive alerts, remove them or
+  turn automatic sending off; they can also write to us at
+  **contact@ridekit-app.com**.
 
 ## 7. Photos, contacts, files
 
@@ -246,8 +247,8 @@ They do not identify you.
   hurt.
 - **Our legitimate interest** (Art. 6(1)(f)): answering your support messages, keeping
   the app up to date and secure, preventing abuse of the alert server; for your
-  contact, getting them the alert you wanted, which their first text tells them
-  about.
+  contact, getting them the alert you wanted, which you tell them about yourself,
+  with the text the app prepares for you.
 
 ## 12. How long
 

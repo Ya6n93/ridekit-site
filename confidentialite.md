@@ -114,8 +114,8 @@ le SMS.
 | **Base motos** (fichier public publié par SZ CORP) | Nouvelle édition de la liste des motos, vérifiée au plus une fois par semaine | Rien te concernant |
 | **Unsplash** | Photos d'illustration de certains écrans | Rien te concernant |
 | **Expo** (650 Industries, Inc., États-Unis) | Mises à jour de l'application | Des informations techniques : système, version de l'app, identifiant technique de l'installation créé par le service de mise à jour |
-| **Serveur d'alerte de RideKit**, hébergé par **Cloudflare** (Cloudflare, Inc., États-Unis) | Envoi automatique de l'alerte chute (section 6), si la détection est activée avec un contact | À l'enregistrement du contact : son numéro et ton pseudo. Lors d'une alerte ou d'un test : son numéro, ton pseudo, l'heure du choc et le fuseau horaire du téléphone, ta vitesse juste avant, ta position et sa précision, la batterie |
-| **Twilio** (Twilio Inc., États-Unis), pour le serveur d'alerte | Envoi des SMS de RideKit à ton contact | Le numéro de ton contact et le texte du SMS : ton pseudo et, lors d'une alerte, l'heure, ta vitesse, ta position, la batterie |
+| **Serveur d'alerte de RideKit**, hébergé par **Cloudflare** (Cloudflare, Inc., États-Unis) | Envoi automatique de l'alerte chute (section 6), si la détection est activée avec un contact | À l'enregistrement du contact : son numéro, rien d'autre. Lors d'une alerte ou d'un test : son numéro, ton pseudo, l'heure du choc et le fuseau horaire du téléphone, ta vitesse juste avant, ta position et sa précision, la batterie |
+| **Twilio** (Twilio Inc., États-Unis), pour le serveur d'alerte | Envoi de l'alerte de RideKit à ton contact, en un seul SMS | Le numéro de ton contact et le texte du SMS : ton pseudo, l'heure, ta position et sa précision, la batterie et, s'il reste de la place, ta vitesse |
 {: .services}
 
 Une position précise peut, recoupée avec d'autres, révéler des lieux que tu
@@ -169,30 +169,30 @@ La détection de chute est **désactivée par défaut** : c'est toi qui l'activ
   Il reste sur ton téléphone ; le serveur d'alerte n'en garde qu'une empreinte
   (ci-dessous). RideKit ne lit pas ton carnet d'adresses et n'y écrit jamais.
 - **En cas d'alerte.** Une alarme sonne et un compte à rebours démarre. Sans réponse
-  de ta part, ou si tu demandes de l'aide, un SMS part pour ton contact : ton pseudo,
-  l'heure du choc, ta vitesse juste avant, ta dernière position connue et sa
-  précision (un lien Google Maps et les coordonnées GPS), le niveau de batterie du
-  téléphone. Avec l'envoi automatique, il part tout seul, par le serveur d'alerte et
-  Twilio. Sans lui, ou si le serveur ne peut pas être joint ou refuse, le message
-  s'ouvre dans l'app SMS du téléphone et ne part que si quelqu'un appuie sur
-  « Envoyer » ; il passe alors par ton opérateur, comme tout SMS. RideKit prévient ton
-  proche : il n'appelle pas les secours. Si ton contact ouvre le lien, Google reçoit
-  les coordonnées, selon sa propre politique.
+  de ta part, ou si tu demandes de l'aide, un SMS, un seul, part pour ton contact :
+  ton pseudo, l'heure du choc, ta dernière position connue et sa précision (un lien
+  Google Maps, qui porte les coordonnées GPS), le niveau de batterie du téléphone et,
+  s'il reste de la place, ta vitesse juste avant. Avec l'envoi automatique, il part
+  tout seul, par le serveur d'alerte et Twilio. Sans lui, ou si le serveur ne peut
+  pas être joint ou refuse, le message s'ouvre dans l'app SMS du téléphone et ne part
+  que si quelqu'un appuie sur « Envoyer » ; il passe alors par ton opérateur, comme
+  tout SMS. RideKit prévient ton proche : il n'appelle pas les secours. Si ton
+  contact ouvre le lien, Google reçoit les coordonnées, selon sa propre politique.
 - **L'envoi automatique.** Il va avec la détection de chute, et se coupe à part
   (« Envoi automatique », dans Réglages › Détection de chute). Sur une installation
   antérieure à son arrivée, il reste coupé tant que tu ne l'allumes pas.
   - *À l'enregistrement de ton contact*, quand tu le choisis, détection activée : le
     serveur remet à ton téléphone un jeton aléatoire, puis reçoit le numéro de ton
-    contact et ton pseudo. Il fait envoyer par Twilio un SMS qui dit à ton contact que
-    tu l'as choisi et ce qui viendrait. Il en garde une empreinte (un HMAC à clé
-    secrète, qui ne permet pas de retrouver le numéro), pas le numéro lui-même, ni son
-    nom, ni ton pseudo.
+    contact, et lui seul. Il n'envoie rien à ton contact. Il en garde une empreinte
+    (un HMAC à clé secrète, qui ne permet pas de retrouver le numéro), pas le numéro
+    lui-même, ni son nom.
   - *Lors d'une alerte, ou d'un test* (« Tester l'envoi automatique », une fois par
-    jour) : l'app envoie au serveur le numéro de ton contact, ton pseudo, l'heure du
-    choc et le fuseau horaire du téléphone, ta vitesse juste avant, ta position et sa
-    précision, la batterie. Le serveur vérifie que c'est le contact enregistré pour ton
-    téléphone, écrit le SMS lui-même et le confie à Twilio. Sans réseau, l'app
-    réessaie pendant 5 minutes.
+    jour, réservé à RideKit Pro ; sans Pro, le SMS de test est préparé sur ton
+    téléphone) : l'app envoie au serveur le numéro de ton contact, ton pseudo,
+    l'heure du choc et le fuseau horaire du téléphone, ta vitesse juste avant, ta
+    position et sa précision, la batterie. Le serveur vérifie que c'est le contact
+    enregistré pour ton téléphone, écrit le SMS lui-même, un seul, et le confie à
+    Twilio. Sans réseau, l'app réessaie pendant 5 minutes.
   - *Ce qui est gardé.* Ni ta position, ni le texte des SMS, ni ton pseudo, ni ton
     adresse IP. Seulement : le jeton de ton téléphone et l'empreinte du numéro de ton
     contact ; des compteurs du jour (par téléphone, par empreinte de numéro et
@@ -212,12 +212,12 @@ La détection de chute est **désactivée par défaut** : c'est toi qui l'activ
   - *Les pays.* L'envoi automatique ne va que vers des mobiles de France, de Belgique,
     de Suisse, du Luxembourg et du Canada. Pour un autre numéro, le SMS est préparé sur
     ton téléphone, comme sans serveur.
-- **Ton contact, informé.** Le premier SMS de RideKit lui dit qui l'a choisi et ce qui
-  viendrait. S'il ne veut plus en recevoir, retire-le ou coupe l'envoi automatique ;
-  il peut aussi nous écrire à **contact@ridekit-app.com**.
-- **Prévenir ton contact toi-même.** Sans l'envoi automatique, tu peux lui envoyer
-  depuis les réglages un SMS qui lui dit qu'il est ton contact d'urgence. Il part de
-  ton téléphone, quand tu appuies sur « Envoyer ».
+- **Ton contact, informé par toi.** RideKit ne lui écrit qu'en cas d'alerte ou de
+  test. C'est toi qui le préviens : dès que tu le choisis, l'app te prépare un SMS qui
+  lui dit qu'il est ton contact d'urgence et ce qui viendrait. Il part de ton
+  téléphone, quand tu appuies sur « Envoyer ». S'il ne veut pas recevoir d'alerte,
+  retire-le ou coupe l'envoi automatique ; il peut aussi nous écrire à
+  **contact@ridekit-app.com**.
 
 ## 7. Photos, contacts, fichiers
 
@@ -273,8 +273,8 @@ permettent pas de t'identifier.
   pouvant laisser penser que tu es blessé.
 - **Notre intérêt légitime** (article 6.1.f) : répondre à tes messages au support,
   maintenir l'app à jour et sûre, limiter les abus du serveur d'alerte ; pour ton
-  contact, lui faire parvenir l'alerte que tu as voulue, ce dont son premier SMS
-  l'informe.
+  contact, lui faire parvenir l'alerte que tu as voulue, ce dont tu l'informes
+  toi-même, par le SMS que l'app te prépare.
 
 ## 12. Combien de temps
 
