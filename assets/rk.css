@@ -1,0 +1,165 @@
+/* Feuille unique du site : accueil et pages légales.
+   Les jetons sont repris TELS QUELS de src/theme/tokens.ts dans l'application
+   (un accent, #E8590C, réservé à l'action principale, à la route et au danger).
+   Une couleur qui change dans l'app doit changer ici, sinon le site cesse de lui
+   ressembler. Titres : Barlow Condensed en capitales, comme l'app ; texte : la
+   police du système.
+
+   Barlow Condensed est servie d'ICI (assets/fonts, SIL OFL 1.1, voir OFL.txt),
+   pas depuis Google Fonts : le site ne fait aucune requête vers un tiers, ce que
+   la politique de confidentialité et les mentions légales affirment. Seul le
+   sous-ensemble « latin » est gardé : il couvre le français (é, œ, « », ’, €). */
+
+@font-face{font-family:"Barlow Condensed";font-style:normal;font-weight:700;font-display:swap;
+  src:url(fonts/barlow-condensed-700.woff2) format("woff2")}
+@font-face{font-family:"Barlow Condensed";font-style:normal;font-weight:800;font-display:swap;
+  src:url(fonts/barlow-condensed-800.woff2) format("woff2")}
+
+:root{
+  --bg:#F5F5F2; --surface:#EAE8E3; --surface2:#DEDBD4;
+  --text:#111111; --muted:#6B6964;
+  --border:rgba(17,17,17,.14); --hairline:rgba(17,17,17,.08);
+  --accent:#E8590C; --on-accent:#FFFFFF;
+  /* Bandeaux toujours sombres (l'identité de l'app : le compte-tours sur fond noir). */
+  --night:#0B0B0B; --night2:#1A1A1A; --on-night:#F5F5F2; --on-night2:#9A9892;
+  --display:"Barlow Condensed","Arial Narrow",ui-sans-serif,system-ui,sans-serif;
+  --body:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --measure:70ch;
+  color-scheme:light dark;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0B0B0B; --surface:#1A1A1A; --surface2:#2A2A2A;
+    --text:#F5F5F2; --muted:#9A9892;
+    --border:rgba(245,245,242,.18); --hairline:rgba(245,245,242,.1);
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0B0B0B; --surface:#1A1A1A; --surface2:#2A2A2A;
+  --text:#F5F5F2; --muted:#9A9892;
+  --border:rgba(245,245,242,.18); --hairline:rgba(245,245,242,.1);
+}
+:root[data-theme="light"]{color-scheme:light}
+:root[data-theme="dark"]{color-scheme:dark}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--text);font-family:var(--body);font-size:17px;line-height:1.62;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+.wrap{width:100%;max-width:1040px;margin:0 auto;padding:0 20px}
+.narrow{max-width:760px}
+
+/* ————— En-tête ————— */
+.top{background:var(--night);color:var(--on-night)}
+.top .wrap{display:flex;align-items:center;gap:16px;min-height:64px;flex-wrap:wrap}
+.brand{display:inline-flex;align-items:center;gap:10px;text-decoration:none;color:var(--on-night)}
+.brand img{width:34px;height:34px;border-radius:9px}
+.brand b{font-family:var(--display);font-weight:800;font-size:24px;letter-spacing:.02em;text-transform:uppercase;line-height:1}
+.brand b i{font-style:normal;color:var(--accent)}
+.top nav{margin-left:auto;display:flex;gap:18px;flex-wrap:wrap;font-size:14.5px}
+.top nav a{color:var(--on-night2);text-decoration:none}
+.top nav a:hover,.top nav a[aria-current="page"]{color:var(--on-night)}
+@media (max-width:620px){
+  .top .wrap{padding-top:12px;padding-bottom:12px}
+  .top nav{margin-left:0;width:100%;gap:14px}
+}
+
+/* ————— Pages légales ————— */
+.prose{padding:44px 0 56px}
+.prose>*{max-width:var(--measure)}
+.prose h1{font-family:var(--display);font-weight:800;text-transform:uppercase;letter-spacing:-.005em;
+  font-size:clamp(34px,7vw,52px);line-height:.98;margin-bottom:14px}
+.prose h2{font-family:var(--display);font-weight:800;text-transform:uppercase;letter-spacing:.02em;
+  font-size:clamp(22px,4vw,27px);line-height:1.08;margin:44px 0 12px}
+.prose h3{font-family:var(--display);font-weight:700;text-transform:uppercase;letter-spacing:.03em;
+  font-size:19px;line-height:1.15;margin:28px 0 8px}
+.prose p{margin:12px 0}
+.prose ul,.prose ol{margin:12px 0 12px 22px}
+.prose li{margin:6px 0}
+.prose li::marker{color:var(--accent)}
+.prose strong{font-weight:650}
+.prose a{color:var(--accent);text-underline-offset:3px;overflow-wrap:anywhere}
+.prose hr{border:0;border-top:1px solid var(--border);margin:40px 0}
+.prose code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.88em;background:var(--surface);
+  border-radius:6px;padding:1px 5px}
+.prose blockquote{background:var(--surface);border-left:4px solid var(--accent);border-radius:0 14px 14px 0;
+  padding:16px 20px;margin:22px 0}
+.prose blockquote p{margin:6px 0}
+.prose .updated,.prose h1+p em{color:var(--muted)}
+.tablewrap,.prose table{max-width:100%}
+.prose table{border-collapse:collapse;width:100%;margin:18px 0;font-size:15px;display:block;overflow-x:auto}
+.prose th,.prose td{text-align:left;vertical-align:top;padding:10px 12px;border-bottom:1px solid var(--border)}
+.prose th{font-family:var(--display);font-weight:700;text-transform:uppercase;letter-spacing:.04em;font-size:14px;
+  background:var(--surface)}
+.todo{background:rgba(232,89,12,.14);color:var(--text);border:1px dashed var(--accent);border-radius:6px;padding:0 4px}
+
+/* ————— Pied ————— */
+footer{border-top:1px solid var(--border);color:var(--muted);font-size:14.5px;padding:30px 0 44px}
+footer .links{display:flex;flex-wrap:wrap;gap:8px 20px;margin-bottom:12px}
+footer a{color:var(--text);text-decoration:none}
+footer a:hover{color:var(--accent)}
+
+/* Dans l'app (écran légal en WebView, URL ?app=1) : l'écran a déjà sa barre et son
+   retour, le site n'affiche que le texte. */
+.in-app .top,.in-app footer{display:none}
+.in-app .prose{padding-top:20px}
+
+/* ————— Accueil ————— */
+.hero{background:var(--night);color:var(--on-night);padding:56px 0 64px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-120px;top:-120px;width:420px;height:420px;border-radius:50%;
+  border:2px solid rgba(232,89,12,.35);pointer-events:none}
+.hero .wrap{position:relative;z-index:1}
+.hero .mark{width:88px;height:88px;border-radius:22px;margin-bottom:26px}
+.eyebrow{font-weight:600;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--on-night2)}
+.hero h1{font-family:var(--display);font-weight:800;text-transform:uppercase;line-height:.92;
+  font-size:clamp(46px,11vw,88px);margin:12px 0 18px;max-width:12ch}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero p{color:var(--on-night2);font-size:clamp(17px,2.2vw,20px);max-width:52ch}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:56px;padding:0 24px;border-radius:14px;
+  background:var(--accent);color:var(--on-accent);text-decoration:none;font-family:var(--display);font-weight:700;
+  text-transform:uppercase;letter-spacing:.04em;font-size:19px}
+.btn.ghost{background:transparent;border:1.5px solid rgba(245,245,242,.35);color:var(--on-night)}
+.btn[aria-disabled="true"]{cursor:default}
+.soon{display:block;margin-top:12px;font-size:13.5px;color:var(--on-night2)}
+
+.section{padding:56px 0}
+.section h2{font-family:var(--display);font-weight:800;text-transform:uppercase;font-size:clamp(28px,5vw,40px);
+  line-height:1;margin-bottom:10px}
+.section .lede{color:var(--muted);max-width:60ch;margin-bottom:26px}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr))}
+.card{background:var(--surface);border-radius:18px;padding:22px}
+.card h3{font-family:var(--display);font-weight:800;text-transform:uppercase;font-size:21px;letter-spacing:.02em;
+  line-height:1.05;margin-bottom:8px}
+.card p{color:var(--muted);font-size:15.5px;line-height:1.5}
+.card .k{display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--accent);margin-bottom:12px}
+.facts{list-style:none;display:grid;gap:10px;max-width:var(--measure)}
+.facts li{padding-left:22px;position:relative}
+.facts li::before{content:"";position:absolute;left:2px;top:.62em;width:8px;height:8px;border-radius:50%;background:var(--accent)}
+.band{background:var(--surface)}
+
+/* Tableaux des pages légales sur téléphone (et dans la WebView de l'app) : une
+   fiche par ligne plutôt qu'un tableau à faire défiler de côté. Les intitulés
+   des colonnes reviennent devant chaque cellule, dans la langue de la page. */
+@media (max-width:620px){
+  .prose table.services,.prose table.authorities{display:block;overflow:visible}
+  .prose table.services thead,.prose table.authorities thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+  .prose table.services tbody,.prose table.authorities tbody,
+  .prose table.services tr,.prose table.authorities tr,
+  .prose table.services td,.prose table.authorities td{display:block}
+  .prose table.services tr,.prose table.authorities tr{background:var(--surface);border-radius:14px;padding:12px 14px;margin:10px 0}
+  .prose table.services td,.prose table.authorities td{border:0;padding:3px 0}
+  .prose table.services td:first-child,.prose table.authorities td:first-child{font-size:16px;padding-bottom:4px}
+  .prose table td:nth-child(n+2)::before{display:block;font-family:var(--display);font-weight:700;text-transform:uppercase;
+    letter-spacing:.05em;font-size:12.5px;color:var(--muted);margin-top:4px}
+  .prose table.services td:nth-child(2)::before{content:"Pour quoi"}
+  .prose table.services td:nth-child(3)::before{content:"Ce qui est envoyé"}
+  .prose table.authorities td:nth-child(2)::before{content:"Loi"}
+  .prose table.authorities td:nth-child(3)::before{content:"Autorité"}
+  :lang(en) .prose table.services td:nth-child(2)::before{content:"What for"}
+  :lang(en) .prose table.services td:nth-child(3)::before{content:"What is sent"}
+  :lang(en) .prose table.authorities td:nth-child(2)::before{content:"Law"}
+  :lang(en) .prose table.authorities td:nth-child(3)::before{content:"Authority"}
+}

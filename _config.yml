@@ -1,0 +1,22 @@
+# Volontairement SANS thème : les thèmes fournis par GitHub Pages injectent dans
+# chaque page un bandeau qui renvoie vers le dépôt d'hébergement. Les pages
+# légales utilisent _layouts/legal.html, écrit à la main, et la feuille
+# assets/rk.css, partagée avec index.html.
+title: RideKit
+description: L'app moto qui trace tes boucles.
+lang: fr
+url: https://ridekit-app.com
+
+# Kramdown + GFM, comme sur GitHub Pages : les tableaux et les listes des pages
+# légales se rendent ici comme là-bas.
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+# Rien d'autre à publier que les pages du site.
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor

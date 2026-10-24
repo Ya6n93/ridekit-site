@@ -1,0 +1,43 @@
+# RideKit
+
+> Application mobile pour la balade à moto (iOS, Android), éditée par SZ CORP
+> (Paris, France). Elle génère des boucles selon la durée et le style de route
+> choisis, guide le motard, affiche la météo pour rouler et garde le carnet de
+> ses balades. Sans compte, sans publicité.
+
+## Les faits
+
+- **Boucles** : une durée, des routes rapides ou à virages, plus ou moins de
+  virages et de relief ; autoroutes, péages, chemins de terre, ferries et
+  tunnels évitables. Calcul par TomTom, itinéraire de secours par OSRM.
+- **Navigation** : guidage tour par tour, écran verrouillé compris, recalcul en
+  route, limitation de vitesse affichée et bip de survitesse.
+- **Itinéraires et traces** : de A à B ; import de traces GPX, KML, TCX ;
+  export GPX des itinéraires et des balades.
+- **Sur la route** : cols et sites (Wikipédia), stations-service et prix du jour
+  (France, données officielles).
+- **Météo** : prévisions heure par heure (Open-Meteo), meilleur créneau pour
+  rouler, radar de pluie (RainViewer), météo des cols proches.
+- **Hors réseau** : carte d'une balade téléchargeable avant le départ.
+- **Zones de danger** : en France uniquement, selon la réglementation (300 m en
+  ville, 2 km hors agglomération, 4 km sur autoroute), jamais l'emplacement d'un
+  radar. Aucune alerte radar ailleurs (Belgique, Suisse, Luxembourg, Canada…).
+- **Carnet et garage** : balades (distance, durée, virages), moto, kilométrage,
+  entretiens et rappels.
+- **Détection de chute** : désactivée par défaut ; une aide, pas un service
+  d'urgence. Après une chute probable et sans réponse, un SMS avec la position
+  est préparé pour le contact d'urgence, envoyé d'un appui.
+- **Données** : aucun compte, aucun serveur RideKit ; balades, moto, contact
+  d'urgence et réglages restent sur le téléphone. Seules des coordonnées partent
+  vers les services qui calculent les routes, la météo et les cartes.
+- **Pays** : France, Belgique, Suisse, Luxembourg, Canada. Interface en français.
+
+## Pages
+
+- [Politique de confidentialité](https://ridekit-app.com/confidentialite/)
+- [Conditions d'utilisation](https://ridekit-app.com/conditions/)
+- [Mentions légales](https://ridekit-app.com/mentions-legales/)
+- [Privacy Policy (EN)](https://ridekit-app.com/en/privacy/)
+- [Terms of Use (EN)](https://ridekit-app.com/en/terms/)
+
+Contact : contact@ridekit-app.com

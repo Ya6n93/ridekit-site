@@ -1,0 +1,6 @@
+# Tout est ouvert, à tous, robots des moteurs de recherche et des modèles de
+# langage compris : le site n'a ni espace privé, ni contenu payant.
+User-agent: *
+Allow: /
+
+Sitemap: https://ridekit-app.com/sitemap.xml

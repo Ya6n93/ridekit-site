@@ -1,0 +1,122 @@
+<!doctype html>
+<!-- Accueil de RideKit. Ne promet que ce que l'app fait aujourd'hui : une
+     fonction qui n'existe pas encore n'a rien à faire ici. Aucune ressource
+     tierce : la police et les images sont servies par le site. -->
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>RideKit — L'app moto qui trace tes boucles</title>
+<meta name="description" content="RideKit trace des boucles à moto selon ta durée et tes routes préférées, te guide, montre la météo, les cols et les stations sur ta route, garde le carnet de tes balades et le suivi de ta moto. Sans compte.">
+<meta name="robots" content="index,follow">
+<meta name="theme-color" content="#0B0B0B">
+<link rel="canonical" href="https://ridekit-app.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="RideKit">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="RideKit — L'app moto qui trace tes boucles">
+<meta property="og:description" content="Des boucles à moto en un tap, le guidage, la météo pour rouler, le carnet de tes balades. Sans compte.">
+<meta property="og:url" content="https://ridekit-app.com/">
+<meta property="og:image" content="https://ridekit-app.com/media/icon-512.png">
+<link rel="icon" type="image/png" sizes="32x32" href="media/icon-32.png">
+<link rel="apple-touch-icon" href="media/icon-180.png">
+<link rel="preload" href="assets/fonts/barlow-condensed-800.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/rk.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+ {"@type":"Organization","@id":"https://ridekit-app.com/#org","name":"SZ CORP","url":"https://ridekit-app.com/","email":"contact@ridekit-app.com"},
+ {"@type":"MobileApplication","name":"RideKit","applicationCategory":"TravelApplication","operatingSystem":"iOS, Android","inLanguage":"fr",
+  "description":"Application moto : génération de boucles selon la durée et le style de route, guidage, météo et radar, cols et stations sur la route, carnet de balades, suivi d'entretien.",
+  "url":"https://ridekit-app.com/","publisher":{"@id":"https://ridekit-app.com/#org"}}
+]}
+</script>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="./"><img src="media/icon-64.png" alt="" width="34" height="34"><b>Ride<i>Kit</i></b></a>
+    <nav aria-label="Pages légales">
+      <a href="confidentialite/">Confidentialité</a>
+      <a href="conditions/">Conditions</a>
+      <a href="mentions-legales/">Mentions légales</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <img class="mark" src="media/icon-512.png" alt="Logo RideKit : un compte-tours dont l'aiguille forme le R" width="88" height="88">
+      <span class="eyebrow">L'app moto</span>
+      <h1>Une boucle. <em>Un tap.</em> On roule.</h1>
+      <p>Dis combien de temps tu as et quelles routes tu aimes : RideKit trace la boucle
+        depuis là où tu es, te guide, et garde ta balade dans ton carnet.</p>
+      <div class="btns">
+        <!-- [À COMPLÉTER : lien App Store] Remplacer ce bouton inactif par
+             <a class="btn" href="https://apps.apple.com/app/idXXXXXXXXXX">Télécharger sur l'App Store</a>
+             dès que la fiche est publiée. -->
+        <span class="btn" aria-disabled="true">Bientôt sur l'App Store</span>
+        <a class="btn ghost" href="confidentialite/">Tes données</a>
+      </div>
+      <span class="soon">Sans compte. Sans publicité.</span>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <h2>Ce que fait RideKit</h2>
+      <p class="lede">Tout ce qui suit est dans l'app aujourd'hui.</p>
+      <div class="grid">
+        <div class="card"><span class="k"></span><h3>Des boucles sur mesure</h3>
+          <p>Une durée, des routes rapides ou à virages, plus ou moins de relief. Sans autoroutes, péages, chemins de terre, ferries ou tunnels si tu préfères.</p></div>
+        <div class="card"><span class="k"></span><h3>Le guidage</h3>
+          <p>Tour par tour, même écran verrouillé, avec recalcul si tu sors de la route. La limitation de vitesse s'affiche, un bip prévient si tu la dépasses.</p></div>
+        <div class="card"><span class="k"></span><h3>De A à B, ou ta trace</h3>
+          <p>Un itinéraire vers une destination, ou une trace GPX, KML ou TCX importée, à suivre dans un sens ou dans l'autre. Itinéraires et balades s'exportent en GPX.</p></div>
+        <div class="card"><span class="k"></span><h3>Sur ta route</h3>
+          <p>Les cols et les sites à voir le long de la balade, les stations-service avec le prix du jour en France.</p></div>
+        <div class="card"><span class="k"></span><h3>La météo pour rouler</h3>
+          <p>Prévisions heure par heure, le meilleur créneau, le radar de pluie, la météo des cols autour de toi.</p></div>
+        <div class="card"><span class="k"></span><h3>Hors réseau</h3>
+          <p>Télécharge la carte d'une balade avant de partir : le guidage continue là où ça ne capte plus.</p></div>
+        <div class="card"><span class="k"></span><h3>Zones de danger</h3>
+          <p>En France, les zones de danger prévues par la loi, à partir de la liste officielle des radars fixes. Jamais l'emplacement d'un radar.</p></div>
+        <div class="card"><span class="k"></span><h3>Carnet et garage</h3>
+          <p>Tes balades, leurs kilomètres et leurs virages. Ta moto, son kilométrage, ses entretiens et leurs rappels.</p></div>
+        <div class="card"><span class="k"></span><h3>Détection de chute</h3>
+          <p>Si tu l'actives : après une chute probable, une alarme, puis un message avec ta position préparé pour ton contact d'urgence. Une aide, pas un service de secours.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section band">
+    <div class="wrap">
+      <h2>Tes données restent sur ton téléphone</h2>
+      <ul class="facts">
+        <li>Pas de compte, pas de serveur RideKit : tes balades, ta moto et ton contact d'urgence ne quittent pas ton téléphone.</li>
+        <li>Pour calculer une route ou afficher la météo, l'app envoie des coordonnées aux services qui font le calcul — jamais ton nom.</li>
+        <li>Aucune publicité, aucun traceur, aucune revente.</li>
+      </ul>
+      <p style="margin-top:22px"><a href="confidentialite/" style="color:var(--accent)">Le détail, service par service →</a></p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="links">
+      <a href="confidentialite/">Politique de confidentialité</a>
+      <a href="conditions/">Conditions d'utilisation</a>
+      <a href="mentions-legales/">Mentions légales</a>
+      <a href="en/privacy/" hreflang="en">Privacy Policy (EN)</a>
+      <a href="en/terms/" hreflang="en">Terms of Use (EN)</a>
+      <a href="mailto:contact@ridekit-app.com">contact@ridekit-app.com</a>
+    </div>
+    <p>RideKit est éditée par SZ CORP. Le Code de la route prime toujours sur les indications de l'app.
+      App Store est une marque d'Apple Inc. Cartes © les contributeurs d'OpenStreetMap.</p>
+  </div>
+</footer>
+
+</body>
+</html>

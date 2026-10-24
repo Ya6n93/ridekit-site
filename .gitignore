@@ -1,0 +1,6 @@
+# Sortie et caches de Jekyll : jamais versionnés, GitHub Pages reconstruit.
+_site/
+.jekyll-cache/
+.jekyll-metadata
+.sass-cache/
+.DS_Store
