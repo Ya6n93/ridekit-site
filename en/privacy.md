@@ -1,6 +1,6 @@
 ---
 title: "Privacy Policy — RideKit"
-description: "What RideKit keeps on your phone, what leaves it, where to and why. No account, no RideKit server, no ads."
+description: "What RideKit keeps on your phone, what leaves it, where to and why. No account, no ads, one server: the crash alert's."
 permalink: /en/privacy/
 alternate: /confidentialite/
 layout: legal
@@ -16,11 +16,15 @@ weather, and keeps your ride journal and your bike's records. This page says exa
 what data exists, where it stays, what leaves your phone, where to, and why. The
 French version ([Politique de confidentialité](/confidentialite/)) prevails.
 
-> **In short.** No account, no RideKit server. Your rides, your bike, your emergency
-> contact and your settings stay on your phone: we have no copy of them. To compute a
-> route or show a map or the weather, the app queries specialised services directly,
-> sending them coordinates — never your name, your nickname or an advertising
-> identifier. No ads, no analytics, no tracking, no data sales.
+> **In short.** No account. Your rides, your bike, your emergency contact and your
+> settings stay on your phone: we have no copy of them. One exception, if you turn
+> crash detection on: so that an alert goes out even if you can't answer, RideKit's
+> alert server receives, at that moment, what the text says, and has it sent to your
+> contact. It keeps neither your location, nor the text, nor your contact's number
+> (section 6). To compute a route or show a map or the weather, the app queries
+> specialised services directly, sending them coordinates — never your name, your
+> nickname or an advertising identifier. No ads, no analytics, no tracking, no data
+> sales.
 
 ## 1. Who is responsible
 
@@ -31,12 +35,18 @@ Paris, France ("SZ CORP", "we"). Contact: **contact@ridekit-app.com**.
 For Québec's Law 25, the person in charge of the protection of personal information
 is Yassine Latrach, at the same address.
 
-## 2. No account, no RideKit server
+## 2. No account, one server
 
-RideKit asks for no sign-up, e-mail address or phone number. SZ CORP runs no server
-that would receive what you do in the app: we see neither your rides, nor your
-location, nor your bike, nor your emergency contact. The only personal data we may
-receive is what you send us yourself, such as a support e-mail.
+RideKit asks for no sign-up, e-mail address or phone number. We see neither your
+rides, nor your bike, nor your settings.
+
+SZ CORP runs one server only: the **alert server**, which sends the crash alert to
+your contact without anyone touching the phone (section 6). It receives something at
+three moments only: when you register your contact, on an alert, and when you test
+it. It keeps only what it needs to know whom to text and to prevent abuse.
+
+The other personal data we may receive is what you send us yourself, such as a
+support e-mail.
 
 ## 3. What stays on your phone
 
@@ -56,20 +66,24 @@ Stored in the app's private storage, on your device, never sent to us:
 - the official list of fixed speed cameras (for danger zones), the motorcycle make and
   model database, and the number of loops generated this month.
 
+Added to it, if automatic alert sending is set up: the random token the alert server
+gave your phone, which the app shows it with each request (section 6).
+
 Depending on your phone's settings, this data may be included in its backup (iCloud,
 Google), under your account and Apple's or Google's rules.
 
 **Deleting it.** In Réglages › Données, "Effacer le carnet" deletes your rides and the
 total distance; "Réinitialiser l'app" erases your bike, journal, emergency contact and
-settings. Deleting the app erases everything it stored on the phone, including your
+settings, and asks the alert server to forget your phone and your contact. Deleting the app erases everything it stored on the phone, including your
 bike's photo, imported tracks and offline maps.
 
 ## 4. What leaves your phone, where to, and why
 
 Some features need online data. The app then contacts the service directly, from your
 phone, when you use the feature. Like any web server, each one receives your **IP
-address** and technical details of the request. No request contains your name,
-nickname, bike or an advertising identifier.
+address** and technical details of the request. No request contains your name, bike
+or an advertising identifier; your nickname only goes to the alert server, for the
+text.
 
 | Service | What for | What is sent |
 |---|---|---|
@@ -87,6 +101,8 @@ nickname, bike or an advertising identifier.
 | **Bike database** (public file published by SZ CORP) | New edition of the motorcycle list, checked at most once a week | Nothing about you |
 | **Unsplash** | Illustration photos on some screens | Nothing about you |
 | **Expo** (650 Industries, Inc., USA) | App updates | Technical details: system, app version, a technical installation identifier created by the update service |
+| **RideKit's alert server**, hosted by **Cloudflare** (Cloudflare, Inc., USA) | Automatic sending of the crash alert (section 6), if detection is on with a contact | When the contact is registered: their number and your nickname. On an alert or a test: their number, your nickname, the time of the impact and the phone's time zone, your speed just before, your location and how precise it is, the battery |
+| **Twilio** (Twilio Inc., USA), for the alert server | Sending RideKit's texts to your contact | Your contact's number and the text: your nickname and, on an alert, the time, your speed, your location, the battery |
 {: .services}
 
 A precise location can, combined with others, reveal places you go to: a loop often
@@ -102,7 +118,8 @@ Each of these services applies its own privacy policy, for instance
 [TomTom](https://www.tomtom.com/privacy/), [Open-Meteo](https://open-meteo.com/en/terms)
 (logs deleted after 90 days), [OpenFreeMap](https://openfreemap.org/privacy/) (logs
 deleted after 7 days), [Wikimedia](https://foundation.wikimedia.org/wiki/Policy:Privacy_policy),
-[Expo](https://expo.dev/privacy).
+[Expo](https://expo.dev/privacy), [Cloudflare](https://www.cloudflare.com/privacypolicy/),
+[Twilio](https://www.twilio.com/en-us/legal/privacy).
 
 ## 5. Your location
 
@@ -130,21 +147,56 @@ Crash detection is **off by default**: you turn it on.
   stored nor sent. RideKit uses neither the step counter nor your health data.
 - **Your contact.** You pick them in the phone's contact picker, which gives RideKit
   only the contact chosen (name and number), or you type the number. It stays on your
-  phone. RideKit doesn't read your address book and never writes to it.
+  phone; the alert server keeps only a fingerprint of it (below). RideKit doesn't read
+  your address book and never writes to it.
 - **On an alert.** An alarm rings and a countdown starts. Without an answer from you,
-  or if you ask for help, a message is prepared for your contact: your nickname, the
-  time of the impact, your speed just before, your last known location and how
-  precise it is (a Google Maps link and GPS coordinates), the phone's battery level.
-  In the current version, this message opens in the phone's messaging app and is only
-  sent if someone taps "Send"; it then goes through your carrier, like any text.
-  RideKit sends nothing to SZ CORP and does not contact emergency services. If your
-  contact opens the link, Google receives the coordinates, under its own policy.
-- **Telling your contact.** From the settings, you can send them a text saying they
-  are your emergency contact. It goes the same way: from your phone, when you tap
-  "Send".
-
-Should automatic sending ever be added, this page will say, before it goes live, what
-it sends, to whom and through which provider.
+  or if you ask for help, a text goes to your contact: your nickname, the time of the
+  impact, your speed just before, your last known location and how precise it is (a
+  Google Maps link and GPS coordinates), the phone's battery level. With automatic
+  sending, it goes by itself, through the alert server and Twilio. Without it, or if
+  the server can't be reached or refuses, the message opens in the phone's messaging
+  app and is only sent if someone taps "Send"; it then goes through your carrier, like
+  any text. RideKit lets your close one know: it does not call emergency services. If
+  your contact opens the link, Google receives the coordinates, under its own policy.
+- **Automatic sending.** It comes with crash detection, and can be turned off on its
+  own ("Envoi automatique", in Réglages › Détection de chute). On an installation from
+  before it existed, it stays off until you turn it on.
+  - *When your contact is registered*, as you pick them with detection on: the server
+    gives your phone a random token, then receives your contact's number and your
+    nickname. It has Twilio send your contact a text saying you chose them and what
+    would follow. It keeps a fingerprint of the number (a keyed HMAC, from which the
+    number can't be recovered), not the number itself, nor their name, nor your
+    nickname.
+  - *On an alert, or a test* ("Tester l'envoi automatique", once a day): the app sends
+    the server your contact's number, your nickname, the time of the impact and the
+    phone's time zone, your speed just before, your location and how precise it is,
+    the battery. The server checks it is the contact registered for your phone, writes
+    the text itself and hands it to Twilio. Without a network, the app keeps trying
+    for 5 minutes.
+  - *What is kept.* Neither your location, nor the texts, nor your nickname, nor your
+    IP address. Only: your phone's token and the fingerprint of your contact's number;
+    the day's counters (per phone, per number and IP address fingerprint, for the
+    whole service), which cap sending against abuse and are deleted the next day; the
+    id of each of the day's alerts, so it is never sent twice; the id of each text,
+    long enough to have it deleted from Twilio's history, about an hour after it was
+    sent. The server's logs say what happened (sent, refused), with no number or
+    location, and are kept 3 days.
+  - *When it forgets.* Turn automatic sending off or remove your contact: the server
+    forgets your contact. "Réinitialiser l'app" makes it forget your phone. Without
+    news from your phone for 400 days, it forgets it by itself.
+  - *Providers.* The server runs on Cloudflare, what it keeps being placed in the
+    European Union where Cloudflare offers it; texts go through Twilio. Both act on
+    behalf of SZ CORP. Twilio may keep technical records of each text (number, date,
+    status) under its own policy.
+  - *Countries.* Automatic sending only goes to mobile numbers in France, Belgium,
+    Switzerland, Luxembourg and Canada. For any other number, the text is prepared on
+    your phone, as without the server.
+- **Your contact, informed.** RideKit's first text tells them who chose them and what
+  would follow. If they don't want any more, remove them or turn automatic sending
+  off; they can also write to us at **contact@ridekit-app.com**.
+- **Telling your contact yourself.** Without automatic sending, you can send them, from
+  the settings, a text saying they are your emergency contact. It goes from your
+  phone, when you tap "Send".
 
 ## 7. Photos, contacts, files
 
@@ -186,31 +238,41 @@ They do not identify you.
 
 - **The service you ask for** (Art. 6(1)(b)): sending coordinates to compute a route
   or show a map, the weather, places or prices.
-- **Your consent** (Art. 6(1)(a)): location, notifications, crash detection, the photo
-  and the contact you pick. You withdraw it at any time, in the app or in your phone's
-  settings.
+- **Your consent** (Art. 6(1)(a)): location, notifications, crash detection and its
+  automatic sending, the photo and the contact you pick. You withdraw it at any time,
+  in the app or in your phone's settings.
+- **Your vital interests** (Art. 6(1)(d) and 9(2)(c)): on an unanswered alert, letting
+  your contact know when you may no longer be able to, an alert suggesting you may be
+  hurt.
 - **Our legitimate interest** (Art. 6(1)(f)): answering your support messages, keeping
-  the app up to date and secure.
+  the app up to date and secure, preventing abuse of the alert server; for your
+  contact, getting them the alert you wanted, which their first text tells them
+  about.
 
 ## 12. How long
 
 - **On your phone**: until you delete it or the app. Offline maps go by themselves
   after 14 days; the ride in progress as soon as it is saved or discarded.
-- **At SZ CORP**: nothing, except your support e-mails, kept while we handle your
-  request and at most three years after our last exchange.
+- **At SZ CORP**: your support e-mails, kept while we handle your request and at most
+  three years after our last exchange; and, if automatic sending is set up, what the
+  alert server keeps (section 6): the token and your contact's number fingerprint as
+  long as they are registered (at most 400 days without news), the counters until the
+  next day.
 - **At third-party services**: under their own policies (see section 4).
 
 ## 13. Where data goes
 
 IGN (France), TomTom (Netherlands), FOSSGIS (Germany), komoot (Germany) and OpenFreeMap (Hungary) are
 in the European Union; Open-Meteo is in Switzerland, which the EU recognises as
-providing adequate protection. Wikipedia, Expo, Unsplash, RainViewer, Open Topo Data
-and the delivery networks some of these services use may process data outside the
-EU, notably in the United States, where authorities may access it under their law.
+providing adequate protection. Wikipedia, Expo, Unsplash, RainViewer, Open Topo Data,
+Cloudflare and Twilio (alert server and texts) and the delivery networks some of these
+services use may process data outside the EU, notably in the United States, where
+authorities may access it under their law.
 
 These transfers rely, as the case may be, on an adequacy decision (for example the
-Data Privacy Framework for certified US companies) or on their necessity to provide the
-service you ask for (Art. 49 GDPR). For Québec, Switzerland and the rest of Canada:
+Data Privacy Framework for certified US companies, such as Cloudflare and Twilio), on
+the European Commission's standard contractual clauses, or on their necessity to
+provide the service you ask for (Art. 49 GDPR). For Québec, Switzerland and the rest of Canada:
 your information may therefore be communicated outside your province or country, to
 the countries listed here.
 
@@ -224,7 +286,9 @@ death.
 As almost everything stays on your phone, you exercise most of these rights yourself,
 in the app (section 3). For the rest, write to **contact@ridekit-app.com**: we answer
 within one month. We have no copy of what the app sends to third-party services, and
-no way to link their requests to you; for that data, contact them directly.
+no way to link their requests to you; for that data, contact them directly. The alert
+server knows neither your name nor your contact's number in clear: to have it forget
+your contact, turn automatic sending off or reset the app.
 
 You can also complain to your country's authority:
 
@@ -249,7 +313,10 @@ under 13 and does not knowingly collect any data about them.
 ## 16. Security
 
 Your data is in the app's private storage, protected by your phone's encryption and
-passcode: set one. Exchanges with the services in section 4 are encrypted (HTTPS).
+passcode: set one. Exchanges with the services in section 4 are encrypted (HTTPS). The alert
+server only sends texts for a phone it gave a signed token to, only to the contact
+registered for that phone, only to mobile numbers in the five countries of section 6,
+and in limited numbers each day.
 
 ## 17. This website
 

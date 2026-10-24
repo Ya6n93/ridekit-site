@@ -92,13 +92,19 @@ ni les secours ni un dispositif d'alerte homologué. En cas d'urgence, appelle l
   détecter** une chute (chute lente, téléphone détaché de la moto ou du pilote, GPS
   perdu, téléphone abîmé, batterie vide, app fermée) ou **en signaler une à tort**.
 - Quand elle pense que tu as chuté, une alarme sonne, au volume du téléphone, et un
-  compte à rebours démarre.
-  Sans réponse, un message avec ta position est préparé pour ton contact d'urgence.
-  Dans la version actuelle, il faut qu'une personne appuie sur « Envoyer » pour
-  qu'il parte : RideKit n'envoie pas de SMS toute seule et **n'alerte pas les
-  secours**. L'envoi dépend aussi du réseau mobile et du forfait.
-- Préviens ton contact qu'il peut recevoir un tel message, vérifie son numéro, et
-  essaie l'alerte avec les tests proposés dans l'app.
+  compte à rebours démarre. Sans réponse, un SMS avec ta position part pour ton
+  contact d'urgence. RideKit prévient ton proche : elle **n'alerte pas les secours**.
+- Avec l'envoi automatique (mobiles de France, Belgique, Suisse, Luxembourg et
+  Canada), ce SMS part tout seul, par le serveur de RideKit et Twilio, si le téléphone
+  a du réseau (données mobiles) ; sans réseau, l'app réessaie pendant 5 minutes.
+  Sinon, ou si cet envoi échoue, le message est préparé dans l'app SMS et il faut
+  qu'une personne appuie sur « Envoyer » pour qu'il parte. Dans tous les cas, l'envoi
+  dépend du réseau mobile, de la batterie, des opérateurs et des prestataires : un SMS
+  peut arriver en retard, ou pas du tout. Le serveur limite le nombre d'envois par jour,
+  contre les abus.
+- Ton contact reçoit un premier SMS de RideKit quand tu l'enregistres. Dis-lui qu'il
+  peut recevoir une alerte, vérifie son numéro, et essaie l'alerte avec les tests
+  proposés dans l'app.
 
 ## 6. RideKit Pro (abonnement)
 
@@ -182,9 +188,11 @@ auteurs et sont fournies par eux en l'état :
 ## 10. Disponibilité
 
 RideKit dépend de services tiers qui peuvent être lents, limités, modifiés ou
-interrompus, et que nous pouvons remplacer. Nous ne garantissons pas que l'app ou
-chacune de ses fonctions soit disponible à tout moment et partout, notamment sans
-réseau : télécharge la carte d'une balade avant de partir là où ça ne capte pas.
+interrompus, et que nous pouvons remplacer ; son serveur d'alerte aussi peut être
+indisponible, et l'app prépare alors le SMS sur le téléphone. Nous ne garantissons
+pas que l'app ou chacune de ses fonctions soit disponible à tout moment et partout,
+notamment sans réseau : télécharge la carte d'une balade avant de partir là où ça ne
+capte pas.
 
 ## 11. Responsabilité
 

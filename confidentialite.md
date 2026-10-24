@@ -1,6 +1,6 @@
 ---
 title: "Politique de confidentialité — RideKit"
-description: "Ce que RideKit garde sur ton téléphone, ce qui en sort, vers qui et pourquoi. Pas de compte, pas de serveur RideKit, pas de publicité."
+description: "Ce que RideKit garde sur ton téléphone, ce qui en sort, vers qui et pourquoi. Pas de compte, pas de publicité, un seul serveur : celui de l'alerte chute."
 permalink: /confidentialite/
 alternate: /en/privacy/
 layout: legal
@@ -16,12 +16,16 @@ itinéraires, te guide, affiche la météo, garde le carnet de tes balades et le
 de ta moto. Cette page dit exactement quelles données existent, où elles restent,
 lesquelles sortent de ton téléphone, vers qui, et pourquoi.
 
-> **En bref.** Pas de compte, pas de serveur RideKit. Tes balades, ta moto, ton
-> contact d'urgence et tes réglages restent sur ton téléphone : nous n'en avons
-> aucune copie. Pour calculer un itinéraire, afficher une carte ou la météo, l'app
-> interroge directement des services spécialisés en leur envoyant des
-> coordonnées — jamais ton nom, ton pseudo ni un identifiant publicitaire. Aucune
-> publicité, aucune mesure d'audience, aucun outil de suivi, aucune revente.
+> **En bref.** Pas de compte. Tes balades, ta moto, ton contact d'urgence et tes
+> réglages restent sur ton téléphone : nous n'en avons aucune copie. Une seule
+> exception, si tu actives la détection de chute : pour qu'une alerte parte même si
+> tu ne peux pas répondre, le serveur d'alerte de RideKit reçoit, à ce moment-là, ce
+> que dit le SMS, et le fait envoyer à ton contact. Il n'en garde ni ta position, ni
+> le texte, ni le numéro de ton contact (section 6). Pour calculer un itinéraire,
+> afficher une carte ou la météo, l'app interroge directement des services
+> spécialisés en leur envoyant des coordonnées — jamais ton nom, ton pseudo ni un
+> identifiant publicitaire. Aucune publicité, aucune mesure d'audience, aucun outil
+> de suivi, aucune revente.
 
 ## 1. Qui est responsable
 
@@ -34,13 +38,18 @@ Contact pour toute question sur tes données : **contact@ridekit-app.com**.
 Pour la loi 25 du Québec, la personne responsable de la protection des
 renseignements personnels est Yassine Latrach, joignable à la même adresse.
 
-## 2. Pas de compte, pas de serveur RideKit
+## 2. Pas de compte, un seul serveur
 
 RideKit ne te demande ni inscription, ni adresse e-mail, ni numéro de téléphone.
-SZ CORP n'exploite aucun serveur qui recevrait ce que tu fais dans l'app : nous ne
-voyons ni tes balades, ni ta position, ni ta moto, ni ton contact d'urgence.
+Nous ne voyons ni tes balades, ni ta moto, ni tes réglages.
 
-Les seules données personnelles que nous pouvons recevoir sont celles que tu nous
+SZ CORP n'exploite qu'un serveur : le **serveur d'alerte**, qui envoie l'alerte chute
+à ton contact sans que personne touche au téléphone (section 6). Il ne reçoit
+quelque chose qu'à trois moments : quand tu enregistres ton contact, lors d'une
+alerte, et quand tu la testes. Il n'en garde que ce qu'il faut pour savoir à qui
+écrire et pour limiter les abus.
+
+Les autres données personnelles que nous pouvons recevoir sont celles que tu nous
 envoies toi-même, par exemple un e-mail au support.
 
 ## 3. Ce qui reste sur ton téléphone
@@ -65,13 +74,18 @@ sur ton appareil. Elles ne nous sont jamais transmises :
 - la liste officielle des radars fixes (pour les zones de danger), la base des
   marques et modèles de motos, et le nombre de boucles générées dans le mois.
 
+S'y ajoute, si l'envoi automatique de l'alerte est en place, le jeton aléatoire que
+le serveur d'alerte a remis à ton téléphone, et que l'app lui présente à chaque envoi
+(section 6).
+
 Selon les réglages de ton téléphone, ces données peuvent être incluses dans sa
 sauvegarde (iCloud, Google), sous ton compte et selon les règles d'Apple ou de
 Google.
 
 **Les effacer.** Dans Réglages › Données, « Effacer le carnet » supprime tes balades
 et le kilométrage cumulé ; « Réinitialiser l'app » efface ta moto, ton carnet, ton
-contact d'urgence et tes réglages. Supprimer l'application efface tout ce qu'elle a
+contact d'urgence et tes réglages, et demande au serveur d'alerte d'oublier ton
+téléphone et ton contact. Supprimer l'application efface tout ce qu'elle a
 enregistré sur le téléphone, y compris la photo de ta moto, les traces importées et
 les cartes hors ligne.
 
@@ -80,8 +94,9 @@ les cartes hors ligne.
 Certaines fonctions ont besoin de données en ligne. L'app contacte alors
 directement le service concerné, depuis ton téléphone, au moment où tu utilises la
 fonction. Comme tout serveur web, chacun reçoit ton **adresse IP** et des
-informations techniques sur la requête. Aucune requête ne contient ton nom, ton
-pseudo, ta moto ni un identifiant publicitaire.
+informations techniques sur la requête. Aucune requête ne contient ton nom, ta
+moto ni un identifiant publicitaire ; ton pseudo ne va qu'au serveur d'alerte, pour
+le SMS.
 
 | Service | Pour quoi | Ce qui est envoyé |
 |---|---|---|
@@ -99,6 +114,8 @@ pseudo, ta moto ni un identifiant publicitaire.
 | **Base motos** (fichier public publié par SZ CORP) | Nouvelle édition de la liste des motos, vérifiée au plus une fois par semaine | Rien te concernant |
 | **Unsplash** | Photos d'illustration de certains écrans | Rien te concernant |
 | **Expo** (650 Industries, Inc., États-Unis) | Mises à jour de l'application | Des informations techniques : système, version de l'app, identifiant technique de l'installation créé par le service de mise à jour |
+| **Serveur d'alerte de RideKit**, hébergé par **Cloudflare** (Cloudflare, Inc., États-Unis) | Envoi automatique de l'alerte chute (section 6), si la détection est activée avec un contact | À l'enregistrement du contact : son numéro et ton pseudo. Lors d'une alerte ou d'un test : son numéro, ton pseudo, l'heure du choc et le fuseau horaire du téléphone, ta vitesse juste avant, ta position et sa précision, la batterie |
+| **Twilio** (Twilio Inc., États-Unis), pour le serveur d'alerte | Envoi des SMS de RideKit à ton contact | Le numéro de ton contact et le texte du SMS : ton pseudo et, lors d'une alerte, l'heure, ta vitesse, ta position, la batterie |
 {: .services}
 
 Une position précise peut, recoupée avec d'autres, révéler des lieux que tu
@@ -116,7 +133,8 @@ exemple : [TomTom](https://www.tomtom.com/privacy/),
 [Open-Meteo](https://open-meteo.com/en/terms) (journaux supprimés au bout de
 90 jours), [OpenFreeMap](https://openfreemap.org/privacy/) (journaux supprimés au
 bout de 7 jours), [Wikimedia](https://foundation.wikimedia.org/wiki/Policy:Privacy_policy),
-[Expo](https://expo.dev/privacy).
+[Expo](https://expo.dev/privacy), [Cloudflare](https://www.cloudflare.com/privacypolicy/),
+[Twilio](https://www.twilio.com/en-us/legal/privacy).
 
 ## 5. Ta position
 
@@ -148,23 +166,58 @@ La détection de chute est **désactivée par défaut** : c'est toi qui l'activ
   de santé.
 - **Ton contact.** Tu le choisis dans le sélecteur de contacts du téléphone, qui ne
   transmet à RideKit que le contact choisi (nom et numéro), ou tu tapes son numéro.
-  Il reste sur ton téléphone. RideKit ne lit pas ton carnet d'adresses et n'y écrit
-  jamais.
+  Il reste sur ton téléphone ; le serveur d'alerte n'en garde qu'une empreinte
+  (ci-dessous). RideKit ne lit pas ton carnet d'adresses et n'y écrit jamais.
 - **En cas d'alerte.** Une alarme sonne et un compte à rebours démarre. Sans réponse
-  de ta part, ou si tu demandes de l'aide, un message est préparé pour ton contact :
-  ton pseudo, l'heure du choc, ta vitesse juste avant, ta dernière position connue et
-  sa précision (un lien Google Maps et les coordonnées GPS), le niveau de batterie du
-  téléphone. Dans la version actuelle, ce message s'ouvre dans l'app SMS du téléphone
-  et ne part que si quelqu'un appuie sur « Envoyer » ; il passe alors par ton
-  opérateur, comme tout SMS. RideKit n'envoie rien à SZ CORP et ne contacte pas les
-  secours. Si ton contact ouvre le lien, Google reçoit les coordonnées, selon sa
-  propre politique.
-- **Prévenir ton contact.** Depuis les réglages, tu peux lui envoyer un SMS qui lui
-  dit qu'il est ton contact d'urgence. Il part de la même façon : de ton téléphone,
-  quand tu appuies sur « Envoyer ».
-
-Si un envoi automatique du message est ajouté un jour, cette page dira avant sa mise
-en service ce qu'il envoie, à qui et par quel prestataire.
+  de ta part, ou si tu demandes de l'aide, un SMS part pour ton contact : ton pseudo,
+  l'heure du choc, ta vitesse juste avant, ta dernière position connue et sa
+  précision (un lien Google Maps et les coordonnées GPS), le niveau de batterie du
+  téléphone. Avec l'envoi automatique, il part tout seul, par le serveur d'alerte et
+  Twilio. Sans lui, ou si le serveur ne peut pas être joint ou refuse, le message
+  s'ouvre dans l'app SMS du téléphone et ne part que si quelqu'un appuie sur
+  « Envoyer » ; il passe alors par ton opérateur, comme tout SMS. RideKit prévient ton
+  proche : il n'appelle pas les secours. Si ton contact ouvre le lien, Google reçoit
+  les coordonnées, selon sa propre politique.
+- **L'envoi automatique.** Il va avec la détection de chute, et se coupe à part
+  (« Envoi automatique », dans Réglages › Détection de chute). Sur une installation
+  antérieure à son arrivée, il reste coupé tant que tu ne l'allumes pas.
+  - *À l'enregistrement de ton contact*, quand tu le choisis, détection activée : le
+    serveur remet à ton téléphone un jeton aléatoire, puis reçoit le numéro de ton
+    contact et ton pseudo. Il fait envoyer par Twilio un SMS qui dit à ton contact que
+    tu l'as choisi et ce qui viendrait. Il en garde une empreinte (un HMAC à clé
+    secrète, qui ne permet pas de retrouver le numéro), pas le numéro lui-même, ni son
+    nom, ni ton pseudo.
+  - *Lors d'une alerte, ou d'un test* (« Tester l'envoi automatique », une fois par
+    jour) : l'app envoie au serveur le numéro de ton contact, ton pseudo, l'heure du
+    choc et le fuseau horaire du téléphone, ta vitesse juste avant, ta position et sa
+    précision, la batterie. Le serveur vérifie que c'est le contact enregistré pour ton
+    téléphone, écrit le SMS lui-même et le confie à Twilio. Sans réseau, l'app
+    réessaie pendant 5 minutes.
+  - *Ce qui est gardé.* Ni ta position, ni le texte des SMS, ni ton pseudo, ni ton
+    adresse IP. Seulement : le jeton de ton téléphone et l'empreinte du numéro de ton
+    contact ; des compteurs du jour (par téléphone, par empreinte de numéro et
+    d'adresse IP, pour tout le service), qui limitent les envois contre les abus et
+    s'effacent le lendemain ; l'identifiant de chaque alerte du jour, pour ne pas
+    l'envoyer deux fois ; l'identifiant de chaque SMS, le temps de le faire effacer de
+    l'historique de Twilio, environ une heure après l'envoi. Les journaux du serveur
+    disent ce qui s'est passé (envoyé, refusé), sans numéro ni position, et sont gardés
+    3 jours.
+  - *Quand il oublie.* Coupe l'envoi automatique ou retire ton contact : le serveur
+    oublie ton contact. « Réinitialiser l'app » lui fait oublier ton téléphone. Sans
+    nouvelles de ton téléphone pendant 400 jours, il l'oublie de lui-même.
+  - *Les prestataires.* Le serveur tourne chez Cloudflare, ce qu'il garde étant placé
+    dans l'Union européenne quand Cloudflare le propose ; les SMS partent par Twilio.
+    Tous deux agissent pour le compte de SZ CORP. Twilio peut garder des traces
+    techniques de chaque envoi (numéro, date, statut) selon sa propre politique.
+  - *Les pays.* L'envoi automatique ne va que vers des mobiles de France, de Belgique,
+    de Suisse, du Luxembourg et du Canada. Pour un autre numéro, le SMS est préparé sur
+    ton téléphone, comme sans serveur.
+- **Ton contact, informé.** Le premier SMS de RideKit lui dit qui l'a choisi et ce qui
+  viendrait. S'il ne veut plus en recevoir, retire-le ou coupe l'envoi automatique ;
+  il peut aussi nous écrire à **contact@ridekit-app.com**.
+- **Prévenir ton contact toi-même.** Sans l'envoi automatique, tu peux lui envoyer
+  depuis les réglages un SMS qui lui dit qu'il est ton contact d'urgence. Il part de
+  ton téléphone, quand tu appuies sur « Envoyer ».
 
 ## 7. Photos, contacts, fichiers
 
@@ -213,18 +266,26 @@ permettent pas de t'identifier.
 - **Le service que tu demandes** (article 6.1.b du RGPD) : envoyer des coordonnées
   pour calculer un itinéraire, afficher une carte, la météo, des lieux ou des prix.
 - **Ton consentement** (article 6.1.a) : la position, les notifications, la
-  détection de chute, la photo et le contact que tu choisis. Tu le retires à tout
-  moment, dans l'app ou dans les réglages du téléphone.
+  détection de chute et son envoi automatique, la photo et le contact que tu
+  choisis. Tu le retires à tout moment, dans l'app ou dans les réglages du téléphone.
+- **Tes intérêts vitaux** (articles 6.1.d et 9.2.c) : lors d'une alerte sans réponse,
+  prévenir ton contact quand tu ne peux peut-être plus le faire toi-même, une alerte
+  pouvant laisser penser que tu es blessé.
 - **Notre intérêt légitime** (article 6.1.f) : répondre à tes messages au support,
-  maintenir l'app à jour et sûre.
+  maintenir l'app à jour et sûre, limiter les abus du serveur d'alerte ; pour ton
+  contact, lui faire parvenir l'alerte que tu as voulue, ce dont son premier SMS
+  l'informe.
 
 ## 12. Combien de temps
 
 - **Sur ton téléphone** : jusqu'à ce que tu les effaces ou supprimes l'app. Les
   cartes hors ligne partent d'elles-mêmes au bout de 14 jours ; la balade en cours,
   dès qu'elle est enregistrée ou abandonnée.
-- **Chez SZ CORP** : rien, sauf tes e-mails au support, gardés le temps de traiter ta
-  demande puis au plus trois ans après notre dernier échange.
+- **Chez SZ CORP** : tes e-mails au support, gardés le temps de traiter ta demande
+  puis au plus trois ans après notre dernier échange ; et, si l'envoi automatique est
+  en place, ce que garde le serveur d'alerte (section 6) : le jeton et l'empreinte du
+  numéro de ton contact tant qu'il est enregistré (400 jours au plus sans nouvelles),
+  les compteurs jusqu'au lendemain.
 - **Chez les services tiers** : selon leur propre politique (voir la section 4).
 
 ## 13. Où vont les données
@@ -232,15 +293,18 @@ permettent pas de t'identifier.
 L'IGN (France), TomTom (Pays-Bas), FOSSGIS (Allemagne), komoot (Allemagne) et OpenFreeMap (Hongrie)
 sont dans l'Union européenne ; Open-Meteo est en Suisse, que l'Union européenne
 reconnaît comme offrant une protection adéquate. Wikipédia, Expo, Unsplash,
-RainViewer, Open Topo Data et les réseaux de diffusion qu'utilisent certains de ces
-services peuvent traiter des données hors de l'Union européenne, notamment aux
-États-Unis, où les autorités peuvent y avoir accès selon leur droit.
+RainViewer, Open Topo Data, Cloudflare et Twilio (serveur d'alerte et SMS) et les
+réseaux de diffusion qu'utilisent certains de ces services peuvent traiter des
+données hors de l'Union européenne, notamment aux États-Unis, où les autorités
+peuvent y avoir accès selon leur droit.
 
 Ces transferts reposent, selon le cas, sur une décision d'adéquation (par exemple
-le Data Privacy Framework pour les entreprises américaines certifiées) ou sur leur
-nécessité pour te fournir le service que tu demandes (article 49 du RGPD). Pour le
-Québec, la Suisse et le reste du Canada : tes renseignements peuvent ainsi être
-communiqués hors de ta province ou de ton pays, dans les pays cités ici.
+le Data Privacy Framework pour les entreprises américaines certifiées, comme
+Cloudflare et Twilio), sur les clauses contractuelles types de la Commission
+européenne, ou sur leur nécessité pour te fournir le service que tu demandes
+(article 49 du RGPD). Pour le Québec, la Suisse et le reste du Canada : tes
+renseignements peuvent ainsi être communiqués hors de ta province ou de ton pays,
+dans les pays cités ici.
 
 ## 14. Tes droits
 
@@ -253,7 +317,9 @@ Comme presque tout reste sur ton téléphone, tu exerces la plupart de ces droit
 toi-même, dans l'app (section 3). Pour le reste, écris à **contact@ridekit-app.com** :
 nous répondons sous un mois. Nous n'avons aucune copie de ce que l'app envoie aux
 services tiers, ni aucun moyen de relier leurs requêtes à toi ; pour ces données,
-adresse-toi directement à eux.
+adresse-toi directement à eux. Le serveur d'alerte ne connaît ni ton nom ni le numéro
+de ton contact en clair : pour qu'il oublie ton contact, coupe l'envoi automatique ou
+réinitialise l'app.
 
 Tu peux aussi saisir l'autorité de ton pays :
 
@@ -280,7 +346,10 @@ concernant.
 
 Tes données sont dans l'espace privé de l'application, protégé par le chiffrement
 et le code de verrouillage de ton téléphone : choisis-en un. Les échanges avec les
-services de la section 4 sont chiffrés (HTTPS).
+services de la section 4 sont chiffrés (HTTPS). Le serveur d'alerte n'envoie de SMS que
+pour un téléphone auquel il a remis un jeton signé, seulement au contact enregistré
+pour ce téléphone, seulement vers des mobiles des cinq pays de la section 6, et en
+nombre limité chaque jour.
 
 ## 17. Ce site
 

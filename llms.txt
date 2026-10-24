@@ -26,10 +26,13 @@
   entretiens et rappels.
 - **Détection de chute** : désactivée par défaut ; une aide, pas un service
   d'urgence. Après une chute probable et sans réponse, un SMS avec la position
-  est préparé pour le contact d'urgence, envoyé d'un appui.
-- **Données** : aucun compte, aucun serveur RideKit ; balades, moto, contact
-  d'urgence et réglages restent sur le téléphone. Seules des coordonnées partent
-  vers les services qui calculent les routes, la météo et les cartes.
+  part tout seul vers le contact d'urgence, par le serveur d'alerte de RideKit
+  (Cloudflare, Twilio) ; sans réseau ou sans ce serveur, il est préparé sur le
+  téléphone, envoyé d'un appui. RideKit prévient un proche, pas les secours.
+- **Données** : aucun compte ; balades, moto, contact d'urgence et réglages restent
+  sur le téléphone. Un seul serveur RideKit, pour l'alerte chute : il ne garde ni
+  position, ni texte, ni numéro en clair. Des coordonnées partent vers les services
+  qui calculent les routes, la météo et les cartes.
 - **Pays** : France, Belgique, Suisse, Luxembourg, Canada. Interface en français.
 
 ## Pages

@@ -87,13 +87,18 @@ emergency services nor a certified alert device. In an emergency, call **112**
   fall, the phone separated from the bike or rider, GPS lost, the phone damaged, a flat
   battery, the app closed) or **report one wrongly**.
 - When it believes you crashed, an alarm rings, at the phone's volume, and a countdown
-  starts. Without an answer, a message with your location is prepared for your
-  emergency contact. In the
-  current version, someone has to tap "Send" for it to go: RideKit doesn't send texts
-  on its own and **does not alert emergency services**. Sending also depends on the
-  mobile network and your plan.
-- Tell your contact they may receive such a message, check their number, and try the
-  alert with the tests in the app.
+  starts. Without an answer, a text with your location goes to your emergency
+  contact. RideKit lets your close one know: it **does not alert emergency services**.
+- With automatic sending (mobile numbers in France, Belgium, Switzerland, Luxembourg
+  and Canada), this text goes by itself, through RideKit's server and Twilio, if the
+  phone has a network (mobile data); without one, the app keeps trying for 5 minutes.
+  Otherwise, or if that sending fails, the message is prepared in the messaging app
+  and someone has to tap "Send" for it to go. In every case, sending depends on the
+  mobile network, the battery, carriers and providers: a text may arrive late, or not
+  at all. The server caps the number of texts a day, against abuse.
+- Your contact gets a first text from RideKit when you register them. Tell them they
+  may receive an alert, check their number, and try the alert with the tests in the
+  app.
 
 ## 6. RideKit Pro (subscription)
 
@@ -172,9 +177,10 @@ provided by them as is:
 ## 10. Availability
 
 RideKit depends on third-party services that may be slow, limited, changed or
-interrupted, and that we may replace. We do not guarantee that the app or each of its
-features is available at all times and everywhere, especially without a network:
-download a ride's map before heading somewhere without coverage.
+interrupted, and that we may replace; its alert server may be unavailable too, and
+the app then prepares the text on the phone. We do not guarantee that the app or
+each of its features is available at all times and everywhere, especially without a
+network: download a ride's map before heading somewhere without coverage.
 
 ## 11. Liability
 

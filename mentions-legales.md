@@ -1,6 +1,6 @@
 ---
 title: "Mentions légales — RideKit"
-description: "Éditeur, directeur de la publication, hébergeur et crédits du site ridekit-app.com et de l'application RideKit."
+description: "Éditeur, directeur de la publication, hébergeurs et crédits du site ridekit-app.com et de l'application RideKit."
 permalink: /mentions-legales/
 layout: legal
 lang: fr
@@ -29,6 +29,15 @@ Yassine Latrach.
 **GitHub, Inc.** (service GitHub Pages)<br>
 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis<br>
 Téléphone : +1 877 448 4820 — [github.com](https://github.com)
+
+## Hébergement du serveur d'alerte de l'application
+
+**Cloudflare, Inc.** (service Workers)<br>
+101 Townsend Street, San Francisco, CA 94107, États-Unis<br>
+Téléphone : +1 888 993 5273 — [cloudflare.com](https://www.cloudflare.com)
+
+Ses SMS sont envoyés par **Twilio Inc.**, 101 Spear Street, San Francisco, CA 94105,
+États-Unis — [twilio.com](https://www.twilio.com).
 
 ## Distribution de l'application
 
