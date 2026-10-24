@@ -73,9 +73,10 @@ nickname, bike or an advertising identifier.
 
 | Service | What for | What is sent |
 |---|---|---|
-| **TomTom** (TomTom International B.V., Netherlands) | Loops and routes, rerouting, speed limits along the way, cafés and restaurants along a ride | Coordinates of the start (usually your location), waypoints and destination; when rerouting, your location and heading; points of the route |
+| **TomTom** (TomTom International B.V., Netherlands) | Loops and routes, rerouting, speed limits along the way, cafés and restaurants along a ride; address and place search outside France, or when IGN finds nothing, and naming a place outside France | Coordinates of the start (usually your location), waypoints and destination; when rerouting, your location and heading; points of the route; for a search, what you type and your location, to rank results around you; the coordinates of a point to name |
 | **OSRM** demo server (FOSSGIS e.V., Germany) | Fallback route when TomTom doesn't answer | Waypoint coordinates |
-| **Photon** (komoot GmbH, Germany) | Address and place search, your town's name for the weather, nearby passes | What you type; your location, to rank results and find your town or nearby passes |
+| **IGN** Géoplateforme (French national mapping agency, France) | Address and place search in France, your town's name (home, weather) and the names of points placed on the map, nearby passes when Photon doesn't answer | What you type; your location, to rank results around you; the coordinates of a point to name |
+| **Photon** (komoot GmbH, Germany) | Nearby passes; address and place search and naming a point when IGN and TomTom don't answer | What you type; your location, to rank results and find nearby passes; the coordinates of a point to name |
 | **Open-Meteo** (OpenMeteo GmbH, Switzerland) | Current weather, forecasts, weather at passes and along the ride | Your location, or a pass's or a ride point's |
 | **RainViewer** | Rain radar | No location: only the images of the map area shown |
 | **OpenFreeMap** (Hyperknot Software Kft., Hungary) | Base map, offline maps | Tiles of the area shown or of the ride's corridor; the app names itself and its version, as OpenFreeMap requires |
@@ -201,7 +202,7 @@ They do not identify you.
 
 ## 13. Where data goes
 
-TomTom (Netherlands), FOSSGIS (Germany), komoot (Germany) and OpenFreeMap (Hungary) are
+IGN (France), TomTom (Netherlands), FOSSGIS (Germany), komoot (Germany) and OpenFreeMap (Hungary) are
 in the European Union; Open-Meteo is in Switzerland, which the EU recognises as
 providing adequate protection. Wikipedia, Expo, Unsplash, RainViewer, Open Topo Data
 and the delivery networks some of these services use may process data outside the

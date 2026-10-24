@@ -158,8 +158,10 @@ auteurs et sont fournies par eux en l'état :
 - **Itinéraires, limitations de vitesse, cafés et restaurants** : © TomTom.
 - **Itinéraire de secours** : [OSRM](https://project-osrm.org), serveur de
   démonstration de FOSSGIS, données © les contributeurs d'OpenStreetMap.
-- **Recherche de lieux** : [Photon](https://photon.komoot.io) (komoot), données © les
-  contributeurs d'OpenStreetMap.
+- **Recherche de lieux et noms des villes** : [IGN Géoplateforme](https://geoservices.ign.fr)
+  (adresses de la Base Adresse Nationale, lieux de la BD TOPO), Licence Ouverte 2.0 ;
+  © TomTom ; [Photon](https://photon.komoot.io) (komoot), données © les contributeurs
+  d'OpenStreetMap.
 - **Météo** : [Open-Meteo.com](https://open-meteo.com), données sous licence CC BY 4.0.
 - **Radar de pluie** : [RainViewer](https://www.rainviewer.com).
 - **Altitude** : [Open Topo Data](https://www.opentopodata.org) ; EU-DEM (programme

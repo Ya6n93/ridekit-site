@@ -85,9 +85,10 @@ pseudo, ta moto ni un identifiant publicitaire.
 
 | Service | Pour quoi | Ce qui est envoyé |
 |---|---|---|
-| **TomTom** (TomTom International B.V., Pays-Bas) | Calcul des boucles et des itinéraires, recalcul en route, limitations de vitesse le long du trajet, cafés et restaurants le long d'une balade | Les coordonnées du départ (en général ta position), des points de passage et de l'arrivée ; pendant un recalcul, ta position et ta direction ; les points du tracé |
+| **TomTom** (TomTom International B.V., Pays-Bas) | Calcul des boucles et des itinéraires, recalcul en route, limitations de vitesse le long du trajet, cafés et restaurants le long d'une balade ; recherche d'une adresse ou d'un lieu hors de France, ou quand l'IGN ne trouve pas, et nom d'un lieu hors de France | Les coordonnées du départ (en général ta position), des points de passage et de l'arrivée ; pendant un recalcul, ta position et ta direction ; les points du tracé ; pour une recherche, le texte que tu tapes et ta position, pour classer les résultats autour de toi ; les coordonnées d'un point à nommer |
 | **OSRM**, serveur de démonstration (FOSSGIS e.V., Allemagne) | Itinéraire de secours quand TomTom ne répond pas | Les coordonnées des points de passage |
-| **Photon** (komoot GmbH, Allemagne) | Recherche d'une adresse ou d'un lieu, nom de ta ville pour la météo, cols proches | Le texte que tu tapes ; ta position, pour classer les résultats et trouver ta ville ou les cols autour |
+| **IGN**, Géoplateforme (Institut national de l'information géographique et forestière, France) | Recherche d'une adresse ou d'un lieu en France, nom de ta ville (accueil, météo) et des points posés sur la carte, cols proches quand Photon ne répond pas | Le texte que tu tapes ; ta position, pour classer les résultats autour de toi ; les coordonnées d'un point à nommer |
+| **Photon** (komoot GmbH, Allemagne) | Cols proches ; recherche d'une adresse ou d'un lieu et nom d'un point quand l'IGN et TomTom ne répondent pas | Le texte que tu tapes ; ta position, pour classer les résultats et trouver les cols autour ; les coordonnées d'un point à nommer |
 | **Open-Meteo** (OpenMeteo GmbH, Suisse) | Météo actuelle, prévisions, météo des cols et le long de la balade | Ta position, ou celle d'un col ou d'un point de la balade |
 | **RainViewer** | Radar de pluie | Aucune position : seulement les images de la zone de carte affichée |
 | **OpenFreeMap** (Hyperknot Software Kft., Hongrie) | Fond de carte, cartes hors ligne | Les tuiles de la zone affichée ou du couloir de la balade téléchargé ; l'app se présente sous son nom et sa version, comme OpenFreeMap le demande |
@@ -228,7 +229,7 @@ permettent pas de t'identifier.
 
 ## 13. Où vont les données
 
-TomTom (Pays-Bas), FOSSGIS (Allemagne), komoot (Allemagne) et OpenFreeMap (Hongrie)
+L'IGN (France), TomTom (Pays-Bas), FOSSGIS (Allemagne), komoot (Allemagne) et OpenFreeMap (Hongrie)
 sont dans l'Union européenne ; Open-Meteo est en Suisse, que l'Union européenne
 reconnaît comme offrant une protection adéquate. Wikipédia, Expo, Unsplash,
 RainViewer, Open Topo Data et les réseaux de diffusion qu'utilisent certains de ces

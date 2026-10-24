@@ -149,8 +149,9 @@ provided by them as is:
 - **Routes, speed limits, cafés and restaurants**: © TomTom.
 - **Fallback route**: [OSRM](https://project-osrm.org), FOSSGIS demo server, data ©
   OpenStreetMap contributors.
-- **Place search**: [Photon](https://photon.komoot.io) (komoot), data © OpenStreetMap
-  contributors.
+- **Place search and town names**: [IGN Géoplateforme](https://geoservices.ign.fr)
+  (Base Adresse Nationale addresses, BD TOPO places), Licence Ouverte 2.0; © TomTom;
+  [Photon](https://photon.komoot.io) (komoot), data © OpenStreetMap contributors.
 - **Weather**: [Open-Meteo.com](https://open-meteo.com), data under CC BY 4.0.
 - **Rain radar**: [RainViewer](https://www.rainviewer.com).
 - **Elevation**: [Open Topo Data](https://www.opentopodata.org); EU-DEM (Copernicus
