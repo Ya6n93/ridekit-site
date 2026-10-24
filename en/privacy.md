@@ -143,9 +143,10 @@ it sends, to whom and through which provider.
 
 ## 7. Photos, contacts, files
 
-- **Photos.** For your bike's photo, RideKit opens the system photo picker: only the
-  photo chosen is copied into the app. RideKit doesn't access your photo library and
-  doesn't use the camera.
+- **Photos.** For your bike's photo, RideKit opens the system photo picker, or the
+  camera if you choose to take it: only that photo is copied into the app. RideKit
+  doesn't access your photo library. The camera only opens when you tap "Camera",
+  once you've allowed it.
 - **Contacts.** See above: only the contact chosen is read. On Android, the system may
   ask for contacts access to open this picker.
 - **Files.** Tracks you import from Files (iCloud Drive included) are copied into the

@@ -163,8 +163,9 @@ en service ce qu'il envoie, à qui et par quel prestataire.
 ## 7. Photos, contacts, fichiers
 
 - **Photos.** Pour la photo de ta moto, RideKit ouvre le sélecteur de photos du
-  système : seule la photo choisie est copiée dans l'app. RideKit n'accède pas à ta
-  photothèque et n'utilise pas l'appareil photo.
+  système, ou l'appareil photo si tu choisis de la prendre : seule cette photo est
+  copiée dans l'app. RideKit n'accède pas à ta photothèque. L'appareil photo n'est
+  ouvert que quand tu touches « Appareil photo », après ton autorisation.
 - **Contacts.** Voir ci-dessus : seul le contact choisi est lu. Sur Android, le
   système peut te demander l'accès aux contacts pour ouvrir ce sélecteur.
 - **Fichiers.** Les traces que tu importes depuis Fichiers (iCloud Drive compris)
