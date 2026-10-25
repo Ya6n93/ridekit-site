@@ -73,8 +73,9 @@ l'absence de contrôle.
 **Partout ailleurs** — Belgique, Suisse, Luxembourg, Canada et tous les autres pays —
 RideKit n'annonce **ni zone de danger ni radar**. Dans certains pays, comme la
 Suisse, avertir des contrôles de vitesse est interdit. L'app choisit selon le pays
-de la route : quand il n'est pas connu, rien n'est annoncé. Seul le bip de
-survitesse reste disponible, là où la limitation est connue.
+de la route : quand il n'est pas connu, rien n'est annoncé. Seule l'alerte de
+survitesse (une phrase, ou un bip voix coupée) reste disponible, là où la limitation
+est connue.
 
 RideKit n'est pas un détecteur de radars. Les alertes se coupent dans Réglages ›
 Alertes.

@@ -69,8 +69,9 @@ contains neither mobile cameras nor police checks: no alert does not mean no che
 **Everywhere else** — Belgium, Switzerland, Luxembourg, Canada and every other
 country — RideKit announces **neither danger zones nor cameras**. In some countries,
 such as Switzerland, warning of speed checks is prohibited. The app decides by the
-road's country: when it is unknown, nothing is announced. Only the overspeed beep
-remains available, where the limit is known.
+road's country: when it is unknown, nothing is announced. Only the overspeed alert
+(a spoken line, or a beep with the voice off) remains available, where the limit is
+known.
 
 RideKit is not a radar detector. Alerts are turned off in Réglages › Alertes.
 
