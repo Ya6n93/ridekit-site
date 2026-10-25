@@ -172,15 +172,14 @@ La détection de chute est **désactivée par défaut** : c'est toi qui l'activ
   de ta part, ou si tu demandes de l'aide, un SMS, un seul, part pour ton contact :
   ton pseudo, l'heure du choc, ta dernière position connue et sa précision (un lien
   Google Maps, qui porte les coordonnées GPS), le niveau de batterie du téléphone et,
-  s'il reste de la place, ta vitesse juste avant. Avec l'envoi automatique, il part
-  tout seul, par le serveur d'alerte et Brevo. Sans lui, ou si le serveur ne peut
-  pas être joint ou refuse, le message s'ouvre dans l'app SMS du téléphone et ne part
+  s'il reste de la place, ta vitesse juste avant. Il part tout seul, par le serveur
+  d'alerte et Brevo. Si le serveur ne peut pas être joint ou refuse, le message s'ouvre dans l'app SMS du téléphone et ne part
   que si quelqu'un appuie sur « Envoyer » ; il passe alors par ton opérateur, comme
   tout SMS. RideKit prévient ton proche : il n'appelle pas les secours. Si ton
   contact ouvre le lien, Google reçoit les coordonnées, selon sa propre politique.
-- **L'envoi automatique.** Il va avec la détection de chute, et se coupe à part
-  (« Envoi automatique », dans Réglages › Détection de chute). Sur une installation
-  antérieure à son arrivée, il reste coupé tant que tu ne l'allumes pas.
+- **L'envoi automatique.** Il va avec la détection de chute : dès qu'elle est activée
+  avec un contact, l'alerte part toute seule. Pour l'arrêter, coupe la détection ou
+  retire ton contact.
   - *À l'enregistrement de ton contact*, quand tu le choisis, détection activée : le
     serveur remet à ton téléphone un jeton aléatoire, puis reçoit le numéro de ton
     contact, et lui seul. Il n'envoie rien à ton contact. Il en garde une empreinte
@@ -200,7 +199,7 @@ La détection de chute est **désactivée par défaut** : c'est toi qui l'activ
     s'effacent le lendemain ; l'identifiant de chaque alerte du jour, pour ne pas
     l'envoyer deux fois. Les journaux du serveur disent ce qui s'est passé (envoyé,
     refusé), sans numéro ni position, et sont gardés 3 jours.
-  - *Quand il oublie.* Coupe l'envoi automatique ou retire ton contact : le serveur
+  - *Quand il oublie.* Coupe la détection ou retire ton contact : le serveur
     oublie ton contact. « Réinitialiser l'app » lui fait oublier ton téléphone. Sans
     nouvelles de ton téléphone pendant 400 jours, il l'oublie de lui-même.
   - *Les prestataires.* Le serveur tourne chez Cloudflare, ce qu'il garde étant placé
@@ -208,16 +207,16 @@ La détection de chute est **désactivée par défaut** : c'est toi qui l'activ
     en France, qui garde ses données dans l'Union européenne. Tous deux agissent pour
     le compte de SZ CORP. Brevo garde le journal de chaque SMS (le numéro, le texte,
     son statut) un mois, puis l'efface. Pour l'acheminer, il passe par des opérateurs
-    partenaires, dont certains américains (vers un mobile canadien, Twilio), qui
+    partenaires, dont certains américains, qui
     peuvent en garder une trace technique selon leur propre politique.
-  - *Les pays.* L'envoi automatique ne va que vers des mobiles de France, de Belgique,
-    de Suisse, du Luxembourg et du Canada. Pour un autre numéro, le SMS est préparé sur
-    ton téléphone, comme sans serveur.
+  - *Les pays.* Pour l'instant, l'envoi automatique ne va que vers des mobiles
+    français. Pour un autre numéro, le SMS est préparé sur ton téléphone, comme sans
+    serveur.
 - **Ton contact, informé par toi.** RideKit ne lui écrit qu'en cas d'alerte ou de
   test. C'est toi qui le préviens : dès que tu le choisis, l'app te prépare un SMS qui
   lui dit qu'il est ton contact d'urgence et ce qui viendrait. Il part de ton
   téléphone, quand tu appuies sur « Envoyer ». S'il ne veut pas recevoir d'alerte,
-  retire-le ou coupe l'envoi automatique ; il peut aussi nous écrire à
+  retire-le ou coupe la détection ; il peut aussi nous écrire à
   **contact@ridekit-app.com**.
 
 ## 7. Photos, contacts, fichiers
@@ -321,8 +320,8 @@ toi-même, dans l'app (section 3). Pour le reste, écris à **contact@ridekit-ap
 nous répondons sous un mois. Nous n'avons aucune copie de ce que l'app envoie aux
 services tiers, ni aucun moyen de relier leurs requêtes à toi ; pour ces données,
 adresse-toi directement à eux. Le serveur d'alerte ne connaît ni ton nom ni le numéro
-de ton contact en clair : pour qu'il oublie ton contact, coupe l'envoi automatique ou
-réinitialise l'app. Le journal d'un SMS d'alerte chez Brevo, nous l'effaçons sur
+de ton contact en clair : pour qu'il oublie ton contact, coupe la détection, retire
+ton contact ou réinitialise l'app. Le journal d'un SMS d'alerte chez Brevo, nous l'effaçons sur
 demande, sans attendre le mois.
 
 Tu peux aussi saisir l'autorité de ton pays :

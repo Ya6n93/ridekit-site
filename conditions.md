@@ -94,8 +94,8 @@ ni les secours ni un dispositif d'alerte homologué. En cas d'urgence, appelle l
 - Quand elle pense que tu as chuté, une alarme sonne, au volume du téléphone, et un
   compte à rebours démarre. Sans réponse, un SMS avec ta position part pour ton
   contact d'urgence. RideKit prévient ton proche : elle **n'alerte pas les secours**.
-- Avec l'envoi automatique (mobiles de France, Belgique, Suisse, Luxembourg et
-  Canada), ce SMS, un seul, part tout seul, par le serveur de RideKit et Brevo, si
+- Vers un mobile français (les seuls servis pour l'instant), ce SMS, un seul, part
+  tout seul, par le serveur de RideKit et Brevo, si
   le téléphone a du réseau (données mobiles) ; sans réseau, l'app réessaie pendant 5
   minutes. Sinon, ou si cet envoi échoue, le message est préparé dans l'app SMS et il
   faut qu'une personne appuie sur « Envoyer » pour qu'il parte. Dans tous les cas,

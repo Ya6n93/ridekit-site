@@ -89,8 +89,8 @@ emergency services nor a certified alert device. In an emergency, call **112**
 - When it believes you crashed, an alarm rings, at the phone's volume, and a countdown
   starts. Without an answer, a text with your location goes to your emergency
   contact. RideKit lets your close one know: it **does not alert emergency services**.
-- With automatic sending (mobile numbers in France, Belgium, Switzerland, Luxembourg
-  and Canada), this text, a single one, goes by itself, through RideKit's server and
+- To a French mobile number (the only ones served for now), this text, a single
+  one, goes by itself, through RideKit's server and
   Brevo, if the phone has a network (mobile data); without one, the app keeps trying
   for 5 minutes. Otherwise, or if that sending fails, the message is prepared in the
   messaging app and someone has to tap "Send" for it to go. In every case, sending

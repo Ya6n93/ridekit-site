@@ -153,15 +153,14 @@ Crash detection is **off by default**: you turn it on.
   or if you ask for help, a single text goes to your contact: your nickname, the time
   of the impact, your last known location and how precise it is (a Google Maps link,
   which carries the GPS coordinates), the phone's battery level and, if there is
-  room, your speed just before. With automatic sending, it goes by itself, through
-  the alert server and Brevo. Without it, or if the server can't be reached or
-  refuses, the message opens in the phone's messaging app and is only sent if someone
+  room, your speed just before. It goes by itself, through the alert server and
+  Brevo. If the server can't be reached or refuses, the message opens in the phone's messaging app and is only sent if someone
   taps "Send"; it then goes through your carrier, like any text. RideKit lets your
   close one know: it does not call emergency services. If your contact opens the
   link, Google receives the coordinates, under its own policy.
-- **Automatic sending.** It comes with crash detection, and can be turned off on its
-  own ("Envoi automatique", in Réglages › Détection de chute). On an installation from
-  before it existed, it stays off until you turn it on.
+- **Automatic sending.** It comes with crash detection: as soon as detection is on
+  with a contact, the alert goes by itself. To stop it, turn detection off or remove
+  your contact.
   - *When your contact is registered*, as you pick them with detection on: the server
     gives your phone a random token, then receives your contact's number, and only
     that. It sends your contact nothing. It keeps a fingerprint of the number (a
@@ -180,7 +179,7 @@ Crash detection is **off by default**: you turn it on.
     whole service), which cap sending against abuse and are deleted the next day; the
     id of each of the day's alerts, so it is never sent twice. The server's logs say
     what happened (sent, refused), with no number or location, and are kept 3 days.
-  - *When it forgets.* Turn automatic sending off or remove your contact: the server
+  - *When it forgets.* Turn detection off or remove your contact: the server
     forgets your contact. "Réinitialiser l'app" makes it forget your phone. Without
     news from your phone for 400 days, it forgets it by itself.
   - *Providers.* The server runs on Cloudflare, what it keeps being placed in the
@@ -188,16 +187,15 @@ Crash detection is **off by default**: you turn it on.
     which keeps its data in the European Union. Both act on behalf of SZ CORP. Brevo
     keeps the log of each text (the number, the text, its status) for one month, then
     deletes it. To deliver it, Brevo goes through partner carriers, some of them
-    American (to a Canadian mobile, Twilio), which may keep a technical record of it
+    American, which may keep a technical record of it
     under their own policy.
-  - *Countries.* Automatic sending only goes to mobile numbers in France, Belgium,
-    Switzerland, Luxembourg and Canada. For any other number, the text is prepared on
-    your phone, as without the server.
+  - *Countries.* For now, automatic sending only goes to French mobile numbers. For
+    any other number, the text is prepared on your phone, as without the server.
 - **Your contact, informed by you.** RideKit only texts them on an alert or a test.
   You are the one who tells them: as soon as you pick them, the app prepares a text
   saying they are your emergency contact and what would follow. It goes from your
   phone, when you tap "Send". If they don't want to receive alerts, remove them or
-  turn automatic sending off; they can also write to us at
+  turn detection off; they can also write to us at
   **contact@ridekit-app.com**.
 
 ## 7. Photos, contacts, files
@@ -292,7 +290,7 @@ in the app (section 3). For the rest, write to **contact@ridekit-app.com**: we a
 within one month. We have no copy of what the app sends to third-party services, and
 no way to link their requests to you; for that data, contact them directly. The alert
 server knows neither your name nor your contact's number in clear: to have it forget
-your contact, turn automatic sending off or reset the app. The log of an alert text at
+your contact, turn detection off, remove your contact or reset the app. The log of an alert text at
 Brevo, we delete on request, without waiting for the month.
 
 You can also complain to your country's authority:
