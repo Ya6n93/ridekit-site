@@ -335,8 +335,7 @@ SZ CORP.
 - **How long.** AppsFlyer keeps this data while it measures the campaigns, then
   deletes it: 24 months at most, as its
   [privacy policy](https://www.appsflyer.com/legal/services-privacy-policy/) provides.
-- **Where.** AppsFlyer is in Israel, which the European Commission recognises as
-  providing adequate protection; this data may also be processed in the United
+- **Where.** AppsFlyer is outside the European Union, in a country the European Commission recognises as providing adequate protection; this data may also be processed in the United
   States, under standard contractual clauses.
 - **Your rights.** To have AppsFlyer delete what it already received from your phone,
   write to us with your measurement identifier, shown in Réglages › Confidentialité
@@ -397,8 +396,7 @@ They do not identify you.
 
 IGN (France), TomTom (Netherlands), FOSSGIS (Germany), komoot (Germany), OpenFreeMap
 (Hungary) and Brevo (France, the alert server's texts) are in the European Union, as
-is the group ride server's data; Open-Meteo is in Switzerland and AppsFlyer in
-Israel, two countries the EU recognises as providing adequate protection. Wikipedia,
+is the group ride server's data; Open-Meteo is in Switzerland, and AppsFlyer outside the EU: countries the EU recognises as providing adequate protection. Wikipedia,
 Expo, Unsplash, RainViewer, Open Topo Data, Cloudflare (the alert server, and any
 access to the group ride server, Cloudflare being an American company), RevenueCat
 (subscriptions), AppsFlyer for part of its processing, the ad networks it passes the
