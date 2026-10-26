@@ -23,7 +23,8 @@ RideKit is a motorcycle riding app. It generates loops from the length and road 
 you choose, draws routes from one place to another, guides you, imports and exports
 GPX tracks, shows places along the way (passes, sights, fuel stations, cafés), the
 weather and rain radar, speed limits and, in France, danger zones. It keeps your ride
-journal and your bike's records, and offers crash detection and group rides.
+journal and your bike's records, and offers crash detection and group rides. Some of
+these features are RideKit Pro features (section 7).
 
 These features depend on GPS, the network and third-party services (section 10). They
 may change, be added or be removed.
@@ -81,7 +82,9 @@ RideKit is not a radar detector. Alerts are turned off in Réglages › Alertes.
 emergency services nor a certified alert device. In an emergency, call **112**
 (Europe, including Switzerland) or **911** (Canada).
 
-- It is off until you turn it on, and only works during a guided ride. Depending on
+- It is a RideKit Pro feature (section 7): without an active subscription, it does
+  not watch your rides, even if turned on before. It is off until you turn it on,
+  and only works during a guided ride. Depending on
   the phone and its system, it may stop when the app is no longer on screen or is
   closed.
 - A phone alone cannot recognise a crash for sure. It may **miss** a crash (a slow
@@ -120,10 +123,23 @@ emergency services nor a certified alert device. In an emergency, call **112**
 
 ## 7. RideKit Pro (subscription)
 
-RideKit is free, with a limited number of loops generated per month. RideKit Pro
-lifts this limit and unlocks the test of the crash alert's automatic sending ("Tester
-l'envoi automatique"; the alert itself goes out for everyone). It may include other
-features, described in the app at the time of purchase.
+RideKit is free, with limits. RideKit Pro includes:
+
+- **crash detection** (section 5) and, to a French mobile number, the alert sent to
+  your close one by itself, with its test ("Tester l'envoi automatique");
+- the **voice co-pilot**: dangerous bends, rain, last fuel station, danger zones,
+  spoken during guidance;
+- **unlimited loops** (without Pro: 3 a month);
+- **downloading offline maps** (maps already downloaded remain usable);
+- **group rides of up to 8 people** when the leader has RideKit Pro (without: 2,
+  section 6);
+- **sharing GPX files**;
+- **routes of more than 5 points** ("Créer le parcours"; without Pro: 5, start and
+  finish included).
+
+Everything else is free, including "Tester la détection", voice guidance, the choice
+of roads, importing tracks, sharing a ride as an image and the Roadbook. The details
+are described in the app at the time of purchase.
 
 - **Plans and prices**: monthly (€5.99/month) or yearly (€49.99/year), prices
   including VAT in France. The price shown in the app before you confirm the purchase

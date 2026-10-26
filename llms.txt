@@ -14,19 +14,19 @@
   route, limitation de vitesse affichée et alerte de survitesse (une phrase dite,
   un bip seulement voix coupée).
 - **Itinéraires et traces** : de A à B ; import de traces GPX, KML, TCX ;
-  export GPX des itinéraires et des balades.
+  export GPX des itinéraires et des balades (RideKit Pro).
 - **Sur la route** : cols et sites (Wikipédia), stations-service et prix du jour
   (France, données officielles).
 - **Météo** : prévisions heure par heure (Open-Meteo), meilleur créneau pour
   rouler, radar de pluie (RainViewer), météo des cols proches.
-- **Hors réseau** : carte d'une balade téléchargeable avant le départ.
+- **Hors réseau** : carte d'une balade téléchargeable avant le départ (RideKit Pro).
 - **Zones de danger** : en France uniquement, selon la réglementation (300 m en
   ville, 2 km hors agglomération, 4 km sur autoroute), jamais l'emplacement d'un
   radar. Aucune alerte radar ailleurs (Belgique, Suisse, Luxembourg, Canada…).
 - **Carnet et garage** : balades (distance, durée, virages), moto, kilométrage,
   entretiens et rappels.
-- **Détection de chute** : désactivée par défaut ; une aide, pas un service
-  d'urgence. Après une chute probable et sans réponse, un SMS avec la position
+- **Détection de chute** (RideKit Pro) : désactivée par défaut ; une aide, pas un
+  service d'urgence. Après une chute probable et sans réponse, un SMS avec la position
   part tout seul vers le contact d'urgence, par le serveur d'alerte de RideKit
   (Cloudflare, Brevo) ; sans réseau ou sans ce serveur, il est préparé sur le
   téléphone, envoyé d'un appui. RideKit prévient un proche, pas les secours.
@@ -47,7 +47,10 @@
   RideKit Pro.
 - **RideKit Pro** : abonnement sur iPhone par l'App Store (pas encore sur Google
   Play), 5,99 €/mois ou 49,99 €/an, 7 jours gratuits sur l'annuel seulement ;
-  boucles illimitées et test de l'envoi automatique de l'alerte chute. Abonnement
+  détection de chute et envoi automatique de l'alerte (et son test), copilote
+  vocal (virages, pluie, dernière station, zones de danger), boucles illimitées
+  (3 par mois sans), cartes hors ligne, sorties de groupe jusqu'à 8 (2 sans),
+  partage GPX, parcours de plus de 5 points. Le reste est gratuit. Abonnement
   suivi par RevenueCat.
 - **Pays** : France, Belgique, Suisse, Luxembourg, Canada. Interface en français.
 

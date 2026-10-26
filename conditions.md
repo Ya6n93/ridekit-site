@@ -24,7 +24,7 @@ autre, te guide, importe et exporte des traces GPX, montre des lieux le long de 
 route (cols, sites, stations-service, cafés), la météo et le radar de pluie, les
 limitations de vitesse et, en France, des zones de danger. Elle garde le carnet de
 tes balades et le suivi de ta moto, propose une détection de chute et des sorties de
-groupe.
+groupe. Certaines de ces fonctions sont réservées à RideKit Pro (section 7).
 
 Ces fonctions dépendent du GPS, du réseau et de services tiers (section 10). Elles
 peuvent évoluer, être ajoutées ou retirées.
@@ -87,8 +87,9 @@ Alertes.
 ni les secours ni un dispositif d'alerte homologué. En cas d'urgence, appelle le
 **112** (Europe, dont la Suisse) ou le **911** (Canada).
 
-- Elle est désactivée tant que tu ne l'actives pas, et ne fonctionne que pendant une
-  balade guidée. Selon le téléphone et son système, elle peut s'arrêter quand l'app
+- Elle est réservée à RideKit Pro (section 7) : sans abonnement en cours, elle ne
+  surveille pas tes balades, même activée auparavant. Elle est désactivée tant que tu
+  ne l'actives pas, et ne fonctionne que pendant une balade guidée. Selon le téléphone et son système, elle peut s'arrêter quand l'app
   n'est plus à l'écran ou quand elle est fermée.
 - Un téléphone seul ne peut pas reconnaître une chute à coup sûr. Elle peut **ne pas
   détecter** une chute (chute lente, téléphone détaché de la moto ou du pilote, GPS
@@ -128,10 +129,25 @@ ni les secours ni un dispositif d'alerte homologué. En cas d'urgence, appelle l
 
 ## 7. RideKit Pro (abonnement)
 
-RideKit est gratuite, avec un nombre limité de boucles générées par mois. RideKit Pro
-lève cette limite et ouvre le test de l'envoi automatique de l'alerte chute (« Tester
-l'envoi automatique » ; l'alerte elle-même part pour tous). Il peut inclure d'autres
-fonctions, décrites dans l'app au moment de l'achat.
+RideKit est gratuite, avec des limites. RideKit Pro comprend :
+
+- la **détection de chute** (section 5) et, vers un mobile français, l'envoi
+  automatique de l'alerte à ton proche, avec son test (« Tester l'envoi
+  automatique ») ;
+- le **copilote vocal** : virages dangereux, pluie, dernière station, zones de
+  danger, dits pendant le guidage ;
+- les **boucles illimitées** (sans Pro : 3 par mois) ;
+- le **téléchargement des cartes hors ligne** (celles déjà téléchargées restent
+  utilisables) ;
+- les **sorties de groupe jusqu'à 8 personnes** quand le leader a RideKit Pro (sans :
+  2, section 6) ;
+- le **partage de fichiers GPX** ;
+- les **parcours de plus de 5 points** (« Créer le parcours » ; sans Pro : 5, départ
+  et arrivée compris).
+
+Le reste est gratuit, dont « Tester la détection », le guidage vocal, le choix des
+routes, l'import de traces, le partage d'une balade en image et le Roadbook. Le
+détail est décrit dans l'app au moment de l'achat.
 
 - **Formules et prix** : mensuelle (5,99 €/mois) ou annuelle (49,99 €/an), prix TTC
   en France. Le prix affiché dans l'app avant que tu confirmes l'achat fait foi.

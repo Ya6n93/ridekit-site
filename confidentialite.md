@@ -182,7 +182,8 @@ téléphone : les fonctions qui en dépendent ne marcheront plus.
 
 ## 6. Détection de chute et contact d'urgence
 
-La détection de chute est **désactivée par défaut** : c'est toi qui l'actives.
+La détection de chute est réservée à RideKit Pro et **désactivée par défaut** : c'est
+toi qui l'actives.
 
 - **Ce qu'elle lit.** Pendant une balade guidée seulement, l'accéléromètre et le
   gyroscope du téléphone et la vitesse GPS, analysés sur le téléphone. Ces mesures ne
@@ -203,9 +204,10 @@ La détection de chute est **désactivée par défaut** : c'est toi qui l'activ
   contact ouvre le lien, Google reçoit les coordonnées, selon sa propre politique. Si
   tu es dans une sortie de groupe, l'alerte (pas un test) est aussi relayée aux
   membres, avec ta position (section 7).
-- **L'envoi automatique.** Il va avec la détection de chute : dès qu'elle est activée
-  avec un contact, l'alerte part toute seule. Pour l'arrêter, coupe la détection ou
-  retire ton contact.
+- **L'envoi automatique.** Il va avec la détection de chute, avec RideKit Pro : dès
+  qu'elle est activée avec un contact, l'alerte part toute seule. Pour l'arrêter,
+  coupe la détection ou retire ton contact ; il s'arrête aussi quand ton abonnement
+  RideKit Pro prend fin.
   - *À l'enregistrement de ton contact*, quand tu le choisis, détection activée : le
     serveur remet à ton téléphone un jeton aléatoire, puis reçoit le numéro de ton
     contact, et lui seul. Il n'envoie rien à ton contact. Il en garde une empreinte
@@ -225,8 +227,8 @@ La détection de chute est **désactivée par défaut** : c'est toi qui l'activ
     s'effacent le lendemain ; l'identifiant de chaque alerte du jour, pour ne pas
     l'envoyer deux fois. Les journaux du serveur disent ce qui s'est passé (envoyé,
     refusé), sans numéro ni position, et sont gardés 3 jours.
-  - *Quand il oublie.* Coupe la détection ou retire ton contact : le serveur
-    oublie ton contact. « Réinitialiser l'app » lui fait oublier ton téléphone. Sans
+  - *Quand il oublie.* Coupe la détection, retire ton contact ou laisse prendre fin
+    ton abonnement RideKit Pro : le serveur oublie ton contact. « Réinitialiser l'app » lui fait oublier ton téléphone. Sans
     nouvelles de ton téléphone pendant 400 jours, il l'oublie de lui-même.
   - *Les prestataires.* Le serveur tourne chez Cloudflare, ce qu'il garde étant placé
     dans l'Union européenne quand Cloudflare le propose ; les SMS partent par Brevo,

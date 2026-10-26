@@ -165,7 +165,7 @@ that need it will stop working.
 
 ## 6. Crash detection and emergency contact
 
-Crash detection is **off by default**: you turn it on.
+Crash detection is a RideKit Pro feature and **off by default**: you turn it on.
 
 - **What it reads.** During a guided ride only, the phone's accelerometer and
   gyroscope and the GPS speed, analysed on the phone. These readings are neither
@@ -185,9 +185,10 @@ Crash detection is **off by default**: you turn it on.
   link, Google receives the coordinates, under its own policy. If you are on a group
   ride, the alert (not a test) is also relayed to the members, with your location
   (section 7).
-- **Automatic sending.** It comes with crash detection: as soon as detection is on
-  with a contact, the alert goes by itself. To stop it, turn detection off or remove
-  your contact.
+- **Automatic sending.** It comes with crash detection, with RideKit Pro: as soon as
+  detection is on with a contact, the alert goes by itself. To stop it, turn
+  detection off or remove your contact; it also stops when your RideKit Pro
+  subscription ends.
   - *When your contact is registered*, as you pick them with detection on: the server
     gives your phone a random token, then receives your contact's number, and only
     that. It sends your contact nothing. It keeps a fingerprint of the number (a
@@ -206,8 +207,8 @@ Crash detection is **off by default**: you turn it on.
     whole service), which cap sending against abuse and are deleted the next day; the
     id of each of the day's alerts, so it is never sent twice. The server's logs say
     what happened (sent, refused), with no number or location, and are kept 3 days.
-  - *When it forgets.* Turn detection off or remove your contact: the server
-    forgets your contact. "Réinitialiser l'app" makes it forget your phone. Without
+  - *When it forgets.* Turn detection off, remove your contact or let your RideKit
+    Pro subscription end: the server forgets your contact. "Réinitialiser l'app" makes it forget your phone. Without
     news from your phone for 400 days, it forgets it by itself.
   - *Providers.* The server runs on Cloudflare, what it keeps being placed in the
     European Union where Cloudflare offers it; texts go through Brevo, in France,
