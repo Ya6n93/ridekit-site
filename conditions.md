@@ -112,6 +112,10 @@ ni les secours ni un dispositif d'alerte homologué. En cas d'urgence, appelle l
 
 ## 6. Sorties de groupe
 
+- Créer une sortie et la rejoindre sont **gratuits**. Un groupe accueille **2
+  personnes**, leader compris, ou **jusqu'à 8** quand son leader a RideKit Pro ; s'il
+  ne l'a plus en cours de sortie, personne n'est retiré, seules les nouvelles
+  arrivées sont bloquées.
 - Les positions des autres membres, leurs messages et leurs alertes sont
   **indicatifs** : ils dépendent de leur réseau et de leur GPS, et peuvent être en
   retard ou manquer. « Plus de nouvelles » veut souvent dire « sans réseau ».

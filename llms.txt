@@ -42,7 +42,9 @@
 - **Sorties de groupe** : un leader invite avec un code ou un QR ; chacun voit les
   autres sur la carte, reçoit la balade du leader, des messages rapides lus à voix
   haute et l'alerte chute d'un membre. La position n'est partagée que si le motard
-  l'accepte, pour la sortie, puis effacée. Réservé aux 15 ans et plus.
+  l'accepte, pour la sortie, puis effacée. Réservé aux 15 ans et plus. Gratuit pour
+  tous ; un groupe accueille 2 personnes, leader compris, 8 quand le leader a
+  RideKit Pro.
 - **RideKit Pro** : abonnement sur iPhone par l'App Store (pas encore sur Google
   Play), 5,99 €/mois ou 49,99 €/an, 7 jours gratuits sur l'annuel seulement ;
   boucles illimitées et test de l'envoi automatique de l'alerte chute. Abonnement

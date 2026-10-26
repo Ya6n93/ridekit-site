@@ -106,6 +106,9 @@ emergency services nor a certified alert device. In an emergency, call **112**
 
 ## 6. Group rides
 
+- Creating a group ride and joining one are **free**. A group takes **2 people**, the
+  leader included, or **up to 8** when its leader has RideKit Pro; if they no longer
+  have it during the ride, nobody is removed, only newcomers are refused.
 - The other members' locations, messages and alerts are **indicative**: they depend
   on their network and GPS, and may be late or missing. "Plus de nouvelles" (no news)
   often means "no network".
