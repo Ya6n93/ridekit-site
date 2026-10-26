@@ -337,7 +337,9 @@ SZ CORP.
   providing adequate protection; this data may also be processed in the United
   States, under standard contractual clauses.
 - **Your rights.** To have AppsFlyer delete what it already received from your phone,
-  write to us: we pass the request on to it, through the procedure it provides for
+  write to us with your measurement identifier, shown in Réglages › Confidentialité
+  while measurement is accepted ("Ton identifiant de mesure", with a button to copy
+  it): we pass the request on to AppsFlyer, through the procedure it provides for
   this (OpenGDPR).
 
 ## 12. What RideKit doesn't do
@@ -430,8 +432,8 @@ at Brevo, we delete on request, without waiting for the month. At RevenueCat, we
 with the Apple order number of your purchase (section 10). Audience measurement stops
 as soon as you refuse it in Réglages › Confidentialité › Mesure d'audience, and the
 sending of the advertising identifier as soon as you withdraw tracking in the
-iPhone's settings; what AppsFlyer already received, we ask it to delete
-(section 11).
+iPhone's settings; what AppsFlyer already received, we ask it to delete, with the
+measurement identifier shown in Réglages › Confidentialité (section 11).
 
 You can also complain to your country's authority:
 

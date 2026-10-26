@@ -191,8 +191,27 @@ provided by them as is:
 - **Fuel prices**: "Prix des carburants en France – Flux instantané", DGCCRF (French
   Ministry of the Economy), [data.economie.gouv.fr](https://data.economie.gouv.fr),
   Licence Ouverte 2.0.
+- **Cafés, restaurants and viewpoints near a route**: © OpenStreetMap contributors,
+  data under ODbL, via [Photon](https://photon.komoot.io) (komoot) and
+  [Overpass API](https://overpass-api.de).
 - **Motorcycle makes and models**: NHTSA vPIC (US Department of Transportation, public
   domain) and [Wikidata](https://www.wikidata.org) (CC0).
+- **Motorcycle brand logos**: [Simple Icons](https://simpleicons.org) (CC0 1.0). They
+  are trademarks of their owners, shown only to identify the make of your bike.
+- **Roadbook**:
+  - routes and texts from [DATAtourisme](https://www.datatourisme.fr) and its
+    producers, tourist offices and départements, credited on each road trip with
+    their update date, Licence Ouverte 2.0;
+  - Québec's tourist routes and circuits: Tourisme Québec, Gouvernement du Québec,
+    via [Données Québec](https://www.donneesquebec.ca/recherche/dataset/routes-et-circuits-touristiques-du-quebec),
+    CC BY 4.0 licence;
+  - the Département de l'Hérault's motorcycle routes, [data.gouv.fr](https://www.data.gouv.fr/datasets/circuits-moto-de-lherault),
+    Licence Ouverte 2.0;
+  - routes recomputed with [OSRM](https://project-osrm.org); passes, viewpoints and
+    place names © OpenStreetMap contributors (ODbL);
+  - towns: the French State's [API Géo](https://geo.api.gouv.fr), Licence Ouverte 2.0;
+  - photos by their authors, credited on each (DATAtourisme, or Wikimedia Commons
+    under a free licence).
 - **Illustration photos**: [Unsplash](https://unsplash.com), Unsplash licence.
 - **Fonts**: Barlow and Barlow Condensed, SIL Open Font License 1.1.
 

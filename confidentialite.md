@@ -364,8 +364,10 @@ agit pour le compte de SZ CORP.
   offrant une protection adéquate ; ces données peuvent aussi être traitées aux
   États-Unis, sous clauses contractuelles types.
 - **Tes droits.** Pour qu'AppsFlyer efface ce qu'il a déjà reçu de ton téléphone,
-  écris-nous : nous lui transmettons la demande, par la procédure qu'il prévoit pour
-  cela (OpenGDPR).
+  écris-nous avec ton identifiant de mesure, affiché dans Réglages ›
+  Confidentialité tant que la mesure est acceptée (« Ton identifiant de mesure »,
+  avec un bouton pour le copier) : nous transmettons la demande à AppsFlyer, par la
+  procédure qu'il prévoit pour cela (OpenGDPR).
 
 ## 12. Ce que RideKit ne fait pas
 
@@ -466,8 +468,8 @@ Chez RevenueCat, nous faisons effacer tes données sur demande, avec
 le numéro de commande Apple de ton achat (section 10). La mesure d'audience s'arrête
 dès que tu la refuses dans Réglages › Confidentialité › Mesure d'audience, et l'envoi
 de l'identifiant publicitaire dès que tu retires le suivi dans les réglages de
-l'iPhone ; ce qu'AppsFlyer a déjà reçu, nous lui en demandons l'effacement
-(section 11).
+l'iPhone ; ce qu'AppsFlyer a déjà reçu, nous lui en demandons l'effacement, avec
+l'identifiant de mesure affiché dans Réglages › Confidentialité (section 11).
 
 Tu peux aussi saisir l'autorité de ton pays :
 

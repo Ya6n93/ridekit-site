@@ -201,8 +201,28 @@ auteurs et sont fournies par eux en l'état :
 - **Prix des carburants** : « Prix des carburants en France – Flux instantané »,
   DGCCRF (ministère de l'Économie), [data.economie.gouv.fr](https://data.economie.gouv.fr),
   Licence Ouverte 2.0.
+- **Cafés, restos et points de vue près d'un parcours** : © les contributeurs
+  d'OpenStreetMap, données sous licence ODbL, via [Photon](https://photon.komoot.io)
+  (komoot) et [Overpass API](https://overpass-api.de).
 - **Marques et modèles de motos** : NHTSA vPIC (ministère des Transports des
   États-Unis, domaine public) et [Wikidata](https://www.wikidata.org) (CC0).
+- **Logos des marques de motos** : [Simple Icons](https://simpleicons.org) (CC0 1.0).
+  Ce sont des marques déposées de leurs propriétaires, montrées seulement pour
+  désigner la marque de ta moto.
+- **Roadbook** :
+  - itinéraires et textes de [DATAtourisme](https://www.datatourisme.fr) et de ses
+    producteurs, offices de tourisme et départements, cités sur chaque road trip
+    avec leur date de mise à jour, Licence Ouverte 2.0 ;
+  - routes et circuits touristiques du Québec : Tourisme Québec, Gouvernement du
+    Québec, via [Données Québec](https://www.donneesquebec.ca/recherche/dataset/routes-et-circuits-touristiques-du-quebec),
+    licence CC BY 4.0 ;
+  - circuits moto du Département de l'Hérault, [data.gouv.fr](https://www.data.gouv.fr/datasets/circuits-moto-de-lherault),
+    Licence Ouverte 2.0 ;
+  - tracés recalculés avec [OSRM](https://project-osrm.org) ; cols, points de vue et
+    noms de lieux © les contributeurs d'OpenStreetMap (ODbL) ;
+  - communes : [API Géo](https://geo.api.gouv.fr) de l'État, Licence Ouverte 2.0 ;
+  - photos de leurs auteurs, créditées sur chacune (DATAtourisme, ou Wikimedia
+    Commons sous licence libre).
 - **Photos d'illustration** : [Unsplash](https://unsplash.com), licence Unsplash.
 - **Polices** : Barlow et Barlow Condensed, SIL Open Font License 1.1.
 
