@@ -11,7 +11,8 @@
   virages et de relief ; autoroutes, péages, chemins de terre, ferries et
   tunnels évitables. Calcul par TomTom, itinéraire de secours par OSRM.
 - **Navigation** : guidage tour par tour, écran verrouillé compris, recalcul en
-  route, limitation de vitesse affichée et bip de survitesse.
+  route, limitation de vitesse affichée et alerte de survitesse (une phrase dite,
+  un bip seulement voix coupée).
 - **Itinéraires et traces** : de A à B ; import de traces GPX, KML, TCX ;
   export GPX des itinéraires et des balades.
 - **Sur la route** : cols et sites (Wikipédia), stations-service et prix du jour
@@ -30,12 +31,18 @@
   (Cloudflare, Brevo) ; sans réseau ou sans ce serveur, il est préparé sur le
   téléphone, envoyé d'un appui. RideKit prévient un proche, pas les secours.
 - **Données** : aucun compte ; balades, moto, contact d'urgence et réglages restent
-  sur le téléphone. Un seul serveur RideKit, pour l'alerte chute : il ne garde ni
-  position, ni texte, ni numéro en clair. Des coordonnées partent vers les services
-  qui calculent les routes, la météo et les cartes. Mesure d'audience et
+  sur le téléphone. Deux serveurs RideKit, chez Cloudflare : celui de l'alerte
+  chute, qui ne garde ni position, ni texte, ni numéro en clair, et celui des
+  sorties de groupe, qui garde ses données dans l'Union européenne, les positions en
+  mémoire seulement, et efface la sortie à sa fin. Des coordonnées partent vers les
+  services qui calculent les routes, la météo et les cartes. Mesure d'audience et
   attribution des pubs par AppsFlyer, seulement si le motard l'accepte, sans
   position ni pub ciblée ; sur iPhone, l'identifiant publicitaire (IDFA) seulement
   s'il autorise aussi le suivi quand iOS le lui demande, jamais celui d'Android.
+- **Sorties de groupe** : un leader invite avec un code ou un QR ; chacun voit les
+  autres sur la carte, reçoit la balade du leader, des messages rapides lus à voix
+  haute et l'alerte chute d'un membre. La position n'est partagée que si le motard
+  l'accepte, pour la sortie, puis effacée. Réservé aux 15 ans et plus.
 - **RideKit Pro** : abonnement sur iPhone par l'App Store (pas encore sur Google
   Play), 5,99 €/mois ou 49,99 €/an, 7 jours gratuits sur l'annuel seulement ;
   boucles illimitées et test de l'envoi automatique de l'alerte chute. Abonnement

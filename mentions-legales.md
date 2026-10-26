@@ -30,14 +30,16 @@ Yassine Latrach.
 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis<br>
 Téléphone : +1 877 448 4820 — [github.com](https://github.com)
 
-## Hébergement du serveur d'alerte de l'application
+## Hébergement des serveurs de l'application
+
+Le serveur d'alerte chute et le serveur des sorties de groupe sont hébergés par :
 
 **Cloudflare, Inc.** (service Workers)<br>
 101 Townsend Street, San Francisco, CA 94107, États-Unis<br>
 Téléphone : +1 888 993 5273 — [cloudflare.com](https://www.cloudflare.com)
 
-Ses SMS sont envoyés par **Brevo SAS** (anciennement Sendinblue), 9-17 rue Salneuve,
-75017 Paris, France — RCS Paris 498 019 298 — [brevo.com](https://www.brevo.com).
+Les SMS d'alerte sont envoyés par **Brevo SAS** (anciennement Sendinblue), 9-17 rue
+Salneuve, 75017 Paris, France — RCS Paris 498 019 298 — [brevo.com](https://www.brevo.com).
 
 ## Distribution de l'application
 

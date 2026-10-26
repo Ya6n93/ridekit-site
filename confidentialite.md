@@ -1,6 +1,6 @@
 ---
 title: "Politique de confidentialité — RideKit"
-description: "Ce que RideKit garde sur ton téléphone, ce qui en sort, vers qui et pourquoi. Pas de compte, pas de publicité dans l'app, la mesure des pubs seulement si tu l'acceptes, un seul serveur : celui de l'alerte chute."
+description: "Ce que RideKit garde sur ton téléphone, ce qui en sort, vers qui et pourquoi. Pas de compte, pas de publicité dans l'app, la mesure des pubs seulement si tu l'acceptes, deux serveurs : celui de l'alerte chute et celui des sorties de groupe."
 permalink: /confidentialite/
 alternate: /en/privacy/
 layout: legal
@@ -17,17 +17,19 @@ de ta moto. Cette page dit exactement quelles données existent, où elles reste
 lesquelles sortent de ton téléphone, vers qui, et pourquoi.
 
 > **En bref.** Pas de compte. Tes balades, ta moto, ton contact d'urgence et tes
-> réglages restent sur ton téléphone : nous n'en avons aucune copie. Une seule
-> exception, si tu actives la détection de chute : pour qu'une alerte parte même si
-> tu ne peux pas répondre, le serveur d'alerte de RideKit reçoit, à ce moment-là, ce
-> que dit le SMS, et le fait envoyer à ton contact. Il n'en garde ni ta position, ni
-> le texte, ni le numéro de ton contact (section 6). Pour calculer un itinéraire,
+> réglages restent sur ton téléphone : nous n'en avons aucune copie. Deux
+> exceptions, que tu choisis. Si tu actives la détection de chute : pour qu'une
+> alerte parte même si tu ne peux pas répondre, le serveur d'alerte de RideKit
+> reçoit, à ce moment-là, ce que dit le SMS, et le fait envoyer à ton contact. Il
+> n'en garde ni ta position, ni le texte, ni le numéro de ton contact (section 6). Si
+> tu rejoins une sortie de groupe, ta position est partagée avec ce groupe pendant la
+> sortie, puis effacée (section 7). Pour calculer un itinéraire,
 > afficher une carte ou la météo, l'app interroge directement des services
 > spécialisés en leur envoyant des coordonnées — jamais ton nom, ton pseudo ni un
 > identifiant publicitaire. Si tu l'acceptes, et seulement alors, AppsFlyer mesure
 > l'usage de l'app et quelle pub t'a amené, sans ta position ni pub ciblée ; sur
 > iPhone, l'identifiant publicitaire ne lui est envoyé que si tu l'autorises aussi
-> quand iOS te le demande (section 10). Aucune publicité dans l'app, aucune revente.
+> quand iOS te le demande (section 11). Aucune publicité dans l'app, aucune revente.
 
 ## 1. Qui est responsable
 
@@ -40,21 +42,26 @@ Contact pour toute question sur tes données : **contact@ridekit-app.com**.
 Pour la loi 25 du Québec, la personne responsable de la protection des
 renseignements personnels est Yassine Latrach, joignable à la même adresse.
 
-## 2. Pas de compte, un seul serveur
+## 2. Pas de compte, deux serveurs
 
 RideKit ne te demande ni inscription, ni adresse e-mail, ni numéro de téléphone.
 Nous ne voyons ni tes balades, ni ta moto, ni tes réglages.
 
-SZ CORP n'exploite qu'un serveur : le **serveur d'alerte**, qui envoie l'alerte chute
-à ton contact sans que personne touche au téléphone (section 6). Il ne reçoit
-quelque chose qu'à trois moments : quand tu enregistres ton contact, lors d'une
-alerte, et quand tu la testes. Il n'en garde que ce qu'il faut pour savoir à qui
-écrire et pour limiter les abus.
+SZ CORP n'exploite que deux serveurs :
+
+- le **serveur d'alerte**, qui envoie l'alerte chute à ton contact sans que personne
+  touche au téléphone (section 6). Il ne reçoit quelque chose qu'à trois moments :
+  quand tu enregistres ton contact, lors d'une alerte, et quand tu la testes. Il n'en
+  garde que ce qu'il faut pour savoir à qui écrire et pour limiter les abus ;
+- le **serveur des sorties de groupe**, qui relaie ta position et tes messages aux
+  membres de ta sortie, seulement si tu en rejoins une et l'acceptes (section 7). Il
+  ne garde les positions qu'en mémoire, jamais sur disque, et efface la sortie à sa
+  fin (le code et les jetons, 24 h après).
 
 Les autres données personnelles que nous pouvons recevoir sont celles que tu nous
 envoies toi-même, par exemple un e-mail au support ; celles de tes achats RideKit Pro,
-par RevenueCat (section 9) ; et, si tu l'acceptes, la mesure d'audience, par
-AppsFlyer (section 10).
+par RevenueCat (section 10) ; et, si tu l'acceptes, la mesure d'audience, par
+AppsFlyer (section 11).
 
 ## 3. Ce qui reste sur ton téléphone
 
@@ -80,7 +87,9 @@ sur ton appareil. Elles ne nous sont jamais transmises :
 
 S'y ajoute, si l'envoi automatique de l'alerte est en place, le jeton aléatoire que
 le serveur d'alerte a remis à ton téléphone, et que l'app lui présente à chaque envoi
-(section 6).
+(section 6). Si tu utilises les sorties de groupe, s'y ajoutent le jeton aléatoire
+que le serveur de groupe a remis à ton téléphone et, pendant une sortie, son code
+(section 7).
 
 Selon les réglages de ton téléphone, ces données peuvent être incluses dans sa
 sauvegarde (iCloud, Google), sous ton compte et selon les règles d'Apple ou de
@@ -89,10 +98,10 @@ Google.
 **Les effacer.** Dans Réglages › Données, « Effacer le carnet » supprime tes balades
 et le kilométrage cumulé ; « Réinitialiser l'app » efface ta moto, ton carnet, ton
 contact d'urgence et tes réglages, demande au serveur d'alerte d'oublier ton
-téléphone et ton contact, et arrête la mesure d'audience jusqu'à ce que tu y répondes
-à nouveau. Supprimer l'application efface tout ce qu'elle a
-enregistré sur le téléphone, y compris la photo de ta moto, les traces importées et
-les cartes hors ligne.
+téléphone et ton contact, te fait quitter la sortie de groupe en cours, et arrête la
+mesure d'audience jusqu'à ce que tu y répondes à nouveau. Supprimer l'application
+efface tout ce qu'elle a enregistré sur le téléphone, y compris la photo de ta moto,
+les traces importées et les cartes hors ligne.
 
 ## 4. Ce qui sort de ton téléphone, vers qui et pourquoi
 
@@ -100,9 +109,10 @@ Certaines fonctions ont besoin de données en ligne. L'app contacte alors
 directement le service concerné, depuis ton téléphone, au moment où tu utilises la
 fonction. Comme tout serveur web, chacun reçoit ton **adresse IP** et des
 informations techniques sur la requête. Aucune requête ne contient ton nom ni ta
-moto ; ton pseudo ne va qu'au serveur d'alerte, pour le SMS ; l'identifiant
+moto ; ton pseudo ne va qu'aux serveurs de RideKit (au serveur d'alerte, pour le
+SMS, et au serveur de groupe, pour les membres de ta sortie) ; l'identifiant
 publicitaire de l'iPhone ne va qu'à AppsFlyer, et seulement avec tes deux accords
-(section 10).
+(section 11).
 
 | Service | Pour quoi | Ce qui est envoyé |
 |---|---|---|
@@ -122,9 +132,11 @@ publicitaire de l'iPhone ne va qu'à AppsFlyer, et seulement avec tes deux accor
 | **Expo** (650 Industries, Inc., États-Unis) | Mises à jour de l'application | Des informations techniques : système, version de l'app, identifiant technique de l'installation créé par le service de mise à jour |
 | **Serveur d'alerte de RideKit**, hébergé par **Cloudflare** (Cloudflare, Inc., États-Unis) | Envoi automatique de l'alerte chute (section 6), si la détection est activée avec un contact | À l'enregistrement du contact : son numéro, rien d'autre. Lors d'une alerte ou d'un test : son numéro, ton pseudo, l'heure du choc et le fuseau horaire du téléphone, ta vitesse juste avant, ta position et sa précision, la batterie |
 | **Brevo** (Brevo SAS, anciennement Sendinblue, France), pour le serveur d'alerte | Envoi de l'alerte de RideKit à ton contact, en un seul SMS | Le numéro de ton contact et le texte du SMS : ton pseudo, l'heure, ta position et sa précision, la batterie et, s'il reste de la place, ta vitesse |
-| **RevenueCat** (RevenueCat, Inc., États-Unis) | Savoir si tu es abonné à RideKit Pro (section 9) | L'historique de tes achats RideKit Pro (produit, dates, prix et devise, pays de la boutique), un identifiant aléatoire créé pour ce téléphone, l'identifiant de l'app sur ce téléphone (IDFV), le modèle et le système du téléphone, la version de l'app, la langue. Jamais l'identifiant publicitaire, jamais ta position |
-| **AppsFlyer** (AppsFlyer Ltd., Israël), seulement si tu l'acceptes | Mesure d'audience : ce qui marche dans l'app, quelle campagne publicitaire t'a amené (section 10) | Des faits d'usage (écran ouvert, balade démarrée ou terminée, réglage changé, distances et durées par tranches) ; un identifiant propre à l'app sur ce téléphone (IDFV sur iOS, identifiant AppsFlyer) ; le modèle et le système du téléphone, la langue ; sur iPhone, l'identifiant publicitaire (IDFA), seulement si tu autorises aussi le suivi quand iOS te le demande. Jamais ta position |
-| **Régies publicitaires** des campagnes de RideKit, par AppsFlyer | Attribuer ton installation à la pub qui l'a amenée (section 10) | Sur iPhone seulement, si tu as accepté la mesure et autorisé le suivi : l'identifiant publicitaire (IDFA), qu'AppsFlyer leur transmet |
+| **Serveur des sorties de groupe de RideKit**, hébergé par **Cloudflare** (Cloudflare, Inc., États-Unis), données dans l'Union européenne | Sorties de groupe (section 7), seulement si tu en crées ou en rejoins une et acceptes d'y partager ta position | Ton pseudo ; pendant tes balades guidées, ta position (toutes les 5 s en roulant, 30 s à l'arrêt), ta vitesse, ta progression sur la balade du groupe, si tu t'en écartes, si ta batterie est faible (pas son niveau) ; les messages rapides que tu choisis ; une alerte de ta détection de chute (pas un test), avec ta position ; pour le leader, le tracé de la balade qu'il lance |
+| **Les membres de ta sortie de groupe**, par ce serveur | Te voir sur la carte, recevoir tes messages et ton alerte (section 7) | Ce que reçoit le serveur des sorties de groupe, sauf le jeton de ton téléphone |
+| **RevenueCat** (RevenueCat, Inc., États-Unis) | Savoir si tu es abonné à RideKit Pro (section 10) | L'historique de tes achats RideKit Pro (produit, dates, prix et devise, pays de la boutique), un identifiant aléatoire créé pour ce téléphone, l'identifiant de l'app sur ce téléphone (IDFV), le modèle et le système du téléphone, la version de l'app, la langue. Jamais l'identifiant publicitaire, jamais ta position |
+| **AppsFlyer** (AppsFlyer Ltd., Israël), seulement si tu l'acceptes | Mesure d'audience : ce qui marche dans l'app, quelle campagne publicitaire t'a amené (section 11) | Des faits d'usage (écran ouvert, balade démarrée ou terminée, réglage changé, distances et durées par tranches) ; un identifiant propre à l'app sur ce téléphone (IDFV sur iOS, identifiant AppsFlyer) ; le modèle et le système du téléphone, la langue ; sur iPhone, l'identifiant publicitaire (IDFA), seulement si tu autorises aussi le suivi quand iOS te le demande. Jamais ta position |
+| **Régies publicitaires** des campagnes de RideKit, par AppsFlyer | Attribuer ton installation à la pub qui l'a amenée (section 11) | Sur iPhone seulement, si tu as accepté la mesure et autorisé le suivi : l'identifiant publicitaire (IDFA), qu'AppsFlyer leur transmet |
 {: .services}
 
 Une position précise peut, recoupée avec d'autres, révéler des lieux que tu
@@ -132,10 +144,10 @@ fréquentes : le départ d'une boucle est souvent ton domicile. C'est pourquoi 
 n'est envoyée qu'au moment où une fonction en a besoin, et seulement au service qui
 la traite. Sans réseau, rien n'est envoyé.
 
-Quelques actions sortent de l'app, à ta demande : importer une trace depuis un lien
-(le site de ce lien reçoit la requête), partager une trace exportée (vers l'app que
-tu choisis), ouvrir une page Wikipédia (dans ton navigateur), lancer le trajet vers
-une station (dans l'app de cartes du téléphone).
+Quelques actions sortent de l'app, à ta demande : partager une trace exportée ou le
+code d'une sortie de groupe (vers l'app que tu choisis), ouvrir une page Wikipédia
+(dans ton navigateur), lancer le trajet vers une station (dans l'app de cartes du
+téléphone).
 
 Chacun de ces services applique sa propre politique de confidentialité, par
 exemple : [TomTom](https://www.tomtom.com/privacy/),
@@ -152,8 +164,9 @@ bout de 7 jours), [Wikimedia](https://foundation.wikimedia.org/wiki/Policy:Priva
 RideKit te demande l'accès à ta position **pendant l'utilisation de l'app**. Elle
 sert à te placer sur la carte, à faire partir tes boucles de là où tu es, à te guider, à mesurer ta
 vitesse et ton angle dans les virages, à enregistrer ta balade dans le carnet, à
-afficher la météo et les stations autour de toi, à annoncer les zones de danger et,
-si tu l'actives, à la détection de chute.
+afficher la météo et les stations autour de toi, à annoncer les zones de danger, si
+tu l'actives, à la détection de chute et, si tu rejoins une sortie de groupe, à te
+montrer aux autres membres (section 7).
 
 Pendant une balade guidée, le guidage continue écran verrouillé ou avec une autre
 app à l'écran, comme dans une app de navigation : l'iPhone l'indique par le
@@ -187,7 +200,9 @@ La détection de chute est **désactivée par défaut** : c'est toi qui l'activ
   d'alerte et Brevo. Si le serveur ne peut pas être joint ou refuse, le message s'ouvre dans l'app SMS du téléphone et ne part
   que si quelqu'un appuie sur « Envoyer » ; il passe alors par ton opérateur, comme
   tout SMS. RideKit prévient ton proche : il n'appelle pas les secours. Si ton
-  contact ouvre le lien, Google reçoit les coordonnées, selon sa propre politique.
+  contact ouvre le lien, Google reçoit les coordonnées, selon sa propre politique. Si
+  tu es dans une sortie de groupe, l'alerte (pas un test) est aussi relayée aux
+  membres, avec ta position (section 7).
 - **L'envoi automatique.** Il va avec la détection de chute : dès qu'elle est activée
   avec un contact, l'alerte part toute seule. Pour l'arrêter, coupe la détection ou
   retire ton contact.
@@ -230,7 +245,40 @@ La détection de chute est **désactivée par défaut** : c'est toi qui l'activ
   retire-le ou coupe la détection ; il peut aussi nous écrire à
   **contact@ridekit-app.com**.
 
-## 7. Photos, contacts, fichiers
+## 7. Sorties de groupe
+
+Une sortie de groupe se crée (« Inviter ») ou se rejoint avec un code ou un QR
+(« Rejoindre »). Rien n'est partagé tant que tu n'en crées ou n'en rejoins pas une et
+que tu n'acceptes pas, pour cette sortie, que ta position soit partagée (« Ta
+position est partagée avec le groupe pendant la sortie, puis effacée »).
+
+- **Ce qui est envoyé.** Au serveur des sorties de groupe de RideKit : ton pseudo et,
+  pendant tes balades guidées, ta position (toutes les 5 s en roulant, 30 s à
+  l'arrêt), ta vitesse, ta progression sur la balade du groupe, si tu t'en écartes, si
+  ta batterie est faible (pas son niveau), les messages rapides que tu choisis
+  (Essence, Pause, Problème, Ralentis, Tout va bien, Danger) et, si ta détection de
+  chute déclenche une alerte (pas un test), cette alerte avec ta position. Le leader y
+  envoie aussi le tracé de la balade qu'il lance.
+- **Qui le voit.** Les seuls membres de ce groupe, que le leader voit arriver et peut
+  retirer. Pas de compte, ni numéro, ni e-mail : un jeton aléatoire pour ton
+  téléphone et un code de groupe tiré au hasard.
+- **Ce qui est gardé, et combien de temps.** Le serveur ne garde les positions qu'en
+  mémoire, jamais sur disque. À la fin de la sortie (par le leader, après 3 h sans
+  activité, ou 16 h au plus), les pseudos, la balade et les alertes sont effacés, et
+  le reste (le code, les jetons des téléphones) 24 h après. Contre les abus, il compte
+  aussi les demandes de chaque téléphone et de chaque adresse IP (par une empreinte) :
+  ces compteurs s'effacent le lendemain. Ses journaux ne contiennent ni position, ni
+  pseudo, ni code, et sont gardés 3 jours.
+- **Base légale.** Ton consentement (article 6.1.a du RGPD), que tu retires en
+  quittant le groupe : le partage s'arrête aussitôt.
+- **Âge.** Réservé aux 15 ans et plus (article 45 de la loi Informatique et
+  Libertés).
+- **Le prestataire.** Le serveur est hébergé par Cloudflare, qui agit pour le compte
+  de SZ CORP ; ses données sont stockées et traitées dans l'Union européenne.
+  Cloudflare étant une société américaine, un éventuel accès depuis les États-Unis
+  repose sur le Data Privacy Framework et les clauses contractuelles types.
+
+## 8. Photos, contacts, fichiers
 
 - **Photos.** Pour la photo de ta moto, RideKit ouvre le sélecteur de photos du
   système, ou l'appareil photo si tu choisis de la prendre : seule cette photo est
@@ -238,20 +286,22 @@ La détection de chute est **désactivée par défaut** : c'est toi qui l'activ
   ouvert que quand tu touches « Appareil photo », après ton autorisation.
 - **Contacts.** Voir ci-dessus : seul le contact choisi est lu. Sur Android, le
   système peut te demander l'accès aux contacts pour ouvrir ce sélecteur.
-- **Fichiers.** Les traces que tu importes depuis Fichiers (iCloud Drive compris)
-  sont copiées dans l'app. Celles que tu exportes partent vers l'app que tu
+- **Fichiers.** Les traces que tu importes depuis Fichiers (iCloud Drive compris), ou
+  que tu ouvres avec RideKit depuis une autre app (« Ouvrir avec RideKit »), sont
+  copiées dans l'app. Celles que tu exportes partent vers l'app que tu
   choisis dans le menu de partage.
 - RideKit n'utilise pas le micro.
 
-## 8. Notifications
+## 9. Notifications
 
 Toutes les notifications de RideKit sont **locales** : rappels d'entretien (si tu
-les actives), alerte chute, et sur Android la notification du guidage en cours.
-Elles sont programmées par ton téléphone : il n'y a aucun serveur d'envoi, aucun
-jeton de notification transmis, et nous ne pouvons pas savoir si tu les as reçues
-ou ouvertes. Elles se coupent dans les réglages de l'app ou du téléphone.
+les actives), alerte chute, alerte d'un membre de ta sortie de groupe quand l'app
+tourne en arrière-plan, et sur Android la notification du guidage en cours. Elles
+sont programmées par ton téléphone : il n'y a aucun service d'envoi de notifications
+(push), aucun jeton de notification transmis, et nous ne pouvons pas savoir si tu les
+as reçues ou ouvertes. Elles se coupent dans les réglages de l'app ou du téléphone.
 
-## 9. Achats (RevenueCat)
+## 10. Achats (RevenueCat)
 
 Les achats dans l'app (RideKit Pro) sont traités par Apple (App Store) ; RideKit Pro
 n'est pas encore vendu sur Google Play. SZ CORP ne voit ni ton moyen de paiement, ni
@@ -267,13 +317,13 @@ Pour savoir si tu es abonné, l'app passe par **RevenueCat** (RevenueCat, Inc.,
   adresse IP.
 - **Ce qu'il ne reçoit jamais.** L'identifiant publicitaire (IDFA), ta position.
 - **Base légale.** L'exécution de ton abonnement (article 6.1.b du RGPD).
-- **Combien de temps.** RevenueCat garde ces données tant que dure notre contrat avec
-  lui. Sur demande, avec le numéro de commande Apple de ton achat, nous les faisons
-  effacer chez RevenueCat.
-- **Où.** Aux États-Unis : ce transfert repose sur le Data Privacy Framework et les
-  clauses contractuelles types de la Commission européenne.
+- **Combien de temps.** Ces données sont gardées tant que RideKit fait appel à
+  RevenueCat. Sur demande, avec le numéro de commande Apple de ton achat, nous les
+  faisons effacer.
+- **Où.** Aux États-Unis : ce transfert repose sur les clauses contractuelles types
+  de la Commission européenne.
 
-## 10. Mesure d'audience et publicité (AppsFlyer)
+## 11. Mesure d'audience et publicité (AppsFlyer)
 
 Seulement si tu l'acceptes, RideKit mesure ce qui marche dans l'app et quelle
 campagne publicitaire t'a amené, avec **AppsFlyer** (AppsFlyer Ltd., Israël), qui
@@ -317,10 +367,10 @@ agit pour le compte de SZ CORP.
   écris-nous : nous lui transmettons la demande, par la procédure qu'il prévoit pour
   cela (OpenGDPR).
 
-## 11. Ce que RideKit ne fait pas
+## 12. Ce que RideKit ne fait pas
 
 - Aucun compte, aucune publicité dans l'app, aucune pub ciblée.
-- Aucune mesure d'audience sans ton accord (section 10). L'identifiant publicitaire
+- Aucune mesure d'audience sans ton accord (section 11). L'identifiant publicitaire
   de l'iPhone n'est lu qu'avec tes deux accords, dans l'app puis quand iOS te le
   demande ; celui d'Android, jamais.
 - Aucun outil tiers de rapport de plantage.
@@ -332,16 +382,17 @@ globales (téléchargements, plantages) si tu as accepté, dans les réglages de
 téléphone, de partager des données d'analyse avec les développeurs. Elles ne
 permettent pas de t'identifier.
 
-## 12. Pourquoi c'est permis (bases légales)
+## 13. Pourquoi c'est permis (bases légales)
 
 - **Le service que tu demandes** (article 6.1.b du RGPD) : envoyer des coordonnées
   pour calculer un itinéraire, afficher une carte, la météo, des lieux ou des prix ;
-  faire marcher ton abonnement RideKit Pro, par RevenueCat (section 9).
+  faire marcher ton abonnement RideKit Pro, par RevenueCat (section 10).
 - **Ton consentement** (article 6.1.a) : la position, les notifications, la
   détection de chute et son envoi automatique, la photo et le contact que tu
-  choisis ; la mesure d'audience par AppsFlyer et, sur iPhone, l'identifiant
-  publicitaire (section 10), qui demandent aussi ton accord selon l'article 82 de la
-  loi Informatique et Libertés. Tu le retires à tout moment, dans l'app ou dans les
+  choisis ; le partage de ta position avec une sortie de groupe (section 7) ; la
+  mesure d'audience par AppsFlyer et, sur iPhone, l'identifiant publicitaire
+  (section 11), qui demandent aussi ton accord selon l'article 82 de la loi
+  Informatique et Libertés. Tu le retires à tout moment, dans l'app ou dans les
   réglages du téléphone.
 - **Tes intérêts vitaux** (articles 6.1.d et 9.2.c) : lors d'une alerte sans réponse,
   prévenir ton contact quand tu ne peux peut-être plus le faire toi-même, une alerte
@@ -351,7 +402,7 @@ permettent pas de t'identifier.
   contact, lui faire parvenir l'alerte que tu as voulue, ce dont tu l'informes
   toi-même, par le SMS que l'app te prépare.
 
-## 13. Combien de temps
+## 14. Combien de temps
 
 - **Sur ton téléphone** : jusqu'à ce que tu les effaces ou supprimes l'app. Les
   cartes hors ligne partent d'elles-mêmes au bout de 14 jours ; la balade en cours,
@@ -360,35 +411,41 @@ permettent pas de t'identifier.
   puis au plus trois ans après notre dernier échange ; et, si l'envoi automatique est
   en place, ce que garde le serveur d'alerte (section 6) : le jeton et l'empreinte du
   numéro de ton contact tant qu'il est enregistré (400 jours au plus sans nouvelles),
-  les compteurs jusqu'au lendemain ; chez Brevo, pour notre compte, le journal de
-  chaque SMS envoyé (numéro, texte, statut), un mois ; chez RevenueCat, pour notre
-  compte, l'historique de tes achats et l'identifiant de ton téléphone, tant que dure
-  notre contrat avec lui (section 9) ; chez AppsFlyer, pour notre compte et si tu as
-  accepté la mesure, ce qu'il a reçu, 24 mois au plus (section 10).
+  les compteurs jusqu'au lendemain ; pour une sortie de groupe, ce que garde son
+  serveur (section 7) : les positions en mémoire seulement, les pseudos, la balade et
+  les alertes jusqu'à la fin de la sortie, le code et les jetons 24 h de plus, les
+  journaux 3 jours ; chez Brevo, pour notre compte, le journal de chaque SMS envoyé
+  (numéro, texte, statut), un mois ; chez RevenueCat, pour notre compte, l'historique
+  de tes achats et l'identifiant de ton téléphone, tant que RideKit fait appel à lui
+  (section 10) ; chez AppsFlyer, pour notre compte et si tu as accepté la mesure, ce
+  qu'il a reçu, 24 mois au plus (section 11).
 - **Chez les services tiers** : selon leur propre politique (voir la section 4).
 
-## 14. Où vont les données
+## 15. Où vont les données
 
-L'IGN (France), TomTom (Pays-Bas), FOSSGIS (Allemagne), komoot (Allemagne), OpenFreeMap (Hongrie)
-et Brevo (France, SMS du serveur d'alerte) sont dans l'Union européenne ; Open-Meteo
-est en Suisse et AppsFlyer en Israël, deux pays que l'Union européenne reconnaît
-comme offrant une protection adéquate. Wikipédia, Expo, Unsplash, RainViewer, Open
-Topo Data, Cloudflare (serveur d'alerte), RevenueCat (abonnements), AppsFlyer pour
-une partie de ses traitements, les régies publicitaires à qui il transmet
-l'identifiant publicitaire, les opérateurs par lesquels Brevo achemine certains SMS
-(vers un mobile canadien, Twilio) et les réseaux de diffusion qu'utilisent certains
-de ces services peuvent traiter des données hors de l'Union européenne, notamment aux
-États-Unis, où les autorités peuvent y avoir accès selon leur droit.
+L'IGN (France), TomTom (Pays-Bas), FOSSGIS (Allemagne), komoot (Allemagne),
+OpenFreeMap (Hongrie) et Brevo (France, SMS du serveur d'alerte) sont dans l'Union
+européenne, comme les données du serveur des sorties de groupe ; Open-Meteo est en
+Suisse et AppsFlyer en Israël, deux pays que l'Union européenne reconnaît comme
+offrant une protection adéquate. Wikipédia, Expo, Unsplash, RainViewer, Open Topo
+Data, Cloudflare (le serveur d'alerte, et un éventuel accès au serveur des sorties de
+groupe, Cloudflare étant une société américaine), RevenueCat (abonnements),
+AppsFlyer pour une partie de ses traitements, les régies publicitaires à qui il
+transmet l'identifiant publicitaire, les opérateurs partenaires par lesquels Brevo
+achemine les SMS, dont certains américains, et les réseaux de diffusion
+qu'utilisent certains de ces services peuvent traiter des données hors de l'Union
+européenne, notamment aux États-Unis, où les autorités peuvent y avoir accès selon
+leur droit.
 
 Ces transferts reposent, selon le cas, sur une décision d'adéquation (par exemple
 le Data Privacy Framework pour les entreprises américaines certifiées, comme
-Cloudflare et RevenueCat), sur les clauses contractuelles types de la Commission
-européenne (par exemple pour AppsFlyer et RevenueCat aux États-Unis), ou sur leur
-nécessité pour te fournir le service que tu demandes (article 49 du RGPD). Pour le
-Québec, la Suisse et le reste du Canada : tes renseignements peuvent ainsi être
-communiqués hors de ta province ou de ton pays, dans les pays cités ici.
+Cloudflare), sur les clauses contractuelles types de la Commission européenne (par
+exemple pour AppsFlyer et RevenueCat aux États-Unis), ou sur leur nécessité pour te
+fournir le service que tu demandes (article 49 du RGPD). Pour le Québec, la Suisse et
+le reste du Canada : tes renseignements peuvent ainsi être communiqués hors de ta
+province ou de ton pays, dans les pays cités ici.
 
-## 15. Tes droits
+## 16. Tes droits
 
 Où que tu habites, tu peux demander l'accès à tes données, leur rectification, leur
 effacement, la limitation ou l'opposition à leur traitement, leur portabilité, et
@@ -402,13 +459,15 @@ services de cartes, d'itinéraires, de recherche, de météo ou de prix, ni aucu
 de relier leurs requêtes à toi ; pour ces données, adresse-toi directement à eux. Le
 serveur d'alerte ne connaît ni ton nom ni le numéro de ton contact en clair : pour
 qu'il oublie ton contact, coupe la détection, retire ton contact ou réinitialise
-l'app. Le journal d'un SMS d'alerte chez Brevo, nous l'effaçons sur demande, sans
-attendre le mois. Chez RevenueCat, nous faisons effacer tes données sur demande, avec
-le numéro de commande Apple de ton achat (section 9). La mesure d'audience s'arrête
+l'app. Pour arrêter le partage de ta position avec une sortie de groupe, quitte le
+groupe : le serveur efface la sortie quand elle se termine (section 7). Le journal
+d'un SMS d'alerte chez Brevo, nous l'effaçons sur demande, sans attendre le mois.
+Chez RevenueCat, nous faisons effacer tes données sur demande, avec
+le numéro de commande Apple de ton achat (section 10). La mesure d'audience s'arrête
 dès que tu la refuses dans Réglages › Confidentialité › Mesure d'audience, et l'envoi
 de l'identifiant publicitaire dès que tu retires le suivi dans les réglages de
 l'iPhone ; ce qu'AppsFlyer a déjà reçu, nous lui en demandons l'effacement
-(section 10).
+(section 11).
 
 Tu peux aussi saisir l'autorité de ton pays :
 
@@ -423,39 +482,43 @@ Tu peux aussi saisir l'autorité de ton pays :
 {: .authorities}
 
 Pour la loi 25 : la position n'est utilisée que si tu l'autorises (section 5), la
-détection de chute est désactivée tant que tu ne l'actives pas (section 6), et la
-mesure d'audience ne démarre que si tu l'acceptes (section 10).
+détection de chute est désactivée tant que tu ne l'actives pas (section 6), ta
+position n'est partagée avec une sortie de groupe que si tu l'acceptes, pour cette
+sortie (section 7), et la mesure d'audience ne démarre que si tu l'acceptes
+(section 11).
 
-## 16. Enfants
+## 17. Enfants
 
 RideKit s'adresse aux conducteurs de deux-roues motorisés. Elle n'est pas destinée
 aux enfants de moins de 13 ans et ne collecte sciemment aucune donnée les
-concernant.
+concernant. Les sorties de groupe sont réservées aux 15 ans et plus (section 7).
 
-## 17. Sécurité
+## 18. Sécurité
 
 Tes données sont dans l'espace privé de l'application, protégé par le chiffrement
 et le code de verrouillage de ton téléphone : choisis-en un. Les échanges avec les
 services de la section 4 sont chiffrés (HTTPS). Le serveur d'alerte n'envoie de SMS que
 pour un téléphone auquel il a remis un jeton signé, seulement au contact enregistré
 pour ce téléphone, seulement vers des mobiles français pour l'instant (section 6), et
-en nombre limité chaque jour.
+en nombre limité chaque jour. On ne rejoint une sortie de groupe qu'avec son code,
+tiré au hasard par le serveur parmi environ 729 millions ; les essais de codes sont
+limités, et le leader voit chaque arrivée et peut retirer quelqu'un.
 
-## 18. Ce site
+## 19. Ce site
 
 ridekit-app.com ne dépose aucun cookie, ne contient aucun outil de mesure d'audience
 et ne charge aucune ressource d'un tiers. Il est hébergé par GitHub (voir les
 [mentions légales](/mentions-legales/)), qui peut enregistrer l'adresse IP des
 visiteurs pour la sécurité de son service. L'application, elle, ne mesure son
-audience que si tu l'acceptes (section 10).
+audience que si tu l'acceptes (section 11).
 
-## 19. Modifications
+## 20. Modifications
 
 Toute évolution de cette politique est publiée sur cette page, avec une nouvelle
 date. Un changement qui ferait sortir de nouvelles données de ton téléphone serait
 annoncé dans l'application avant d'entrer en vigueur.
 
-## 20. Contact
+## 21. Contact
 
 **contact@ridekit-app.com** — SZ CORP (Yassine Latrach EI), 200 rue de la Croix
 Nivert, 75015 Paris, France.

@@ -1,6 +1,6 @@
 ---
 title: "Terms of Use — RideKit"
-description: "RideKit's terms of use: on the road, you are the one riding; what routes, speed limits, danger zones and crash detection are worth; the subscription; data sources."
+description: "RideKit's terms of use: on the road, you are the one riding; what routes, speed limits, danger zones, crash detection and group rides are worth; the subscription; data sources."
 permalink: /en/terms/
 alternate: /conditions/
 layout: legal
@@ -23,9 +23,9 @@ RideKit is a motorcycle riding app. It generates loops from the length and road 
 you choose, draws routes from one place to another, guides you, imports and exports
 GPX tracks, shows places along the way (passes, sights, fuel stations, cafés), the
 weather and rain radar, speed limits and, in France, danger zones. It keeps your ride
-journal and your bike's records, and offers crash detection.
+journal and your bike's records, and offers crash detection and group rides.
 
-These features depend on GPS, the network and third-party services (section 9). They
+These features depend on GPS, the network and third-party services (section 10). They
 may change, be added or be removed.
 
 ## 2. On the road, you are the one riding
@@ -47,7 +47,7 @@ may change, be added or be removed.
 
 Everything RideKit shows is **for guidance only**: routes, distances, durations, speed
 limits, danger zones, weather, radar, fuel prices, places and opening hours,
-elevations, maps. This data comes from third-party sources (section 9) and may be
+elevations, maps. This data comes from third-party sources (section 10) and may be
 incomplete, inaccurate or outdated: a limit that changed, a wrong forecast, a radar
 showing the last hours' images with a delay, a price a station didn't update.
 
@@ -104,7 +104,18 @@ emergency services nor a certified alert device. In an emergency, call **112**
   app; the test sent by RideKit's server ("Tester l'envoi automatique") is a RideKit
   Pro feature.
 
-## 6. RideKit Pro (subscription)
+## 6. Group rides
+
+- The other members' locations, messages and alerts are **indicative**: they depend
+  on their network and GPS, and may be late or missing. "Plus de nouvelles" (no news)
+  often means "no network".
+- An alert relayed to the group **does not alert emergency services**: in an
+  emergency, call **112** (**911** in Canada).
+- **Do not handle your phone while riding**: quick messages are picked when stopped.
+- For riders aged 15 and over only. What the ride shares, with whom and for how long,
+  is described in the [privacy policy](/en/privacy/).
+
+## 7. RideKit Pro (subscription)
 
 RideKit is free, with a limited number of loops generated per month. RideKit Pro
 lifts this limit and unlocks the test of the crash alert's automatic sending ("Tester
@@ -136,13 +147,13 @@ features, described in the app at the time of purchase.
 - **Restore purchases**: on a new phone, with the same App Store account ("Restaurer
   les achats", on the RideKit Pro screen).
 
-## 7. Acceptable use
+## 8. Acceptable use
 
 You agree to use RideKit for your personal use and lawfully; not to decompile or modify
 it, except where the law allows; and not to use it to bulk-extract the data of the
 third-party services it queries or to get around their limits.
 
-## 8. Intellectual property
+## 9. Intellectual property
 
 The app, the RideKit name, its logo, design and texts belong to SZ CORP. You receive a
 personal, non-exclusive, non-transferable and revocable licence to use RideKit on
@@ -154,7 +165,7 @@ What you create or import (tracks, photos, notes) remains yours.
 TomTom, App Store, Google Play and the other names mentioned are trademarks of their
 owners. RideKit is not affiliated with any of them.
 
-## 9. Data sources and licences {#sources}
+## 10. Data sources and licences {#sources}
 
 RideKit relies on these sources, whose data remains their authors' property and is
 provided by them as is:
@@ -185,21 +196,23 @@ provided by them as is:
 - **Illustration photos**: [Unsplash](https://unsplash.com), Unsplash licence.
 - **Fonts**: Barlow and Barlow Condensed, SIL Open Font License 1.1.
 
-## 10. Availability
+## 11. Availability
 
 RideKit depends on third-party services that may be slow, limited, changed or
-interrupted, and that we may replace; its alert server may be unavailable too, and
-the app then prepares the text on the phone. We do not guarantee that the app or
+interrupted, and that we may replace; its own servers may be unavailable too: without
+the alert server, the app prepares the text on the phone; without the group ride
+server, the group no longer sees each other. We do not guarantee that the app or
 each of its features is available at all times and everywhere, especially without a
 network: download a ride's map before heading somewhere without coverage.
 
-## 11. Liability
+## 12. Liability
 
 To the extent permitted by applicable law, SZ CORP is not liable for damage resulting
 from riding against the Highway Code or carelessly, from inaccurate or late data from
 a third-party source, from the unavailability of the app or a third-party service,
-from an undetected crash or an alert message not sent or not received, nor for
-indirect damage.
+from an undetected crash or an alert message not sent or not received, from a group
+ride member's location, message or alert that is late or missing, nor for indirect
+damage.
 
 Nothing in these terms excludes or limits SZ CORP's liability for gross negligence,
 wilful misconduct or personal injury caused by its fault, nor the guarantees the law
@@ -207,17 +220,17 @@ gives you as a consumer — in France, notably the legal guarantee of conformity
 digital content and services (articles L224-25-12 et seq. of the Code de la
 consommation).
 
-## 12. Personal data
+## 13. Personal data
 
 What RideKit does with your data is described in the [privacy policy](/en/privacy/).
 
-## 13. Changes
+## 14. Changes
 
 These terms may change. The version in force is the one published on this page, at the
 date shown at the top. A significant change is announced in the app before it applies;
 if you disagree, you can stop using RideKit and cancel your subscription.
 
-## 14. Governing law and disputes
+## 15. Governing law and disputes
 
 These terms are governed by French law. If you are a consumer living in another
 country (Belgium, Luxembourg, Switzerland, Canada including Québec…), you keep the
@@ -228,7 +241,7 @@ In case of disagreement, write to us first: we look for an amicable solution. Yo
 also use a consumer mediator free of charge:
 <span class="todo">[TO COMPLETE: name and contact details of the consumer mediator]</span>.
 
-## 15. Contact
+## 16. Contact
 
 **contact@ridekit-app.com** — SZ CORP (Yassine Latrach EI), 200 rue de la Croix
 Nivert, 75015 Paris, France.
