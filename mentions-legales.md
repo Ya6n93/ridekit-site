@@ -8,7 +8,7 @@ lang: fr
 
 # Mentions légales
 
-*Dernière mise à jour : 25 octobre 2026*
+*Dernière mise à jour : 26 octobre 2026*
 
 ## Éditeur
 
@@ -47,10 +47,19 @@ Android, par Google Play (Google Ireland Limited, Gordon House, Barrow Street,
 Dublin 4, Irlande). Ses mises à jour sont diffusées par Expo (650 Industries, Inc.,
 Palo Alto, Californie, États-Unis).
 
+## Mesure d'audience et abonnements de l'application
+
+Mesure d'audience, seulement avec ton accord : **AppsFlyer Ltd.**, Herzliya, Israël —
+[appsflyer.com](https://www.appsflyer.com).
+
+Suivi des abonnements RideKit Pro : **RevenueCat, Inc.**, 1032 E Brandon Blvd #3003,
+Brandon, FL 33511, États-Unis — [revenuecat.com](https://www.revenuecat.com).
+
 ## Données personnelles et cookies
 
 Le site ne dépose aucun cookie, ne contient aucun outil de mesure d'audience et ne
-charge aucune ressource d'un tiers. Ce que fait l'application est décrit dans la
+charge aucune ressource d'un tiers. Ce que fait l'application, dont sa mesure
+d'audience, seulement si tu l'acceptes, est décrit dans la
 [politique de confidentialité](/confidentialite/).
 
 ## Propriété intellectuelle

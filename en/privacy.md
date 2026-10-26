@@ -1,6 +1,6 @@
 ---
 title: "Privacy Policy — RideKit"
-description: "What RideKit keeps on your phone, what leaves it, where to and why. No account, no ads, one server: the crash alert's."
+description: "What RideKit keeps on your phone, what leaves it, where to and why. No account, no ads in the app, ad measurement only if you accept it, one server: the crash alert's."
 permalink: /en/privacy/
 alternate: /confidentialite/
 layout: legal
@@ -9,7 +9,7 @@ lang: en
 
 # Privacy Policy
 
-*Last updated: 25 October 2026*
+*Last updated: 26 October 2026*
 
 RideKit is a motorcycle riding app: it draws loops and routes, guides you, shows the
 weather, and keeps your ride journal and your bike's records. This page says exactly
@@ -23,8 +23,10 @@ French version ([Politique de confidentialité](/confidentialite/)) prevails.
 > contact. It keeps neither your location, nor the text, nor your contact's number
 > (section 6). To compute a route or show a map or the weather, the app queries
 > specialised services directly, sending them coordinates — never your name, your
-> nickname or an advertising identifier. No ads, no analytics, no tracking, no data
-> sales.
+> nickname or an advertising identifier. If you accept it, and only then, AppsFlyer
+> measures how the app is used and which ad brought you, without your location or
+> targeted ads; on iPhone, the advertising identifier is only sent to it if you also
+> allow it when iOS asks you (section 10). No ads in the app, no data sales.
 
 ## 1. Who is responsible
 
@@ -46,7 +48,8 @@ three moments only: when you register your contact, on an alert, and when you te
 it. It keeps only what it needs to know whom to text and to prevent abuse.
 
 The other personal data we may receive is what you send us yourself, such as a
-support e-mail.
+support e-mail; that of your RideKit Pro purchases, through RevenueCat (section 9);
+and, if you accept it, audience measurement, through AppsFlyer (section 10).
 
 ## 3. What stays on your phone
 
@@ -74,16 +77,19 @@ Google), under your account and Apple's or Google's rules.
 
 **Deleting it.** In Réglages › Données, "Effacer le carnet" deletes your rides and the
 total distance; "Réinitialiser l'app" erases your bike, journal, emergency contact and
-settings, and asks the alert server to forget your phone and your contact. Deleting the app erases everything it stored on the phone, including your
-bike's photo, imported tracks and offline maps.
+settings, asks the alert server to forget your phone and your contact, and stops
+audience measurement until you answer its question again. Deleting the app erases
+everything it stored on the phone, including your bike's photo, imported tracks and
+offline maps.
 
 ## 4. What leaves your phone, where to, and why
 
 Some features need online data. The app then contacts the service directly, from your
 phone, when you use the feature. Like any web server, each one receives your **IP
-address** and technical details of the request. No request contains your name, bike
-or an advertising identifier; your nickname only goes to the alert server, for the
-text.
+address** and technical details of the request. No request contains your name or
+bike; your nickname only goes to the alert server, for the text; the iPhone's
+advertising identifier only goes to AppsFlyer, and only with both your agreements
+(section 10).
 
 | Service | What for | What is sent |
 |---|---|---|
@@ -103,6 +109,9 @@ text.
 | **Expo** (650 Industries, Inc., USA) | App updates | Technical details: system, app version, a technical installation identifier created by the update service |
 | **RideKit's alert server**, hosted by **Cloudflare** (Cloudflare, Inc., USA) | Automatic sending of the crash alert (section 6), if detection is on with a contact | When the contact is registered: their number, nothing else. On an alert or a test: their number, your nickname, the time of the impact and the phone's time zone, your speed just before, your location and how precise it is, the battery |
 | **Brevo** (Brevo SAS, formerly Sendinblue, France), for the alert server | Sending RideKit's alert to your contact, as a single text | Your contact's number and the text: your nickname, the time, your location and how precise it is, the battery and, if there is room, your speed |
+| **RevenueCat** (RevenueCat, Inc., USA) | Knowing whether you subscribe to RideKit Pro (section 9) | The history of your RideKit Pro purchases (product, dates, price and currency, store country), a random identifier created for this phone, the app's identifier on this phone (IDFV), the phone's model and system, the app version, the language. Never the advertising identifier, never your location |
+| **AppsFlyer** (AppsFlyer Ltd., Israel), only if you accept it | Audience measurement: what works in the app, which ad campaign brought you (section 10) | Usage facts (screen opened, ride started or finished, setting changed, distances and durations in ranges); an identifier specific to the app on this phone (IDFV on iOS, AppsFlyer ID); the phone's model and system, the language; on iPhone, the advertising identifier (IDFA), only if you also allow tracking when iOS asks you. Never your location |
+| **Ad networks** running RideKit's campaigns, through AppsFlyer | Attributing your installation to the ad that brought it (section 10) | On iPhone only, if you accepted measurement and allowed tracking: the advertising identifier (IDFA), which AppsFlyer passes on to them |
 {: .services}
 
 A precise location can, combined with others, reveal places you go to: a loop often
@@ -119,7 +128,9 @@ Each of these services applies its own privacy policy, for instance
 (logs deleted after 90 days), [OpenFreeMap](https://openfreemap.org/privacy/) (logs
 deleted after 7 days), [Wikimedia](https://foundation.wikimedia.org/wiki/Policy:Privacy_policy),
 [Expo](https://expo.dev/privacy), [Cloudflare](https://www.cloudflare.com/privacypolicy/),
-[Brevo](https://www.brevo.com/legal/privacypolicy/).
+[Brevo](https://www.brevo.com/legal/privacypolicy/),
+[RevenueCat](https://www.revenuecat.com/privacy/),
+[AppsFlyer](https://www.appsflyer.com/legal/services-privacy-policy/).
 
 ## 5. Your location
 
@@ -217,30 +228,91 @@ on), crash alerts, and on Android the ongoing guidance notification. They are
 scheduled by your phone: there is no push server, no notification token sent, and we
 cannot know whether you received or opened them.
 
-## 9. Purchases
+## 9. Purchases (RevenueCat)
 
-Any in-app purchase (RideKit Pro) is processed by Apple (App Store) or Google (Google
-Play). SZ CORP sees neither your payment method, nor your Apple or Google ID, nor your
-address. As of today, the app contains no third-party purchase management tool; if one
-is added, it will be named here, with what it receives, before it goes live.
+In-app purchases (RideKit Pro) are processed by Apple (App Store); RideKit Pro is not
+sold on Google Play yet. SZ CORP sees neither your payment method, nor your Apple ID,
+nor your address.
 
-## 10. What RideKit doesn't do
+To know whether you subscribe, the app goes through **RevenueCat** (RevenueCat, Inc.,
+USA), which acts on behalf of SZ CORP.
 
-- No account, no ads, no advertising identifier, no cross-app or cross-site tracking.
-- No analytics tool, no third-party crash reporting tool.
+- **What it receives.** The history of your RideKit Pro purchases (product, dates,
+  price and currency, store country), a random identifier created for this phone,
+  with no account or name, the app's identifier on this phone (IDFV), and what any
+  connection carries: the phone's model and system, app version, language, IP
+  address.
+- **What it never receives.** The advertising identifier (IDFA), your location.
+- **Legal basis.** Performing your subscription (Art. 6(1)(b) GDPR).
+- **How long.** RevenueCat keeps this data as long as our contract with it lasts. On
+  request, with the Apple order number of your purchase, we have it deleted at
+  RevenueCat.
+- **Where.** In the United States: this transfer relies on the Data Privacy Framework
+  and the European Commission's standard contractual clauses.
+
+## 10. Audience measurement and advertising (AppsFlyer)
+
+Only if you accept it, RideKit measures what works in the app and which ad campaign
+brought you, with **AppsFlyer** (AppsFlyer Ltd., Israel), which acts on behalf of
+SZ CORP.
+
+- **Your choice.** The app asks you during onboarding, at the "Autorisations" step
+  (the "Mesure des pubs" row): "Non merci" or "Accepter", nothing chosen in advance.
+  You change your mind at any time in Réglages › Confidentialité › Mesure d'audience,
+  as easily as you answered. Before you agree, nothing is sent; if you refuse,
+  nothing will be.
+- **What is sent.** Usage facts: a screen opened, a ride started or finished, a
+  setting changed, a distance or a duration in ranges (such as "20-50 km"); an
+  identifier specific to the app on this phone (IDFV on iOS, AppsFlyer ID); and what
+  any connection carries: the phone's model and system, language, IP address, from
+  which AppsFlyer infers the country.
+- **What is never sent.** Your location, your routes, your nickname, your emergency
+  contact, what you type; Android's advertising identifier (Google Advertising ID).
+- **The iPhone's advertising identifier (IDFA).** On iPhone, once measurement is
+  accepted, and only then, iOS asks you whether RideKit may "track your activity"
+  (App Tracking Transparency). If you allow it, the IDFA also goes to AppsFlyer,
+  which shares it with the ad networks running RideKit's campaigns, to attribute your
+  installation to the ad that brought it. If you refuse there, or if you refused
+  measurement, the IDFA is never read and the question is never asked. You withdraw
+  this permission in the iPhone's settings: Privacy & Security › Tracking. On iOS,
+  attribution also goes through SKAdNetwork, Apple's anonymous mechanism.
+- **No targeted ads.** RideKit doesn't use it to show you targeted ads, and tells
+  AppsFlyer so (no consent to ad personalisation).
+- **Legal basis.** Your consent (Art. 6(1)(a) GDPR; Article 82 of the French Loi
+  Informatique et Libertés). You withdraw it at any time, in Réglages: sending stops.
+- **How long.** AppsFlyer keeps this data while it measures the campaigns, then
+  deletes it: 24 months at most, as its
+  [privacy policy](https://www.appsflyer.com/legal/services-privacy-policy/) provides.
+- **Where.** AppsFlyer is in Israel, which the European Commission recognises as
+  providing adequate protection; this data may also be processed in the United
+  States, under standard contractual clauses.
+- **Your rights.** To have AppsFlyer delete what it already received from your phone,
+  write to us: we pass the request on to it, through the procedure it provides for
+  this (OpenGDPR).
+
+## 11. What RideKit doesn't do
+
+- No account, no ads in the app, no targeted ads.
+- No audience measurement without your consent (section 10). The iPhone's advertising
+  identifier is only read with both your agreements, in the app and then when iOS
+  asks you; Android's, never.
+- No third-party crash reporting tool.
 - No profiling, no automated decision about you, no sale or rental of data.
 
 Apple and Google, who distribute the app, may give us aggregate statistics (downloads,
 crashes) if you agreed, in your phone's settings, to share analytics with developers.
 They do not identify you.
 
-## 11. Legal bases (GDPR)
+## 12. Legal bases (GDPR)
 
 - **The service you ask for** (Art. 6(1)(b)): sending coordinates to compute a route
-  or show a map, the weather, places or prices.
+  or show a map, the weather, places or prices; running your RideKit Pro
+  subscription, through RevenueCat (section 9).
 - **Your consent** (Art. 6(1)(a)): location, notifications, crash detection and its
-  automatic sending, the photo and the contact you pick. You withdraw it at any time,
-  in the app or in your phone's settings.
+  automatic sending, the photo and the contact you pick; audience measurement by
+  AppsFlyer and, on iPhone, the advertising identifier (section 10), which also need
+  your agreement under Article 82 of the French Loi Informatique et Libertés. You
+  withdraw it at any time, in the app or in your phone's settings.
 - **Your vital interests** (Art. 6(1)(d) and 9(2)(c)): on an unanswered alert, letting
   your contact know when you may no longer be able to, an alert suggesting you may be
   hurt.
@@ -249,7 +321,7 @@ They do not identify you.
   contact, getting them the alert you wanted, which you tell them about yourself,
   with the text the app prepares for you.
 
-## 12. How long
+## 13. How long
 
 - **On your phone**: until you delete it or the app. Offline maps go by themselves
   after 14 days; the ride in progress as soon as it is saved or discarded.
@@ -258,27 +330,33 @@ They do not identify you.
   alert server keeps (section 6): the token and your contact's number fingerprint as
   long as they are registered (at most 400 days without news), the counters until the
   next day; at Brevo, on our behalf, the log of each text sent (number, text, status),
-  one month.
+  one month; at RevenueCat, on our behalf, the history of your purchases and your
+  phone's identifier, as long as our contract with it lasts (section 9); at
+  AppsFlyer, on our behalf and if you accepted measurement, what it received, 24
+  months at most (section 10).
 - **At third-party services**: under their own policies (see section 4).
 
-## 13. Where data goes
+## 14. Where data goes
 
 IGN (France), TomTom (Netherlands), FOSSGIS (Germany), komoot (Germany), OpenFreeMap (Hungary) and
 Brevo (France, the alert server's texts) are in the European Union; Open-Meteo is in
-Switzerland, which the EU recognises as providing adequate protection. Wikipedia,
-Expo, Unsplash, RainViewer, Open Topo Data, Cloudflare (alert server), the carriers
+Switzerland and AppsFlyer in Israel, two countries the EU recognises as providing
+adequate protection. Wikipedia, Expo, Unsplash, RainViewer, Open Topo Data,
+Cloudflare (alert server), RevenueCat (subscriptions), AppsFlyer for part of its
+processing, the ad networks it passes the advertising identifier on to, the carriers
 Brevo delivers some texts through (to a Canadian mobile, Twilio) and the delivery
 networks some of these services use may process data outside the EU, notably in the
 United States, where authorities may access it under their law.
 
 These transfers rely, as the case may be, on an adequacy decision (for example the
-Data Privacy Framework for certified US companies, such as Cloudflare), on
-the European Commission's standard contractual clauses, or on their necessity to
-provide the service you ask for (Art. 49 GDPR). For Québec, Switzerland and the rest of Canada:
-your information may therefore be communicated outside your province or country, to
-the countries listed here.
+Data Privacy Framework for certified US companies, such as Cloudflare and
+RevenueCat), on the European Commission's standard contractual clauses (for example
+for AppsFlyer and RevenueCat in the United States), or on their necessity to provide
+the service you ask for (Art. 49 GDPR). For Québec, Switzerland and the rest of
+Canada: your information may therefore be communicated outside your province or
+country, to the countries listed here.
 
-## 14. Your rights
+## 15. Your rights
 
 Wherever you live, you can ask for access to your data, its correction, erasure,
 restriction, objection to its processing, its portability, and withdraw your consent.
@@ -287,11 +365,17 @@ death.
 
 As almost everything stays on your phone, you exercise most of these rights yourself,
 in the app (section 3). For the rest, write to **contact@ridekit-app.com**: we answer
-within one month. We have no copy of what the app sends to third-party services, and
-no way to link their requests to you; for that data, contact them directly. The alert
-server knows neither your name nor your contact's number in clear: to have it forget
-your contact, turn detection off, remove your contact or reset the app. The log of an alert text at
-Brevo, we delete on request, without waiting for the month.
+within one month. We have no copy of what the app sends to the map, routing, search,
+weather or price services, and no way to link their requests to you; for that data,
+contact them directly. The alert server knows neither your name nor your contact's
+number in clear: to have it forget your contact, turn detection off, remove your
+contact or reset the app. The log of an alert text at Brevo, we delete on request,
+without waiting for the month. At RevenueCat, we have your data deleted on request,
+with the Apple order number of your purchase (section 9). Audience measurement stops
+as soon as you refuse it in Réglages › Confidentialité › Mesure d'audience, and the
+sending of the advertising identifier as soon as you withdraw tracking in the
+iPhone's settings; what AppsFlyer already received, we ask it to delete
+(section 10).
 
 You can also complain to your country's authority:
 
@@ -305,35 +389,37 @@ You can also complain to your country's authority:
 | Canada | PIPEDA | [Office of the Privacy Commissioner of Canada](https://www.priv.gc.ca) |
 {: .authorities}
 
-For Law 25: location is only used if you allow it (section 5), and crash detection is
-off until you turn it on (section 6).
+For Law 25: location is only used if you allow it (section 5), crash detection is off
+until you turn it on (section 6), and audience measurement only starts if you accept
+it (section 10).
 
-## 15. Children
+## 16. Children
 
 RideKit is meant for riders of powered two-wheelers. It is not intended for children
 under 13 and does not knowingly collect any data about them.
 
-## 16. Security
+## 17. Security
 
 Your data is in the app's private storage, protected by your phone's encryption and
 passcode: set one. Exchanges with the services in section 4 are encrypted (HTTPS). The alert
 server only sends texts for a phone it gave a signed token to, only to the contact
-registered for that phone, only to mobile numbers in the five countries of section 6,
-and in limited numbers each day.
+registered for that phone, only to French mobile numbers for now (section 6), and in
+limited numbers each day.
 
-## 17. This website
+## 18. This website
 
 ridekit-app.com sets no cookies, has no analytics and loads nothing from third
 parties. It is hosted by GitHub (see the [legal notice](/mentions-legales/), in French),
-which may log visitors' IP addresses for the security of its service.
+which may log visitors' IP addresses for the security of its service. The app, for its
+part, only measures its audience if you accept it (section 10).
 
-## 18. Changes
+## 19. Changes
 
 Any change to this policy is published on this page, with a new date. A change that
 would make new data leave your phone would be announced in the app before taking
 effect.
 
-## 19. Contact
+## 20. Contact
 
 **contact@ridekit-app.com** — SZ CORP (Yassine Latrach EI), 200 rue de la Croix
 Nivert, 75015 Paris, France.

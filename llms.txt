@@ -32,7 +32,14 @@
 - **Données** : aucun compte ; balades, moto, contact d'urgence et réglages restent
   sur le téléphone. Un seul serveur RideKit, pour l'alerte chute : il ne garde ni
   position, ni texte, ni numéro en clair. Des coordonnées partent vers les services
-  qui calculent les routes, la météo et les cartes.
+  qui calculent les routes, la météo et les cartes. Mesure d'audience et
+  attribution des pubs par AppsFlyer, seulement si le motard l'accepte, sans
+  position ni pub ciblée ; sur iPhone, l'identifiant publicitaire (IDFA) seulement
+  s'il autorise aussi le suivi quand iOS le lui demande, jamais celui d'Android.
+- **RideKit Pro** : abonnement sur iPhone par l'App Store (pas encore sur Google
+  Play), 5,99 €/mois ou 49,99 €/an, 7 jours gratuits sur l'annuel seulement ;
+  boucles illimitées et test de l'envoi automatique de l'alerte chute. Abonnement
+  suivi par RevenueCat.
 - **Pays** : France, Belgique, Suisse, Luxembourg, Canada. Interface en français.
 
 ## Pages

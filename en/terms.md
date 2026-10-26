@@ -9,7 +9,7 @@ lang: en
 
 # Terms of Use
 
-*Last updated: 25 October 2026*
+*Last updated: 26 October 2026*
 
 RideKit is published by **SZ CORP**, the trade name of Yassine Latrach, sole
 proprietor (entrepreneur individuel, EI) — see the [legal notice](/mentions-legales/)
@@ -109,27 +109,32 @@ emergency services nor a certified alert device. In an emergency, call **112**
 RideKit is free, with a limited number of loops generated per month. RideKit Pro
 lifts this limit and unlocks the test of the crash alert's automatic sending ("Tester
 l'envoi automatique"; the alert itself goes out for everyone). It may include other
-features, described in the app at the time of purchase. This section applies as soon
-as RideKit Pro is offered for purchase.
+features, described in the app at the time of purchase.
 
-- **Plans and prices**: monthly or yearly, at the price shown in the app before you
-  confirm the purchase, taxes included.
-- **Payment**: charged to your App Store or Google Play account when you confirm the
-  purchase, or at the end of the free trial.
-- **Free trial**: if offered, its length is shown before purchase. Unless cancelled at
-  least 24 hours before it ends, the subscription starts and is charged. Any unused
-  portion of a trial is forfeited if you subscribe during it.
+- **Plans and prices**: monthly (€5.99/month) or yearly (€49.99/year), prices
+  including VAT in France. The price shown in the app before you confirm the purchase
+  prevails.
+- **Where to buy it**: on iPhone, through the App Store. RideKit Pro is not sold on
+  Google Play yet.
+- **Free trial**: the yearly subscription starts with 7 free days if you have never
+  used the trial (one trial per App Store account). Unless cancelled at least 24 hours
+  before they end, the subscription starts and is charged to your App Store account.
+  Any unused portion of a trial is forfeited if you subscribe during it. The monthly
+  plan has no trial: it is charged at purchase.
+- **Payment**: charged to your App Store account when you confirm the purchase or, for
+  the yearly plan with a trial, at the end of the 7 free days.
 - **Auto-renewal**: the subscription renews for the same period unless cancelled at
   least 24 hours before the end of the current period; renewal is charged within the
   24 hours before that end.
-- **Manage or cancel**: at any time, in your App Store or Google Play account settings
-  (reachable from Réglages › Abonnement). Deleting the app does not cancel the
+- **Manage or cancel**: at any time, in your App Store account settings (Réglages ›
+  Abonnement, in the app, takes you there). Deleting the app does not cancel the
   subscription.
-- **Refunds and withdrawal**: payment is collected by Apple or Google; refund requests
-  and the right of withdrawal are handled by them, under their terms.
-- **Price changes**: announced to you under App Store or Google Play rules, and you can
-  cancel before they apply.
-- **Restore purchases**: on a new phone, with the same App Store or Google Play account.
+- **Refunds and withdrawal**: payment is collected by Apple; refund requests and the
+  right of withdrawal are handled by Apple, under its terms.
+- **Price changes**: announced to you under App Store rules, and you can cancel before
+  they apply.
+- **Restore purchases**: on a new phone, with the same App Store account ("Restaurer
+  les achats", on the RideKit Pro screen).
 
 ## 7. Acceptable use
 

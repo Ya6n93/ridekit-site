@@ -9,7 +9,7 @@ lang: fr
 
 # Conditions d'utilisation
 
-*Dernière mise à jour : 25 octobre 2026*
+*Dernière mise à jour : 26 octobre 2026*
 
 RideKit est éditée par **SZ CORP**, nom commercial de Yassine Latrach, entrepreneur
 individuel (EI) — voir les [mentions légales](/mentions-legales/). En installant ou
@@ -114,29 +114,32 @@ ni les secours ni un dispositif d'alerte homologué. En cas d'urgence, appelle l
 RideKit est gratuite, avec un nombre limité de boucles générées par mois. RideKit Pro
 lève cette limite et ouvre le test de l'envoi automatique de l'alerte chute (« Tester
 l'envoi automatique » ; l'alerte elle-même part pour tous). Il peut inclure d'autres
-fonctions, décrites dans l'app au moment de l'achat. Cet article s'applique dès que
-RideKit Pro est proposé à l'achat.
+fonctions, décrites dans l'app au moment de l'achat.
 
-- **Formules et prix** : mensuelle ou annuelle, au prix affiché dans l'app avant que
-  tu confirmes l'achat, taxes comprises.
-- **Paiement** : débité sur ton compte App Store ou Google Play à la confirmation de
-  l'achat, ou à la fin de l'essai gratuit.
-- **Essai gratuit** : s'il est proposé, sa durée est indiquée avant l'achat. Sans
-  résiliation au moins 24 heures avant sa fin, l'abonnement commence et est facturé.
-  La partie non utilisée d'un essai est perdue si tu souscris pendant celui-ci.
+- **Formules et prix** : mensuelle (5,99 €/mois) ou annuelle (49,99 €/an), prix TTC
+  en France. Le prix affiché dans l'app avant que tu confirmes l'achat fait foi.
+- **Où l'acheter** : sur iPhone, par l'App Store. RideKit Pro n'est pas encore vendu
+  sur Google Play.
+- **Essai gratuit** : l'abonnement annuel commence par 7 jours gratuits si tu n'en as
+  jamais profité (un essai par compte App Store). Sans résiliation au moins 24 heures
+  avant leur fin, l'abonnement commence et est débité sur ton compte App Store. La
+  partie non utilisée d'un essai est perdue si tu souscris pendant celui-ci. Le
+  mensuel n'a pas d'essai : il est débité dès l'achat.
+- **Paiement** : débité sur ton compte App Store à la confirmation de l'achat ou, pour
+  l'annuel avec essai, à la fin des 7 jours gratuits.
 - **Renouvellement automatique** : l'abonnement se renouvelle pour la même durée sauf
   résiliation au moins 24 heures avant la fin de la période en cours ; le
   renouvellement est facturé dans les 24 heures qui précèdent cette fin.
-- **Gérer ou résilier** : à tout moment, dans les réglages de ton compte App Store ou
-  Google Play (accessibles depuis Réglages › Abonnement). Supprimer l'app ne résilie
-  pas l'abonnement.
-- **Remboursement et rétractation** : le paiement est encaissé par Apple ou Google ;
-  les demandes de remboursement et l'exercice du droit de rétractation se font
-  auprès d'eux, selon leurs conditions.
-- **Changement de prix** : il t'est annoncé selon les règles de l'App Store ou de
-  Google Play, et tu peux résilier avant qu'il s'applique.
-- **Restaurer un achat** : sur un nouveau téléphone, avec le même compte App Store ou
-  Google Play.
+- **Gérer ou résilier** : à tout moment, dans les réglages de ton compte App Store
+  (Réglages › Abonnement, dans l'app, y mène). Supprimer l'app ne résilie pas
+  l'abonnement.
+- **Remboursement et rétractation** : le paiement est encaissé par Apple ; les
+  demandes de remboursement et l'exercice du droit de rétractation se font auprès
+  d'Apple, selon ses conditions.
+- **Changement de prix** : il t'est annoncé selon les règles de l'App Store, et tu peux
+  résilier avant qu'il s'applique.
+- **Restaurer un achat** : sur un nouveau téléphone, avec le même compte App Store
+  (« Restaurer les achats », dans l'écran de RideKit Pro).
 
 ## 7. Usage acceptable
 
