@@ -124,7 +124,7 @@ advertising identifier only goes to AppsFlyer, and only with both your agreement
 | **RideKit's group ride server**, hosted by **Cloudflare** (Cloudflare, Inc., USA), data in the European Union | Group rides (section 7), only if you create or join one and agree to share your location in it | Your nickname; during your guided rides, your location (every 5 s while riding, 30 s when stopped), your speed, your progress along the group's ride, whether you leave it, whether your battery is low (not its level); the quick messages you pick; an alert from your crash detection (not a test), with your location; for the leader, the route of the ride they start and whether they have RideKit Pro (the group's size depends on it) |
 | **The members of your group ride**, through this server | Seeing you on the map, getting your messages and your alert (section 7) | What the group ride server receives, except your phone's token |
 | **RevenueCat** (RevenueCat, Inc., USA) | Knowing whether you subscribe to RideKit Pro (section 10) | The history of your RideKit Pro purchases (product, dates, price and currency, store country), a random identifier created for this phone, the app's identifier on this phone (IDFV), the phone's model and system, the app version, the language. Never the advertising identifier, never your location |
-| **AppsFlyer** (AppsFlyer Ltd., Israel), only if you accept it | Audience measurement: what works in the app, which ad campaign brought you (section 11) | Usage facts (screen opened, ride started or finished, setting changed, distances and durations in ranges); an identifier specific to the app on this phone (IDFV on iOS, AppsFlyer ID); the phone's model and system, the language; on iPhone, the advertising identifier (IDFA), only if you also allow tracking when iOS asks you. Never your location |
+| **AppsFlyer** (AppsFlyer Ltd.), only if you accept it | Audience measurement: what works in the app, which ad campaign brought you (section 11) | Usage facts (screen opened, ride started or finished, setting changed, distances and durations in ranges); an identifier specific to the app on this phone (IDFV on iOS, AppsFlyer ID); the phone's model and system, the language; on iPhone, the advertising identifier (IDFA), only if you also allow tracking when iOS asks you. Never your location |
 | **Ad networks** running RideKit's campaigns, through AppsFlyer | Attributing your installation to the ad that brought it (section 11) | On iPhone only, if you accepted measurement and allowed tracking: the advertising identifier (IDFA), which AppsFlyer passes on to them |
 {: .services}
 
@@ -305,7 +305,7 @@ USA), which acts on behalf of SZ CORP.
 ## 11. Audience measurement and advertising (AppsFlyer)
 
 Only if you accept it, RideKit measures what works in the app and which ad campaign
-brought you, with **AppsFlyer** (AppsFlyer Ltd., Israel), which acts on behalf of
+brought you, with **AppsFlyer** (AppsFlyer Ltd.), which acts on behalf of
 SZ CORP.
 
 - **Your choice.** The app asks you during onboarding, at the "Autorisations" step

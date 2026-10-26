@@ -51,7 +51,7 @@ Palo Alto, Californie, États-Unis).
 
 ## Mesure d'audience et abonnements de l'application
 
-Mesure d'audience, seulement avec ton accord : **AppsFlyer Ltd.**, Herzliya, Israël —
+Mesure d'audience, seulement avec ton accord : **AppsFlyer Ltd.** —
 [appsflyer.com](https://www.appsflyer.com).
 
 Suivi des abonnements RideKit Pro : **RevenueCat, Inc.**, 1032 E Brandon Blvd #3003,

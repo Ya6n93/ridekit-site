@@ -135,7 +135,7 @@ publicitaire de l'iPhone ne va qu'à AppsFlyer, et seulement avec tes deux accor
 | **Serveur des sorties de groupe de RideKit**, hébergé par **Cloudflare** (Cloudflare, Inc., États-Unis), données dans l'Union européenne | Sorties de groupe (section 7), seulement si tu en crées ou en rejoins une et acceptes d'y partager ta position | Ton pseudo ; pendant tes balades guidées, ta position (toutes les 5 s en roulant, 30 s à l'arrêt), ta vitesse, ta progression sur la balade du groupe, si tu t'en écartes, si ta batterie est faible (pas son niveau) ; les messages rapides que tu choisis ; une alerte de ta détection de chute (pas un test), avec ta position ; pour le leader, le tracé de la balade qu'il lance et s'il a RideKit Pro (la taille du groupe en dépend) |
 | **Les membres de ta sortie de groupe**, par ce serveur | Te voir sur la carte, recevoir tes messages et ton alerte (section 7) | Ce que reçoit le serveur des sorties de groupe, sauf le jeton de ton téléphone |
 | **RevenueCat** (RevenueCat, Inc., États-Unis) | Savoir si tu es abonné à RideKit Pro (section 10) | L'historique de tes achats RideKit Pro (produit, dates, prix et devise, pays de la boutique), un identifiant aléatoire créé pour ce téléphone, l'identifiant de l'app sur ce téléphone (IDFV), le modèle et le système du téléphone, la version de l'app, la langue. Jamais l'identifiant publicitaire, jamais ta position |
-| **AppsFlyer** (AppsFlyer Ltd., Israël), seulement si tu l'acceptes | Mesure d'audience : ce qui marche dans l'app, quelle campagne publicitaire t'a amené (section 11) | Des faits d'usage (écran ouvert, balade démarrée ou terminée, réglage changé, distances et durées par tranches) ; un identifiant propre à l'app sur ce téléphone (IDFV sur iOS, identifiant AppsFlyer) ; le modèle et le système du téléphone, la langue ; sur iPhone, l'identifiant publicitaire (IDFA), seulement si tu autorises aussi le suivi quand iOS te le demande. Jamais ta position |
+| **AppsFlyer** (AppsFlyer Ltd.), seulement si tu l'acceptes | Mesure d'audience : ce qui marche dans l'app, quelle campagne publicitaire t'a amené (section 11) | Des faits d'usage (écran ouvert, balade démarrée ou terminée, réglage changé, distances et durées par tranches) ; un identifiant propre à l'app sur ce téléphone (IDFV sur iOS, identifiant AppsFlyer) ; le modèle et le système du téléphone, la langue ; sur iPhone, l'identifiant publicitaire (IDFA), seulement si tu autorises aussi le suivi quand iOS te le demande. Jamais ta position |
 | **Régies publicitaires** des campagnes de RideKit, par AppsFlyer | Attribuer ton installation à la pub qui l'a amenée (section 11) | Sur iPhone seulement, si tu as accepté la mesure et autorisé le suivi : l'identifiant publicitaire (IDFA), qu'AppsFlyer leur transmet |
 {: .services}
 
@@ -329,7 +329,7 @@ Pour savoir si tu es abonné, l'app passe par **RevenueCat** (RevenueCat, Inc.,
 ## 11. Mesure d'audience et publicité (AppsFlyer)
 
 Seulement si tu l'acceptes, RideKit mesure ce qui marche dans l'app et quelle
-campagne publicitaire t'a amené, avec **AppsFlyer** (AppsFlyer Ltd., Israël), qui
+campagne publicitaire t'a amené, avec **AppsFlyer** (AppsFlyer Ltd.), qui
 agit pour le compte de SZ CORP.
 
 - **Ton choix.** L'app te le demande à l'onboarding, à l'étape « Autorisations »
