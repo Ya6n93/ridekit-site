@@ -9,7 +9,7 @@ lang: fr
 
 # Politique de confidentialité
 
-*Dernière mise à jour : 26 octobre 2026*
+*Dernière mise à jour : 27 octobre 2026*
 
 RideKit est une application pour rouler à moto : elle trace des boucles et des
 itinéraires, te guide, affiche la météo, garde le carnet de tes balades et le suivi
@@ -23,7 +23,8 @@ lesquelles sortent de ton téléphone, vers qui, et pourquoi.
 > reçoit, à ce moment-là, ce que dit le SMS, et le fait envoyer à ton contact. Il
 > n'en garde ni ta position, ni le texte, ni le numéro de ton contact (section 6). Si
 > tu rejoins une sortie de groupe, ta position est partagée avec ce groupe pendant la
-> sortie, puis effacée (section 7). Pour calculer un itinéraire,
+> sortie, sauf aux abords de ton départ et de l'arrivée, puis effacée (section 7).
+> Pour calculer un itinéraire,
 > afficher une carte ou la météo, l'app interroge directement des services
 > spécialisés en leur envoyant des coordonnées — jamais ton nom, ton pseudo ni un
 > identifiant publicitaire. Si tu l'acceptes, et seulement alors, AppsFlyer mesure
@@ -55,8 +56,9 @@ SZ CORP n'exploite que deux serveurs :
   garde que ce qu'il faut pour savoir à qui écrire et pour limiter les abus ;
 - le **serveur des sorties de groupe**, qui relaie ta position et tes messages aux
   membres de ta sortie, seulement si tu en rejoins une et l'acceptes (section 7). Il
-  ne garde les positions qu'en mémoire, jamais sur disque, et efface la sortie à sa
-  fin (le code et les jetons, 24 h après).
+  ne garde les positions de route qu'en mémoire ; la balade du leader et une alerte en
+  cours y sont enregistrées jusqu'à la fin de la sortie, puis effacées (le code et les
+  identifiants des téléphones, 24 h après).
 
 Les autres données personnelles que nous pouvons recevoir sont celles que tu nous
 envoies toi-même, par exemple un e-mail au support ; celles de tes achats RideKit Pro,
@@ -119,7 +121,8 @@ publicitaire de l'iPhone ne va qu'à AppsFlyer, et seulement avec tes deux accor
 | **TomTom** (TomTom International B.V., Pays-Bas) | Calcul des boucles et des itinéraires, recalcul en route, limitations de vitesse le long du trajet, cafés et restaurants le long d'une balade ; recherche d'une adresse ou d'un lieu hors de France, ou quand l'IGN ne trouve pas, et nom d'un lieu hors de France | Les coordonnées du départ (en général ta position), des points de passage et de l'arrivée ; pendant un recalcul, ta position et ta direction ; les points du tracé ; pour une recherche, le texte que tu tapes et ta position, pour classer les résultats autour de toi ; les coordonnées d'un point à nommer |
 | **OSRM**, serveur de démonstration (FOSSGIS e.V., Allemagne) | Itinéraire de secours quand TomTom ne répond pas | Les coordonnées des points de passage |
 | **IGN**, Géoplateforme (Institut national de l'information géographique et forestière, France) | Recherche d'une adresse ou d'un lieu en France, nom de ta ville (accueil, météo) et des points posés sur la carte, cols proches quand Photon ne répond pas | Le texte que tu tapes ; ta position, pour classer les résultats autour de toi ; les coordonnées d'un point à nommer |
-| **Photon** (komoot GmbH, Allemagne) | Cols proches ; recherche d'une adresse ou d'un lieu et nom d'un point quand l'IGN et TomTom ne répondent pas | Le texte que tu tapes ; ta position, pour classer les résultats et trouver les cols autour ; les coordonnées d'un point à nommer |
+| **Photon** (komoot GmbH, Allemagne) | Cols proches ; cafés, restos et points de vue autour d'un point, ou le long d'un parcours quand Overpass est occupé ; recherche d'une adresse ou d'un lieu et nom d'un point quand l'IGN et TomTom ne répondent pas | Le texte que tu tapes ; ta position, pour classer les résultats et trouver les cols autour ; les coordonnées d'un point à nommer ou autour duquel chercher ; quelques points du parcours |
+| **Overpass API**, serveur public d'OpenStreetMap (FOSSGIS e.V., Allemagne) | Cafés, restos et points de vue le long d'un parcours (puces de « Créer le parcours ») | Des points du parcours (80 au plus) et le genre de lieu cherché ; l'app se présente sous son nom, comme Overpass le demande. Pas de compte |
 | **Open-Meteo** (OpenMeteo GmbH, Suisse) | Météo actuelle, prévisions, météo des cols et le long de la balade | Ta position, ou celle d'un col ou d'un point de la balade |
 | **RainViewer** | Radar de pluie | Aucune position : seulement les images de la zone de carte affichée |
 | **OpenFreeMap** (Hyperknot Software Kft., Hongrie) | Fond de carte, cartes hors ligne | Les tuiles de la zone affichée ou du couloir de la balade téléchargé ; l'app se présente sous son nom et sa version, comme OpenFreeMap le demande |
@@ -128,12 +131,11 @@ publicitaire de l'iPhone ne va qu'à AppsFlyer, et seulement avec tes deux accor
 | **Prix des carburants** (data.economie.gouv.fr, ministère de l'Économie, France) | Stations-service et prix du jour, en France | Ta position ou des points du tracé |
 | **data.gouv.fr** (France) | Liste officielle des radars fixes, vérifiée au plus une fois par semaine | Rien te concernant |
 | **Base motos** (fichier public publié par SZ CORP) | Nouvelle édition de la liste des motos, vérifiée au plus une fois par semaine | Rien te concernant |
-| **Unsplash** | Photos d'illustration de certains écrans | Rien te concernant |
 | **Expo** (650 Industries, Inc., États-Unis) | Mises à jour de l'application | Des informations techniques : système, version de l'app, identifiant technique de l'installation créé par le service de mise à jour |
 | **Serveur d'alerte de RideKit**, hébergé par **Cloudflare** (Cloudflare, Inc., États-Unis) | Envoi automatique de l'alerte chute (section 6), si la détection est activée avec un contact | À l'enregistrement du contact : son numéro, rien d'autre. Lors d'une alerte ou d'un test : son numéro, ton pseudo, l'heure du choc et le fuseau horaire du téléphone, ta vitesse juste avant, ta position et sa précision, la batterie |
 | **Brevo** (Brevo SAS, anciennement Sendinblue, France), pour le serveur d'alerte | Envoi de l'alerte de RideKit à ton contact, en un seul SMS | Le numéro de ton contact et le texte du SMS : ton pseudo, l'heure, ta position et sa précision, la batterie et, s'il reste de la place, ta vitesse |
-| **Serveur des sorties de groupe de RideKit**, hébergé par **Cloudflare** (Cloudflare, Inc., États-Unis), données dans l'Union européenne | Sorties de groupe (section 7), seulement si tu en crées ou en rejoins une et acceptes d'y partager ta position | Ton pseudo ; pendant tes balades guidées, ta position (toutes les 5 s en roulant, 30 s à l'arrêt), ta vitesse, ta progression sur la balade du groupe, si tu t'en écartes, si ta batterie est faible (pas son niveau) ; les messages rapides que tu choisis ; une alerte de ta détection de chute (pas un test), avec ta position ; pour le leader, le tracé de la balade qu'il lance et s'il a RideKit Pro (la taille du groupe en dépend) |
-| **Les membres de ta sortie de groupe**, par ce serveur | Te voir sur la carte, recevoir tes messages et ton alerte (section 7) | Ce que reçoit le serveur des sorties de groupe, sauf le jeton de ton téléphone |
+| **Serveur des sorties de groupe de RideKit**, hébergé par **Cloudflare** (Cloudflare, Inc., États-Unis), données dans l'Union européenne | Sorties de groupe (section 7), seulement si tu en crées ou en rejoins une et acceptes d'y partager ta position | Ton pseudo ; pendant tes balades guidées, ta position (toutes les 5 s en roulant, 30 s à l'arrêt), ta vitesse, ta progression sur la balade du groupe, si tu t'en écartes, si ta batterie est faible (pas son niveau) ; les messages rapides que tu choisis ; jamais ta position à moins de 500 m de ton départ ni de l'arrivée (sauf en allant vers un membre tombé), seulement que tu y es ; une alerte de ta détection de chute (pas un test), avec ta position exacte ; pour le leader, le tracé de la balade qu'il lance, coupé à 500 m de son départ et de son arrivée, et s'il a RideKit Pro (la taille du groupe en dépend) |
+| **Les membres de ta sortie de groupe**, par ce serveur | Te voir sur la carte, recevoir tes messages et ton alerte (section 7) | Ce que reçoit le serveur des sorties de groupe, sauf le jeton de ton téléphone ; et quand le serveur a eu de tes nouvelles pour la dernière fois |
 | **RevenueCat** (RevenueCat, Inc., États-Unis) | Savoir si tu es abonné à RideKit Pro (section 10) | L'historique de tes achats RideKit Pro (produit, dates, prix et devise, pays de la boutique), un identifiant aléatoire créé pour ce téléphone, l'identifiant de l'app sur ce téléphone (IDFV), le modèle et le système du téléphone, la version de l'app, la langue. Jamais l'identifiant publicitaire, jamais ta position |
 | **AppsFlyer** (AppsFlyer Ltd.), seulement si tu l'acceptes | Mesure d'audience : ce qui marche dans l'app, quelle campagne publicitaire t'a amené (section 11) | Des faits d'usage (écran ouvert, balade démarrée ou terminée, réglage changé, distances et durées par tranches) ; un identifiant propre à l'app sur ce téléphone (IDFV sur iOS, identifiant AppsFlyer) ; le modèle et le système du téléphone, la langue ; sur iPhone, l'identifiant publicitaire (IDFA), seulement si tu autorises aussi le suivi quand iOS te le demande. Jamais ta position |
 | **Régies publicitaires** des campagnes de RideKit, par AppsFlyer | Attribuer ton installation à la pub qui l'a amenée (section 11) | Sur iPhone seulement, si tu as accepté la mesure et autorisé le suivi : l'identifiant publicitaire (IDFA), qu'AppsFlyer leur transmet |
@@ -203,7 +205,10 @@ toi qui l'actives.
   tout SMS. RideKit prévient ton proche : il n'appelle pas les secours. Si ton
   contact ouvre le lien, Google reçoit les coordonnées, selon sa propre politique. Si
   tu es dans une sortie de groupe, l'alerte (pas un test) est aussi relayée aux
-  membres, avec ta position (section 7).
+  membres, avec ta position (section 7). Une fois le SMS parti, l'app te propose de
+  dire à ton contact que tout va bien : ce SMS-là est toujours préparé dans l'app SMS
+  du téléphone et part de ton téléphone, quand tu appuies sur « Envoyer » ; le
+  serveur d'alerte ne l'envoie jamais.
 - **L'envoi automatique.** Il va avec la détection de chute, avec RideKit Pro : dès
   qu'elle est activée avec un contact, l'alerte part toute seule. Pour l'arrêter,
   coupe la détection ou retire ton contact ; il s'arrête aussi quand ton abonnement
@@ -222,14 +227,17 @@ toi qui l'actives.
     Brevo. Sans réseau, l'app réessaie pendant 5 minutes.
   - *Ce qui est gardé.* Ni ta position, ni le texte des SMS, ni ton pseudo, ni ton
     adresse IP. Seulement : le jeton de ton téléphone et l'empreinte du numéro de ton
-    contact ; des compteurs du jour (par téléphone, par empreinte de numéro et
-    d'adresse IP, pour tout le service), qui limitent les envois contre les abus et
-    s'effacent le lendemain ; l'identifiant de chaque alerte du jour, pour ne pas
+    contact ; des compteurs du jour (par téléphone, par empreinte du numéro, par
+    empreinte de l'adresse IP, une adresse IPv6 comptant par son bloc /64, et pour
+    tout le service), qui limitent les envois contre les abus et s'effacent le
+    lendemain ; l'identifiant de chaque alerte du jour, pour ne pas
     l'envoyer deux fois. Les journaux du serveur disent ce qui s'est passé (envoyé,
     refusé), sans numéro ni position, et sont gardés 3 jours.
   - *Quand il oublie.* Coupe la détection, retire ton contact ou laisse prendre fin
-    ton abonnement RideKit Pro : le serveur oublie ton contact. « Réinitialiser l'app » lui fait oublier ton téléphone. Sans
-    nouvelles de ton téléphone pendant 400 jours, il l'oublie de lui-même.
+    ton abonnement RideKit Pro : le serveur oublie ton contact dès que ton téléphone a
+    du réseau. « Réinitialiser l'app » lui fait oublier ton téléphone, s'il a du réseau
+    à ce moment. Sans nouvelles de ton téléphone pendant 400 jours, il l'oublie de
+    lui-même.
   - *Les prestataires.* Le serveur tourne chez Cloudflare, ce qu'il garde étant placé
     dans l'Union européenne quand Cloudflare le propose ; les SMS partent par Brevo,
     en France, qui garde ses données dans l'Union européenne. Tous deux agissent pour
@@ -237,9 +245,9 @@ toi qui l'actives.
     son statut) un mois, puis l'efface. Pour l'acheminer, il passe par des opérateurs
     partenaires, dont certains américains, qui
     peuvent en garder une trace technique selon leur propre politique.
-  - *Les pays.* Pour l'instant, l'envoi automatique ne va que vers des mobiles
-    français. Pour un autre numéro, le SMS est préparé sur ton téléphone, comme sans
-    serveur.
+  - *Les pays.* Pour l'instant, l'envoi automatique ne va que vers des mobiles de
+    France métropolitaine. Pour un autre numéro, outre-mer compris, le SMS est préparé
+    sur ton téléphone, comme sans serveur.
 - **Ton contact, informé par toi.** RideKit ne lui écrit qu'en cas d'alerte ou de
   test. C'est toi qui le préviens : dès que tu le choisis, l'app te prépare un SMS qui
   lui dit qu'il est ton contact d'urgence et ce qui viendrait. Il part de ton
@@ -259,21 +267,37 @@ position est partagée avec le groupe pendant la sortie, puis effacée »).
   l'arrêt), ta vitesse, ta progression sur la balade du groupe, si tu t'en écartes, si
   ta batterie est faible (pas son niveau), les messages rapides que tu choisis
   (Essence, Pause, Problème, Ralentis, Tout va bien, Danger) et, si ta détection de
-  chute déclenche une alerte (pas un test), cette alerte avec ta position. Le leader y
-  envoie aussi le tracé de la balade qu'il lance, et s'il a RideKit Pro (son groupe
-  accueille alors 8 personnes au lieu de 2).
+  chute déclenche une alerte (pas un test), cette alerte avec ta position exacte. Le
+  leader y envoie aussi le tracé de la balade qu'il lance, et s'il a RideKit Pro (son
+  groupe accueille alors 8 personnes au lieu de 2).
+- **Les abords du départ et de l'arrivée.** Ta position n'est jamais envoyée à moins
+  de 500 m de l'endroit où tu as commencé à rouler, ni de l'arrivée de la balade que
+  tu suis (sauf quand tu vas rejoindre un membre tombé) : le groupe sait seulement que
+  tu es « près du départ » ou « à l'arrivée ». Le tracé du leader est envoyé coupé à
+  500 m de son départ et de son arrivée. L'alerte chute, elle, garde ta position
+  exacte : c'est celle qu'il faut pour te secourir.
 - **Qui le voit.** Les seuls membres de ce groupe, que le leader voit arriver et peut
-  retirer. Pas de compte, ni numéro, ni e-mail : un jeton aléatoire pour ton
-  téléphone et un code de groupe tiré au hasard.
-- **Ce qui est gardé, et combien de temps.** Le serveur ne garde les positions qu'en
-  mémoire, jamais sur disque. À la fin de la sortie (par le leader, après 3 h sans
-  activité, ou 16 h au plus), les pseudos, la balade et les alertes sont effacés, et
-  le reste (le code, les jetons des téléphones) 24 h après. Contre les abus, il compte
-  aussi les demandes de chaque téléphone et de chaque adresse IP (par une empreinte) :
-  ces compteurs s'effacent le lendemain. Ses journaux ne contiennent ni position, ni
-  pseudo, ni code, et sont gardés 3 jours.
+  retirer ; ils voient aussi quand le serveur a eu de tes nouvelles pour la dernière
+  fois. Le groupe se ferme aux nouvelles arrivées dès que le leader lance une balade
+  et après chaque retrait, et seul le leader peut le rouvrir. Pas de compte, ni
+  numéro, ni e-mail : un jeton aléatoire pour ton téléphone et un code de groupe tiré
+  au hasard.
+- **Ce qui est gardé, et combien de temps.** Les positions de route ne sont gardées
+  qu'en mémoire, jamais sur disque. La balade du leader et une alerte en cours (avec
+  sa position) sont enregistrées sur le serveur jusqu'à la fin de la sortie. À la fin
+  (par le leader, après 3 h sans activité, ou 16 h au plus), les pseudos, la balade et
+  les alertes sont effacés, et le reste (le code, les identifiants des téléphones du
+  groupe) 24 h après. Cloudflare, qui héberge le serveur, en garde de quoi les
+  restaurer jusqu'à 30 jours. Contre les abus, le serveur compte aussi les demandes
+  de chaque téléphone et de chaque adresse IP (par une empreinte) : ces compteurs
+  s'effacent le lendemain. Ses journaux ne contiennent ni position, ni pseudo, ni
+  code, et sont gardés 3 jours (7 si le serveur passe à l'offre payante de
+  Cloudflare).
 - **Base légale.** Ton consentement (article 6.1.a du RGPD), que tu retires en
-  quittant le groupe : le partage s'arrête aussitôt.
+  quittant le groupe : le partage s'arrête aussitôt sur ton téléphone, et le serveur
+  l'apprend dès que tu as du réseau. Pour une alerte relayée au groupe, qui laisse
+  penser que tu es blessé : la sauvegarde de tes intérêts vitaux (articles 6.1.d et
+  9.2.c).
 - **Âge.** Réservé aux 15 ans et plus (article 45 de la loi Informatique et
   Libertés).
 - **Le prestataire.** Le serveur est hébergé par Cloudflare, qui agit pour le compte
@@ -306,9 +330,9 @@ as reçues ou ouvertes. Elles se coupent dans les réglages de l'app ou du tél�
 
 ## 10. Achats (RevenueCat)
 
-Les achats dans l'app (RideKit Pro) sont traités par Apple (App Store) ; RideKit Pro
-n'est pas encore vendu sur Google Play. SZ CORP ne voit ni ton moyen de paiement, ni
-ton identifiant Apple, ni ton adresse.
+Les achats dans l'app (RideKit Pro) sont traités par Apple (App Store), pour l'instant
+en France ; RideKit n'est pas encore sur Google Play. SZ CORP ne voit ni ton moyen de
+paiement, ni ton identifiant Apple, ni ton adresse.
 
 Pour savoir si tu es abonné, l'app passe par **RevenueCat** (RevenueCat, Inc.,
 États-Unis), qui agit pour le compte de SZ CORP.
@@ -343,7 +367,8 @@ agit pour le compte de SZ CORP.
   identifiant AppsFlyer) ; et ce que toute connexion transmet : modèle et système du
   téléphone, langue, adresse IP, dont AppsFlyer déduit le pays.
 - **Ce qui n'est jamais envoyé.** Ta position, tes trajets, ton pseudo, ton contact
-  d'urgence, ce que tu tapes ; l'identifiant publicitaire d'Android (Google
+  d'urgence, ce que tu tapes ; rien d'une vraie alerte de chute (seulement tes tests ;
+  l'écran d'alerte n'est jamais mesuré) ; l'identifiant publicitaire d'Android (Google
   Advertising ID).
 - **L'identifiant publicitaire de l'iPhone (IDFA).** Sur iPhone, une fois la mesure
   acceptée, et seulement alors, iOS te demande si RideKit peut « suivre ton
@@ -381,10 +406,10 @@ agit pour le compte de SZ CORP.
 - Aucun profilage, aucune décision automatisée te concernant, aucune revente ni
   location de données.
 
-Apple et Google, qui distribuent l'app, peuvent nous fournir des statistiques
-globales (téléchargements, plantages) si tu as accepté, dans les réglages de ton
-téléphone, de partager des données d'analyse avec les développeurs. Elles ne
-permettent pas de t'identifier.
+Apple, qui distribue l'app (et Google, quand elle sera sur Android), peut nous fournir
+des statistiques globales (téléchargements, plantages) si tu as accepté, dans les
+réglages de ton téléphone, de partager des données d'analyse avec les développeurs.
+Elles ne permettent pas de t'identifier.
 
 ## 13. Pourquoi c'est permis (bases légales)
 
@@ -400,7 +425,8 @@ permettent pas de t'identifier.
   réglages du téléphone.
 - **Tes intérêts vitaux** (articles 6.1.d et 9.2.c) : lors d'une alerte sans réponse,
   prévenir ton contact quand tu ne peux peut-être plus le faire toi-même, une alerte
-  pouvant laisser penser que tu es blessé.
+  pouvant laisser penser que tu es blessé ; de même, relayer ton alerte aux membres
+  de ta sortie de groupe (section 7).
 - **Notre intérêt légitime** (article 6.1.f) : répondre à tes messages au support,
   maintenir l'app à jour et sûre, limiter les abus du serveur d'alerte ; pour ton
   contact, lui faire parvenir l'alerte que tu as voulue, ce dont tu l'informes
@@ -416,13 +442,15 @@ permettent pas de t'identifier.
   en place, ce que garde le serveur d'alerte (section 6) : le jeton et l'empreinte du
   numéro de ton contact tant qu'il est enregistré (400 jours au plus sans nouvelles),
   les compteurs jusqu'au lendemain ; pour une sortie de groupe, ce que garde son
-  serveur (section 7) : les positions en mémoire seulement, les pseudos, la balade et
-  les alertes jusqu'à la fin de la sortie, le code et les jetons 24 h de plus, les
-  journaux 3 jours ; chez Brevo, pour notre compte, le journal de chaque SMS envoyé
-  (numéro, texte, statut), un mois ; chez RevenueCat, pour notre compte, l'historique
-  de tes achats et l'identifiant de ton téléphone, tant que RideKit fait appel à lui
-  (section 10) ; chez AppsFlyer, pour notre compte et si tu as accepté la mesure, ce
-  qu'il a reçu, 24 mois au plus (section 11).
+  serveur (section 7) : les positions de route en mémoire seulement, les pseudos, la
+  balade du leader et les alertes (avec leur position) jusqu'à la fin de la sortie, le
+  code et les identifiants des téléphones 24 h de plus, de quoi restaurer ces données
+  chez Cloudflare jusqu'à 30 jours, les journaux 3 jours ; chez Brevo, pour notre
+  compte, le journal de chaque SMS envoyé (numéro, texte, statut), un mois ; chez
+  RevenueCat, pour notre compte, l'historique de tes achats et l'identifiant de ton
+  téléphone, tant que RideKit fait appel à lui (section 10) ; chez AppsFlyer, pour
+  notre compte et si tu as accepté la mesure, ce qu'il a reçu, 24 mois au plus
+  (section 11).
 - **Chez les services tiers** : selon leur propre politique (voir la section 4).
 
 ## 15. Où vont les données
@@ -430,15 +458,15 @@ permettent pas de t'identifier.
 L'IGN (France), TomTom (Pays-Bas), FOSSGIS (Allemagne), komoot (Allemagne),
 OpenFreeMap (Hongrie) et Brevo (France, SMS du serveur d'alerte) sont dans l'Union
 européenne, comme les données du serveur des sorties de groupe ; Open-Meteo est en
-Suisse, et AppsFlyer hors de l'Union européenne : des pays que l'Union européenne reconnaît comme offrant une protection adéquate. Wikipédia, Expo, Unsplash, RainViewer, Open Topo
-Data, Cloudflare (le serveur d'alerte, et un éventuel accès au serveur des sorties de
-groupe, Cloudflare étant une société américaine), RevenueCat (abonnements),
+Suisse, et AppsFlyer hors de l'Union européenne : des pays que l'Union européenne
+reconnaît comme offrant une protection adéquate. Wikipédia, Expo, RainViewer, Open
+Topo Data, Cloudflare (le serveur d'alerte, et un éventuel accès au serveur des
+sorties de groupe, Cloudflare étant une société américaine), RevenueCat (abonnements),
 AppsFlyer pour une partie de ses traitements, les régies publicitaires à qui il
 transmet l'identifiant publicitaire, les opérateurs partenaires par lesquels Brevo
-achemine les SMS, dont certains américains, et les réseaux de diffusion
-qu'utilisent certains de ces services peuvent traiter des données hors de l'Union
-européenne, notamment aux États-Unis, où les autorités peuvent y avoir accès selon
-leur droit.
+achemine les SMS, dont certains américains, et les réseaux de diffusion qu'utilisent
+certains de ces services peuvent traiter des données hors de l'Union européenne,
+notamment aux États-Unis, où les autorités peuvent y avoir accès selon leur droit.
 
 Ces transferts reposent, selon le cas, sur une décision d'adéquation (par exemple
 le Data Privacy Framework pour les entreprises américaines certifiées, comme
@@ -458,17 +486,18 @@ sort de tes données après ton décès.
 Comme presque tout reste sur ton téléphone, tu exerces la plupart de ces droits
 toi-même, dans l'app (section 3). Pour le reste, écris à **contact@ridekit-app.com** :
 nous répondons sous un mois. Nous n'avons aucune copie de ce que l'app envoie aux
-services de cartes, d'itinéraires, de recherche, de météo ou de prix, ni aucun moyen
-de relier leurs requêtes à toi ; pour ces données, adresse-toi directement à eux. Le
-serveur d'alerte ne connaît ni ton nom ni le numéro de ton contact en clair : pour
-qu'il oublie ton contact, coupe la détection, retire ton contact ou réinitialise
-l'app. Pour arrêter le partage de ta position avec une sortie de groupe, quitte le
-groupe : le serveur efface la sortie quand elle se termine (section 7). Le journal
-d'un SMS d'alerte chez Brevo, nous l'effaçons sur demande, sans attendre le mois.
-Chez RevenueCat, nous faisons effacer tes données sur demande, avec
-le numéro de commande Apple de ton achat (section 10). La mesure d'audience s'arrête
-dès que tu la refuses dans Réglages › Confidentialité › Mesure d'audience, et l'envoi
-de l'identifiant publicitaire dès que tu retires le suivi dans les réglages de
+services de cartes, d'itinéraires, de recherche, de lieux, de météo ou de prix, ni
+aucun moyen de relier leurs requêtes à toi ; pour ces données, adresse-toi directement
+à eux. Le serveur d'alerte ne connaît ni ton nom ni le numéro de ton contact en
+clair : pour qu'il oublie ton contact, coupe la détection, retire ton contact ou
+réinitialise l'app. Pour arrêter le partage de ta position avec une sortie de groupe,
+quitte le groupe : le partage s'arrête aussitôt sur ton téléphone, le serveur
+l'apprend dès que tu as du réseau, et il efface la sortie quand elle se termine
+(section 7). Le journal d'un SMS d'alerte chez Brevo, nous l'effaçons sur demande,
+sans attendre le mois. Chez RevenueCat, nous faisons effacer tes données sur demande,
+avec le numéro de commande Apple de ton achat (section 10). La mesure d'audience
+s'arrête dès que tu la refuses dans Réglages › Confidentialité › Mesure d'audience, et
+l'envoi de l'identifiant publicitaire dès que tu retires le suivi dans les réglages de
 l'iPhone ; ce qu'AppsFlyer a déjà reçu, nous lui en demandons l'effacement, avec
 l'identifiant de mesure affiché dans Réglages › Confidentialité (section 11).
 
@@ -502,10 +531,12 @@ Tes données sont dans l'espace privé de l'application, protégé par le chiffr
 et le code de verrouillage de ton téléphone : choisis-en un. Les échanges avec les
 services de la section 4 sont chiffrés (HTTPS). Le serveur d'alerte n'envoie de SMS que
 pour un téléphone auquel il a remis un jeton signé, seulement au contact enregistré
-pour ce téléphone, seulement vers des mobiles français pour l'instant (section 6), et
-en nombre limité chaque jour. On ne rejoint une sortie de groupe qu'avec son code,
-tiré au hasard par le serveur parmi environ 729 millions ; les essais de codes sont
-limités, et le leader voit chaque arrivée et peut retirer quelqu'un.
+pour ce téléphone, seulement vers des mobiles de France métropolitaine pour
+l'instant (section 6), et en nombre limité chaque jour. On ne rejoint une sortie de
+groupe qu'avec son code, tiré au hasard par le serveur parmi environ 729 millions ;
+les essais de codes sont limités, le leader voit chaque arrivée et peut retirer
+quelqu'un, et le groupe se ferme aux nouvelles arrivées dès que le leader lance une
+balade et après chaque retrait.
 
 ## 19. Ce site
 

@@ -9,7 +9,7 @@ lang: en
 
 # Privacy Policy
 
-*Last updated: 26 October 2026*
+*Last updated: 27 October 2026*
 
 RideKit is a motorcycle riding app: it draws loops and routes, guides you, shows the
 weather, and keeps your ride journal and your bike's records. This page says exactly
@@ -22,7 +22,8 @@ French version ([Politique de confidentialité](/confidentialite/)) prevails.
 > answer, RideKit's alert server receives, at that moment, what the text says, and
 > has it sent to your contact. It keeps neither your location, nor the text, nor your
 > contact's number (section 6). If you join a group ride, your location is shared
-> with that group during the ride, then deleted (section 7). To compute a route or
+> with that group during the ride, except around your start and the finish, then
+> deleted (section 7). To compute a route or
 > show a map or the weather, the app queries specialised services directly, sending
 > them coordinates — never your name, your nickname or an advertising identifier. If
 > you accept it, and only then, AppsFlyer measures how the app is used and which ad
@@ -51,9 +52,9 @@ SZ CORP runs two servers only:
   you register your contact, on an alert, and when you test it. It keeps only what it
   needs to know whom to text and to prevent abuse;
 - the **group ride server**, which relays your location and messages to the members
-  of your ride, only if you join one and agree (section 7). It keeps locations in
-  memory only, never on disk, and deletes the ride when it ends (the code and tokens,
-  24 h later).
+  of your ride, only if you join one and agree (section 7). It keeps road locations
+  in memory only; the leader's ride and an ongoing alert are stored on it until the
+  ride ends, then deleted (the code and the phones' identifiers, 24 h later).
 
 The other personal data we may receive is what you send us yourself, such as a
 support e-mail; that of your RideKit Pro purchases, through RevenueCat (section 10);
@@ -108,7 +109,8 @@ advertising identifier only goes to AppsFlyer, and only with both your agreement
 | **TomTom** (TomTom International B.V., Netherlands) | Loops and routes, rerouting, speed limits along the way, cafés and restaurants along a ride; address and place search outside France, or when IGN finds nothing, and naming a place outside France | Coordinates of the start (usually your location), waypoints and destination; when rerouting, your location and heading; points of the route; for a search, what you type and your location, to rank results around you; the coordinates of a point to name |
 | **OSRM** demo server (FOSSGIS e.V., Germany) | Fallback route when TomTom doesn't answer | Waypoint coordinates |
 | **IGN** Géoplateforme (French national mapping agency, France) | Address and place search in France, your town's name (home, weather) and the names of points placed on the map, nearby passes when Photon doesn't answer | What you type; your location, to rank results around you; the coordinates of a point to name |
-| **Photon** (komoot GmbH, Germany) | Nearby passes; address and place search and naming a point when IGN and TomTom don't answer | What you type; your location, to rank results and find nearby passes; the coordinates of a point to name |
+| **Photon** (komoot GmbH, Germany) | Nearby passes; cafés, restaurants and viewpoints around a point, or along a route when Overpass is busy; address and place search and naming a point when IGN and TomTom don't answer | What you type; your location, to rank results and find nearby passes; the coordinates of a point to name or to search around; a few points of the route |
+| **Overpass API**, a public OpenStreetMap server (FOSSGIS e.V., Germany) | Cafés, restaurants and viewpoints along a route ("Créer le parcours" chips) | Points of the route (80 at most) and the kind of place looked for; the app names itself, as Overpass requires. No account |
 | **Open-Meteo** (OpenMeteo GmbH, Switzerland) | Current weather, forecasts, weather at passes and along the ride | Your location, or a pass's or a ride point's |
 | **RainViewer** | Rain radar | No location: only the images of the map area shown |
 | **OpenFreeMap** (Hyperknot Software Kft., Hungary) | Base map, offline maps | Tiles of the area shown or of the ride's corridor; the app names itself and its version, as OpenFreeMap requires |
@@ -117,12 +119,11 @@ advertising identifier only goes to AppsFlyer, and only with both your agreement
 | **Fuel prices** (data.economie.gouv.fr, French Ministry of the Economy) | Fuel stations and today's prices, in France | Your location or route points |
 | **data.gouv.fr** (France) | Official list of fixed speed cameras, checked at most once a week | Nothing about you |
 | **Bike database** (public file published by SZ CORP) | New edition of the motorcycle list, checked at most once a week | Nothing about you |
-| **Unsplash** | Illustration photos on some screens | Nothing about you |
 | **Expo** (650 Industries, Inc., USA) | App updates | Technical details: system, app version, a technical installation identifier created by the update service |
 | **RideKit's alert server**, hosted by **Cloudflare** (Cloudflare, Inc., USA) | Automatic sending of the crash alert (section 6), if detection is on with a contact | When the contact is registered: their number, nothing else. On an alert or a test: their number, your nickname, the time of the impact and the phone's time zone, your speed just before, your location and how precise it is, the battery |
 | **Brevo** (Brevo SAS, formerly Sendinblue, France), for the alert server | Sending RideKit's alert to your contact, as a single text | Your contact's number and the text: your nickname, the time, your location and how precise it is, the battery and, if there is room, your speed |
-| **RideKit's group ride server**, hosted by **Cloudflare** (Cloudflare, Inc., USA), data in the European Union | Group rides (section 7), only if you create or join one and agree to share your location in it | Your nickname; during your guided rides, your location (every 5 s while riding, 30 s when stopped), your speed, your progress along the group's ride, whether you leave it, whether your battery is low (not its level); the quick messages you pick; an alert from your crash detection (not a test), with your location; for the leader, the route of the ride they start and whether they have RideKit Pro (the group's size depends on it) |
-| **The members of your group ride**, through this server | Seeing you on the map, getting your messages and your alert (section 7) | What the group ride server receives, except your phone's token |
+| **RideKit's group ride server**, hosted by **Cloudflare** (Cloudflare, Inc., USA), data in the European Union | Group rides (section 7), only if you create or join one and agree to share your location in it | Your nickname; during your guided rides, your location (every 5 s while riding, 30 s when stopped), your speed, your progress along the group's ride, whether you leave it, whether your battery is low (not its level); the quick messages you pick; never your location within 500 m of your start or of the finish (except when heading to a fallen member), only that you are there; an alert from your crash detection (not a test), with your exact location; for the leader, the route of the ride they start, cut 500 m from its start and from its finish, and whether they have RideKit Pro (the group's size depends on it) |
+| **The members of your group ride**, through this server | Seeing you on the map, getting your messages and your alert (section 7) | What the group ride server receives, except your phone's token; and when the server last heard from you |
 | **RevenueCat** (RevenueCat, Inc., USA) | Knowing whether you subscribe to RideKit Pro (section 10) | The history of your RideKit Pro purchases (product, dates, price and currency, store country), a random identifier created for this phone, the app's identifier on this phone (IDFV), the phone's model and system, the app version, the language. Never the advertising identifier, never your location |
 | **AppsFlyer** (AppsFlyer Ltd.), only if you accept it | Audience measurement: what works in the app, which ad campaign brought you (section 11) | Usage facts (screen opened, ride started or finished, setting changed, distances and durations in ranges); an identifier specific to the app on this phone (IDFV on iOS, AppsFlyer ID); the phone's model and system, the language; on iPhone, the advertising identifier (IDFA), only if you also allow tracking when iOS asks you. Never your location |
 | **Ad networks** running RideKit's campaigns, through AppsFlyer | Attributing your installation to the ad that brought it (section 11) | On iPhone only, if you accepted measurement and allowed tracking: the advertising identifier (IDFA), which AppsFlyer passes on to them |
@@ -184,7 +185,9 @@ Crash detection is a RideKit Pro feature and **off by default**: you turn it on.
   close one know: it does not call emergency services. If your contact opens the
   link, Google receives the coordinates, under its own policy. If you are on a group
   ride, the alert (not a test) is also relayed to the members, with your location
-  (section 7).
+  (section 7). Once the text has gone, the app offers to tell your contact that you
+  are fine: that text is always prepared in the phone's messaging app and goes from
+  your phone, when you tap "Send"; the alert server never sends it.
 - **Automatic sending.** It comes with crash detection, with RideKit Pro: as soon as
   detection is on with a contact, the alert goes by itself. To stop it, turn
   detection off or remove your contact; it also stops when your RideKit Pro
@@ -203,13 +206,15 @@ Crash detection is a RideKit Pro feature and **off by default**: you turn it on.
     the app keeps trying for 5 minutes.
   - *What is kept.* Neither your location, nor the texts, nor your nickname, nor your
     IP address. Only: your phone's token and the fingerprint of your contact's number;
-    the day's counters (per phone, per number and IP address fingerprint, for the
-    whole service), which cap sending against abuse and are deleted the next day; the
+    the day's counters (per phone, per number fingerprint, per IP address
+    fingerprint, an IPv6 address counting by its /64 block, and for the whole
+    service), which cap sending against abuse and are deleted the next day; the
     id of each of the day's alerts, so it is never sent twice. The server's logs say
     what happened (sent, refused), with no number or location, and are kept 3 days.
   - *When it forgets.* Turn detection off, remove your contact or let your RideKit
-    Pro subscription end: the server forgets your contact. "Réinitialiser l'app" makes it forget your phone. Without
-    news from your phone for 400 days, it forgets it by itself.
+    Pro subscription end: the server forgets your contact as soon as your phone has a
+    network. "Réinitialiser l'app" makes it forget your phone, if it has a network at
+    that moment. Without news from your phone for 400 days, it forgets it by itself.
   - *Providers.* The server runs on Cloudflare, what it keeps being placed in the
     European Union where Cloudflare offers it; texts go through Brevo, in France,
     which keeps its data in the European Union. Both act on behalf of SZ CORP. Brevo
@@ -217,8 +222,9 @@ Crash detection is a RideKit Pro feature and **off by default**: you turn it on.
     deletes it. To deliver it, Brevo goes through partner carriers, some of them
     American, which may keep a technical record of it
     under their own policy.
-  - *Countries.* For now, automatic sending only goes to French mobile numbers. For
-    any other number, the text is prepared on your phone, as without the server.
+  - *Countries.* For now, automatic sending only goes to mobile numbers in
+    mainland France. For any other number, overseas France included, the text is
+    prepared on your phone, as without the server.
 - **Your contact, informed by you.** RideKit only texts them on an alert or a test.
   You are the one who tells them: as soon as you pick them, the app prepares a text
   saying they are your emergency contact and what would follow. It goes from your
@@ -238,21 +244,34 @@ effacée": your location is shared with the group during the ride, then deleted)
   speed, your progress along the group's ride, whether you leave it, whether your
   battery is low (not its level), the quick messages you pick (Essence, Pause,
   Problème, Ralentis, Tout va bien, Danger) and, if your crash detection triggers an
-  alert (not a test), that alert with your location. The leader also sends the route
-  of the ride they start, and whether they have RideKit Pro (their group then takes 8
-  people instead of 2).
+  alert (not a test), that alert with your exact location. The leader also sends the
+  route of the ride they start, and whether they have RideKit Pro (their group then
+  takes 8 people instead of 2).
+- **Around the start and the finish.** Your location is never sent within 500 m of
+  where you set off, nor of the finish of the ride you follow (except when you head
+  to a fallen member): the group only knows you are "près du départ" (near the
+  start) or "à l'arrivée" (at the finish). The leader's route is sent cut 500 m from
+  its start and from its finish. The crash alert, for its part, keeps your exact
+  location: it is the one needed to help you.
 - **Who sees it.** Only the members of that group, whom the leader sees arrive and can
-  remove. No account, number or e-mail: a random token for your phone and a randomly
-  drawn group code.
-- **What is kept, and for how long.** The server keeps locations in memory only,
-  never on disk. When the ride ends (by the leader, after 3 hours without activity, or
-  16 hours at most), nicknames, the ride and alerts are deleted, and the rest (the
-  code, the phones' tokens) 24 hours later. Against abuse, it also counts the requests
-  of each phone and each IP address (through a fingerprint): these counters are
-  deleted the next day. Its logs contain no location, nickname or code, and are kept
-  3 days.
+  remove; they also see when the server last heard from you. The group closes to
+  newcomers as soon as the leader starts a ride and after each removal, and only the
+  leader can open it again. No account, number or e-mail: a random token for your
+  phone and a randomly drawn group code.
+- **What is kept, and for how long.** Road locations are kept in memory only, never
+  on disk. The leader's ride and an ongoing alert (with its location) are stored on
+  the server until the ride ends. When it ends (by the leader, after 3 hours without
+  activity, or 16 hours at most), nicknames, the ride and alerts are deleted, and the
+  rest (the code, the identifiers of the group's phones) 24 hours later. Cloudflare,
+  which hosts the server, keeps what it takes to restore them for up to 30 days.
+  Against abuse, the server also counts the requests of each phone and each IP
+  address (through a fingerprint): these counters are deleted the next day. Its logs
+  contain no location, nickname or code, and are kept 3 days (7 if the server moves
+  to Cloudflare's paid plan).
 - **Legal basis.** Your consent (Art. 6(1)(a) GDPR), which you withdraw by leaving the
-  group: sharing stops at once.
+  group: sharing stops at once on your phone, and the server learns it as soon as you
+  have a network. For an alert relayed to the group, which suggests you may be hurt:
+  protecting your vital interests (Art. 6(1)(d) and 9(2)(c)).
 - **Age.** For riders aged 15 and over only (Article 45 of the French Loi Informatique
   et Libertés).
 - **Provider.** The server is hosted by Cloudflare, which acts on behalf of SZ CORP;
@@ -283,9 +302,9 @@ cannot know whether you received or opened them.
 
 ## 10. Purchases (RevenueCat)
 
-In-app purchases (RideKit Pro) are processed by Apple (App Store); RideKit Pro is not
-sold on Google Play yet. SZ CORP sees neither your payment method, nor your Apple ID,
-nor your address.
+In-app purchases (RideKit Pro) are processed by Apple (App Store), for now in France;
+RideKit is not on Google Play yet. SZ CORP sees neither your payment method, nor your
+Apple ID, nor your address.
 
 To know whether you subscribe, the app goes through **RevenueCat** (RevenueCat, Inc.,
 USA), which acts on behalf of SZ CORP.
@@ -319,7 +338,9 @@ SZ CORP.
   any connection carries: the phone's model and system, language, IP address, from
   which AppsFlyer infers the country.
 - **What is never sent.** Your location, your routes, your nickname, your emergency
-  contact, what you type; Android's advertising identifier (Google Advertising ID).
+  contact, what you type; anything about a real crash alert (only your tests; the
+  alert screen is never measured); Android's advertising identifier (Google
+  Advertising ID).
 - **The iPhone's advertising identifier (IDFA).** On iPhone, once measurement is
   accepted, and only then, iOS asks you whether RideKit may "track your activity"
   (App Tracking Transparency). If you allow it, the IDFA also goes to AppsFlyer,
@@ -352,9 +373,9 @@ SZ CORP.
 - No third-party crash reporting tool.
 - No profiling, no automated decision about you, no sale or rental of data.
 
-Apple and Google, who distribute the app, may give us aggregate statistics (downloads,
-crashes) if you agreed, in your phone's settings, to share analytics with developers.
-They do not identify you.
+Apple, which distributes the app (and Google, once it is on Android), may give us
+aggregate statistics (downloads, crashes) if you agreed, in your phone's settings, to
+share analytics with developers. They do not identify you.
 
 ## 13. Legal bases (GDPR)
 
@@ -369,7 +390,7 @@ They do not identify you.
   withdraw it at any time, in the app or in your phone's settings.
 - **Your vital interests** (Art. 6(1)(d) and 9(2)(c)): on an unanswered alert, letting
   your contact know when you may no longer be able to, an alert suggesting you may be
-  hurt.
+  hurt; likewise, relaying your alert to the members of your group ride (section 7).
 - **Our legitimate interest** (Art. 6(1)(f)): answering your support messages, keeping
   the app up to date and secure, preventing abuse of the alert server; for your
   contact, getting them the alert you wanted, which you tell them about yourself,
@@ -383,13 +404,14 @@ They do not identify you.
   three years after our last exchange; and, if automatic sending is set up, what the
   alert server keeps (section 6): the token and your contact's number fingerprint as
   long as they are registered (at most 400 days without news), the counters until the
-  next day; for a group ride, what its server keeps (section 7): locations in memory
-  only, nicknames, the ride and alerts until the ride ends, the code and tokens 24
-  hours more, logs 3 days; at Brevo, on our behalf, the log of each text sent (number,
-  text, status), one month; at RevenueCat, on our behalf, the history of your purchases
-  and your phone's identifier, as long as RideKit uses it (section 10); at
-  AppsFlyer, on our behalf and if you accepted measurement, what it received, 24
-  months at most (section 11).
+  next day; for a group ride, what its server keeps (section 7): road locations in
+  memory only, nicknames, the leader's ride and alerts (with their location) until the
+  ride ends, the code and the phones' identifiers 24 hours more, what it takes to
+  restore this data at Cloudflare for up to 30 days, logs 3 days; at Brevo, on our
+  behalf, the log of each text sent (number, text, status), one month; at RevenueCat,
+  on our behalf, the history of your purchases and your phone's identifier, as long as
+  RideKit uses it (section 10); at AppsFlyer, on our behalf and if you accepted
+  measurement, what it received, 24 months at most (section 11).
 - **At third-party services**: under their own policies (see section 4).
 
 ## 15. Where data goes
@@ -397,7 +419,7 @@ They do not identify you.
 IGN (France), TomTom (Netherlands), FOSSGIS (Germany), komoot (Germany), OpenFreeMap
 (Hungary) and Brevo (France, the alert server's texts) are in the European Union, as
 is the group ride server's data; Open-Meteo is in Switzerland, and AppsFlyer outside the EU: countries the EU recognises as providing adequate protection. Wikipedia,
-Expo, Unsplash, RainViewer, Open Topo Data, Cloudflare (the alert server, and any
+Expo, RainViewer, Open Topo Data, Cloudflare (the alert server, and any
 access to the group ride server, Cloudflare being an American company), RevenueCat
 (subscriptions), AppsFlyer for part of its processing, the ad networks it passes the
 advertising identifier on to, the partner carriers Brevo delivers texts through, some
@@ -423,17 +445,19 @@ death.
 As almost everything stays on your phone, you exercise most of these rights yourself,
 in the app (section 3). For the rest, write to **contact@ridekit-app.com**: we answer
 within one month. We have no copy of what the app sends to the map, routing, search,
-weather or price services, and no way to link their requests to you; for that data,
-contact them directly. The alert server knows neither your name nor your contact's
-number in clear: to have it forget your contact, turn detection off, remove your
-contact or reset the app. To stop sharing your location with a group ride, leave the
-group: the server deletes the ride when it ends (section 7). The log of an alert text
-at Brevo, we delete on request, without waiting for the month. At RevenueCat, we have your data deleted on request,
-with the Apple order number of your purchase (section 10). Audience measurement stops
-as soon as you refuse it in Réglages › Confidentialité › Mesure d'audience, and the
-sending of the advertising identifier as soon as you withdraw tracking in the
-iPhone's settings; what AppsFlyer already received, we ask it to delete, with the
-measurement identifier shown in Réglages › Confidentialité (section 11).
+place, weather or price services, and no way to link their requests to you; for that
+data, contact them directly. The alert server knows neither your name nor your
+contact's number in clear: to have it forget your contact, turn detection off, remove
+your contact or reset the app. To stop sharing your location with a group ride, leave
+the group: sharing stops at once on your phone, the server learns it as soon as you
+have a network, and it deletes the ride when it ends (section 7). The log of an alert
+text at Brevo, we delete on request, without waiting for the month. At RevenueCat, we
+have your data deleted on request, with the Apple order number of your purchase
+(section 10). Audience measurement stops as soon as you refuse it in Réglages ›
+Confidentialité › Mesure d'audience, and the sending of the advertising identifier as
+soon as you withdraw tracking in the iPhone's settings; what AppsFlyer already
+received, we ask it to delete, with the measurement identifier shown in Réglages ›
+Confidentialité (section 11).
 
 You can also complain to your country's authority:
 
@@ -463,10 +487,11 @@ riders aged 15 and over only (section 7).
 Your data is in the app's private storage, protected by your phone's encryption and
 passcode: set one. Exchanges with the services in section 4 are encrypted (HTTPS). The alert
 server only sends texts for a phone it gave a signed token to, only to the contact
-registered for that phone, only to French mobile numbers for now (section 6), and in
-limited numbers each day. A group ride can only be joined with its code, drawn at
-random by the server among about 729 million; code attempts are limited, and the
-leader sees each arrival and can remove anyone.
+registered for that phone, only to mobile numbers in mainland France for now
+(section 6), and in limited numbers each day. A group ride can only be joined with its
+code, drawn at random by the server among about 729 million; code attempts are
+limited, the leader sees each arrival and can remove anyone, and the group closes to
+newcomers as soon as the leader starts a ride and after each removal.
 
 ## 19. This website
 

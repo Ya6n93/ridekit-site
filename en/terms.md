@@ -9,7 +9,7 @@ lang: en
 
 # Terms of Use
 
-*Last updated: 26 October 2026*
+*Last updated: 27 October 2026*
 
 RideKit is published by **SZ CORP**, the trade name of Yassine Latrach, sole
 proprietor (entrepreneur individuel, EI) — see the [legal notice](/mentions-legales/)
@@ -93,14 +93,13 @@ emergency services nor a certified alert device. In an emergency, call **112**
 - When it believes you crashed, an alarm rings, at the phone's volume, and a countdown
   starts. Without an answer, a text with your location goes to your emergency
   contact. RideKit lets your close one know: it **does not alert emergency services**.
-- To a French mobile number (the only ones served for now), this text, a single
-  one, goes by itself, through RideKit's server and
-  Brevo, if the phone has a network (mobile data); without one, the app keeps trying
-  for 5 minutes. Otherwise, or if that sending fails, the message is prepared in the
-  messaging app and someone has to tap "Send" for it to go. In every case, sending
-  depends on the mobile network, the battery, carriers and providers: a text may
-  arrive late, or not at all. The server caps the number of texts a day, against
-  abuse.
+- To a mobile number in mainland France (the only ones served for now), this text, a
+  single one, goes by itself, through RideKit's server and Brevo, if the phone has a
+  network (mobile data); without one, the app keeps trying for 5 minutes. Otherwise,
+  or if that sending fails, the message is prepared in the messaging app and someone
+  has to tap "Send" for it to go. In every case, sending depends on the mobile
+  network, the battery, carriers and providers: a text may arrive late, or not at all.
+  The server caps the number of texts a day, against abuse.
 - RideKit doesn't text your contact when you register them: it is up to you to tell
   them, with the text the app prepares for you, sent from your phone. Tell them they
   may receive an alert, check their number, and try the alert with the tests in the
@@ -114,7 +113,11 @@ emergency services nor a certified alert device. In an emergency, call **112**
   have it during the ride, nobody is removed, only newcomers are refused.
 - The other members' locations, messages and alerts are **indicative**: they depend
   on their network and GPS, and may be late or missing. "Plus de nouvelles" (no news)
-  often means "no network".
+  often means "no network". Around the start and the finish (500 m), a member's
+  location is not shared: the group only reads "Près du départ" (near the start) or
+  "À l'arrivée" (at the finish).
+- The group closes to newcomers as soon as the leader starts a ride and after each
+  removal; only the leader can open it again.
 - An alert relayed to the group **does not alert emergency services**: in an
   emergency, call **112** (**911** in Canada).
 - **Do not handle your phone while riding**: quick messages are picked when stopped.
@@ -125,8 +128,9 @@ emergency services nor a certified alert device. In an emergency, call **112**
 
 RideKit is free, with limits. RideKit Pro includes:
 
-- **crash detection** (section 5) and, to a French mobile number, the alert sent to
-  your close one by itself, with its test ("Tester l'envoi automatique");
+- **crash detection** (section 5) and, to a mobile number in mainland France, the
+  alert sent to your close one by itself, with its test ("Tester l'envoi
+  automatique");
 - the **voice co-pilot**: dangerous bends, rain, last fuel station, danger zones,
   spoken during guidance;
 - **unlimited loops** (without Pro: 3 a month);
@@ -144,8 +148,8 @@ are described in the app at the time of purchase.
 - **Plans and prices**: monthly (€5.99/month) or yearly (€49.99/year), prices
   including VAT in France. The price shown in the app before you confirm the purchase
   prevails.
-- **Where to buy it**: on iPhone, through the App Store. RideKit Pro is not sold on
-  Google Play yet.
+- **Where to buy it**: on iPhone, through the App Store, for now in France. RideKit
+  is not on Google Play yet.
 - **Free trial**: the yearly subscription starts with 7 free days if you have never
   used the trial (one trial per App Store account). Unless cancelled at least 24 hours
   before they end, the subscription starts and is charged to your App Store account.
@@ -231,7 +235,10 @@ provided by them as is:
   - towns: the French State's [API Géo](https://geo.api.gouv.fr), Licence Ouverte 2.0;
   - photos by their authors, credited on each (DATAtourisme, or Wikimedia Commons
     under a free licence).
-- **Illustration photos**: [Unsplash](https://unsplash.com), Unsplash licence.
+- **The app's photos and video**: photos from [Unsplash](https://unsplash.com)
+  (Unsplash licence) and [Pixabay](https://pixabay.com) (Pixabay Content License);
+  video on the RideKit Pro screen from [Pexels](https://www.pexels.com) (Pexels
+  licence).
 - **Fonts**: Barlow and Barlow Condensed, SIL Open Font License 1.1.
 
 ## 11. Availability

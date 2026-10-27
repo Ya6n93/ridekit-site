@@ -1,6 +1,6 @@
 # RideKit
 
-> Application mobile pour la balade à moto (iOS, Android), éditée par SZ CORP
+> Application mobile pour la balade à moto (iPhone ; Android plus tard), éditée par SZ CORP
 > (Paris, France). Elle génère des boucles selon la durée et le style de route
 > choisis, guide le motard, affiche la météo pour rouler et garde le carnet de
 > ses balades. Sans compte, sans publicité.
@@ -26,33 +26,40 @@
 - **Carnet et garage** : balades (distance, durée, virages), moto, kilométrage,
   entretiens et rappels.
 - **Détection de chute** (RideKit Pro) : désactivée par défaut ; une aide, pas un
-  service d'urgence. Après une chute probable et sans réponse, un SMS avec la position
-  part tout seul vers le contact d'urgence, par le serveur d'alerte de RideKit
-  (Cloudflare, Brevo) ; sans réseau ou sans ce serveur, il est préparé sur le
-  téléphone, envoyé d'un appui. RideKit prévient un proche, pas les secours.
-- **Données** : aucun compte ; balades, moto, contact d'urgence et réglages restent
-  sur le téléphone. Deux serveurs RideKit, chez Cloudflare : celui de l'alerte
-  chute, qui ne garde ni position, ni texte, ni numéro en clair, et celui des
-  sorties de groupe, qui garde ses données dans l'Union européenne, les positions en
-  mémoire seulement, et efface la sortie à sa fin. Des coordonnées partent vers les
-  services qui calculent les routes, la météo et les cartes. Mesure d'audience et
-  attribution des pubs par AppsFlyer, seulement si le motard l'accepte, sans
-  position ni pub ciblée ; sur iPhone, l'identifiant publicitaire (IDFA) seulement
-  s'il autorise aussi le suivi quand iOS le lui demande, jamais celui d'Android.
+  service d'urgence. Après une chute probable et sans réponse, un SMS avec la
+  position part tout seul vers le contact d'urgence (mobile de France
+  métropolitaine), par le serveur d'alerte de RideKit (Cloudflare, Brevo) ; sans
+  réseau, sans ce serveur ou vers un autre numéro, il est préparé sur le
+  téléphone, envoyé d'un appui. Le SMS « Tout va bien », proposé ensuite, part
+  toujours du téléphone. RideKit prévient un proche, pas les secours.
+- **Données** : aucun compte ; balades, moto, contact d'urgence et réglages
+  restent sur le téléphone. Deux serveurs RideKit, chez Cloudflare : celui de
+  l'alerte chute, qui ne garde ni position, ni texte, ni numéro en clair, et celui
+  des sorties de groupe, qui garde ses données dans l'Union européenne, les
+  positions de route en mémoire seulement (la balade du leader et une alerte en
+  cours enregistrées jusqu'à la fin de la sortie), et efface la sortie à sa fin.
+  Des coordonnées partent vers les services qui calculent les routes, la météo et
+  les cartes. Mesure d'audience et attribution des pubs par AppsFlyer, seulement
+  si le motard l'accepte, sans position ni pub ciblée ; sur iPhone, l'identifiant
+  publicitaire (IDFA) seulement s'il autorise aussi le suivi quand iOS le lui
+  demande, jamais celui d'Android.
 - **Sorties de groupe** : un leader invite avec un code ou un QR ; chacun voit les
   autres sur la carte, reçoit la balade du leader, des messages rapides lus à voix
   haute et l'alerte chute d'un membre. La position n'est partagée que si le motard
-  l'accepte, pour la sortie, puis effacée. Réservé aux 15 ans et plus. Gratuit pour
-  tous ; un groupe accueille 2 personnes, leader compris, 8 quand le leader a
-  RideKit Pro.
-- **RideKit Pro** : abonnement sur iPhone par l'App Store (pas encore sur Google
-  Play), 5,99 €/mois ou 49,99 €/an, 7 jours gratuits sur l'annuel seulement ;
-  détection de chute et envoi automatique de l'alerte (et son test), copilote
-  vocal (virages, pluie, dernière station, zones de danger), boucles illimitées
-  (3 par mois sans), cartes hors ligne, sorties de groupe jusqu'à 8 (2 sans),
-  partage GPX, parcours de plus de 5 points. Le reste est gratuit. Abonnement
-  suivi par RevenueCat.
-- **Pays** : France, Belgique, Suisse, Luxembourg, Canada. Interface en français.
+  l'accepte, pour la sortie, puis effacée ; jamais à moins de 500 m de son départ
+  ni de l'arrivée (sauf en allant vers un membre tombé), et le tracé du leader est
+  coupé d'autant. Le groupe se ferme aux nouvelles arrivées au départ de chaque
+  balade et après chaque retrait ; seul le leader le rouvre. Réservé aux 15 ans et
+  plus. Gratuit pour tous ; un groupe accueille 2 personnes, leader compris, 8
+  quand le leader a RideKit Pro.
+- **RideKit Pro** : abonnement sur iPhone par l'App Store, pour l'instant en
+  France (pas encore sur Google Play), 5,99 €/mois ou 49,99 €/an, 7 jours gratuits
+  sur l'annuel seulement ; détection de chute et envoi automatique de l'alerte (et
+  son test), copilote vocal (virages, pluie, dernière station, zones de danger),
+  boucles illimitées (3 par mois sans), cartes hors ligne, sorties de groupe
+  jusqu'à 8 (2 sans), partage GPX, parcours de plus de 5 points. Le reste est
+  gratuit. Abonnement suivi par RevenueCat.
+- **Pays** : France pour l'instant. Interface en français.
 
 ## Pages
 

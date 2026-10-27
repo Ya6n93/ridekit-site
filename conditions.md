@@ -9,7 +9,7 @@ lang: fr
 
 # Conditions d'utilisation
 
-*Dernière mise à jour : 26 octobre 2026*
+*Dernière mise à jour : 27 octobre 2026*
 
 RideKit est éditée par **SZ CORP**, nom commercial de Yassine Latrach, entrepreneur
 individuel (EI) — voir les [mentions légales](/mentions-legales/). En installant ou
@@ -97,14 +97,14 @@ ni les secours ni un dispositif d'alerte homologué. En cas d'urgence, appelle l
 - Quand elle pense que tu as chuté, une alarme sonne, au volume du téléphone, et un
   compte à rebours démarre. Sans réponse, un SMS avec ta position part pour ton
   contact d'urgence. RideKit prévient ton proche : elle **n'alerte pas les secours**.
-- Vers un mobile français (les seuls servis pour l'instant), ce SMS, un seul, part
-  tout seul, par le serveur de RideKit et Brevo, si
-  le téléphone a du réseau (données mobiles) ; sans réseau, l'app réessaie pendant 5
-  minutes. Sinon, ou si cet envoi échoue, le message est préparé dans l'app SMS et il
-  faut qu'une personne appuie sur « Envoyer » pour qu'il parte. Dans tous les cas,
-  l'envoi dépend du réseau mobile, de la batterie, des opérateurs et des
-  prestataires : un SMS peut arriver en retard, ou pas du tout. Le serveur limite le
-  nombre d'envois par jour, contre les abus.
+- Vers un mobile de France métropolitaine (les seuls servis pour l'instant), ce SMS,
+  un seul, part tout seul, par le serveur de RideKit et Brevo, si le téléphone a du
+  réseau (données mobiles) ; sans réseau, l'app réessaie pendant 5 minutes. Sinon, ou
+  si cet envoi échoue, le message est préparé dans l'app SMS et il faut qu'une
+  personne appuie sur « Envoyer » pour qu'il parte. Dans tous les cas, l'envoi dépend
+  du réseau mobile, de la batterie, des opérateurs et des prestataires : un SMS peut
+  arriver en retard, ou pas du tout. Le serveur limite le nombre d'envois par jour,
+  contre les abus.
 - RideKit n'écrit pas à ton contact quand tu l'enregistres : c'est à toi de le
   prévenir, par le SMS que l'app te prépare et qui part de ton téléphone. Dis-lui
   qu'il peut recevoir une alerte, vérifie son numéro, et essaie l'alerte avec les
@@ -119,7 +119,11 @@ ni les secours ni un dispositif d'alerte homologué. En cas d'urgence, appelle l
   arrivées sont bloquées.
 - Les positions des autres membres, leurs messages et leurs alertes sont
   **indicatifs** : ils dépendent de leur réseau et de leur GPS, et peuvent être en
-  retard ou manquer. « Plus de nouvelles » veut souvent dire « sans réseau ».
+  retard ou manquer. « Plus de nouvelles » veut souvent dire « sans réseau ». Aux
+  abords du départ et de l'arrivée (500 m), la position d'un membre n'est pas
+  partagée : le groupe lit seulement « Près du départ » ou « À l'arrivée ».
+- Le groupe se ferme aux nouvelles arrivées dès que le leader lance une balade et
+  après chaque retrait ; seul le leader peut le rouvrir.
 - Une alerte relayée au groupe **ne prévient pas les secours** : en cas d'urgence,
   appelle le **112** (le **911** au Canada).
 - **Ne manipule pas le téléphone en roulant** : les messages rapides se choisissent à
@@ -131,8 +135,8 @@ ni les secours ni un dispositif d'alerte homologué. En cas d'urgence, appelle l
 
 RideKit est gratuite, avec des limites. RideKit Pro comprend :
 
-- la **détection de chute** (section 5) et, vers un mobile français, l'envoi
-  automatique de l'alerte à ton proche, avec son test (« Tester l'envoi
+- la **détection de chute** (section 5) et, vers un mobile de France métropolitaine,
+  l'envoi automatique de l'alerte à ton proche, avec son test (« Tester l'envoi
   automatique ») ;
 - le **copilote vocal** : virages dangereux, pluie, dernière station, zones de
   danger, dits pendant le guidage ;
@@ -151,8 +155,8 @@ détail est décrit dans l'app au moment de l'achat.
 
 - **Formules et prix** : mensuelle (5,99 €/mois) ou annuelle (49,99 €/an), prix TTC
   en France. Le prix affiché dans l'app avant que tu confirmes l'achat fait foi.
-- **Où l'acheter** : sur iPhone, par l'App Store. RideKit Pro n'est pas encore vendu
-  sur Google Play.
+- **Où l'acheter** : sur iPhone, par l'App Store, pour l'instant en France. RideKit
+  n'est pas encore sur Google Play.
 - **Essai gratuit** : l'abonnement annuel commence par 7 jours gratuits si tu n'en as
   jamais profité (un essai par compte App Store). Sans résiliation au moins 24 heures
   avant leur fin, l'abonnement commence et est débité sur ton compte App Store. La
@@ -243,7 +247,9 @@ auteurs et sont fournies par eux en l'état :
   - communes : [API Géo](https://geo.api.gouv.fr) de l'État, Licence Ouverte 2.0 ;
   - photos de leurs auteurs, créditées sur chacune (DATAtourisme, ou Wikimedia
     Commons sous licence libre).
-- **Photos d'illustration** : [Unsplash](https://unsplash.com), licence Unsplash.
+- **Photos et vidéo de l'app** : photos [Unsplash](https://unsplash.com) (licence
+  Unsplash) et [Pixabay](https://pixabay.com) (Pixabay Content License) ; vidéo de
+  l'écran RideKit Pro : [Pexels](https://www.pexels.com) (licence Pexels).
 - **Polices** : Barlow et Barlow Condensed, SIL Open Font License 1.1.
 
 ## 11. Disponibilité

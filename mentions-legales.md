@@ -8,7 +8,7 @@ lang: fr
 
 # Mentions légales
 
-*Dernière mise à jour : 26 octobre 2026*
+*Dernière mise à jour : 27 octobre 2026*
 
 ## Éditeur
 
@@ -44,10 +44,10 @@ Salneuve, 75017 Paris, France — RCS Paris 498 019 298 — [brevo.com](https://
 ## Distribution de l'application
 
 RideKit est distribuée sur iPhone par l'App Store d'Apple (Apple Distribution
-International Ltd., Hollyhill Industrial Estate, Hollyhill, Cork, Irlande) et, sur
-Android, par Google Play (Google Ireland Limited, Gordon House, Barrow Street,
-Dublin 4, Irlande). Ses mises à jour sont diffusées par Expo (650 Industries, Inc.,
-Palo Alto, Californie, États-Unis).
+International Ltd., Hollyhill Industrial Estate, Hollyhill, Cork, Irlande), pour
+l'instant en France. Sur Android, elle le sera plus tard par Google Play (Google
+Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irlande). Ses mises à jour
+sont diffusées par Expo (650 Industries, Inc., Palo Alto, Californie, États-Unis).
 
 ## Mesure d'audience et abonnements de l'application
 
@@ -75,7 +75,8 @@ des exceptions prévues par la loi.
 - Police des titres : Barlow Condensed, © The Barlow Project Authors, SIL Open Font
   License 1.1 ([licence](/assets/fonts/OFL.txt)), servie par ce site.
 - Les sources de données de l'application et leurs licences (OpenStreetMap,
-  OpenFreeMap, TomTom, Open-Meteo, RainViewer, Wikipédia, data.gouv.fr…) sont
+  OpenFreeMap, TomTom, Overpass API, Open-Meteo, RainViewer, Wikipédia,
+  data.gouv.fr…), ainsi que ses photos (Unsplash, Pixabay) et sa vidéo (Pexels), sont
   listées dans les [conditions d'utilisation](/conditions/#sources).
 
 ## Contact
