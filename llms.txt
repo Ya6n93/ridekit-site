@@ -20,7 +20,7 @@
 - **Météo** : prévisions heure par heure (Open-Meteo), meilleur créneau pour
   rouler, radar de pluie (RainViewer), météo des cols proches.
 - **Hors réseau** : carte d'une balade téléchargeable avant le départ (RideKit Pro).
-- **Zones de danger** : en France uniquement, selon la réglementation (300 m en
+- **Zones de danger** : en France uniquement, dans le cadre autorisé (300 m en
   ville, 2 km hors agglomération, 4 km sur autoroute), jamais l'emplacement d'un
   radar. Aucune alerte radar ailleurs (Belgique, Suisse, Luxembourg, Canada…).
 - **Carnet et garage** : balades (distance, durée, virages), moto, kilométrage,

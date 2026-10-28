@@ -8,7 +8,7 @@
 - q: "La détection de chute appelle-t-elle les secours ?"
   a: "Non. Avec RideKit Pro, après une chute probable et sans réponse de ta part, elle envoie un SMS avec ta position à ton contact d'urgence. C'est une aide, pas une garantie : elle peut rater une chute ou se déclencher à tort. En cas d'urgence, appelle le 112. [En savoir plus](/detection-chute-moto/)."
 - q: "RideKit affiche-t-elle les radars ?"
-  a: "Non. En France, elle signale les zones de danger comme la loi le permet (une portion de 300 m en ville, 2 km hors agglomération, 4 km sur autoroute), à partir de la liste officielle des radars fixes, sans jamais montrer l'emplacement d'un radar."
+  a: "Non. En France, elle signale les zones de danger, comme les autres aides à la conduite autorisées (une portion de 300 m en ville, 2 km hors agglomération, 4 km sur autoroute), à partir de la liste officielle des radars fixes, sans jamais montrer l'emplacement d'un radar."
 - q: "Est-ce que ça marche sans réseau ?"
   a: "Le guidage a besoin de la carte : avec RideKit Pro, télécharge la carte d'une balade ou d'un road trip avant de partir, et le guidage continue là où ça ne capte plus."
 - q: "Puis-je suivre mes propres traces GPX ?"

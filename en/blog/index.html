@@ -1,0 +1,28 @@
+---
+layout: base
+lang: en
+title: "Motorcycle guides from RideKit"
+seo_title: "Motorcycle riding guides: group rides, GPX, France"
+description: "RideKit's riding guides in English: riding in a group, GPX tracks on iPhone, motorcycle road trips in France."
+schema_type: CollectionPage
+---
+<main id="main">
+  <section class="hero hero-slim">
+    <div class="wrap">
+      {% include crumbs.html n1="Guides" u1="/en/blog/" %}
+      <p class="eyebrow">RideKit</p>
+      <h1>Riding guides</h1>
+      <p class="lede">A few of our French guides, in English. The full blog is in French: <a href="/blog/" hreflang="fr" lang="fr" style="color:#F08A4B">ridekit-app.com/blog</a>.</p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="wrap">
+      <div class="post-grid">
+        {%- assign guides = site.pages | where: "lang", "en" | where: "article", true | sort: "date" | reverse -%}
+        {%- for p in guides %}
+        <a class="post-card" href="{{ p.url }}"><span class="pc-cat">Guide</span><strong>{{ p.title }}</strong><span class="pc-lede">{{ p.lede | default: p.description | truncate: 150 }}</span></a>
+        {%- endfor %}
+      </div>
+    </div>
+  </section>
+</main>

@@ -1,0 +1,73 @@
+---
+layout: base
+lang: en
+title: "RideKit: the motorcycle app for iPhone, a loop in one tap"
+seo_title: "RideKit: motorcycle app for iPhone, loops in one tap"
+description: "RideKit is a motorcycle app for iPhone: a twisty loop in one tap, group rides with your friends on the map, crash detection that texts a loved one (Pro), 97 road trips in France. In French, in France for now."
+alternate: /
+schema_app: true
+image: /assets/img/og/en.jpg
+---
+<main id="main">
+  <section class="hero hero-home" aria-labelledby="home-title">
+    <div class="hero-media">
+      <video autoplay muted loop playsinline preload="metadata" poster="/assets/video/balade-poster.webp" aria-hidden="true" tabindex="-1" disablepictureinpicture>
+        <source src="/assets/video/balade-640.webm" type="video/webm" media="(max-width: 700px)">
+        <source src="/assets/video/balade-640.mp4" type="video/mp4" media="(max-width: 700px)">
+        <source src="/assets/video/balade-960.webm" type="video/webm">
+        <source src="/assets/video/balade-960.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="wrap">
+      <div>
+        <p class="eyebrow">The motorcycle app for iPhone</p>
+        <h1 id="home-title">Your ride. <em>One tap.</em> Let's go.</h1>
+        <p class="lede">Tell RideKit how long you have and which roads you like: it draws a twisty loop from where you are, guides you by voice and keeps the ride in your journal. With your friends on the map, and a loved one told if you crash.</p>
+        <div class="btns">{% include store.html %}<a class="btn ghost" href="/" hreflang="fr" lang="fr">Version française</a></div>
+        <ul class="proof"><li>Free</li><li>No account</li><li>No ads</li><li>In French, in France for now</li></ul>
+      </div>
+      <div class="hero-shot">{% include shot.html name="boucle-en-un-tap" eager=true sizes="290px" alt="RideKit's loop screen: map around Annecy, 1 h ride, fast or twisty roads, Generate button" %}</div>
+    </div>
+    <p class="credit">Video: <a href="https://www.pexels.com/video/5052415/" rel="noopener">Pexels</a>, Pexels licence</p>
+  </section>
+
+  <section class="section">
+    <div class="wrap narrow">
+      <h2>Good to know</h2>
+      <ul class="facts">
+        <li>RideKit is coming to the App Store <strong>in France</strong> first. The app is <strong>in French</strong>; Android will come later.</li>
+        <li>Free, with an optional subscription, <strong>RideKit Pro</strong>: €49.99 a year with a 7-day free trial, or €5.99 a month.</li>
+        <li>No account: your rides, your bike and your settings stay on your phone.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section band">
+    <div class="wrap">
+      <h2>What RideKit does</h2>
+      <div class="grid">
+        <div class="card"><h3>A loop in one tap</h3><p>Pick a duration (1 to 5 h) and fast or twisty roads; avoid motorways, tolls, dirt roads, ferries or tunnels. 3 loops a month free, unlimited with Pro.</p></div>
+        <div class="card"><h3>Group rides</h3><p>The leader shares a code or a QR; everyone sees the others on the map, gets the leader's route and quick messages read aloud. 2 riders free, up to 8 when the leader has Pro.</p></div>
+        <div class="card"><h3>Crash detection <span class="tag-pro">Pro</span></h3><p>During a guided ride, after a likely crash and no answer, your emergency contact gets a text with your position (French mobiles). An aid, not a guarantee: it tells a loved one, not the emergency services.</p></div>
+        <div class="card"><h3>Roadbook</h3><p>97 road trips in France from open data, stage by stage, each with a <a href="/roadbook-moto/" hreflang="fr">page and a free GPX track</a> (in French).</p></div>
+        <div class="card"><h3>Riding weather</h3><p>Hourly forecast, the best time slot to ride, live rain radar, mountain pass weather.</p></div>
+        <div class="card"><h3>Voice navigation</h3><p>Free turn-by-turn voice guidance, screen locked too, speed limits and French danger zones. With Pro, a Copilot announces hairpins, rain and the last fuel station.</p></div>
+        <div class="card"><h3>And more</h3><p>Fuel prices in France, cols and viewpoints on your route, GPX/KML/TCX import (export with Pro), share your ride as an image, garage with maintenance reminders.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap narrow">
+      <h2>Guides in English</h2>
+      <div class="post-grid">
+        {%- assign guides = site.pages | where: "lang", "en" | where: "article", true | sort: "date" | reverse -%}
+        {%- for p in guides %}
+        <a class="post-card" href="{{ p.url }}"><span class="pc-cat">Guide</span><strong>{{ p.title }}</strong><span class="pc-lede">{{ p.lede | default: p.description | truncate: 150 }}</span></a>
+        {%- endfor %}
+      </div>
+      {% include cta.html title="Coming soon to the App Store" text="RideKit is coming to iPhone, in France. Free, no account, no ads." nolink=true %}
+      <p class="muted">Read more: <a class="link-more" href="/en/privacy/">Privacy Policy</a> · <a class="link-more" href="/en/terms/">Terms of Use</a></p>
+    </div>
+  </section>
+</main>
