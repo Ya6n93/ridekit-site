@@ -14,7 +14,9 @@ body_class: home
   fonctions dans l'ordre du fondateur. Aucune ressource tierce.
 {%- endcomment -%}
 <script>
-/* The intro, once per visit (like the app's launch: its logo revs up, then the ride starts): set before the first
+/* The logo's rev (needle, lit ticks, red-zone glow) is SVG's own animation (splash-mark.html): it turns around
+   the needle's pivot the same way in every browser, Safari included, as the app's splash does.
+   The intro, once per visit (like the app's launch: its logo revs up, then the ride starts): set before the first
    paint so nothing flashes. Not with reduced motion; « ?intro » plays it again. */
 (function(){var d=document.documentElement,f=/(^|[?&#])intro(=|&|$)/.test(location.search+location.hash),s=false;
 try{s=sessionStorage.getItem('rk-intro')==='1';}catch(e){}
@@ -25,13 +27,7 @@ if(f||(!s&&!(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').m
 .pre .rk-splash{display:flex;position:fixed;inset:0;z-index:60;align-items:center;justify-content:center;background:#0B0B0B;pointer-events:none}
 .pre .rk-splash.out{background:transparent;transition:background-color .7s ease}
 .rk-splash .rk-mark{width:min(52vw,260px);height:auto;opacity:0;transform:scale(.9);animation:rk-appear .35s cubic-bezier(.2,.8,.3,1) forwards;will-change:transform}
-.rk-sweep{stroke-dashoffset:703.7;animation:rk-sweep 1.2s cubic-bezier(.65,0,.35,1) .3s forwards}
-.rk-needle{transform-box:view-box;transform-origin:165px 172px;transform:rotate(-225deg);animation:rk-needle 1.2s cubic-bezier(.65,0,.35,1) .3s forwards}
-.rk-glow{stroke-opacity:0;opacity:0;animation:rk-glow .68s ease 1.45s forwards}
 @keyframes rk-appear{to{opacity:1;transform:scale(1)}}
-@keyframes rk-sweep{to{stroke-dashoffset:180}}
-@keyframes rk-needle{to{transform:rotate(40.5deg)}}
-@keyframes rk-glow{26%{opacity:.35}to{opacity:.14}}
 .pre header.top,.pre .hero-home .eyebrow,.pre .hero-home h1,.pre .hero-home .lede,.pre .hero-home .btns,.pre .hero-home .proof,.pre .hero-home .hero-shot,.pre .hero-home .credit{opacity:0}
 .hero-home h1{will-change:transform}
 </style>
