@@ -20,7 +20,7 @@ OUT = ROOT / "assets/img/og"
 S = 2  # dessiné en 2× puis réduit
 
 PAGES = [
-    ("default", "L'app moto pour iPhone", "Ta balade. Un tap. On roule.", "boucle-en-un-tap"),
+    ("default", "L'app moto pour iPhone", "Ta balade parfaite en un tap.", "boucle-en-un-tap"),
     ("generateur-balade-moto", "Générateur de balade moto", "Ta balade moto en un tap", "boucle-apercu"),
     ("sortie-moto-en-groupe", "Sortie moto en groupe", "Tes potes sur la carte", "sortie-de-groupe"),
     ("detection-chute-moto", "Détection de chute · RideKit Pro", "Si tu tombes, un proche le sait", "detection-de-chute"),
