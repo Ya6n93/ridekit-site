@@ -445,3 +445,4 @@ a{color:inherit}
 .tc-wrap{display:contents}
 .prose .tc-wrap{display:block;max-width:540px;margin:14px 0}
 .prose .tc-wrap .trip-card{margin:0}
+.art-meta a{color:var(--accent-text)}

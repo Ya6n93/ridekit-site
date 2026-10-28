@@ -1,0 +1,25 @@
+---
+layout: null
+sitemap: false
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>Blog RideKit</title>
+  <link>{{ site.url }}/blog/</link>
+  <atom:link href="{{ site.url }}/blog/feed.xml" rel="self" type="application/rss+xml"/>
+  <description>Routes, sécurité, météo, entretien et GPX : les guides moto de RideKit.</description>
+  <language>fr-FR</language>
+  <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
+  {%- for p in site.posts limit: 30 %}
+  <item>
+    <title>{{ p.title | xml_escape }}</title>
+    <link>{{ site.url }}{{ p.url }}</link>
+    <guid isPermaLink="true">{{ site.url }}{{ p.url }}</guid>
+    <pubDate>{{ p.date | date_to_rfc822 }}</pubDate>
+    <category>{{ site.data.categories[p.category].name | default: p.category | xml_escape }}</category>
+    <description>{{ p.description | default: p.lede | xml_escape }}</description>
+  </item>
+  {%- endfor %}
+</channel>
+</rss>

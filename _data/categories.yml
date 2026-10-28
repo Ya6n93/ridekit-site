@@ -1,0 +1,25 @@
+# Catégories du blog : clé = category: des articles, page /blog/<clé>/.
+routes:
+  name: "Routes et road trips"
+  short: "Routes"
+  description: "Guides de balades moto par région, à partir des road trips du Roadbook, et conseils pour préparer un road trip."
+groupe:
+  name: "Rouler en groupe"
+  short: "Groupe"
+  description: "Placement, règles, organisation : tout pour réussir une sortie moto à plusieurs."
+securite:
+  name: "Sécurité"
+  short: "Sécurité"
+  description: "Chute, accident, rouler seul, zones de danger : des conseils prudents et sourcés."
+meteo:
+  name: "Météo et moto"
+  short: "Météo"
+  description: "Pluie, vent, froid, chaleur : lire la météo pour choisir quand rouler."
+entretien:
+  name: "Entretien et carburant"
+  short: "Entretien"
+  description: "Contrôle technique, vidange, chaîne, pneus, carburant : garder sa moto en forme."
+applis:
+  name: "GPS, GPX et applis"
+  short: "Applis"
+  description: "Traces GPX, applications GPS moto, téléphone sur la moto : les outils du motard."

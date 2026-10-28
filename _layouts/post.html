@@ -17,7 +17,7 @@ layout: base
       {%- unless en %}<a class="art-cat" href="/blog/{{ page.category }}/">{{ cat.name }}</a>{% endunless %}
       <h1>{{ page.title }}</h1>
       {%- if page.lede %}<p class="art-lede">{{ page.lede }}</p>{% endif %}
-      <p class="art-meta">{% if en %}By RideKit · {% include date.html date=page.date %} · {{ minutes }} min read{% else %}Par l'équipe RideKit · publié le {% include date.html date=page.date %}{% if page.last_modified_at and page.last_modified_at != page.date %} · mis à jour le {% include date.html date=page.last_modified_at %}{% endif %} · {{ minutes }} min de lecture{% endif %}</p>
+      <p class="art-meta">{% if en %}By RideKit · {% include date.html date=page.date %} · {{ minutes }} min read{% else %}Par l'équipe RideKit · publié le {% include date.html date=page.date %}{% if page.last_modified_at and page.last_modified_at != page.date %} · mis à jour le {% include date.html date=page.last_modified_at %}{% endif %} · {{ minutes }} min de lecture{% endif %}{% if page.alternate %} · <a href="{{ page.alternate }}" hreflang="{% if en %}fr{% else %}en{% endif %}" lang="{% if en %}fr{% else %}en{% endif %}">{% if en %}Lire en français{% else %}Read in English{% endif %}</a>{% endif %}</p>
     </header>
     <div class="prose art-body">
 {{ content }}

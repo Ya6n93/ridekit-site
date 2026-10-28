@@ -8,6 +8,7 @@
 {%- if paginator and paginator.page > 1 -%}{%- capture ptitle -%}{{ ptitle }} (page {{ paginator.page }}){%- endcapture -%}{%- endif -%}
 {%- if ptitle contains 'RideKit' -%}{%- assign full_title = ptitle -%}{%- else -%}{%- assign full_title = ptitle | append: ' | RideKit' -%}{%- endif -%}
 {%- assign pdesc = page.description | default: page.lede | default: site.description | strip_html | normalize_whitespace | truncate: 170 -%}
+{%- if paginator and paginator.page > 1 -%}{%- capture pdesc -%}{{ pdesc | truncate: 150 }} Page {{ paginator.page }}.{%- endcapture -%}{%- endif -%}
 {%- assign canonical = page.url | replace: 'index.html', '' | prepend: site.url -%}
 {%- if page.image -%}{%- assign pimage = page.image | prepend: site.url -%}{%- elsif page.collection == 'posts' -%}{%- assign pimage = '/assets/img/og/blog/' | append: page.slug | append: '.jpg' | prepend: site.url -%}{%- else -%}{%- assign pimage = '/assets/img/og/default.jpg' | prepend: site.url -%}{%- endif -%}
 <meta charset="utf-8">
