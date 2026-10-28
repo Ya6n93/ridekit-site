@@ -1,0 +1,154 @@
+{
+ "regions": [
+  {
+   "name": "Bourgogne-Franche-Comté",
+   "slug": "bourgogne-franche-comte",
+   "count": 72,
+   "url": "/roadbook-moto/bourgogne-franche-comte/",
+   "indexed": true,
+   "depts": [
+    {
+     "name": "Saône-et-Loire",
+     "code": "71",
+     "slug": "saone-et-loire",
+     "count": 19,
+     "url": "/roadbook-moto/bourgogne-franche-comte/saone-et-loire/",
+     "indexed": true
+    },
+    {
+     "name": "Côte-d'Or",
+     "code": "21",
+     "slug": "cote-d-or",
+     "count": 13,
+     "url": "/roadbook-moto/bourgogne-franche-comte/cote-d-or/",
+     "indexed": true
+    },
+    {
+     "name": "Jura",
+     "code": "39",
+     "slug": "jura",
+     "count": 13,
+     "url": "/roadbook-moto/bourgogne-franche-comte/jura/",
+     "indexed": true
+    },
+    {
+     "name": "Doubs",
+     "code": "25",
+     "slug": "doubs",
+     "count": 12,
+     "url": "/roadbook-moto/bourgogne-franche-comte/doubs/",
+     "indexed": true
+    },
+    {
+     "name": "Nièvre",
+     "code": "58",
+     "slug": "nievre",
+     "count": 9,
+     "url": "/roadbook-moto/bourgogne-franche-comte/nievre/",
+     "indexed": true
+    },
+    {
+     "name": "Yonne",
+     "code": "89",
+     "slug": "yonne",
+     "count": 4,
+     "url": "/roadbook-moto/bourgogne-franche-comte/yonne/",
+     "indexed": true
+    },
+    {
+     "name": "Haute-Saône",
+     "code": "70",
+     "slug": "haute-saone",
+     "count": 1,
+     "url": "/roadbook-moto/bourgogne-franche-comte/haute-saone/",
+     "indexed": false
+    },
+    {
+     "name": "Territoire de Belfort",
+     "code": "90",
+     "slug": "territoire-de-belfort",
+     "count": 1,
+     "url": "/roadbook-moto/bourgogne-franche-comte/territoire-de-belfort/",
+     "indexed": false
+    }
+   ]
+  },
+  {
+   "name": "Occitanie",
+   "slug": "occitanie",
+   "count": 17,
+   "url": "/roadbook-moto/occitanie/",
+   "indexed": true,
+   "depts": [
+    {
+     "name": "Aveyron",
+     "code": "12",
+     "slug": "aveyron",
+     "count": 14,
+     "url": "/roadbook-moto/occitanie/aveyron/",
+     "indexed": true
+    },
+    {
+     "name": "Hérault",
+     "code": "34",
+     "slug": "herault",
+     "count": 3,
+     "url": "/roadbook-moto/occitanie/herault/",
+     "indexed": true
+    }
+   ]
+  },
+  {
+   "name": "Grand Est",
+   "slug": "grand-est",
+   "count": 7,
+   "url": "/roadbook-moto/grand-est/",
+   "indexed": true,
+   "depts": [
+    {
+     "name": "Moselle",
+     "code": "57",
+     "slug": "moselle",
+     "count": 4,
+     "url": "/roadbook-moto/grand-est/moselle/",
+     "indexed": true
+    },
+    {
+     "name": "Meuse",
+     "code": "55",
+     "slug": "meuse",
+     "count": 2,
+     "url": "/roadbook-moto/grand-est/meuse/",
+     "indexed": false
+    },
+    {
+     "name": "Haut-Rhin",
+     "code": "68",
+     "slug": "haut-rhin",
+     "count": 1,
+     "url": "/roadbook-moto/grand-est/haut-rhin/",
+     "indexed": false
+    }
+   ]
+  },
+  {
+   "name": "Normandie",
+   "slug": "normandie",
+   "count": 1,
+   "url": "/roadbook-moto/normandie/",
+   "indexed": false,
+   "depts": [
+    {
+     "name": "Calvados",
+     "code": "14",
+     "slug": "calvados",
+     "count": 1,
+     "url": "/roadbook-moto/normandie/calvados/",
+     "indexed": false
+    }
+   ]
+  }
+ ],
+ "total": 97,
+ "km": 12780
+}

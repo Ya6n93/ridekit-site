@@ -1,0 +1,92 @@
+---
+layout: feature
+title: "Roadbook moto : 97 road trips en France, avec leur trace GPX"
+seo_title: "Roadbook moto France : 97 road trips et traces GPX"
+description: "97 road trips et balades moto en France, étape par étape : Bourgogne, Jura, Doubs, Aveyron, Hérault, Lorraine. Tracés, sinuosité, cols, points de vue et traces GPX gratuites."
+eyebrow: "Roadbook moto"
+h1: "97 road trips moto en France"
+lede: "Des itinéraires proposés par les offices de tourisme et les départements, mis en forme pour la moto : le tracé, les étapes, la sinuosité, les cols et les points de vue, et une trace GPX gratuite pour chacun."
+hero_shot: roadbook-liste
+hero_link: { url: "#regions", text: "Par région" }
+hero_note: "Le Roadbook est gratuit dans RideKit. Cartes hors ligne avec RideKit Pro."
+crumbs:
+  - { name: "Roadbook", url: "/roadbook-moto/" }
+schema_type: CollectionPage
+schema_about_app: true
+image: /assets/img/og/roadbook.jpg
+faq:
+  - q: "Qu'est-ce qu'un roadbook moto ?"
+    a: "Un carnet de route : l'itinéraire d'une balade ou d'un voyage, découpé en étapes, avec les distances, les durées et ce qu'il y a à voir. Dans RideKit, chaque road trip se suit étape par étape avec le guidage vocal."
+  - q: "Les traces GPX sont-elles gratuites ?"
+    a: "Oui. Chaque road trip a sa page avec sa trace GPX à télécharger, utilisable dans RideKit, sur un GPS ou dans une autre app. Les données viennent de sources publiques sous Licence Ouverte : leurs auteurs sont cités sur chaque page."
+  - q: "D'où viennent ces road trips ?"
+    a: "De DATAtourisme, la plateforme nationale des données touristiques, qui rassemble les itinéraires publiés par les offices de tourisme et les départements, et des circuits moto du Département de l'Hérault (data.gouv.fr). RideKit recalcule les tracés quand il le faut, mesure leur sinuosité et repère les cols et points de vue (OpenStreetMap)."
+  - q: "Peut-on rouler un road trip sans réseau ?"
+    a: "Avec RideKit Pro, télécharge le road trip (toutes ses étapes) avant de partir : cartes, tracés et photos restent sur ton téléphone. Sinon, la trace GPX s'ouvre sur un GPS qui a ses propres cartes."
+  - q: "Pourquoi surtout la Bourgogne-Franche-Comté ?"
+    a: "Parce que ce sont les régions dont les offices de tourisme publient le plus d'itinéraires routiers en données ouvertes. Le Roadbook s'agrandit au fil des publications."
+---
+<section class="section" id="regions">
+  <div class="wrap">
+    <h2>Par région</h2>
+    <p class="lede">{{ site.data.roadbook.total }} road trips, {{ site.data.roadbook.km | divided_by: 1000 }} {{ site.data.roadbook.km | modulo: 1000 | prepend: '000' | slice: -3, 3 }} km de routes au total.</p>
+    <div class="region-list">
+      {%- for r in site.data.roadbook.regions %}
+      <div class="card">
+        <h3><a href="{{ r.url }}">{{ r.name }}</a></h3>
+        <p>{{ r.count }} road trip{% if r.count > 1 %}s{% endif %}</p>
+        <p>{% for d in r.depts %}<a href="{{ d.url }}">{{ d.name }}</a> ({{ d.count }}){% unless forloop.last %} · {% endunless %}{% endfor %}</p>
+      </div>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section band">
+  <div class="wrap">
+    <h2>Les plus sinueux</h2>
+    <p class="lede">La sinuosité mesure combien la route tourne, de 1,5 (tout droit) à 9,9 (des lacets).</p>
+    <div class="trip-cards">
+      {%- assign twisty = site.roadtrips | sort: "curv_value" | reverse -%}
+      {%- for t in twisty limit: 9 %}{% include trip-card.html trip=t %}{% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <h2>Sur plusieurs jours</h2>
+    <div class="trip-cards">
+      {%- assign multi = site.roadtrips | where: "kind", "multiday" | sort: "km" | reverse -%}
+      {%- for t in multi %}{% include trip-card.html trip=t %}{% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="frow flip band">
+  <div class="wrap frow-grid">
+    <div>
+      <p class="num">Dans l'app</p>
+      <h2>Étape par étape, guidé à la voix</h2>
+      <p>Dans RideKit, ouvre un road trip : sa carte, ses étapes avec leurs distances et durées, la feuille de route avec les heures d'arrivée estimées, et <strong>Démarrer l'étape</strong>. Le guidage vocal est gratuit ; mets tes road trips préférés en favoris.</p>
+      <p>Avec <a href="/pro/">RideKit Pro</a>, télécharge un road trip entier, cartes et photos comprises, pour rouler là où ça ne capte pas.</p>
+    </div>
+    {% include shot.html name="roadbook-etapes" caption="Les 5 étapes de l'Aveyron, avec distances et durées." %}
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <h2>Toutes les fiches</h2>
+    {%- for r in site.data.roadbook.regions %}
+    <h3 class="list-h"><a href="{{ r.url }}">{{ r.name }}</a></h3>
+    <ul class="link-cols">
+      {%- assign rt = site.roadtrips | where: "region_slug", r.slug | sort: "title" -%}
+      {%- for t in rt %}
+      <li><a href="{{ t.url }}">{{ t.title }}</a> <span class="muted">· {{ t.km }} km</span></li>
+      {%- endfor %}
+    </ul>
+    {%- endfor %}
+    <p class="muted attrib-line" style="margin-top:28px">Itinéraires : DATAtourisme et ses producteurs (offices de tourisme, départements) et Département de l'Hérault, <a href="https://www.etalab.gouv.fr/licence-ouverte-open-licence/" rel="license noopener">Licence Ouverte 2.0</a> ; tracés recalculés, cols et points de vue © les contributeurs d'<a href="https://www.openstreetmap.org/copyright" rel="noopener">OpenStreetMap</a> (ODbL) ; communes : API Géo. Le détail des sources est sur chaque fiche.</p>
+  </div>
+</section>

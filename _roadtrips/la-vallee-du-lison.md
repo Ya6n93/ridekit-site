@@ -1,0 +1,41 @@
+---
+title: "La vallée du Lison"
+seo_title: "La vallée du Lison : itinéraire moto de 34 km (Doubs)"
+description: "Itinéraire moto de 34 km d’Ornans à Crouzet-Migette (Doubs) : tracé, étapes, sinuosité 5,1/10, cols et points de vue, trace GPX gratuite."
+permalink: "/roadbook-moto/bourgogne-franche-comte/la-vallee-du-lison/"
+trip_id: "fr-dt-717e61a0"
+region: "Bourgogne-Franche-Comté"
+region_slug: "bourgogne-franche-comte"
+dept: "Doubs"
+dept_code: "25"
+dept_slug: "doubs"
+depts: ["Doubs"]
+kind: "linear"
+kind_label: "Itinéraire"
+days: 1
+km: 34
+minutes: 35
+duration: "35 min"
+curv: "5,1"
+curv_value: 5.1
+curv_label: "sinueux par endroits"
+start: "Ornans"
+end: "Crouzet-Migette"
+intro: "Itinéraire de 34 km d’Ornans à Crouzet-Migette, dans le Doubs. Compte environ 35 min de route à allure de balade, sans les pauses. Sinuosité 5,1/10 : sinueux par endroits. Sur la route : 2 points de vue."
+summary: "Découvrez la vallée du Lison à travers un itinéraire de 51 km en voiture qui vous mènera d’Ornans à Montmahoux en passant par la Source du Lison."
+paragraphs: ["Découvrez la vallée du Lison à travers un itinéraire de 51 km en voiture qui vous mènera d’Ornans à Montmahoux en passant par la Source du Lison."]
+tags: []
+stages: [{"title": "Ornans → Crouzet-Migette", "start": "Ornans", "end": "Crouzet-Migette", "km": 34.1, "duration": "35 min", "curv": "5,1"}]
+highlights: [{"type": "viewpoint", "name": "Le miroir de Scey", "ele": null, "lat": 47.10206, "lon": 6.0781}, {"type": "viewpoint", "name": "Creux Billard", "ele": null, "lat": 46.96414, "lon": 6.01262}]
+communes: ["Ornans", "Scey-Maisières", "Fertans", "Amancey", "Déservillers", "Éternoz-Vallée-du-Lison", "Nans-sous-Sainte-Anne", "Crouzet-Migette"]
+svg: {"w": 640, "h": 440, "paths": ["M438.6 49.9L435.0 47.8L425.1 49.2L423.1 48.3L413.7 52.9L405.1 42.2L399.7 38.6L392.9 35.5L387.7 38.5L382.9 38.1L374.7 34.1L372.4 34.0L367.1 36.3L357.9 47.2L351.0 50.8L348.5 51.1L345.3 49.1L339.6 49.8L332.7 55.5L326.1 63.1L319.3 64.9L316.6 66.7L315.0 69.0L315.0 71.7L313.0 69.3L310.4 68.5L304.5 72.4L301.9 72.8L299.1 84.4L295.6 89.7L297.8 90.9L298.8 93.8L294.9 99.5L294.2 104.2L292.1 107.9L294.0 116.0L302.8 131.7L300.7 139.2L305.0 148.0L303.9 153.0L307.0 162.5L306.8 167.2L304.5 169.9L307.0 175.4L308.1 186.0L307.3 190.5L314.5 203.5L314.8 211.8L318.1 213.1L319.6 217.7L316.7 228.5L317.5 236.2L314.4 262.1L316.1 265.5L321.2 268.4L285.0 285.0L276.5 290.0L271.2 288.3L265.2 290.8L256.0 291.7L251.8 293.8L243.9 293.3L240.8 292.0L224.8 297.5L219.7 297.4L216.8 299.0L216.8 307.2L212.9 315.0L211.6 321.5L209.0 326.0L202.1 332.2L202.1 339.7L205.4 349.1L207.6 349.3L208.9 350.9L210.0 354.0L209.9 359.6L214.8 364.7L217.2 369.6L221.4 371.1L224.8 375.9L221.4 371.1L217.2 369.6L214.8 364.7L209.4 358.5L209.8 356.9L213.3 358.2L217.9 355.8L222.4 355.0L222.7 356.6L220.8 359.0L222.8 360.1L222.3 362.0L224.0 366.3L229.7 371.7L228.0 377.5L230.5 381.0L229.8 376.7L230.7 376.4L232.7 381.6L227.0 389.9L222.3 401.2L218.3 401.0L214.5 406.0"], "start": [438.6, 49.9], "end": [214.5, 406.0], "loop": false, "marks": [{"x": 329.3, "y": 59.4, "type": "viewpoint", "name": "Le miroir de Scey", "ele": null}, {"x": 225.5, "y": 379.9, "type": "viewpoint", "name": "Creux Billard", "ele": null}], "stages": [], "scale": {"px": 104.5, "label": "5 km"}}
+mini: "M83.0 9.1L78.1 9.7L75.4 6.9L70.1 6.0L66.0 9.3L63.8 9.1L59.0 13.3L56.5 13.5L54.6 20.3L56.7 24.9L57.5 36.3L59.9 41.5L58.9 50.1L60.2 51.4L51.6 55.5L40.0 57.3L37.2 65.2L41.6 72.2L38.6 68.8L41.1 68.1L43.1 73.3L39.6 78.0"
+bbox: [5.9974, 46.9529, 6.1471, 47.113]
+gpx: "/assets/gpx/la-vallee-du-lison.gpx"
+gpx_kb: 8
+photo: {"base": "/assets/img/roadbook/la-vallee-du-lison", "place": "Scey-Maisières", "author": "Bonneville", "licence": "CC BY-SA 3.0", "licence_url": "https://creativecommons.org/licenses/by-sa/3.0/deed.fr", "link": "https://commons.wikimedia.org/wiki/File:Scey.jpg"}
+image: "/assets/img/og/roadbook/la-vallee-du-lison.jpg"
+source: {"provider": "DATAtourisme", "producer": "OFFICE DE TOURISME DESTINATION LOUE LISON", "url": "https://data.datatourisme.fr/6/717e61a0-ad3c-3dc5-b0ed-7c48c45e4d99", "licence": "Licence Ouverte 2.0 (Etalab)", "licence_url": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/", "updated": "27/04/2026", "retrieved": "2026-10-24", "routed": false}
+nearby: [{"title": "Moto Les 5 Vallées Ornans", "url": "/roadbook-moto/bourgogne-franche-comte/moto-les-5-vallees-ornans/", "km_away": 0, "km": 321, "kind": "Boucle", "mini": "M18.6 54.4L20.8 55.0L29.6 64.9L34.5 66.1L35.7 68.9L39.4 69.9L38.3 72.7L36.1 73.4L34.4 72.4L33.7 69.3L35.0 73.0L38.1 72.9L41.0 67.3L46.2 64.1L44.8 66.8L50.0 65.8L51.6 66.7L55.0 64.3L57.8 63.9L57.2 65.0L58.9 64.7L60.6 66.8L62.3 66.4L63.0 68.2L68.8 66.8L72.9 63.5L76.4 65.1L80.0 63.9L81.3 61.7L84.2 60.7L84.2 57.6L88.1 55.3L86.4 51.9L93.2 50.5L99.2 46.2L98.6 40.5L100.8 38.3L100.8 39.7L103.4 39.2L106.6 31.6L112.3 32.0L113.6 30.3L112.4 29.3L113.8 26.1L112.5 23.4L114.0 22.0L107.3 24.9L104.5 23.9L98.5 24.9L97.6 21.6L96.0 21.2L97.2 17.9L94.3 22.1L91.3 23.7L90.9 25.6L84.8 29.0L83.5 34.8L74.2 37.8L74.7 41.2L72.6 43.8L72.9 45.9L66.9 51.0L63.5 48.0L60.4 48.1L59.7 46.7L62.9 44.7L62.5 43.4L66.0 39.3L67.2 39.6L65.9 38.7L66.7 36.1L65.2 35.6L66.1 29.9L68.7 25.3L70.6 24.6L69.0 22.9L72.9 19.8L73.3 17.7L71.0 16.5L72.4 12.0L69.0 10.6L66.5 16.1L62.2 18.1L55.9 15.9L54.5 17.0L44.8 17.7L44.1 16.3L46.5 13.7L44.3 13.7L44.2 12.3L42.9 15.0L40.1 13.9L38.6 15.7L32.9 17.3L28.9 21.2L26.1 20.2L25.1 22.7L17.9 23.6L14.5 26.2L11.5 25.9L8.6 32.6L6.0 33.4L8.8 33.0L8.7 34.7L10.4 34.0L13.6 37.4L15.4 47.3L14.8 49.9L16.6 50.1L15.4 53.4L18.1 54.5"}, {"title": "Moto La Loue Lison Ornans", "url": "/roadbook-moto/bourgogne-franche-comte/moto-la-loue-lison-ornans/", "km_away": 0, "km": 125, "kind": "Boucle", "mini": "M57.9 8.8L62.2 10.6L63.2 9.6L64.8 10.0L71.8 17.2L72.7 21.0L82.8 28.1L87.0 35.2L95.1 38.6L99.7 38.2L101.8 40.1L102.5 45.2L105.5 45.6L107.1 44.6L106.5 46.5L112.2 47.8L109.5 52.1L109.3 55.0L105.7 56.3L104.5 54.9L105.7 52.6L104.2 53.7L103.8 56.9L99.0 54.4L98.6 50.3L97.2 49.0L99.0 46.7L96.5 46.3L96.4 43.0L96.5 46.3L99.0 46.7L97.2 49.0L98.6 50.2L99.2 54.3L97.1 55.1L90.4 53.0L75.7 59.8L68.1 56.5L72.2 52.4L69.5 51.9L70.4 51.5L69.3 50.7L69.5 48.5L66.8 47.0L61.1 50.1L61.1 51.6L64.6 51.0L60.2 53.0L60.3 56.1L60.2 53.0L64.6 50.8L56.7 51.3L54.3 49.6L51.9 50.1L48.8 47.1L37.5 50.5L37.3 55.3L35.2 55.6L29.8 60.0L27.1 59.9L24.6 65.9L25.0 64.4L25.0 66.3L30.3 68.2L24.6 72.7L18.5 74.9L15.6 77.9L20.7 72.1L18.7 66.8L16.3 67.6L18.8 70.3L15.9 65.8L14.4 66.5L14.7 67.7L15.7 59.6L14.6 60.9L15.8 57.9L10.6 58.0L9.2 55.5L9.2 50.4L7.6 49.1L10.3 47.5L10.4 42.2L12.1 43.1L13.6 41.2L15.1 41.2L14.0 40.0L12.1 40.4L8.7 37.2L10.5 36.6L10.7 34.7L12.7 33.8L14.3 30.7L20.8 25.7L21.5 27.8L23.8 28.8L26.8 26.6L28.7 26.9L28.1 22.1L30.6 15.9L31.9 14.7L32.0 17.1L33.3 17.4L33.9 13.4L36.4 13.1L41.1 9.0L43.2 9.2L47.5 6.0L52.3 6.9L55.1 9.6L57.9 8.8"}, {"title": "Route gourmande entre terroir et savoir-faire", "url": "/roadbook-moto/bourgogne-franche-comte/route-gourmande-entre-terroir-et-savoir-faire/", "km_away": 17, "km": 78, "kind": "Itinéraire", "mini": "M6.0 69.4L12.4 57.2L18.8 51.5L24.8 48.9L32.5 48.9L37.0 47.5L41.8 48.4L48.8 42.0L55.3 41.5L59.9 39.7L63.6 35.0L79.7 34.0L82.9 32.5L87.3 33.1L92.0 30.7L95.4 31.8L103.2 27.2L108.6 21.3L112.4 19.1L114.0 16.3L110.8 14.6"}, {"title": "Moto Haut-Doubs Arc-et-Senans", "url": "/roadbook-moto/bourgogne-franche-comte/moto-haut-doubs-arc-et-senans/", "km_away": 26, "km": 200, "kind": "Boucle", "mini": "M112.9 14.2L109.8 16.2L104.9 11.5L104.7 9.0L101.6 7.9L97.4 9.1L93.4 6.0L83.2 9.6L77.0 8.9L70.6 10.0L67.2 15.2L68.8 15.6L69.1 19.7L65.6 24.3L66.0 28.0L63.0 28.6L61.1 30.7L60.2 29.4L50.8 32.5L45.7 40.7L40.6 37.0L38.6 36.9L38.6 34.4L37.2 35.6L35.9 34.4L37.1 32.3L34.7 29.9L35.5 28.1L31.6 29.4L30.2 31.9L26.1 29.2L24.4 30.0L24.5 27.5L19.7 31.8L18.0 36.2L19.5 40.1L14.2 46.7L12.8 52.9L6.9 59.9L8.3 62.8L12.9 56.9L13.9 58.6L14.3 53.1L23.5 43.2L26.8 42.6L29.1 44.2L29.7 42.8L31.0 44.7L32.3 43.8L37.1 46.4L39.8 46.4L39.0 49.7L41.0 50.4L41.8 53.0L38.7 57.4L43.3 60.7L45.9 61.1L46.0 64.3L47.7 66.2L46.3 67.5L47.4 68.4L46.6 70.1L48.1 71.1L47.2 72.7L54.7 72.6L61.0 78.0L61.4 72.4L72.0 66.3L70.1 62.9L77.6 59.8L74.7 52.3L78.0 52.4L80.3 56.3L81.9 56.7L86.9 52.0L90.1 51.1L92.8 46.7L99.7 42.4L100.0 38.8L106.0 24.4L109.8 23.6L113.0 14.3"}]
+last_modified_at: "2026-10-24"
+---
