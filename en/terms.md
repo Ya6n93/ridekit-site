@@ -61,8 +61,10 @@ unknown: the app then shows none.
 ## 4. Danger zones and speed cameras
 
 **In France** (mainland and overseas departments), RideKit announces "danger zones", as
-French regulation provides (article R413-15 of the Code de la route): a stretch of road
-of at least 300 m in town, 2 km outside built-up areas and 4 km on motorways, **never
+French regulation allows, which forbids pointing out camera locations (article R413-15
+of the Code de la route). Their length follows the 2011 agreement between the French
+State and driving-assistance publishers: a stretch of road of at least 300 m in town,
+2 km outside built-up areas and 4 km on motorways, **never
 giving a camera's location or type**. They are computed from the official list of
 fixed speed cameras published by the Ministry of the Interior on data.gouv.fr. This
 list may be incomplete or lag behind reality (cameras added, moved or removed), and

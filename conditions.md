@@ -63,9 +63,11 @@ l'app n'en affiche alors aucune.
 ## 4. Zones de danger et radars
 
 **En France** (métropole et départements d'outre-mer), RideKit signale des « zones de
-danger », comme le prévoit la réglementation française (article R413-15 du Code de
-la route) : une portion de route de 300 m au moins en ville, 2 km hors agglomération
-et 4 km sur autoroute, **sans jamais indiquer l'emplacement ni le type d'un radar**.
+danger », comme le permet la réglementation française, qui interdit de signaler
+l'emplacement des radars (article R413-15 du Code de la route). Leur longueur suit le
+protocole conclu en 2011 entre l'État et les éditeurs d'aide à la conduite : une
+portion de route de 300 m au moins en ville, 2 km hors agglomération et 4 km sur
+autoroute, **sans jamais indiquer l'emplacement ni le type d'un radar**.
 Elles sont calculées à partir de la liste officielle des radars fixes publiée par le
 ministère de l'Intérieur sur data.gouv.fr. Cette liste peut être incomplète ou en
 retard sur le terrain (radar ajouté, déplacé ou retiré), et ne contient ni les

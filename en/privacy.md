@@ -1,16 +1,16 @@
 ---
 title: "Privacy Policy — RideKit"
-description: "What RideKit keeps on your phone, what leaves it, where to and why. No account, no ads in the app, ad measurement only if you accept it, two servers: the crash alert's and the group rides'."
+description: "What RideKit keeps on your phone, what leaves it, where to and why. No account, no ads in the app, campaign measurement for everyone and usage statistics with your consent, two servers: the crash alert's and the group rides'."
 permalink: /en/privacy/
 alternate: /confidentialite/
 layout: legal
 lang: en
-last_modified_at: 2026-10-27
+last_modified_at: 2026-10-28
 ---
 
 # Privacy Policy
 
-*Last updated: 27 October 2026*
+*Last updated: 28 October 2026*
 
 RideKit is a motorcycle riding app: it draws loops and routes, guides you, shows the
 weather, and keeps your ride journal and your bike's records. This page says exactly
@@ -26,9 +26,10 @@ French version ([Politique de confidentialité](/confidentialite/)) prevails.
 > with that group during the ride, except around your start and the finish, then
 > deleted (section 7). To compute a route or
 > show a map or the weather, the app queries specialised services directly, sending
-> them coordinates — never your name, your nickname or an advertising identifier. If
-> you accept it, and only then, AppsFlyer measures how the app is used and which ad
-> brought you, without your location or targeted ads; on iPhone, the advertising
+> them coordinates — never your name, your nickname or an advertising identifier. For
+> everyone, AppsFlyer counts which ad brought you, the main milestones of your journey
+> and RideKit Pro purchases; with your consent, it also measures how the app is used
+> in detail, without your location or targeted ads; on iPhone, the advertising
 > identifier is only sent to it if you also allow it when iOS asks you (section 11).
 > No ads in the app, no data sales.
 
@@ -59,7 +60,8 @@ SZ CORP runs two servers only:
 
 The other personal data we may receive is what you send us yourself, such as a
 support e-mail; that of your RideKit Pro purchases, through RevenueCat (section 10);
-and, if you accept it, audience measurement, through AppsFlyer (section 11).
+and campaign measurement and, if you accept it, usage statistics, through AppsFlyer
+(section 11).
 
 ## 3. What stays on your phone
 
@@ -90,8 +92,8 @@ Google), under your account and Apple's or Google's rules.
 **Deleting it.** In Réglages › Données, "Effacer le carnet" deletes your rides and the
 total distance; "Réinitialiser l'app" erases your bike, journal, emergency contact and
 settings, asks the alert server to forget your phone and your contact, makes you
-leave the current group ride, and stops audience measurement until you answer its
-question again. Deleting the app erases
+leave the current group ride, and stops the detailed usage statistics until you
+answer its question again. Deleting the app erases
 everything it stored on the phone, including your bike's photo, imported tracks and
 offline maps.
 
@@ -126,7 +128,7 @@ advertising identifier only goes to AppsFlyer, and only with both your agreement
 | **RideKit's group ride server**, hosted by **Cloudflare** (Cloudflare, Inc., USA), data in the European Union | Group rides (section 7), only if you create or join one and agree to share your location in it | Your nickname; during your guided rides, your location (every 5 s while riding, 30 s when stopped), your speed, your progress along the group's ride, whether you leave it, whether your battery is low (not its level); the quick messages you pick; never your location within 500 m of your start or of the finish (except when heading to a fallen member), only that you are there; an alert from your crash detection (not a test), with your exact location; for the leader, the route of the ride they start, cut 500 m from its start and from its finish, and whether they have RideKit Pro (the group's size depends on it) |
 | **The members of your group ride**, through this server | Seeing you on the map, getting your messages and your alert (section 7) | What the group ride server receives, except your phone's token; and when the server last heard from you |
 | **RevenueCat** (RevenueCat, Inc., USA) | Knowing whether you subscribe to RideKit Pro (section 10) | The history of your RideKit Pro purchases (product, dates, price and currency, store country), a random identifier created for this phone, the app's identifier on this phone (IDFV), the phone's model and system, the app version, the language. Never the advertising identifier, never your location |
-| **AppsFlyer** (AppsFlyer Ltd.), only if you accept it | Audience measurement: what works in the app, which ad campaign brought you (section 11) | Usage facts (screen opened, ride started or finished, setting changed, distances and durations in ranges); an identifier specific to the app on this phone (IDFV on iOS, AppsFlyer ID); the phone's model and system, the language; on iPhone, the advertising identifier (IDFA), only if you also allow tracking when iOS asks you. Never your location |
+| **AppsFlyer** (AppsFlyer Ltd.) | For everyone: which ad campaign brought you, the main milestones and purchases; with your consent: usage statistics (section 11) | For everyone: the main milestones of your journey (a milestone name, once), RideKit Pro trials and purchases; with your consent, also: usage facts (screen opened, ride started or finished, setting changed, distances and durations in ranges); in both cases: an identifier specific to the app on this phone (IDFV on iOS, AppsFlyer ID), the phone's model and system, the language; on iPhone, the advertising identifier (IDFA), only with your consent and if you also allow tracking when iOS asks you. Never your location |
 | **Ad networks** running RideKit's campaigns, through AppsFlyer | Attributing your installation to the ad that brought it (section 11) | On iPhone only, if you accepted measurement and allowed tracking: the advertising identifier (IDFA), which AppsFlyer passes on to them |
 {: .services}
 
@@ -322,53 +324,60 @@ USA), which acts on behalf of SZ CORP.
 - **Where.** In the United States: this transfer relies on the European Commission's
   standard contractual clauses.
 
-## 11. Audience measurement and advertising (AppsFlyer)
+## 11. Usage statistics and advertising (AppsFlyer)
 
-Only if you accept it, RideKit measures what works in the app and which ad campaign
-brought you, with **AppsFlyer** (AppsFlyer Ltd.), which acts on behalf of
-SZ CORP.
+RideKit measures which ad campaign brought you and what works in the app with
+**AppsFlyer** (AppsFlyer Ltd.), which acts on behalf of SZ CORP, at two levels.
 
+- **For everyone, from installation.** Which campaign brought you, the main
+  milestones of your journey (first ride, first share…: a milestone name, once) and
+  RideKit Pro trials and purchases (product, amount, currency). Without any
+  advertising identifier: attribution relies on SKAdNetwork, Apple's anonymous
+  mechanism, and AppsFlyer's identifier.
+- **With your consent, also.** Detailed usage statistics: a screen opened, a ride
+  started or finished, a setting changed, a distance or a duration in ranges (such as
+  "20-50 km").
 - **Your choice.** The app asks you during onboarding, at the "Autorisations" step
-  (the "Mesure des pubs" row): "Non merci" or "Accepter", nothing chosen in advance.
-  You change your mind at any time in Réglages › Confidentialité › Mesure d'audience,
-  as easily as you answered. Before you agree, nothing is sent; if you refuse,
-  nothing will be.
-- **What is sent.** Usage facts: a screen opened, a ride started or finished, a
-  setting changed, a distance or a duration in ranges (such as "20-50 km"); an
-  identifier specific to the app on this phone (IDFV on iOS, AppsFlyer ID); and what
-  any connection carries: the phone's model and system, language, IP address, from
-  which AppsFlyer infers the country.
-- **What is never sent.** Your location, your routes, your nickname, your emergency
-  contact, what you type; anything about a real crash alert (only your tests; the
-  alert screen is never measured); Android's advertising identifier (Google
-  Advertising ID).
-- **The iPhone's advertising identifier (IDFA).** On iPhone, once measurement is
-  accepted, and only then, iOS asks you whether RideKit may "track your activity"
-  (App Tracking Transparency). If you allow it, the IDFA also goes to AppsFlyer,
-  which shares it with the ad networks running RideKit's campaigns, to attribute your
-  installation to the ad that brought it. If you refuse there, or if you refused
-  measurement, the IDFA is never read and the question is never asked. You withdraw
-  this permission in the iPhone's settings: Privacy & Security › Tracking. On iOS,
-  attribution also goes through SKAdNetwork, Apple's anonymous mechanism.
-- **No targeted ads.** RideKit doesn't use it to show you targeted ads, and tells
+  (the "Améliorer RideKit" row): "Non merci" or "Accepter", nothing chosen in
+  advance. You change your mind at any time in Réglages › Confidentialité ›
+  Statistiques d'usage, as simply as you answered. Before you answer, the detailed
+  statistics wait on the phone; if you refuse, they are forgotten, none will ever
+  leave, and your refusal is passed on to AppsFlyer.
+- **What also leaves, in both cases.** An identifier specific to the app on this
+  phone (IDFV on iOS, AppsFlyer ID) and what any connection carries: the phone's model
+  and system, the language, the IP address, from which AppsFlyer infers the country.
+- **What is never sent.** Your location, your rides, your nickname, your emergency
+  contact, what you type; nothing of a real crash alert (only your tests; the alert
+  screen is never measured); Android's advertising identifier (Google Advertising ID).
+- **The iPhone's advertising identifier (IDFA).** On iPhone, once you have given your
+  consent, and only then, iOS asks whether RideKit may "track your activity" (App
+  Tracking Transparency). If you allow it, the IDFA also goes to AppsFlyer, which
+  shares it with the ad networks running RideKit's campaigns, to attribute your
+  installation to the ad that brought it. Otherwise, the IDFA is never read. You
+  withdraw this permission in the iPhone's settings: Privacy & Security › Tracking.
+- **No targeted ads.** RideKit does not use it to show you targeted ads, and tells
   AppsFlyer so (no consent to ad personalisation).
-- **Legal basis.** Your consent (Art. 6(1)(a) GDPR; Article 82 of the French Loi
-  Informatique et Libertés). You withdraw it at any time, in Réglages: sending stops.
+- **Legal bases.** For the basic level, RideKit's legitimate interest in measuring its
+  campaigns and sales (Art. 6(1)(f) GDPR), which you can object to by writing to us;
+  for the detailed statistics and the IDFA, your consent (Art. 6(1)(a) GDPR;
+  Article 82 of the French Loi Informatique et Libertés), which you withdraw at any
+  time in Réglages: the detailed sending stops.
 - **How long.** AppsFlyer keeps this data while it measures the campaigns, then
   deletes it: 24 months at most, as its
   [privacy policy](https://www.appsflyer.com/legal/services-privacy-policy/) provides.
-- **Where.** AppsFlyer is outside the European Union, in a country the European Commission recognises as providing adequate protection; this data may also be processed in the United
-  States, under standard contractual clauses.
-- **Your rights.** To have AppsFlyer delete what it already received from your phone,
-  write to us with your measurement identifier, shown in Réglages › Confidentialité
-  while measurement is accepted ("Ton identifiant de mesure", with a button to copy
-  it): we pass the request on to AppsFlyer, through the procedure it provides for
-  this (OpenGDPR).
+- **Where.** AppsFlyer is outside the European Union, in a country the European
+  Commission recognises as providing adequate protection; this data may also be
+  processed in the United States, under standard contractual clauses.
+- **Your rights.** To have AppsFlyer delete what it received from your phone, or to
+  object to the basic level, write to us with your measurement identifier, shown in
+  Réglages › Confidentialité ("Ton identifiant de mesure", with a button to copy it):
+  we pass the request on to AppsFlyer, through the procedure it provides for this
+  (OpenGDPR).
 
 ## 12. What RideKit doesn't do
 
 - No account, no ads in the app, no targeted ads.
-- No audience measurement without your consent (section 11). The iPhone's advertising
+- No detailed usage statistics without your consent (section 11). The iPhone's advertising
   identifier is only read with both your agreements, in the app and then when iOS
   asks you; Android's, never.
 - No third-party crash reporting tool.
@@ -385,7 +394,7 @@ share analytics with developers. They do not identify you.
   subscription, through RevenueCat (section 10).
 - **Your consent** (Art. 6(1)(a)): location, notifications, crash detection and its
   automatic sending, the photo and the contact you pick; sharing your location with a
-  group ride (section 7); audience measurement by
+  group ride (section 7); the detailed usage statistics by
   AppsFlyer and, on iPhone, the advertising identifier (section 11), which also need
   your agreement under Article 82 of the French Loi Informatique et Libertés. You
   withdraw it at any time, in the app or in your phone's settings.
@@ -393,7 +402,8 @@ share analytics with developers. They do not identify you.
   your contact know when you may no longer be able to, an alert suggesting you may be
   hurt; likewise, relaying your alert to the members of your group ride (section 7).
 - **Our legitimate interest** (Art. 6(1)(f)): answering your support messages, keeping
-  the app up to date and secure, preventing abuse of the alert server; for your
+  the app up to date and secure, preventing abuse of the alert server, measuring our ad
+  campaigns and sales at AppsFlyer's basic level (section 11); for your
   contact, getting them the alert you wanted, which you tell them about yourself,
   with the text the app prepares for you.
 
@@ -411,8 +421,8 @@ share analytics with developers. They do not identify you.
   restore this data at Cloudflare for up to 30 days, logs 3 days; at Brevo, on our
   behalf, the log of each text sent (number, text, status), one month; at RevenueCat,
   on our behalf, the history of your purchases and your phone's identifier, as long as
-  RideKit uses it (section 10); at AppsFlyer, on our behalf and if you accepted
-  measurement, what it received, 24 months at most (section 11).
+  RideKit uses it (section 10); at AppsFlyer, on our behalf, what it received,
+  24 months at most (section 11).
 - **At third-party services**: under their own policies (see section 4).
 
 ## 15. Where data goes
@@ -454,8 +464,9 @@ the group: sharing stops at once on your phone, the server learns it as soon as 
 have a network, and it deletes the ride when it ends (section 7). The log of an alert
 text at Brevo, we delete on request, without waiting for the month. At RevenueCat, we
 have your data deleted on request, with the Apple order number of your purchase
-(section 10). Audience measurement stops as soon as you refuse it in Réglages ›
-Confidentialité › Mesure d'audience, and the sending of the advertising identifier as
+(section 10). The detailed usage statistics stop as soon as you refuse them in
+Réglages › Confidentialité › Statistiques d'usage; you can object to the basic level
+by writing to us; and the sending of the advertising identifier stops as
 soon as you withdraw tracking in the iPhone's settings; what AppsFlyer already
 received, we ask it to delete, with the measurement identifier shown in Réglages ›
 Confidentialité (section 11).
@@ -474,8 +485,8 @@ You can also complain to your country's authority:
 
 For Law 25: location is only used if you allow it (section 5), crash detection is off
 until you turn it on (section 6), your location is only shared with a group ride if
-you agree, for that ride (section 7), and audience measurement only starts if you
-accept it (section 11).
+you agree, for that ride (section 7), and the detailed usage statistics only leave
+if you accept them; campaign measurement stays at the basic level (section 11).
 
 ## 17. Children
 

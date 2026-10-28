@@ -1,11 +1,11 @@
 ---
 title: "Politique de confidentialité — RideKit"
-description: "Ce que RideKit garde sur ton téléphone, ce qui en sort, vers qui et pourquoi. Pas de compte, pas de publicité dans l'app, la mesure des pubs seulement si tu l'acceptes, deux serveurs : celui de l'alerte chute et celui des sorties de groupe."
+description: "Ce que RideKit garde sur ton téléphone, ce qui en sort, vers qui et pourquoi. Pas de compte, pas de publicité dans l'app, la mesure des campagnes pour tous et les statistiques d'usage avec ton accord, deux serveurs : celui de l'alerte chute et celui des sorties de groupe."
 permalink: /confidentialite/
 alternate: /en/privacy/
 layout: legal
 lang: fr
-last_modified_at: 2026-10-27
+last_modified_at: 2026-10-28
 ---
 
 # Politique de confidentialité
@@ -28,10 +28,11 @@ lesquelles sortent de ton téléphone, vers qui, et pourquoi.
 > Pour calculer un itinéraire,
 > afficher une carte ou la météo, l'app interroge directement des services
 > spécialisés en leur envoyant des coordonnées — jamais ton nom, ton pseudo ni un
-> identifiant publicitaire. Si tu l'acceptes, et seulement alors, AppsFlyer mesure
-> l'usage de l'app et quelle pub t'a amené, sans ta position ni pub ciblée ; sur
-> iPhone, l'identifiant publicitaire ne lui est envoyé que si tu l'autorises aussi
-> quand iOS te le demande (section 11). Aucune publicité dans l'app, aucune revente.
+> identifiant publicitaire. AppsFlyer compte, pour tout le monde, quelle pub t'a
+> amené, les grandes étapes de ton parcours et les achats de RideKit Pro ; avec ton
+> accord, il mesure aussi l'usage détaillé de l'app, sans ta position ni pub ciblée ;
+> sur iPhone, l'identifiant publicitaire ne lui est envoyé que si tu l'autorises
+> aussi quand iOS te le demande (section 11). Aucune publicité dans l'app, aucune revente.
 
 ## 1. Qui est responsable
 
@@ -63,8 +64,8 @@ SZ CORP n'exploite que deux serveurs :
 
 Les autres données personnelles que nous pouvons recevoir sont celles que tu nous
 envoies toi-même, par exemple un e-mail au support ; celles de tes achats RideKit Pro,
-par RevenueCat (section 10) ; et, si tu l'acceptes, la mesure d'audience, par
-AppsFlyer (section 11).
+par RevenueCat (section 10) ; et la mesure des campagnes et, si tu l'acceptes, les
+statistiques d'usage, par AppsFlyer (section 11).
 
 ## 3. Ce qui reste sur ton téléphone
 
@@ -101,8 +102,8 @@ Google.
 **Les effacer.** Dans Réglages › Données, « Effacer le carnet » supprime tes balades
 et le kilométrage cumulé ; « Réinitialiser l'app » efface ta moto, ton carnet, ton
 contact d'urgence et tes réglages, demande au serveur d'alerte d'oublier ton
-téléphone et ton contact, te fait quitter la sortie de groupe en cours, et arrête la
-mesure d'audience jusqu'à ce que tu y répondes à nouveau. Supprimer l'application
+téléphone et ton contact, te fait quitter la sortie de groupe en cours, et arrête les
+statistiques d'usage détaillées jusqu'à ce que tu y répondes à nouveau. Supprimer l'application
 efface tout ce qu'elle a enregistré sur le téléphone, y compris la photo de ta moto,
 les traces importées et les cartes hors ligne.
 
@@ -138,7 +139,7 @@ publicitaire de l'iPhone ne va qu'à AppsFlyer, et seulement avec tes deux accor
 | **Serveur des sorties de groupe de RideKit**, hébergé par **Cloudflare** (Cloudflare, Inc., États-Unis), données dans l'Union européenne | Sorties de groupe (section 7), seulement si tu en crées ou en rejoins une et acceptes d'y partager ta position | Ton pseudo ; pendant tes balades guidées, ta position (toutes les 5 s en roulant, 30 s à l'arrêt), ta vitesse, ta progression sur la balade du groupe, si tu t'en écartes, si ta batterie est faible (pas son niveau) ; les messages rapides que tu choisis ; jamais ta position à moins de 500 m de ton départ ni de l'arrivée (sauf en allant vers un membre tombé), seulement que tu y es ; une alerte de ta détection de chute (pas un test), avec ta position exacte ; pour le leader, le tracé de la balade qu'il lance, coupé à 500 m de son départ et de son arrivée, et s'il a RideKit Pro (la taille du groupe en dépend) |
 | **Les membres de ta sortie de groupe**, par ce serveur | Te voir sur la carte, recevoir tes messages et ton alerte (section 7) | Ce que reçoit le serveur des sorties de groupe, sauf le jeton de ton téléphone ; et quand le serveur a eu de tes nouvelles pour la dernière fois |
 | **RevenueCat** (RevenueCat, Inc., États-Unis) | Savoir si tu es abonné à RideKit Pro (section 10) | L'historique de tes achats RideKit Pro (produit, dates, prix et devise, pays de la boutique), un identifiant aléatoire créé pour ce téléphone, l'identifiant de l'app sur ce téléphone (IDFV), le modèle et le système du téléphone, la version de l'app, la langue. Jamais l'identifiant publicitaire, jamais ta position |
-| **AppsFlyer** (AppsFlyer Ltd.), seulement si tu l'acceptes | Mesure d'audience : ce qui marche dans l'app, quelle campagne publicitaire t'a amené (section 11) | Des faits d'usage (écran ouvert, balade démarrée ou terminée, réglage changé, distances et durées par tranches) ; un identifiant propre à l'app sur ce téléphone (IDFV sur iOS, identifiant AppsFlyer) ; le modèle et le système du téléphone, la langue ; sur iPhone, l'identifiant publicitaire (IDFA), seulement si tu autorises aussi le suivi quand iOS te le demande. Jamais ta position |
+| **AppsFlyer** (AppsFlyer Ltd.) | Pour tous : quelle campagne publicitaire t'a amené, les grandes étapes et les achats ; avec ton accord : les statistiques d'usage (section 11) | Pour tous : les grandes étapes de ton parcours (un nom d'étape, une seule fois), les essais et achats de RideKit Pro ; avec ton accord, en plus : des faits d'usage (écran ouvert, balade démarrée ou terminée, réglage changé, distances et durées par tranches) ; dans les deux cas : un identifiant propre à l'app sur ce téléphone (IDFV sur iOS, identifiant AppsFlyer), le modèle et le système du téléphone, la langue ; sur iPhone, l'identifiant publicitaire (IDFA), seulement avec ton accord et si tu autorises aussi le suivi quand iOS te le demande. Jamais ta position |
 | **Régies publicitaires** des campagnes de RideKit, par AppsFlyer | Attribuer ton installation à la pub qui l'a amenée (section 11) | Sur iPhone seulement, si tu as accepté la mesure et autorisé le suivi : l'identifiant publicitaire (IDFA), qu'AppsFlyer leur transmet |
 {: .services}
 
@@ -351,56 +352,65 @@ Pour savoir si tu es abonné, l'app passe par **RevenueCat** (RevenueCat, Inc.,
 - **Où.** Aux États-Unis : ce transfert repose sur les clauses contractuelles types
   de la Commission européenne.
 
-## 11. Mesure d'audience et publicité (AppsFlyer)
+## 11. Statistiques d'usage et publicité (AppsFlyer)
 
-Seulement si tu l'acceptes, RideKit mesure ce qui marche dans l'app et quelle
-campagne publicitaire t'a amené, avec **AppsFlyer** (AppsFlyer Ltd.), qui
-agit pour le compte de SZ CORP.
+RideKit mesure quelle campagne publicitaire t'a amené et ce qui marche dans l'app
+avec **AppsFlyer** (AppsFlyer Ltd.), qui agit pour le compte de SZ CORP, à deux
+niveaux.
 
-- **Ton choix.** L'app te le demande à l'onboarding, à l'étape « Autorisations »
-  (ligne « Mesure des pubs ») : « Non merci » ou « Accepter », rien n'est choisi
-  d'avance. Tu changes d'avis à tout moment dans Réglages › Confidentialité › Mesure
-  d'audience, aussi simplement que tu as répondu. Avant ton accord, rien ne part ; si
-  tu refuses, rien ne partira.
-- **Ce qui est envoyé.** Des faits d'usage : un écran ouvert, une balade démarrée ou
-  terminée, un réglage changé, une distance ou une durée par tranches (comme
-  « 20-50 km ») ; un identifiant propre à l'app sur ce téléphone (IDFV sur iOS,
-  identifiant AppsFlyer) ; et ce que toute connexion transmet : modèle et système du
-  téléphone, langue, adresse IP, dont AppsFlyer déduit le pays.
+- **Pour tout le monde, dès l'installation.** Quelle campagne t'a amené, les grandes
+  étapes de ton parcours (première balade, premier partage… : un nom d'étape, une
+  seule fois) et les essais et achats de RideKit Pro (produit, montant, devise).
+  Sans identifiant publicitaire : l'attribution passe par SKAdNetwork, le mécanisme
+  anonyme d'Apple, et l'identifiant d'AppsFlyer.
+- **Avec ton accord, en plus.** Des statistiques d'usage détaillées : un écran
+  ouvert, une balade démarrée ou terminée, un réglage changé, une distance ou une
+  durée par tranches (comme « 20-50 km »).
+- **Ton choix.** L'app te le demande à l'onboarding, à l'étape « Autorisations »
+  (ligne « Améliorer RideKit ») : « Non merci » ou « Accepter », rien n'est choisi
+  d'avance. Tu changes d'avis à tout moment dans Réglages › Confidentialité ›
+  Statistiques d'usage, aussi simplement que tu as répondu. Avant ta réponse, les
+  statistiques détaillées attendent sur le téléphone ; si tu refuses, elles sont
+  oubliées, aucune ne partira, et ton refus est transmis à AppsFlyer.
+- **Ce qui part aussi, dans les deux cas.** Un identifiant propre à l'app sur ce
+  téléphone (IDFV sur iOS, identifiant AppsFlyer) et ce que toute connexion
+  transmet : modèle et système du téléphone, langue, adresse IP, dont AppsFlyer
+  déduit le pays.
 - **Ce qui n'est jamais envoyé.** Ta position, tes trajets, ton pseudo, ton contact
-  d'urgence, ce que tu tapes ; rien d'une vraie alerte de chute (seulement tes tests ;
-  l'écran d'alerte n'est jamais mesuré) ; l'identifiant publicitaire d'Android (Google
+  d'urgence, ce que tu tapes ; rien d'une vraie alerte de chute (seulement tes tests ;
+  l'écran d'alerte n'est jamais mesuré) ; l'identifiant publicitaire d'Android (Google
   Advertising ID).
-- **L'identifiant publicitaire de l'iPhone (IDFA).** Sur iPhone, une fois la mesure
-  acceptée, et seulement alors, iOS te demande si RideKit peut « suivre ton
-  activité » (App Tracking Transparency). Si tu l'autorises, l'IDFA part aussi vers
-  AppsFlyer, qui le partage avec les régies publicitaires des campagnes de RideKit,
-  pour attribuer ton installation à la pub qui l'a amenée. Si tu refuses là, ou si tu
-  as refusé la mesure, l'IDFA n'est jamais lu et la question n'est jamais posée. Tu
-  retires cette autorisation dans les réglages de l'iPhone : Confidentialité et
-  sécurité › Suivi. Sur iOS, l'attribution passe aussi par SKAdNetwork, le mécanisme
-  anonyme d'Apple.
+- **L'identifiant publicitaire de l'iPhone (IDFA).** Sur iPhone, une fois ton accord
+  donné, et seulement alors, iOS te demande si RideKit peut « suivre ton activité »
+  (App Tracking Transparency). Si tu l'autorises, l'IDFA part aussi vers AppsFlyer,
+  qui le partage avec les régies publicitaires des campagnes de RideKit, pour
+  attribuer ton installation à la pub qui l'a amenée. Sinon, l'IDFA n'est jamais lu.
+  Tu retires cette autorisation dans les réglages de l'iPhone : Confidentialité et
+  sécurité › Suivi.
 - **Pas de pub ciblée.** RideKit ne s'en sert pas pour te montrer de la publicité
   ciblée, et le signale à AppsFlyer (pas de consentement à la personnalisation des
   publicités).
-- **Base légale.** Ton consentement (article 6.1.a du RGPD ; article 82 de la loi
-  Informatique et Libertés). Tu le retires à tout moment, dans Réglages : l'envoi
-  s'arrête.
+- **Bases légales.** Pour le niveau de base, l'intérêt légitime de RideKit à mesurer
+  ses campagnes et ses ventes (article 6.1.f du RGPD), auquel tu peux t'opposer en
+  nous écrivant ; pour les statistiques détaillées et l'IDFA, ton consentement
+  (article 6.1.a du RGPD ; article 82 de la loi Informatique et Libertés), que tu
+  retires à tout moment, dans Réglages : l'envoi détaillé s'arrête.
 - **Combien de temps.** AppsFlyer garde ces données le temps de mesurer les
-  campagnes, puis les efface : 24 mois au plus, comme le prévoit sa
+  campagnes, puis les efface : 24 mois au plus, comme le prévoit sa
   [politique de confidentialité](https://www.appsflyer.com/legal/services-privacy-policy/).
-- **Où.** AppsFlyer est hors de l'Union européenne, dans un pays que la Commission européenne reconnaît comme offrant une protection adéquate ; ces données peuvent aussi être traitées aux
-  États-Unis, sous clauses contractuelles types.
-- **Tes droits.** Pour qu'AppsFlyer efface ce qu'il a déjà reçu de ton téléphone,
-  écris-nous avec ton identifiant de mesure, affiché dans Réglages ›
-  Confidentialité tant que la mesure est acceptée (« Ton identifiant de mesure »,
-  avec un bouton pour le copier) : nous transmettons la demande à AppsFlyer, par la
-  procédure qu'il prévoit pour cela (OpenGDPR).
+- **Où.** AppsFlyer est hors de l'Union européenne, dans un pays que la Commission
+  européenne reconnaît comme offrant une protection adéquate ; ces données peuvent
+  aussi être traitées aux États-Unis, sous clauses contractuelles types.
+- **Tes droits.** Pour qu'AppsFlyer efface ce qu'il a reçu de ton téléphone, ou pour
+  t'opposer au niveau de base, écris-nous avec ton identifiant de mesure, affiché
+  dans Réglages › Confidentialité (« Ton identifiant de mesure », avec un bouton pour
+  le copier) : nous transmettons la demande à AppsFlyer, par la procédure qu'il
+  prévoit pour cela (OpenGDPR).
 
 ## 12. Ce que RideKit ne fait pas
 
 - Aucun compte, aucune publicité dans l'app, aucune pub ciblée.
-- Aucune mesure d'audience sans ton accord (section 11). L'identifiant publicitaire
+- Aucune statistique d'usage détaillée sans ton accord (section 11). L'identifiant publicitaire
   de l'iPhone n'est lu qu'avec tes deux accords, dans l'app puis quand iOS te le
   demande ; celui d'Android, jamais.
 - Aucun outil tiers de rapport de plantage.
@@ -419,8 +429,8 @@ Elles ne permettent pas de t'identifier.
   faire marcher ton abonnement RideKit Pro, par RevenueCat (section 10).
 - **Ton consentement** (article 6.1.a) : la position, les notifications, la
   détection de chute et son envoi automatique, la photo et le contact que tu
-  choisis ; le partage de ta position avec une sortie de groupe (section 7) ; la
-  mesure d'audience par AppsFlyer et, sur iPhone, l'identifiant publicitaire
+  choisis ; le partage de ta position avec une sortie de groupe (section 7) ; les
+  statistiques d'usage détaillées par AppsFlyer et, sur iPhone, l'identifiant publicitaire
   (section 11), qui demandent aussi ton accord selon l'article 82 de la loi
   Informatique et Libertés. Tu le retires à tout moment, dans l'app ou dans les
   réglages du téléphone.
@@ -429,7 +439,8 @@ Elles ne permettent pas de t'identifier.
   pouvant laisser penser que tu es blessé ; de même, relayer ton alerte aux membres
   de ta sortie de groupe (section 7).
 - **Notre intérêt légitime** (article 6.1.f) : répondre à tes messages au support,
-  maintenir l'app à jour et sûre, limiter les abus du serveur d'alerte ; pour ton
+  maintenir l'app à jour et sûre, limiter les abus du serveur d'alerte, mesurer nos
+  campagnes publicitaires et nos ventes au niveau de base d'AppsFlyer (section 11) ; pour ton
   contact, lui faire parvenir l'alerte que tu as voulue, ce dont tu l'informes
   toi-même, par le SMS que l'app te prépare.
 
@@ -450,7 +461,7 @@ Elles ne permettent pas de t'identifier.
   compte, le journal de chaque SMS envoyé (numéro, texte, statut), un mois ; chez
   RevenueCat, pour notre compte, l'historique de tes achats et l'identifiant de ton
   téléphone, tant que RideKit fait appel à lui (section 10) ; chez AppsFlyer, pour
-  notre compte et si tu as accepté la mesure, ce qu'il a reçu, 24 mois au plus
+  notre compte, ce qu'il a reçu, 24 mois au plus
   (section 11).
 - **Chez les services tiers** : selon leur propre politique (voir la section 4).
 
@@ -496,8 +507,9 @@ quitte le groupe : le partage s'arrête aussitôt sur ton téléphone, le serve
 l'apprend dès que tu as du réseau, et il efface la sortie quand elle se termine
 (section 7). Le journal d'un SMS d'alerte chez Brevo, nous l'effaçons sur demande,
 sans attendre le mois. Chez RevenueCat, nous faisons effacer tes données sur demande,
-avec le numéro de commande Apple de ton achat (section 10). La mesure d'audience
-s'arrête dès que tu la refuses dans Réglages › Confidentialité › Mesure d'audience, et
+avec le numéro de commande Apple de ton achat (section 10). Les statistiques d'usage
+détaillées s'arrêtent dès que tu les refuses dans Réglages › Confidentialité ›
+Statistiques d'usage ; tu peux t'opposer au niveau de base en nous écrivant ; et
 l'envoi de l'identifiant publicitaire dès que tu retires le suivi dans les réglages de
 l'iPhone ; ce qu'AppsFlyer a déjà reçu, nous lui en demandons l'effacement, avec
 l'identifiant de mesure affiché dans Réglages › Confidentialité (section 11).
@@ -517,8 +529,8 @@ Tu peux aussi saisir l'autorité de ton pays :
 Pour la loi 25 : la position n'est utilisée que si tu l'autorises (section 5), la
 détection de chute est désactivée tant que tu ne l'actives pas (section 6), ta
 position n'est partagée avec une sortie de groupe que si tu l'acceptes, pour cette
-sortie (section 7), et la mesure d'audience ne démarre que si tu l'acceptes
-(section 11).
+sortie (section 7), et les statistiques d'usage détaillées ne partent que si tu les
+acceptes ; la mesure des campagnes reste au niveau de base (section 11).
 
 ## 17. Enfants
 
