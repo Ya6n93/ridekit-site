@@ -1,0 +1,84 @@
+---
+layout: feature
+title: "Générateur de balade moto : une boucle à virages en un tap"
+seo_title: "Générateur de balade moto : ta boucle en un tap"
+description: "Choisis une durée et des routes rapides ou sinueuses : RideKit trace une balade moto en boucle autour de toi, sans autoroute si tu veux, et te guide à la voix."
+section: fonctions
+eyebrow: "Générateur de balade moto"
+h1: "Ta balade moto, en un tap"
+lede: "Tu as deux heures et envie de virages ? Dis-le à RideKit : il trace une boucle autour de toi, sur des routes qui tournent, et te ramène au point de départ."
+hero_shot: boucle-en-un-tap
+hero_link: { url: "#comment", text: "Comment ça marche" }
+hero_note: "3 boucles par mois gratuites, illimitées avec RideKit Pro."
+crumbs:
+  - { name: "Fonctions", url: "/fonctionnalites/" }
+  - { name: "Générateur de balade", url: "/generateur-balade-moto/" }
+schema_type: WebPage
+schema_about_app: true
+image: /assets/img/og/generateur-balade-moto.jpg
+faq:
+  - q: "Comment trouver une balade moto autour de moi ?"
+    a: "Dans RideKit, ouvre « Générer une boucle », choisis une durée (de 1 h à 5 h) et le type de route, puis touche « Générer la balade » : la boucle part de ta position et y revient. Tu peux aussi piocher dans le [Roadbook](/roadbook-moto/), 97 road trips en France."
+  - q: "Peut-on éviter les autoroutes et les péages ?"
+    a: "Oui. Dans les réglages de la boucle, tu peux éviter les autoroutes, les péages, les chemins de terre, les ferries et les tunnels. Les mêmes choix valent pour les itinéraires de A à B."
+  - q: "Combien de boucles peut-on générer gratuitement ?"
+    a: "3 par mois sans abonnement ; le compteur repart à zéro chaque mois. Avec RideKit Pro, c'est illimité."
+  - q: "Que veut dire la sinuosité sur 10 ?"
+    a: "C'est la mesure de RideKit de combien la route tourne, de 1,5 (tout droit) à 9,9 (des lacets), calculée sur le tracé : une traversée de ville tourne autour de 2,5, une boucle de montagne dépasse souvent 6."
+---
+<section class="frow" id="comment">
+  <div class="wrap frow-grid">
+    <div>
+      <p class="num">1 · Tes réglages</p>
+      <h2>Une durée, un style de route</h2>
+      <p>Glisse le curseur de la durée, de 1 h à 5 h, puis choisis entre <strong>Rapide</strong> (le plus direct) et <strong>Sinueux</strong> (des routes à virages). Ouvre les réglages pour aller plus loin :</p>
+      <ul>
+        <li><strong>Virages</strong> : peu, normal, beaucoup.</li>
+        <li><strong>Relief</strong> : plat, vallonné, montagne.</li>
+        <li><strong>À éviter</strong> : autoroutes, péages, chemins de terre, ferries, tunnels.</li>
+      </ul>
+    </div>
+    {% include shot.html name="boucle-virages-relief" caption="Beaucoup de virages, relief montagne, sans autoroute ni chemin de terre." %}
+  </div>
+</section>
+
+<section class="frow flip band">
+  <div class="wrap frow-grid">
+    <div>
+      <p class="num">2 · L'aperçu</p>
+      <h2>Tu vois la balade avant de partir</h2>
+      <p>La boucle s'affiche sur la carte avec ce qui compte : sa <strong>distance</strong>, sa <strong>durée</strong> à allure de balade, sa <strong>sinuosité</strong> sur 10, la <strong>montée</strong> totale et le point culminant. Les cols et les sites à voir sont posés sur la carte.</p>
+      <p>Si tu rentres après le coucher du soleil, l'aperçu te le dit. Pas convaincu ? <strong>Inverser le sens</strong>, ou demander <strong>une autre boucle</strong>.</p>
+    </div>
+    {% include shot.html name="boucle-apercu" caption="54 km, 1 h 33, sinuosité 5,2 sur 10, 884 m de montée." %}
+  </div>
+</section>
+
+<section class="frow">
+  <div class="wrap frow-grid">
+    <div>
+      <p class="num">3 · On roule</p>
+      <h2>Guidé à la voix, jusqu'au retour</h2>
+      <p>Touche <strong>Démarrer</strong> : RideKit te guide tour par tour, à la voix, même écran verrouillé, et recalcule si tu sors de la route. La limitation de vitesse s'affiche, les zones de danger aussi (en France). Au retour, la balade va dans ton carnet, avec ses kilomètres et ses virages.</p>
+      <p>Avec <a href="/pro/">RideKit Pro</a>, le <a href="/gps-moto/">Copilote</a> annonce les épingles avant d'y être, et tu peux <strong>télécharger la carte</strong> de la boucle pour rouler là où ça ne capte pas.</p>
+      <a class="link-more" href="/gps-moto/">Le guidage en détail →</a>
+    </div>
+    {% include shot.html name="nav-instruction" caption="« 130 m, tourne à droite » : la prochaine manœuvre, la limitation, ta vitesse." %}
+  </div>
+</section>
+
+<section class="section band">
+  <div class="wrap narrow prose">
+    <h2>Pourquoi une boucle plutôt qu'un aller-retour</h2>
+    <p>Un aller-retour, c'est deux fois la même route. Une boucle te fait découvrir autant de kilomètres que de paysages, et te ramène chez toi sans y penser. C'est le format de la balade du dimanche, de la sortie après le boulot, ou de la journée entre potes.</p>
+    <p>Le générateur de RideKit part toujours de ta position. Il cherche une boucle de la durée demandée, sur le style de route que tu as choisi, et calcule sa sinuosité à partir du tracé réel, virage par virage. La durée est estimée à allure de balade, sans les pauses : compte un peu plus si tu t'arrêtes souvent.</p>
+    <h3>Et si je veux choisir où je passe ?</h3>
+    <p>Alors <a href="/itineraire-moto/">crée ton propre parcours</a> : un départ, une arrivée et des points de passage, avec les mêmes routes à éviter. Ou pars sur un road trip tout prêt du <a href="/roadbook-moto/">Roadbook</a>, avec sa trace GPX.</p>
+    <h3>Pour aller plus loin</h3>
+    <ul>
+      <li><a href="/blog/rouler-en-groupe-moto/">Rouler en groupe à moto : placement et règles</a></li>
+      <li><a href="/blog/meteo-moto-quand-rouler/">Météo moto : quand rouler, quand renoncer</a></li>
+      <li><a href="/blog/preparer-road-trip-moto/">Préparer un road trip moto</a></li>
+    </ul>
+  </div>
+</section>

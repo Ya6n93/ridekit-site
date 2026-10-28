@@ -1,123 +1,192 @@
-<!doctype html>
-<!-- Accueil de RideKit. Ne promet que ce que l'app fait aujourd'hui : une
-     fonction qui n'existe pas encore n'a rien à faire ici. Aucune ressource
-     tierce : la police et les images sont servies par le site. -->
-<html lang="fr">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>RideKit — L'app moto qui trace tes boucles</title>
-<meta name="description" content="RideKit trace des boucles à moto selon ta durée et tes routes préférées, te guide, montre la météo, les cols et les stations sur ta route, garde le carnet de tes balades et le suivi de ta moto. Sans compte.">
-<meta name="robots" content="index,follow">
-<meta name="theme-color" content="#0B0B0B">
-<link rel="canonical" href="https://ridekit-app.com/">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="RideKit">
-<meta property="og:locale" content="fr_FR">
-<meta property="og:title" content="RideKit — L'app moto qui trace tes boucles">
-<meta property="og:description" content="Des boucles à moto en un tap, le guidage, la météo pour rouler, le carnet de tes balades. Sans compte.">
-<meta property="og:url" content="https://ridekit-app.com/">
-<meta property="og:image" content="https://ridekit-app.com/media/icon-512.png">
-<link rel="icon" type="image/png" sizes="32x32" href="media/icon-32.png">
-<link rel="apple-touch-icon" href="media/icon-180.png">
-<link rel="preload" href="assets/fonts/barlow-condensed-800.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/rk.css">
-<script type="application/ld+json">
-{"@context":"https://schema.org","@graph":[
- {"@type":"Organization","@id":"https://ridekit-app.com/#org","name":"SZ CORP","url":"https://ridekit-app.com/","email":"contact@ridekit-app.com"},
- {"@type":"MobileApplication","name":"RideKit","applicationCategory":"TravelApplication","operatingSystem":"iOS","inLanguage":"fr",
-  "description":"Application moto : génération de boucles selon la durée et le style de route, guidage, météo et radar, cols et stations sur la route, carnet de balades, suivi d'entretien.",
-  "url":"https://ridekit-app.com/","publisher":{"@id":"https://ridekit-app.com/#org"}}
-]}
-</script>
-</head>
-<body>
-
-<header class="top">
-  <div class="wrap">
-    <a class="brand" href="./"><img src="media/icon-64.png" alt="" width="34" height="34"><b>Ride<i>Kit</i></b></a>
-    <nav aria-label="Pages légales">
-      <a href="confidentialite/">Confidentialité</a>
-      <a href="conditions/">Conditions</a>
-      <a href="mentions-legales/">Mentions légales</a>
-    </nav>
-  </div>
-</header>
-
-<main>
-  <section class="hero">
+---
+layout: base
+title: "RideKit : l'app moto pour iPhone, ta balade en un tap"
+seo_title: "RideKit : app moto iPhone, balade en un tap et GPS moto"
+description: "L'app moto pour iPhone : une balade à virages en un tap, tes potes sur la carte, un proche prévenu par SMS si tu chutes (Pro), 97 road trips en France, la météo pour rouler. Gratuite, sans compte."
+alternate: /en/
+schema_app: true
+image: /assets/img/og/default.jpg
+body_class: home
+---
+{%- comment -%}
+  Accueil. Ne promet que ce que l'app fait aujourd'hui (vérifié dans le code de l'app le
+  28 octobre 2026) : une fonction qui n'existe pas encore n'a rien à faire ici. Les
+  fonctions dans l'ordre du fondateur. Aucune ressource tierce.
+{%- endcomment -%}
+<main id="main">
+  <section class="hero hero-home" aria-labelledby="home-title">
+    <div class="hero-media">
+      <video autoplay muted loop playsinline preload="metadata" poster="/assets/video/balade-poster.webp" aria-hidden="true" tabindex="-1" disablepictureinpicture>
+        <source src="/assets/video/balade-640.webm" type="video/webm" media="(max-width: 700px)">
+        <source src="/assets/video/balade-640.mp4" type="video/mp4" media="(max-width: 700px)">
+        <source src="/assets/video/balade-960.webm" type="video/webm">
+        <source src="/assets/video/balade-960.mp4" type="video/mp4">
+      </video>
+    </div>
     <div class="wrap">
-      <img class="mark" src="media/icon-512.png" alt="Logo RideKit : un compte-tours dont l'aiguille forme le R" width="88" height="88">
-      <span class="eyebrow">L'app moto</span>
-      <h1>Une boucle. <em>Un tap.</em> On roule.</h1>
-      <p>Dis combien de temps tu as et quelles routes tu aimes : RideKit trace la boucle
-        depuis là où tu es, te guide, et garde ta balade dans ton carnet.</p>
-      <div class="btns">
-        <!-- [À COMPLÉTER : lien App Store] Remplacer ce bouton inactif par
-             <a class="btn" href="https://apps.apple.com/app/idXXXXXXXXXX">Télécharger sur l'App Store</a>
-             dès que la fiche est publiée. -->
-        <span class="btn" aria-disabled="true">Bientôt sur l'App Store</span>
-        <a class="btn ghost" href="confidentialite/">Tes données</a>
+      <div>
+        <p class="eyebrow">L'app moto pour iPhone</p>
+        <h1 id="home-title">Ta balade. <em>Un tap.</em> On roule.</h1>
+        <p class="lede">Dis combien de temps tu as et quelles routes tu aimes : RideKit trace une boucle à virages autour de toi, te guide à la voix et garde la balade dans ton carnet. Avec tes potes sur la carte, et un proche prévenu si tu chutes.</p>
+        <div class="btns" id="telecharger">
+          {% include store.html %}
+          <a class="btn ghost" href="/fonctionnalites/">Voir les fonctions</a>
+        </div>
+        <ul class="proof">
+          <li>Gratuite</li><li>Sans compte</li><li>Sans publicité</li><li>97 road trips en France</li>
+        </ul>
       </div>
-      <span class="soon">Sans compte. Sans publicité.</span>
+      <div class="hero-shot">{% include shot.html name="boucle-en-un-tap" eager=true sizes="290px" %}</div>
+    </div>
+    <p class="credit">Vidéo : <a href="https://www.pexels.com/video/5052415/" rel="noopener">Pexels</a>, licence Pexels</p>
+  </section>
+
+  <section class="frow" id="boucle" aria-labelledby="f1">
+    <div class="wrap frow-grid">
+      <div>
+        <p class="num">01 · Balade en un tap</p>
+        <h2 id="f1"><a href="/generateur-balade-moto/">Une boucle à virages, autour de toi</a></h2>
+        <p>Une durée, de 1 h à 5 h. Des routes rapides ou sinueuses, plus ou moins de virages, plus ou moins de relief. Sans autoroute, péages, chemins de terre, ferries ou tunnels si tu préfères. Un tap, et la boucle est tracée depuis là où tu es, avec sa durée, sa sinuosité et sa montée.</p>
+        <p class="muted">3 boucles par mois gratuites, illimitées avec RideKit Pro.</p>
+        <a class="link-more" href="/generateur-balade-moto/">Le générateur de balade moto →</a>
+      </div>
+      {% include shot.html name="boucle-apercu" caption="Une boucle de 54 km autour du lac d'Annecy, par le col de la Forclaz." %}
     </div>
   </section>
 
-  <section class="section">
+  <section class="frow flip band" id="groupe" aria-labelledby="f2">
+    <div class="wrap frow-grid">
+      <div>
+        <p class="num">02 · Sortie de groupe</p>
+        <h2 id="f2"><a href="/sortie-moto-en-groupe/">Tes potes sur la carte</a></h2>
+        <p>Le leader crée la sortie et partage un code ou un QR. Chacun voit les autres sur la carte, reçoit la balade lancée par le leader et des messages rapides lus à voix haute : Essence, Pause, Ralentis, Problème. Si la détection de chute d'un membre déclenche une alerte, le groupe la reçoit.</p>
+        <p class="muted">Ta position n'est partagée que si tu l'acceptes, pendant la sortie, puis effacée. Gratuit à 2, jusqu'à 8 quand le leader a RideKit Pro. Rejoindre est toujours gratuit.</p>
+        <a class="link-more" href="/sortie-moto-en-groupe/">Rouler en groupe avec RideKit →</a>
+      </div>
+      {% include shot.html name="sortie-de-groupe" caption="Hugo, Manon et Léa sur la route du groupe." %}
+    </div>
+  </section>
+
+  <section class="frow" id="chute" aria-labelledby="f3">
+    <div class="wrap frow-grid">
+      <div>
+        <p class="num">03 · Détection de chute <span class="tag-pro">Pro</span></p>
+        <h2 id="f3"><a href="/detection-chute-moto/">Si tu tombes, un proche le sait</a></h2>
+        <p>Pendant une balade guidée, ton iPhone repère un choc fort, la moto qui s'arrête et un signe de chute. Une alarme sonne avec un décompte. Sans réponse de ta part, ton contact d'urgence reçoit un SMS avec ta position.</p>
+        <p class="muted">Avec RideKit Pro, à activer. Une aide, pas une garantie : elle peut rater une chute ou se tromper, et elle prévient un proche, pas les secours. En cas d'urgence, le 112.</p>
+        <a class="link-more" href="/detection-chute-moto/">Comment marche la détection de chute →</a>
+      </div>
+      {% include shot.html name="detection-de-chute" caption="Le décompte avant l'alerte : « Je vais bien » annule tout." %}
+    </div>
+  </section>
+
+  <section class="frow flip band" id="roadbook" aria-labelledby="f4">
+    <div class="wrap frow-grid">
+      <div>
+        <p class="num">04 · Roadbook</p>
+        <h2 id="f4"><a href="/roadbook-moto/">97 road trips prêts à rouler</a></h2>
+        <p>De la Route des Grands Crus au road trip de 5 jours dans l'Aveyron : des itinéraires des offices de tourisme et des départements, étape par étape, avec leur sinuosité, leurs cols et leurs points de vue. Chacun a sa page ici, avec sa trace GPX gratuite.</p>
+        <div class="trip-cards" style="margin-top:18px">
+          {%- assign featured = site.roadtrips | sort: "curv_value" | reverse -%}
+          {%- for t in featured limit: 3 %}{% include trip-card.html trip=t %}{% endfor %}
+        </div>
+        <a class="link-more" href="/roadbook-moto/" style="margin-top:14px">Tous les road trips moto →</a>
+      </div>
+      {% include shot.html name="roadbook" caption="L'Aveyron à moto, de Laguiole à Millau : 5 jours, 720 km." %}
+    </div>
+  </section>
+
+  <section class="frow" id="meteo" aria-labelledby="f5">
+    <div class="wrap frow-grid">
+      <div>
+        <p class="num">05 · Météo moto</p>
+        <h2 id="f5"><a href="/meteo-moto/">Le meilleur créneau pour rouler</a></h2>
+        <p>Les prévisions heure par heure, et le créneau de la journée où rouler : de jour, sans pluie, sans vent fort, sans risque de verglas. Le radar de pluie en direct, la pluie des deux prochaines heures, la météo des cols autour de toi.</p>
+        <a class="link-more" href="/meteo-moto/">La météo moto →</a>
+      </div>
+      {% include shot.html name="meteo" caption="Demain, de 8 h à 17 h : la journée sera sèche." %}
+    </div>
+  </section>
+
+  <section class="section dark" aria-labelledby="more-features">
     <div class="wrap">
-      <h2>Ce que fait RideKit</h2>
-      <p class="lede">Tout ce qui suit est dans l'app aujourd'hui.</p>
-      <div class="grid">
-        <div class="card"><span class="k"></span><h3>Des boucles sur mesure</h3>
-          <p>Une durée, des routes rapides ou à virages, plus ou moins de relief. Sans autoroutes, péages, chemins de terre, ferries ou tunnels si tu préfères.</p></div>
-        <div class="card"><span class="k"></span><h3>Le guidage</h3>
-          <p>Tour par tour, même écran verrouillé, avec recalcul si tu sors de la route. La limitation de vitesse s'affiche, une phrase te prévient si tu la dépasses (un bip si la voix est coupée).</p></div>
-        <div class="card"><span class="k"></span><h3>De A à B, ou ta trace</h3>
-          <p>Un itinéraire vers une destination, ou une trace GPX, KML ou TCX importée, à suivre dans un sens ou dans l'autre. Avec RideKit Pro, itinéraires et balades s'exportent en GPX.</p></div>
-        <div class="card"><span class="k"></span><h3>Sur ta route</h3>
-          <p>Les cols et les sites à voir le long de la balade, les stations-service avec le prix du jour en France.</p></div>
-        <div class="card"><span class="k"></span><h3>La météo pour rouler</h3>
-          <p>Prévisions heure par heure, le meilleur créneau, le radar de pluie, la météo des cols autour de toi.</p></div>
-        <div class="card"><span class="k"></span><h3>Hors réseau</h3>
-          <p>Avec RideKit Pro, télécharge la carte d'une balade avant de partir : le guidage continue là où ça ne capte plus.</p></div>
-        <div class="card"><span class="k"></span><h3>Zones de danger</h3>
-          <p>En France, les zones de danger prévues par la loi, à partir de la liste officielle des radars fixes. Jamais l'emplacement d'un radar.</p></div>
-        <div class="card"><span class="k"></span><h3>Carnet et garage</h3>
-          <p>Tes balades, leurs kilomètres et leurs virages. Ta moto, son kilométrage, ses entretiens et leurs rappels.</p></div>
-        <div class="card"><span class="k"></span><h3>Détection de chute</h3>
-          <p>Avec RideKit Pro, si tu l'actives : après une chute probable, une alarme, puis un SMS avec ta position envoyé à ton contact d'urgence (un mobile de France métropolitaine), même si tu ne peux pas répondre. Une aide, pas un service de secours.</p></div>
+      <h2 id="more-features">Et tout le reste pour rouler</h2>
+      <p class="lede">Le guidage, le partage, les pauses et le plein : ce qui fait une bonne journée à moto.</p>
+      <div class="reel">
+        {% include shot.html name="navigation-lacets" caption="GPS : guidage vocal tour par tour, gratuit." sizes="230px" %}
+        {% include shot.html name="partage" caption="Partage ta balade en image, façon Strava." sizes="230px" %}
+        {% include shot.html name="points-de-vue" caption="Points de vue, cafés et restos sur ta route." sizes="230px" %}
+        {% include shot.html name="essence" caption="Le prix de l'essence autour de toi." sizes="230px" %}
+        {% include shot.html name="gpx-trace" caption="Tes traces GPX, KML ou TCX, guidées." sizes="230px" %}
+        {% include shot.html name="garage-entretien" caption="Ta moto, ses entretiens, leurs rappels." sizes="230px" %}
+      </div>
+      <div class="feat-links dark-links">
+        <a href="/gps-moto/"><strong>GPS et Copilote</strong><span>Guidage vocal gratuit, écran verrouillé compris ; le Copilote (Pro) annonce les épingles, la pluie, la dernière station.</span></a>
+        <a href="/partage-balade-moto/"><strong>Partage</strong><span>Ta trace et tes chiffres en une image : story, post, ou PNG transparent.</span></a>
+        <a href="/itineraire-moto/"><strong>Itinéraires et points de vue</strong><span>De A à B ou par tes points, avec les cols, les points de vue et les pauses café.</span></a>
+        <a href="/prix-essence-moto/"><strong>Prix de l'essence</strong><span>Les stations et leur prix du jour, d'après les données officielles.</span></a>
+        <a href="/gpx-moto/"><strong>GPX</strong><span>Import gratuit de GPX, KML, KMZ et TCX ; export GPX avec Pro.</span></a>
+        <a href="/carnet-entretien-moto/"><strong>Garage et carnet</strong><span>Kilométrage, entretiens, rappels, et le carnet de tes balades.</span></a>
       </div>
     </div>
   </section>
 
-  <section class="section band">
+  <section class="section" id="pro" aria-labelledby="pro-title">
+    <div class="wrap narrow">
+      <h2 id="pro-title">Gratuit, et RideKit Pro si tu veux plus</h2>
+      <p class="lede">L'essentiel est gratuit, sans compte et sans publicité. RideKit Pro ajoute ce qui coûte à faire tourner : l'alerte chute, le Copilote, les cartes hors ligne.</p>
+      <div class="tablewrap">
+      <table class="compare">
+        <thead><tr><th scope="col">Fonction</th><th scope="col">Gratuit</th><th scope="col">RideKit Pro</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Boucle en un tap</th><td>3 par mois</td><td class="yes">Illimitées</td></tr>
+          <tr><th scope="row">Guidage vocal, zones de danger, survitesse</th><td>Oui</td><td class="yes">Oui</td></tr>
+          <tr><th scope="row">Roadbook, météo, prix de l'essence, import GPX, partage en image</th><td>Oui</td><td class="yes">Oui</td></tr>
+          <tr><th scope="row">Sortie de groupe (créée par toi)</th><td>2 personnes, toi compris</td><td class="yes">Jusqu'à 8</td></tr>
+          <tr><th scope="row">Parcours à points</th><td>5 points</td><td class="yes">Jusqu'à 149</td></tr>
+          <tr><th scope="row">Détection de chute et SMS à un proche</th><td>Test de la détection</td><td class="yes">Oui</td></tr>
+          <tr><th scope="row">Copilote vocal (épingles, pluie, dernière station)</th><td>Non</td><td class="yes">Oui</td></tr>
+          <tr><th scope="row">Cartes hors ligne, export GPX</th><td>Non</td><td class="yes">Oui</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <p><strong>{{ site.pro_year }} par an</strong>, avec {{ site.pro_trial_days }} jours d'essai gratuits, ou <strong>{{ site.pro_month }} par mois</strong> sans essai. Abonnement sur l'App Store, résiliable à tout moment dans les réglages de ton compte Apple. <a class="link-more" href="/pro/">Tout sur RideKit Pro →</a></p>
+    </div>
+  </section>
+
+  <section class="section band" aria-labelledby="blog-title">
     <div class="wrap">
-      <h2>Tes données restent sur ton téléphone</h2>
+      <h2 id="blog-title">Le blog</h2>
+      <p class="lede">Des guides pour rouler mieux, vérifiés et sourcés.</p>
+      <div class="post-grid">
+        {%- for p in site.posts limit: 6 %}{% include post-card.html post=p %}{% endfor %}
+      </div>
+      <p class="more-links"><a href="/blog/">Tous les articles →</a></p>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="data-title">
+    <div class="wrap">
+      <h2 id="data-title">Tes données restent sur ton téléphone</h2>
       <ul class="facts">
-        <li>Pas de compte : tes balades, ta moto et tes réglages ne quittent pas ton téléphone. Seul le serveur d'alerte reçoit, au moment d'une alerte, de quoi prévenir ton contact, et n'en garde ni ta position ni le texte.</li>
+        <li>Pas de compte : tes balades, ta moto et tes réglages ne quittent pas ton téléphone. Seul le serveur d'alerte reçoit, au moment d'une alerte, de quoi prévenir ton contact, et n'en garde ni ta position ni le texte.</li>
         <li>En sortie de groupe, si tu l'acceptes, ta position est partagée avec le groupe pendant la sortie, sauf aux abords de ton départ et de l'arrivée, puis effacée.</li>
         <li>Pour calculer une route ou afficher la météo, l'app envoie des coordonnées aux services qui font le calcul — jamais ton nom.</li>
         <li>Aucune publicité dans l'app, aucune revente. La mesure des pubs, par AppsFlyer, seulement si tu l'acceptes, jamais avec ta position.</li>
       </ul>
-      <p style="margin-top:22px"><a href="confidentialite/" style="color:var(--accent)">Le détail, service par service →</a></p>
+      <p style="margin-top:22px"><a class="link-more" href="/confidentialite/">Le détail, service par service →</a></p>
     </div>
   </section>
-</main>
 
-<footer>
-  <div class="wrap">
-    <div class="links">
-      <a href="confidentialite/">Politique de confidentialité</a>
-      <a href="conditions/">Conditions d'utilisation</a>
-      <a href="mentions-legales/">Mentions légales</a>
-      <a href="en/privacy/" hreflang="en">Privacy Policy (EN)</a>
-      <a href="en/terms/" hreflang="en">Terms of Use (EN)</a>
-      <a href="mailto:contact@ridekit-app.com">contact@ridekit-app.com</a>
-    </div>
-    <p>RideKit est éditée par SZ CORP. Le Code de la route prime toujours sur les indications de l'app.
-      App Store est une marque d'Apple Inc. Cartes © les contributeurs d'OpenStreetMap.</p>
+  <div class="wrap narrow">
+    {% include faq.html items=site.data.faq_home %}
+    {% include cta.html title="Bientôt sur l'App Store" text="RideKit sort sur iPhone, en France. Gratuite, sans compte, sans publicité." nolink=true %}
   </div>
-</footer>
-
-</body>
-</html>
+</main>
+<script>
+/* Mouvement réduit demandé : la vidéo reste sur son image. */
+(function(){var v=document.querySelector('.hero-home video');if(!v)return;
+var m=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)');
+function apply(){if(m&&m.matches){v.removeAttribute('autoplay');v.pause();}else if(v.paused){var p=v.play();if(p&&p.catch)p.catch(function(){});}}
+apply();if(m&&m.addEventListener)m.addEventListener('change',apply);})();
+</script>

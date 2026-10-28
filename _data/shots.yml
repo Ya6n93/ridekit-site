@@ -1,0 +1,106 @@
+# Captures de l'app (iPhone 17 Pro, 1206 × 2622, 27 octobre 2026), servies en WebP et AVIF
+# par _includes/shot.html depuis assets/img/shots/<nom>-<320|480|720>.(webp|avif).
+# alt : ce que la capture montre, pour qui ne la voit pas. pro : la capture montre une
+# fonction de RideKit Pro (la légende le dit).
+boucle-en-un-tap:
+  alt: "Écran « Ta balade parfaite en un tap » : carte autour d'Annecy, durée 1 h, routes rapides ou sinueuses, bouton Générer la balade"
+boucle-reglages-quota:
+  alt: "Réglages de la boucle : durée 2 h, routes sinueuses, et la mention 3 balades gratuites ce mois-ci"
+boucle-virages-relief:
+  alt: "Réglages avancés de la boucle : beaucoup de virages, relief montagne, autoroutes, péages et chemins de terre évités"
+boucle-apercu:
+  alt: "Aperçu d'une boucle de 54 km autour du lac d'Annecy par le col de la Forclaz : durée 1 h 33, sinuosité 5,2 sur 10, 884 m de montée"
+boucle-hors-ligne:
+  alt: "Téléchargement de la carte hors ligne d'une boucle, à 58 %"
+  pro: true
+navigation-lacets:
+  alt: "Guidage dans une épingle de la D41 en thème clair : « 12,7 km, tourne à droite », vitesse 45 km/h, limitation 80"
+nav-instruction:
+  alt: "Guidage tour par tour : « 130 m, tourne à droite, D42 », limitation 30 et vitesse actuelle"
+nav-survitesse:
+  alt: "Alerte de survitesse : 66 km/h affiché en rouge sous un panneau limité à 50"
+nav-zone-danger:
+  alt: "Bandeau rouge « Zone de danger, limitée à 80 » pendant le guidage"
+nav-resume:
+  alt: "Résumé de fin de balade « Belle balade » : 18 km, 28 min, inclinaison estimée, vitesse moyenne et 12 virages"
+nav-lacets-clair:
+  alt: "Guidage dans les lacets du Semnoz en thème clair"
+parcours-5-points:
+  alt: "Créer le parcours : une boucle de 64 km par Talloires et le col de la Forclaz, 5 points, sinuosité 6 sur 10"
+aller-quelque-part:
+  alt: "Aller quelque part : recherche, puces Stations, Cafés, Restos et Points de vue, lieux récents et cols autour de soi"
+points-de-vue:
+  alt: "Puce Points de vue : les belvédères autour d'Annecy sur la carte et en liste, avec leur distance"
+stations-prix:
+  alt: "Puce Stations : les stations-service autour de soi avec le prix du SP98"
+essence:
+  alt: "Stations essence : carte des prix officiels, meilleur prix SP98 à 1,990 € à Argonay, 0,22 € sous la moyenne, bouton Y aller"
+roadbook:
+  alt: "Road trip « L'Aveyron à moto, de Laguiole à Millau » : 5 jours, 720 km, sinuosité 6,1, carte des étapes et bouton Démarrer l'étape 1"
+roadbook-liste:
+  alt: "Liste du Roadbook : 97 road trips en France, filtres Tous, Favoris et Téléchargés, le road trip à la une"
+roadbook-etapes:
+  alt: "Les 5 étapes d'un road trip du Roadbook, avec leurs distances et durées"
+roadbook-hors-ligne:
+  alt: "Roadbook, filtre Téléchargés : road trips prêts à rouler hors ligne"
+  pro: true
+gpx-import:
+  alt: "Importer un GPX : « Roule tes propres traces », un fichier avec deux traces à enchaîner"
+gpx-trace:
+  alt: "Trace GPX importée : carte du lac d'Annecy aux Aravis, 81 km, sinuosité 6,6"
+gpx-profil-cols:
+  alt: "Profil d'altitude d'une trace importée, 2 174 m de montée, et les cols sur le parcours"
+gpx-export:
+  alt: "Export d'une trace en GPX par la feuille de partage d'iOS"
+  pro: true
+sortie-de-groupe:
+  alt: "Sortie de groupe pendant le guidage : les initiales de chaque motard sur la route, compteur de 4 motards"
+groupe-inviter:
+  alt: "Sortie de groupe : boutons Inviter et Rejoindre"
+groupe-consentement:
+  alt: "Avant de créer un groupe : « Ta position est partagée avec le groupe pendant la sortie, puis effacée »"
+groupe-salon:
+  alt: "Salon du groupe : code X5T-KT4, QR code, places 4 sur 8, le leader et les membres connectés"
+groupe-carte:
+  alt: "Carte de la balade du groupe : le leader en orange et les autres motards sur la route"
+groupe-message:
+  alt: "Message rapide reçu pendant le guidage : « Léa, Pause »"
+groupe-messages-rapides:
+  alt: "Feuille « Message au groupe » : Essence, Pause, Problème, Ralentis, Tout va bien, Danger"
+groupe-qui-est-ou:
+  alt: "Qui est où : 4 motards connectés, avec la distance de chacun devant ou derrière"
+detection-de-chute:
+  alt: "Test de l'alerte de chute : « Tout va bien ? », décompte de 20 secondes, boutons Je vais bien, J'ai besoin d'aide et Appeler le 112"
+  pro: true
+chute-reglages:
+  alt: "Écran Détection de chute sans abonnement : désactivée, réservée à RideKit Pro, avec le choc, le délai et le SMS expliqués"
+chute-alerte:
+  alt: "Alerte de chute : décompte de 22 secondes avant l'alerte, boutons Je vais bien, J'ai besoin d'aide et Appeler le 112"
+  pro: true
+chute-annulee:
+  alt: "Alerte annulée : « Ouf. Bonne route. Rien n'a été envoyé. »"
+  pro: true
+meteo:
+  alt: "Météo moto : radar de pluie, 16° demain, journée sèche et meilleur créneau de 8 h à 17 h"
+meteo-radar:
+  alt: "Météo du soir : radar de pluie animé, pluie des deux prochaines heures et meilleur créneau"
+accueil:
+  alt: "Accueil de RideKit : générer une boucle, Roadbook, créer un itinéraire, importer un GPX, stations essence et groupe"
+partage:
+  alt: "Partager une balade : image Plein cadre de la trace vers le Crêt de Châtillon avec distance, durée, dénivelé et vitesse"
+partage-plein-cadre:
+  alt: "Image à partager au style Plein cadre, au format story 9:16"
+partage-nuit:
+  alt: "Image à partager au style Nuit : la trace lumineuse sur une carte sombre"
+partage-transparent:
+  alt: "Image transparente à partager : la trace et ses chiffres, à poser sur une photo"
+carnet:
+  alt: "Carnet de balades : 72 km, 2 balades et la carte de leurs traces"
+garage:
+  alt: "Garage : la moto, son kilométrage, les kilomètres faits avec RideKit et le prochain entretien"
+garage-entretien:
+  alt: "Entretien : vidange dans 5 jours, chaîne dans 188 km, pneus, rappels activés"
+paywall:
+  alt: "Écran RideKit Pro : 49,99 € par an avec 7 jours gratuits, ou 5,99 € par mois"
+reglages-alertes:
+  alt: "Réglages : alertes zones de danger, alerte de survitesse et sa tolérance, thème"

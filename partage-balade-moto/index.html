@@ -1,0 +1,59 @@
+---
+layout: feature
+title: "Partager sa balade moto en image, façon Strava"
+seo_title: "Partager sa balade moto en image, façon Strava"
+description: "Ta balade moto en une image : la trace sur la carte, la distance, la durée, le dénivelé, en story 9:16 ou en post 4:5, ou en PNG transparent à poser sur ta photo. Gratuit."
+section: fonctions
+eyebrow: "Partage"
+h1: "Ta sortie, en une image"
+lede: "Une belle balade mérite mieux qu'une capture d'écran : RideKit met ta trace et tes chiffres en page, prêts pour une story, un post ou le groupe WhatsApp."
+hero_shot: partage
+hero_note: "Gratuit. L'export du fichier GPX, lui, est dans RideKit Pro."
+crumbs:
+  - { name: "Fonctions", url: "/fonctionnalites/" }
+  - { name: "Partage", url: "/partage-balade-moto/" }
+schema_type: WebPage
+schema_about_app: true
+image: /assets/img/og/partage-balade-moto.jpg
+faq:
+  - q: "Existe-t-il un « Strava » pour la moto ?"
+    a: "Plusieurs applis enregistrent les sorties à moto. RideKit garde chaque balade guidée dans ton carnet (distance, durée, virages, vitesse moyenne) et la transforme en image à partager. Il n'y a pas de réseau social dans l'app : tu partages où tu veux."
+  - q: "Quels formats d'image ?"
+    a: "Story 9:16 et post 4:5, en trois styles (Plein cadre, Carte arrondie, Nuit), ou un PNG transparent (trace et chiffres, trace seule, liste de chiffres, badge) à poser sur ta propre photo."
+  - q: "Peut-on partager la trace elle-même ?"
+    a: "Oui, avec RideKit Pro : chaque balade du carnet s'exporte en fichier GPX, pour un GPS ou une autre app. L'image, elle, est gratuite."
+---
+<section class="frow">
+  <div class="wrap frow-grid">
+    <div>
+      <p class="num">Carte</p>
+      <h2>Trois styles, deux formats</h2>
+      <p><strong>Plein cadre</strong>, <strong>Carte arrondie</strong> ou <strong>Nuit</strong> (la trace lumineuse sur une carte sombre), en <strong>story 9:16</strong> ou en <strong>post 4:5</strong>. Les chiffres qui comptent : distance, durée, dénivelé, vitesse moyenne.</p>
+      <p>Touche <strong>Partager</strong> : Instagram, WhatsApp, Messages, ou « Enregistrer l'image » pour la garder dans Photos.</p>
+    </div>
+    <div class="shots">
+      {% include shot.html name="partage-plein-cadre" caption="Plein cadre, en story." sizes="(min-width: 860px) 210px, 44vw" %}
+      {% include shot.html name="partage-nuit" caption="Nuit." sizes="(min-width: 860px) 210px, 44vw" %}
+    </div>
+  </div>
+</section>
+
+<section class="frow flip band">
+  <div class="wrap frow-grid">
+    <div>
+      <p class="num">Transparent</p>
+      <h2>Sur ta propre photo</h2>
+      <p>Une photo de ta moto au sommet du col, et par-dessus, ta trace et tes chiffres. Le mode <strong>Transparent</strong> donne un PNG sans fond : trace et chiffres, trace seule, liste de chiffres ou badge, à poser dans ta story.</p>
+    </div>
+    {% include shot.html name="partage-transparent" caption="La trace et ses chiffres, sans fond." %}
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap narrow prose">
+    <h2>Le carnet de tes balades</h2>
+    <p>Chaque balade guidée peut aller dans ton carnet : sa carte, sa distance, sa durée, ses virages, sa vitesse moyenne et une estimation de l'inclinaison maximale. Le carnet fait le total des kilomètres et affiche toutes tes traces sur une même carte. Tout reste sur ton téléphone, sans compte.</p>
+    {% include shot.html name="carnet" caption="Le carnet : les kilomètres, les balades, leurs traces." %}
+    <p>Pour envoyer la trace elle-même à un ami ou à ton GPS : l'<a href="/gpx-moto/">export GPX</a>, avec RideKit Pro.</p>
+  </div>
+</section>

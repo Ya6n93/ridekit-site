@@ -1,0 +1,45 @@
+---
+layout: base
+title: "Toutes les fonctions de RideKit, l'app moto pour iPhone"
+seo_title: "Fonctions de RideKit : balade, groupe, chute, GPS moto"
+description: "Balade en un tap, sortie de groupe, détection de chute, Roadbook, météo moto, GPS et Copilote, itinéraires, partage, prix de l'essence, GPX, garage : tout ce que fait RideKit."
+section: fonctions
+schema_type: CollectionPage
+schema_about_app: true
+---
+<main id="main">
+  <section class="hero hero-slim">
+    <div class="wrap">
+      {% include crumbs.html n1="Fonctions" u1="/fonctionnalites/" %}
+      <p class="eyebrow">L'app moto pour iPhone</p>
+      <h1>Tout ce que fait RideKit</h1>
+      <p class="lede">Tout ce qui suit est dans l'app aujourd'hui. Ce qui demande RideKit Pro est marqué.</p>
+      <div class="btns">{% include store.html %}<a class="btn ghost" href="/pro/">Gratuit ou Pro ?</a></div>
+    </div>
+  </section>
+  {%- for f in site.data.features %}
+  <section class="frow{% cycle '', ' flip band' %}">
+    <div class="wrap frow-grid">
+      <div>
+        <p class="num">{% if forloop.index < 10 %}0{% endif %}{{ forloop.index }}{% if f.pro %} · <span class="muted">{{ f.pro }}</span>{% endif %}</p>
+        <h2><a href="{{ f.url }}">{{ f.name }}</a></h2>
+        <p>{{ f.text }}</p>
+        <a class="link-more" href="{{ f.url }}">En savoir plus →</a>
+      </div>
+      {% include shot.html name=f.shot sizes="(min-width: 860px) 260px, 60vw" %}
+    </div>
+  </section>
+  {%- endfor %}
+  <section class="section band">
+    <div class="wrap narrow">
+      <h2>Et aussi</h2>
+      <ul class="facts">
+        <li>Thème clair, sombre ou automatique.</li>
+        <li>Zones de danger et alerte de survitesse réglables.</li>
+        <li>Aucun compte, aucune publicité : tes balades, ta moto et tes réglages restent sur ton téléphone.</li>
+        <li>En français, sur iPhone, en France pour l'instant.</li>
+      </ul>
+      {% include cta.html nolink=true %}
+    </div>
+  </section>
+</main>

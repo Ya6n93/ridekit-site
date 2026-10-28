@@ -1,0 +1,69 @@
+---
+layout: feature
+title: "Météo moto : le meilleur créneau pour rouler, le radar de pluie"
+seo_title: "Météo moto : meilleur créneau et radar de pluie"
+description: "La météo pour rouler à moto : prévisions heure par heure, le meilleur créneau de la journée, le radar de pluie en direct, la pluie des 2 prochaines heures et la météo des cols."
+section: fonctions
+eyebrow: "Météo moto"
+h1: "La météo, lue pour rouler"
+lede: "Pas besoin de déchiffrer trois applis météo avant de partir : RideKit te dit quand rouler aujourd'hui ou demain, où il pleut maintenant, et quel temps il fait au col."
+hero_shot: meteo
+hero_note: "Gratuit. Prévisions Open-Meteo, radar RainViewer."
+crumbs:
+  - { name: "Fonctions", url: "/fonctionnalites/" }
+  - { name: "Météo moto", url: "/meteo-moto/" }
+schema_type: WebPage
+schema_about_app: true
+image: /assets/img/og/meteo-moto.jpg
+faq:
+  - q: "Comment RideKit choisit-il le meilleur créneau ?"
+    a: "Il cherche, dans les heures de jour, la plus longue suite d'heures où l'on peut rouler : sans pluie, avec un vent de moins de 50 km/h et plus de 3 °C (en dessous, risque de verglas). Les heures « idéales » (entre 10 et 32 °C, vent de moins de 35 km/h, peu de risque d'averse) comptent double."
+  - q: "D'où viennent les prévisions ?"
+    a: "D'Open-Meteo, qui agrège les modèles des services météo nationaux, heure par heure. Le radar de pluie vient de RainViewer. Ce sont des prévisions : regarde le ciel avant de partir."
+  - q: "Peut-on voir la météo d'un col ?"
+    a: "Oui : l'écran météo montre la météo des cols autour de toi, avec leur altitude et la température prévue là-haut, souvent bien plus fraîche qu'en bas."
+  - q: "À partir de quelle température ne faut-il pas rouler à moto ?"
+    a: "Il n'y a pas de règle unique : tout dépend de l'équipement, de la route et de l'humidité. Sous 3 °C, le risque de verglas existe, surtout à l'ombre et au petit matin : RideKit écarte ces heures du meilleur créneau. Notre guide [Météo moto : quand rouler](/blog/meteo-moto-quand-rouler/) détaille le froid, le vent et la chaleur."
+---
+<section class="frow">
+  <div class="wrap frow-grid">
+    <div>
+      <p class="num">1 · Quand rouler</p>
+      <h2>Le meilleur créneau de la journée</h2>
+      <p>Aujourd'hui, demain ou après-demain : RideKit cherche la plus longue plage d'heures de jour où rouler est agréable, et te la donne en une ligne. Par exemple : <strong>8 h – 17 h, 10 à 16 °C, pluie 10 % max</strong>. Un bouton <strong>Rouler</strong> t'emmène droit au <a href="/generateur-balade-moto/">générateur de balade</a>.</p>
+      <p>Les repères de l'app : pas de pluie, un vent de moins de 50 km/h, plus de 3 °C. Entre 10 et 32 °C avec peu de vent, c'est « idéal pour rouler ».</p>
+    </div>
+    {% include shot.html name="meteo" caption="Demain : brouillard le matin, journée sèche, meilleur créneau de 8 h à 17 h." %}
+  </div>
+</section>
+
+<section class="frow flip band">
+  <div class="wrap frow-grid">
+    <div>
+      <p class="num">2 · Maintenant</p>
+      <h2>Le radar de pluie, en direct</h2>
+      <p>Le radar anime les dernières images de pluie sur la carte, autour de toi. Juste en dessous, une phrase dit ce qui arrive dans les <strong>deux prochaines heures</strong>, au quart d'heure : « Sec sur Annecy pour l'instant, pluie faible vers 16 h 15 ».</p>
+      <p>L'état de la route aussi, en un mot : <strong>route sèche</strong>, <strong>humide</strong> (il a plu ces trois dernières heures), <strong>mouillée</strong>, ou <strong>risque de verglas</strong> sous 3 °C.</p>
+    </div>
+    {% include shot.html name="meteo-radar" caption="Le radar de pluie et la pluie des deux prochaines heures." %}
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap narrow prose">
+    <h2>La météo sur ta route</h2>
+    <ul>
+      <li><strong>Les cols autour de toi</strong> : leur altitude et la température prévue là-haut. En moyenne, l'air perd environ 6 à 7 °C tous les 1 000 m de montée : en haut d'un col, prévois une couche de plus.</li>
+      <li><strong>Avant chaque balade</strong> : l'aperçu donne l'heure du coucher du soleil et te prévient si tu rentres de nuit.</li>
+      <li><strong>Pendant la balade</strong>, avec <a href="/pro/">RideKit Pro</a>, le <a href="/gps-moto/">Copilote</a> annonce la pluie qui arrive sur ta route, d'après la prévision.</li>
+    </ul>
+    <blockquote class="note">
+      <p><strong>Bon à savoir.</strong> Une prévision reste une prévision, surtout en montagne et par temps orageux. Le meilleur créneau t'aide à choisir ; le ciel et la route décident.</p>
+    </blockquote>
+    <h2>Nos guides météo</h2>
+    <ul>
+      <li><a href="/blog/meteo-moto-quand-rouler/">Météo moto : vent, froid, chaleur, quand renoncer</a></li>
+      <li><a href="/blog/rouler-moto-sous-la-pluie/">Rouler à moto sous la pluie : les bons réflexes</a></li>
+    </ul>
+  </div>
+</section>

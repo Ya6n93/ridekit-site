@@ -1,0 +1,89 @@
+---
+layout: feature
+title: "Détection de chute moto : un proche prévenu par SMS avec ta position"
+seo_title: "Détection de chute moto : un proche prévenu par SMS"
+description: "Avec RideKit Pro, ton iPhone repère une chute probable pendant ta balade guidée ; sans réponse de ta part, ton contact reçoit un SMS avec ta position. Une aide, pas une garantie."
+section: fonctions
+eyebrow: "Détection de chute"
+pro_badge: "RideKit Pro"
+h1: "Si tu tombes, un proche le sait"
+lede: "Pendant ta balade guidée, RideKit surveille les signes d'une chute. Si tu ne réponds pas à l'alarme, ton contact d'urgence reçoit un SMS avec ta position. Une aide, pas une garantie : elle prévient un proche, pas les secours."
+hero_shot: detection-de-chute
+hero_link: { url: "#limites", text: "Ses limites" }
+hero_note: "Avec RideKit Pro, désactivée tant que tu ne l'actives pas. « Tester la détection » est gratuit."
+crumbs:
+  - { name: "Fonctions", url: "/fonctionnalites/" }
+  - { name: "Détection de chute", url: "/detection-chute-moto/" }
+schema_type: WebPage
+schema_about_app: true
+image: /assets/img/og/detection-chute-moto.jpg
+faq:
+  - q: "La détection de chute de RideKit appelle-t-elle les secours ?"
+    a: "Non. Elle envoie un SMS avec ta position à ton contact d'urgence, un proche que tu as choisi. C'est à lui d'agir, et d'appeler les secours si besoin. Si tu peux appeler, appelle le 112 : l'écran d'alerte a un bouton pour ça."
+  - q: "Comment l'application sait-elle que je suis tombé ?"
+    a: "Pendant une balade guidée, elle lit l'accéléromètre et le gyroscope du téléphone et cherche trois choses : un choc fort, la moto qui s'arrête, et un signe de chute (téléphone basculé, chute libre). Tout est analysé sur le téléphone, rien n'est enregistré."
+  - q: "Et si mon téléphone tombe de son support ?"
+    a: "Ça peut déclencher une fausse alerte. C'est pour ça qu'il y a une alarme et un décompte (30 secondes par défaut, de 20 à 60) : « Je vais bien » annule tout, et rien n'est envoyé."
+  - q: "Mon contact doit-il installer l'app ?"
+    a: "Non. Il reçoit un simple SMS. Pour l'instant, l'envoi automatique va vers les mobiles de France métropolitaine ; pour un autre numéro, ou sans réseau, le SMS est préparé sur ton téléphone et part d'un appui."
+  - q: "Est-ce que l'iPhone détecte déjà les accidents ?"
+    a: "La détection des accidents d'Apple est conçue pour les accidents de voiture graves. RideKit cherche, lui, les signes d'une chute à moto pendant ta balade guidée, et prévient un proche que tu choisis. Notre article [Détection de chute à moto](/blog/detection-chute-moto/) compare les approches."
+---
+<section class="frow">
+  <div class="wrap frow-grid">
+    <div>
+      <p class="num">1 · Avant de partir</p>
+      <h2>Un contact, un délai, c'est tout</h2>
+      <p>Active la détection, choisis ton contact d'urgence (dans tes contacts ou en tapant un numéro) et le délai avant l'alerte : 20, 30, 45 ou 60 secondes. RideKit te prépare un SMS pour lui dire que tu l'as choisi : c'est toi qui le préviens.</p>
+      <p>Tu peux vérifier que ça marche sans attendre une chute : <strong>Tester la détection</strong> (gratuit) te fait secouer le téléphone, <strong>Tester l'alerte</strong> déroule l'alarme et le décompte, avec un SMS marqué TEST.</p>
+    </div>
+    {% include shot.html name="chute-reglages" caption="Le choc, le délai, le SMS : ce que fait la détection, expliqué dans l'app." %}
+  </div>
+</section>
+
+<section class="frow flip band">
+  <div class="wrap frow-grid">
+    <div>
+      <p class="num">2 · Pendant la balade</p>
+      <h2>Une alarme, puis un SMS</h2>
+      <p>Pendant une balade guidée, l'app ouverte, le téléphone repère un <strong>choc fort</strong>, la <strong>moto qui s'arrête</strong> et un <strong>signe de chute</strong>. Une alarme sonne, au volume du téléphone, avec un décompte et trois boutons : <strong>Je vais bien</strong>, <strong>J'ai besoin d'aide</strong>, <strong>Appeler le 112</strong>.</p>
+      <p>Sans réponse à la fin du décompte, ou si tu demandes de l'aide, ton contact reçoit <strong>un SMS</strong> : l'heure du choc, ta position et sa précision, la batterie de ton téléphone et ta vitesse juste avant. Il part tout seul, par le serveur d'alerte de RideKit, vers un mobile de France métropolitaine.</p>
+      <p>Si tu roules en <a href="/sortie-moto-en-groupe/">sortie de groupe</a>, le groupe reçoit l'alerte aussi.</p>
+    </div>
+    {% include shot.html name="chute-alerte" caption="Le décompte : sans réponse, le SMS part." %}
+  </div>
+</section>
+
+<section class="frow">
+  <div class="wrap frow-grid">
+    <div>
+      <p class="num">3 · Fausse alerte</p>
+      <h2>« Je vais bien », et rien ne part</h2>
+      <p>Un téléphone qui tombe du support, un gros nid-de-poule : ça arrive. Touche <strong>Je vais bien</strong> avant la fin du décompte, et rien n'est envoyé. Si l'alerte est déjà partie, RideKit te propose d'écrire à ton contact que tout va bien, depuis ton téléphone.</p>
+    </div>
+    {% include shot.html name="chute-annulee" caption="« Ouf. Bonne route. Rien n'a été envoyé. »" %}
+  </div>
+</section>
+
+<section class="section band" id="limites">
+  <div class="wrap narrow prose">
+    <h2>Ce qu'elle ne fait pas</h2>
+    <blockquote class="note-warn">
+      <p><strong>Une aide, pas une garantie.</strong> La détection de chute peut ne pas détecter une chute, ou en signaler une à tort. Elle prévient un proche, <strong>pas les secours</strong>. En cas d'urgence, appelle le 112.</p>
+    </blockquote>
+    <ul>
+      <li>Elle ne surveille que pendant une <strong>balade guidée</strong>, l'app ouverte. Pas en dehors.</li>
+      <li>Le SMS dépend du <strong>réseau</strong>, de la <strong>batterie</strong> et des opérateurs : il peut arriver en retard, ou pas du tout. Sans données mobiles, il est préparé sur ton téléphone et doit être envoyé d'un appui.</li>
+      <li>L'envoi automatique va pour l'instant vers les <strong>mobiles de France métropolitaine</strong>. Pour un autre numéro, outre-mer compris, le SMS est préparé sur le téléphone.</li>
+      <li>Elle est réservée à <a href="/pro/">RideKit Pro</a> ({{ site.pro_year }} par an avec {{ site.pro_trial_days }} jours d'essai, ou {{ site.pro_month }} par mois). Sans abonnement en cours, elle ne surveille pas, même activée.</li>
+    </ul>
+    <h2>Tes données</h2>
+    <p>Les capteurs sont analysés sur le téléphone, sans rien enregistrer. Le serveur d'alerte ne reçoit de quoi écrire le SMS qu'au moment d'une alerte (ou d'un test), et n'en garde ni ta position, ni le texte, ni le numéro de ton contact en clair. Le détail est dans la <a href="/confidentialite/">politique de confidentialité</a>.</p>
+    <h2>Pour aller plus loin</h2>
+    <ul>
+      <li><a href="/blog/detection-chute-moto/">Détection de chute à moto : comment ça marche, et ses limites</a></li>
+      <li><a href="/blog/accident-moto-que-faire/">Accident de moto : les bons gestes</a></li>
+      <li><a href="/blog/rouler-seul-moto-securite/">Rouler seul à moto : prévenir un proche</a></li>
+    </ul>
+  </div>
+</section>

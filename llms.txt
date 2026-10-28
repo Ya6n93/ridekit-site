@@ -63,6 +63,21 @@
 
 ## Pages
 
+- [Accueil](https://ridekit-app.com/) et [toutes les fonctions](https://ridekit-app.com/fonctionnalites/)
+- [Générateur de balade moto](https://ridekit-app.com/generateur-balade-moto/)
+- [Sortie moto en groupe](https://ridekit-app.com/sortie-moto-en-groupe/)
+- [Détection de chute](https://ridekit-app.com/detection-chute-moto/)
+- [Roadbook : 97 road trips moto en France](https://ridekit-app.com/roadbook-moto/), une page
+  par road trip avec sa trace GPX (données DATAtourisme et data.gouv.fr, Licence Ouverte 2.0)
+- [Météo moto](https://ridekit-app.com/meteo-moto/), [GPS moto](https://ridekit-app.com/gps-moto/),
+  [Itinéraire moto](https://ridekit-app.com/itineraire-moto/),
+  [Partage](https://ridekit-app.com/partage-balade-moto/),
+  [Prix de l'essence](https://ridekit-app.com/prix-essence-moto/),
+  [GPX](https://ridekit-app.com/gpx-moto/),
+  [Garage et entretien](https://ridekit-app.com/carnet-entretien-moto/)
+- [RideKit Pro : prix et contenu](https://ridekit-app.com/pro/)
+- [Blog](https://ridekit-app.com/blog/) (flux RSS : https://ridekit-app.com/blog/feed.xml)
+- [English](https://ridekit-app.com/en/)
 - [Politique de confidentialité](https://ridekit-app.com/confidentialite/)
 - [Conditions d'utilisation](https://ridekit-app.com/conditions/)
 - [Mentions légales](https://ridekit-app.com/mentions-legales/)

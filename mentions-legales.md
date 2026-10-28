@@ -4,6 +4,7 @@ description: "Éditeur, directeur de la publication, hébergeurs et crédits du 
 permalink: /mentions-legales/
 layout: legal
 lang: fr
+last_modified_at: 2026-10-28
 ---
 
 # Mentions légales
@@ -74,6 +75,17 @@ des exceptions prévues par la loi.
 
 - Police des titres : Barlow Condensed, © The Barlow Project Authors, SIL Open Font
   License 1.1 ([licence](/assets/fonts/OFL.txt)), servie par ce site.
+- Vidéo de l'accueil : [Pexels](https://www.pexels.com/video/5052415/), vidéo n° 5052415,
+  licence Pexels. Photos de la page Sortie de groupe : [Pixabay](https://pixabay.com), image
+  n° 8077483 (Pixabay Content License) et Rick Barrett (Ambitious Studio) sur
+  [Unsplash](https://unsplash.com/photos/0IufleV_Uvw) (licence Unsplash).
+- Roadbook du site : itinéraires et textes de [DATAtourisme](https://www.datatourisme.fr) et de
+  ses producteurs, et du Département de l'Hérault ([data.gouv.fr](https://www.data.gouv.fr)),
+  Licence Ouverte 2.0 ; cols, points de vue et tracés recalculés © les contributeurs
+  d'[OpenStreetMap](https://www.openstreetmap.org/copyright) (ODbL) ; communes :
+  [API Géo](https://geo.api.gouv.fr) (Licence Ouverte 2.0) ; photos de
+  [Wikimedia Commons](https://commons.wikimedia.org), auteur et licence cités sous chacune. Le
+  détail est sur chaque page de road trip.
 - Les sources de données de l'application et leurs licences (OpenStreetMap,
   OpenFreeMap, TomTom, Overpass API, Open-Meteo, RainViewer, Wikipédia,
   data.gouv.fr…), ainsi que ses photos (Unsplash, Pixabay) et sa vidéo (Pexels), sont

@@ -1,0 +1,51 @@
+# Les fonctions de RideKit, dans l'ordre du fondateur. Utilisé par l'accueil, la page
+# Fonctions et les liens « Les autres fonctions ». pro : la fonction est (en partie) RideKit Pro.
+- url: /generateur-balade-moto/
+  name: "Ta balade en un tap"
+  text: "Une durée, des routes rapides ou à virages : RideKit trace une boucle autour de toi."
+  shot: boucle-en-un-tap
+  pro: "3 boucles par mois gratuites, illimitées avec Pro"
+- url: /sortie-moto-en-groupe/
+  name: "Sortie de groupe"
+  text: "Un code ou un QR, et chacun voit les autres sur la carte, avec des messages lus à voix haute."
+  shot: sortie-de-groupe
+  pro: "Gratuit à 2, jusqu'à 8 avec Pro"
+- url: /detection-chute-moto/
+  name: "Détection de chute"
+  text: "Après une chute probable et sans réponse de ta part, un proche reçoit un SMS avec ta position."
+  shot: detection-de-chute
+  pro: "RideKit Pro"
+- url: /roadbook-moto/
+  name: "Roadbook"
+  text: "97 road trips en France, étape par étape, avec leur trace GPX."
+  shot: roadbook
+- url: /meteo-moto/
+  name: "Météo moto"
+  text: "Le meilleur créneau pour rouler, le radar de pluie, la météo des cols."
+  shot: meteo
+- url: /gps-moto/
+  name: "GPS et Copilote"
+  text: "Guidage vocal tour par tour, zones de danger, et un Copilote qui annonce les épingles."
+  shot: navigation-lacets
+  pro: "Copilote et cartes hors ligne avec Pro"
+- url: /itineraire-moto/
+  name: "Itinéraire et points de vue"
+  text: "De A à B ou par tes points, sans autoroute, avec cols, points de vue et pauses café."
+  shot: points-de-vue
+- url: /partage-balade-moto/
+  name: "Partage façon Strava"
+  text: "Ta trace et tes chiffres en une image, prête pour une story ou un post."
+  shot: partage
+- url: /prix-essence-moto/
+  name: "Prix de l'essence"
+  text: "Les stations autour de toi et le prix du jour, données officielles."
+  shot: essence
+- url: /gpx-moto/
+  name: "GPX"
+  text: "Importe une trace GPX, KML ou TCX et laisse-toi guider. Export en GPX avec Pro."
+  shot: gpx-trace
+  pro: "Export avec Pro"
+- url: /carnet-entretien-moto/
+  name: "Garage et carnet"
+  text: "Ta moto, ses entretiens et leurs rappels, et le carnet de tes balades."
+  shot: garage-entretien
