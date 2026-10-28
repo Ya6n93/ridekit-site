@@ -1,9 +1,39 @@
+---
+layout: null
+sitemap: false
+---
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://ridekit-app.com/</loc><lastmod>2026-10-27</lastmod><changefreq>monthly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://ridekit-app.com/confidentialite/</loc><lastmod>2026-10-27</lastmod><changefreq>yearly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://ridekit-app.com/conditions/</loc><lastmod>2026-10-27</lastmod><changefreq>yearly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://ridekit-app.com/mentions-legales/</loc><lastmod>2026-10-27</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
-  <url><loc>https://ridekit-app.com/en/privacy/</loc><lastmod>2026-10-27</lastmod><changefreq>yearly</changefreq><priority>0.4</priority></url>
-  <url><loc>https://ridekit-app.com/en/terms/</loc><lastmod>2026-10-27</lastmod><changefreq>yearly</changefreq><priority>0.4</priority></url>
+{%- comment -%}
+  Plan du site, écrit ici plutôt que par jekyll-sitemap : pour y mettre les versions
+  française et anglaise d'une même page (hreflang) et laisser dehors les pages noindex.
+{%- endcomment %}
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+{%- assign pages = site.pages | where_exp: "p", "p.sitemap != false" | where_exp: "p", "p.noindex != true" -%}
+{%- for p in pages -%}
+{%- if p.url contains '.xml' or p.url contains '.txt' or p.url contains '/page/' or p.url == '/404.html' -%}{%- continue -%}{%- endif %}
+  <url>
+    <loc>{{ site.url }}{{ p.url | replace: 'index.html', '' }}</loc>
+    <lastmod>{{ p.last_modified_at | default: site.time | date: "%Y-%m-%d" }}</lastmod>
+    {%- if p.alternate %}
+    <xhtml:link rel="alternate" hreflang="{{ p.lang | default: 'fr' }}" href="{{ site.url }}{{ p.url | replace: 'index.html', '' }}"/>
+    <xhtml:link rel="alternate" hreflang="{% if p.lang == 'en' %}fr{% else %}en{% endif %}" href="{{ site.url }}{{ p.alternate }}"/>
+    {%- endif %}
+  </url>
+{%- endfor %}
+{%- for p in site.posts %}
+  <url>
+    <loc>{{ site.url }}{{ p.url }}</loc>
+    <lastmod>{{ p.last_modified_at | default: p.date | date: "%Y-%m-%d" }}</lastmod>
+    {%- if p.alternate %}
+    <xhtml:link rel="alternate" hreflang="fr" href="{{ site.url }}{{ p.url }}"/>
+    <xhtml:link rel="alternate" hreflang="en" href="{{ site.url }}{{ p.alternate }}"/>
+    {%- endif %}
+  </url>
+{%- endfor %}
+{%- for p in site.roadtrips %}
+  <url>
+    <loc>{{ site.url }}{{ p.url }}</loc>
+    <lastmod>{{ p.last_modified_at | date: "%Y-%m-%d" }}</lastmod>
+  </url>
+{%- endfor %}
 </urlset>

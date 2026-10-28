@@ -1,0 +1,50 @@
+---
+layout: base
+---
+{%- comment -%} Liste d'articles : le blog paginé (paginator) ou une catégorie (page.category_key). {%- endcomment -%}
+<main id="main">
+  <section class="hero hero-slim">
+    <div class="wrap">
+      {%- if page.category_key %}
+      {%- assign cat = site.data.categories[page.category_key] -%}
+      {% include crumbs.html n1="Blog" u1="/blog/" n2=cat.name u2=page.url %}
+      <p class="eyebrow">Blog RideKit</p>
+      <h1>{{ cat.name }}</h1>
+      <p class="lede">{{ cat.description }}</p>
+      {%- else %}
+      {% include crumbs.html n1="Blog" u1="/blog/" %}
+      <p class="eyebrow">Blog RideKit</p>
+      <h1>{{ page.h1 | default: page.title }}</h1>
+      <p class="lede">{{ page.lede }}</p>
+      {%- endif %}
+      <nav class="chips" aria-label="Catégories">
+        <a href="/blog/"{% unless page.category_key %} aria-current="page"{% endunless %}>Tout</a>
+        {%- for c in site.data.categories %}
+        <a href="/blog/{{ c[0] }}/"{% if page.category_key == c[0] %} aria-current="page"{% endif %}>{{ c[1].short }}</a>
+        {%- endfor %}
+      </nav>
+    </div>
+  </section>
+  <section class="section">
+    <div class="wrap">
+      {%- if page.category_key %}
+      {%- assign list = site.posts | where: "category", page.category_key -%}
+      {%- elsif paginator %}
+      {%- assign list = paginator.posts -%}
+      {%- else %}
+      {%- assign list = site.posts -%}
+      {%- endif %}
+      <div class="post-grid">
+        {%- for p in list %}{% include post-card.html post=p %}{% endfor %}
+      </div>
+      {%- if paginator and paginator.total_pages > 1 and page.category_key == nil %}
+      <nav class="pager" aria-label="Pages">
+        {%- if paginator.previous_page %}<a href="{{ paginator.previous_page_path | replace: 'index.html', '' }}" rel="prev">← Plus récents</a>{% endif %}
+        <span>Page {{ paginator.page }} sur {{ paginator.total_pages }}</span>
+        {%- if paginator.next_page %}<a href="{{ paginator.next_page_path }}" rel="next">Plus anciens →</a>{% endif %}
+      </nav>
+      {%- endif %}
+      {% include cta.html %}
+    </div>
+  </section>
+</main>

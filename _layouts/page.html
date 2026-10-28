@@ -1,0 +1,9 @@
+---
+layout: base
+---
+<main id="main" class="prose">
+  <div class="wrap narrow">
+    {%- if page.crumbs %}{% include crumbs.html items=page.crumbs %}{% endif %}
+{{ content }}
+  </div>
+</main>

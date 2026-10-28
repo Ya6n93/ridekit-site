@@ -5,6 +5,7 @@ permalink: /en/terms/
 alternate: /conditions/
 layout: legal
 lang: en
+last_modified_at: 2026-10-27
 ---
 
 # Terms of Use

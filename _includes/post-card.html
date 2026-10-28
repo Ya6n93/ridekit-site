@@ -1,0 +1,6 @@
+{%- assign p = include.post -%}{%- assign c = site.data.categories[p.category] -%}
+<a class="post-card" href="{{ p.url }}">
+  <span class="pc-cat">{{ c.short | default: p.category }}</span>
+  <strong>{{ p.title }}</strong>
+  <span class="pc-lede">{{ p.lede | default: p.description | strip_html | truncate: 150 }}</span>
+</a>

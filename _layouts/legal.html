@@ -1,79 +1,12 @@
-<!doctype html>
-<!-- Gabarit maison des pages légales : identité de RideKit, aucune ressource
-     tierce (la police est servie par le site). Aucun thème : voir _config.yml. -->
-{%- assign en = false -%}{%- if page.lang == 'en' -%}{%- assign en = true -%}{%- endif -%}
-<html lang="{{ page.lang | default: 'fr' }}">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>{{ page.title }}</title>
-{%- if page.description %}
-<meta name="description" content="{{ page.description }}">
-{%- endif %}
-<meta name="robots" content="{% if page.noindex %}noindex{% else %}index,follow{% endif %}">
-<meta name="theme-color" content="#0B0B0B">
-<link rel="canonical" href="{{ site.url }}{{ page.url }}">
-{%- if page.alternate %}
-<link rel="alternate" hreflang="{% if en %}fr{% else %}en{% endif %}" href="{{ site.url }}{{ page.alternate }}">
-<link rel="alternate" hreflang="{{ page.lang | default: 'fr' }}" href="{{ site.url }}{{ page.url }}">
-{%- endif %}
-<script>
-/* Avant le rendu, pour ne pas clignoter : ?app=1 retire la barre et le pied
-   (l'écran de l'app a les siens), ?theme=light|dark suit le réglage de l'app
-   plutôt que celui du système. */
-(function(){var q=location.search,r=document.documentElement;
-if(/[?&]app=1\b/.test(q))r.classList.add('in-app');
-var t=/[?&]theme=(light|dark)\b/.exec(q);if(t)r.setAttribute('data-theme',t[1]);})();
-</script>
-<link rel="icon" type="image/png" sizes="32x32" href="{{ '/media/icon-32.png' | relative_url }}">
-<link rel="apple-touch-icon" href="{{ '/media/icon-180.png' | relative_url }}">
-<link rel="preload" href="{{ '/assets/fonts/barlow-condensed-800.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="{{ '/assets/rk.css' | relative_url }}">
-</head>
-<body>
-
-<header class="top">
-  <div class="wrap">
-    <a class="brand" href="{{ '/' | relative_url }}"><img src="{{ '/media/icon-64.png' | relative_url }}" alt="" width="34" height="34"><b>Ride<i>Kit</i></b></a>
-    <nav aria-label="{% if en %}Legal{% else %}Pages légales{% endif %}">
-      {%- if en %}
-      <a href="{{ '/en/privacy/' | relative_url }}"{% if page.url == '/en/privacy/' %} aria-current="page"{% endif %}>Privacy</a>
-      <a href="{{ '/en/terms/' | relative_url }}"{% if page.url == '/en/terms/' %} aria-current="page"{% endif %}>Terms</a>
-      <a href="{{ '/mentions-legales/' | relative_url }}" hreflang="fr">Legal notice (FR)</a>
-      {%- if page.alternate %}<a href="{{ page.alternate | relative_url }}" hreflang="fr">Français</a>{% endif %}
-      {%- else %}
-      <a href="{{ '/confidentialite/' | relative_url }}"{% if page.url == '/confidentialite/' %} aria-current="page"{% endif %}>Confidentialité</a>
-      <a href="{{ '/conditions/' | relative_url }}"{% if page.url == '/conditions/' %} aria-current="page"{% endif %}>Conditions</a>
-      <a href="{{ '/mentions-legales/' | relative_url }}"{% if page.url == '/mentions-legales/' %} aria-current="page"{% endif %}>Mentions légales</a>
-      {%- if page.alternate %}<a href="{{ page.alternate | relative_url }}" hreflang="en">English</a>{% endif %}
-      {%- endif %}
-    </nav>
-  </div>
-</header>
-
-<main class="prose">
+---
+layout: base
+---
+{%- comment -%}
+  Pages légales : le texte seul, en colonne. Dans l'app (WebView, ?app=1), la barre et le
+  pied disparaissent (voir head.html et .in-app dans rk.css).
+{%- endcomment -%}
+<main id="main" class="prose">
   <div class="wrap narrow">
 {{ content }}
   </div>
 </main>
-
-<footer>
-  <div class="wrap narrow">
-    <div class="links">
-      <a href="{{ '/' | relative_url }}">{% if en %}← RideKit{% else %}← Accueil{% endif %}</a>
-      {%- if en %}
-      <a href="{{ '/en/privacy/' | relative_url }}">Privacy Policy</a>
-      <a href="{{ '/en/terms/' | relative_url }}">Terms of Use</a>
-      {%- else %}
-      <a href="{{ '/confidentialite/' | relative_url }}">Confidentialité</a>
-      <a href="{{ '/conditions/' | relative_url }}">Conditions d'utilisation</a>
-      {%- endif %}
-      <a href="{{ '/mentions-legales/' | relative_url }}">{% if en %}Legal notice{% else %}Mentions légales{% endif %}</a>
-      <a href="mailto:contact@ridekit-app.com">contact@ridekit-app.com</a>
-    </div>
-    <p>RideKit · SZ CORP</p>
-  </div>
-</footer>
-
-</body>
-</html>

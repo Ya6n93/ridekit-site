@@ -1,11 +1,27 @@
 # Volontairement SANS thème : les thèmes fournis par GitHub Pages injectent dans
-# chaque page un bandeau qui renvoie vers le dépôt d'hébergement. Les pages
-# légales utilisent _layouts/legal.html, écrit à la main, et la feuille
-# assets/rk.css, partagée avec index.html.
+# chaque page un bandeau qui renvoie vers le dépôt d'hébergement. Toutes les pages
+# utilisent les gabarits de _layouts, écrits à la main, et la feuille assets/rk.css.
+# Aucune ressource tierce, aucun cookie, aucun outil de mesure : ce que promettent la
+# politique de confidentialité et les mentions légales.
 title: RideKit
-description: L'app moto qui trace tes boucles.
+description: "L'app moto pour iPhone : ta balade en un tap, tes potes sur la carte, un proche prévenu si tu chutes, 97 road trips en France."
 lang: fr
+locale: fr_FR
 url: https://ridekit-app.com
+baseurl: ""
+email: contact@ridekit-app.com
+publisher: SZ CORP
+
+# L'app sur l'App Store (France). Tant que app_store_live est false, le bouton dit
+# « Bientôt sur l'App Store » et ne mène nulle part. Le jour de la sortie : passer à true.
+app_store_id: "6826872715"
+app_store_url: "https://apps.apple.com/fr/app/id6826872715"
+app_store_live: false
+
+# Prix de RideKit Pro (France, TTC), affichés tels quels partout sur le site.
+pro_year: "49,99 €"
+pro_month: "5,99 €"
+pro_trial_days: 7
 
 # Kramdown + GFM, comme sur GitHub Pages : les tableaux et les listes des pages
 # légales se rendent ici comme là-bas.
@@ -14,9 +30,33 @@ kramdown:
   input: GFM
   hard_wrap: false
 
+timezone: Europe/Paris
+permalink: /blog/:title/
+
+# Seuls des greffons autorisés par GitHub Pages.
+plugins:
+  - jekyll-paginate
+
+paginate: 12
+paginate_path: "/blog/page/:num/"
+
+collections:
+  roadtrips:
+    output: true
+
+defaults:
+  - scope: { path: "", type: pages }
+    values: { last_modified_at: 2026-10-28 }
+  - scope: { path: "", type: posts }
+    values: { layout: post, lang: fr }
+  - scope: { path: "", type: roadtrips }
+    values: { layout: roadtrip, lang: fr }
+
 # Rien d'autre à publier que les pages du site.
 exclude:
   - README.md
   - Gemfile
   - Gemfile.lock
   - vendor
+  - scripts
+  - node_modules

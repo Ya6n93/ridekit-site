@@ -1,0 +1,18 @@
+{%- comment -%}
+  Une capture de l'app dans un cadre de téléphone : AVIF puis WebP, trois largeurs,
+  chargement différé sauf si include.eager. include.name : clé de _data/shots.yml.
+{%- endcomment -%}
+{%- assign s = site.data.shots[include.name] -%}
+{%- assign alt = include.alt | default: s.alt -%}
+{%- assign sizes = include.sizes | default: "(min-width: 900px) 280px, (min-width: 600px) 40vw, 72vw" -%}
+{%- assign b = '/assets/img/shots/' | append: include.name -%}
+<figure class="shot{% if include.class %} {{ include.class }}{% endif %}">
+  <picture>
+    <source type="image/avif" srcset="{{ b }}-320.avif 320w, {{ b }}-480.avif 480w, {{ b }}-720.avif 720w" sizes="{{ sizes }}">
+    <source type="image/webp" srcset="{{ b }}-320.webp 320w, {{ b }}-480.webp 480w, {{ b }}-720.webp 720w" sizes="{{ sizes }}">
+    <img src="{{ b }}-480.webp" width="480" height="1044" alt="{{ alt | escape }}"{% if include.eager %} fetchpriority="high"{% else %} loading="lazy"{% endif %} decoding="async">
+  </picture>
+  {%- if include.caption %}
+  <figcaption>{{ include.caption }}{% if s.pro %} <span class="tag-pro">Pro</span>{% endif %}</figcaption>
+  {%- endif %}
+</figure>

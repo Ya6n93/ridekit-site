@@ -1,0 +1,48 @@
+{%- assign en = false -%}{%- if page.lang == 'en' -%}{%- assign en = true -%}{%- endif -%}
+<footer class="foot">
+  <div class="wrap">
+    {%- if en %}
+    <div class="foot-cols">
+      <div><p class="foot-h">RideKit</p>
+        <a href="/en/">The app</a><a href="/en/blog/">Guides</a><a href="/">Français</a></div>
+      <div><p class="foot-h">Legal</p>
+        <a href="/en/privacy/">Privacy Policy</a><a href="/en/terms/">Terms of Use</a><a href="/mentions-legales/" hreflang="fr" lang="fr">Legal notice (FR)</a><a href="mailto:{{ site.email }}">{{ site.email }}</a></div>
+    </div>
+    <p>RideKit is published by SZ CORP, Paris. The Highway Code always prevails over the app. App Store is a trademark of Apple Inc. Maps © OpenStreetMap contributors.</p>
+    {%- else %}
+    <div class="foot-cols">
+      <div><p class="foot-h">Fonctions</p>
+        <a href="/generateur-balade-moto/">Balade en un tap</a>
+        <a href="/sortie-moto-en-groupe/">Sortie de groupe</a>
+        <a href="/detection-chute-moto/">Détection de chute</a>
+        <a href="/meteo-moto/">Météo moto</a>
+        <a href="/gps-moto/">GPS moto</a>
+        <a href="/itineraire-moto/">Itinéraire moto</a>
+        <a href="/partage-balade-moto/">Partage</a>
+        <a href="/prix-essence-moto/">Prix de l'essence</a>
+        <a href="/gpx-moto/">GPX</a>
+        <a href="/carnet-entretien-moto/">Garage et entretien</a>
+        <a href="/pro/">RideKit Pro</a></div>
+      <div><p class="foot-h">Roadbook</p>
+        <a href="/roadbook-moto/">97 road trips en France</a>
+        {%- for r in site.data.roadbook.regions %}{% if r.indexed %}
+        <a href="{{ r.url }}">{{ r.name }}</a>{% endif %}{% endfor %}
+        {%- for r in site.data.roadbook.regions %}{% for d in r.depts %}{% if d.indexed and d.count >= 9 %}
+        <a href="{{ d.url }}">{{ d.name }}</a>{% endif %}{% endfor %}{% endfor %}</div>
+      <div><p class="foot-h">Blog</p>
+        <a href="/blog/">Tous les articles</a>
+        {%- for c in site.data.categories %}
+        <a href="/blog/{{ c[0] }}/">{{ c[1].name }}</a>{% endfor %}</div>
+      <div><p class="foot-h">RideKit</p>
+        <a href="/confidentialite/">Confidentialité</a>
+        <a href="/conditions/">Conditions d'utilisation</a>
+        <a href="/mentions-legales/">Mentions légales</a>
+        <a href="/en/" hreflang="en" lang="en">English</a>
+        <a href="mailto:{{ site.email }}">{{ site.email }}</a></div>
+    </div>
+    <p>RideKit est éditée par SZ CORP, à Paris. Le Code de la route prime toujours sur les indications de l'app.
+      Ce site ne dépose aucun cookie et ne charge rien d'un tiers. App Store est une marque d'Apple Inc.
+      Cartes de l'app © les contributeurs d'OpenStreetMap.</p>
+    {%- endif %}
+  </div>
+</footer>

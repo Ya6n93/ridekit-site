@@ -1,0 +1,25 @@
+{%- comment -%}
+  Fil d'Ariane visible et son BreadcrumbList, sans l'accueil (ajouté ici). Les étapes
+  viennent de include.items ([{name, url}]) ou des paramètres n1/u1 … n5/u5 ; la dernière
+  est la page elle-même.
+{%- endcomment -%}
+{%- assign en = false -%}{%- if page.lang == 'en' -%}{%- assign en = true -%}{%- endif -%}
+{%- assign names = "" | split: "" -%}{%- assign urls = "" | split: "" -%}
+{%- if include.items -%}
+  {%- for c in include.items -%}{%- assign names = names | push: c.name -%}{%- assign urls = urls | push: c.url -%}{%- endfor -%}
+{%- else -%}
+  {%- for i in (1..5) -%}{%- assign kn = 'n' | append: i -%}{%- assign ku = 'u' | append: i -%}
+    {%- if include[kn] -%}{%- assign names = names | push: include[kn] -%}{%- assign urls = urls | push: include[ku] -%}{%- endif -%}
+  {%- endfor -%}
+{%- endif -%}
+<nav class="crumbs" aria-label="{% if en %}Breadcrumb{% else %}Fil d'Ariane{% endif %}">
+  <ol>
+    <li><a href="{% if en %}/en/{% else %}/{% endif %}">{% if en %}Home{% else %}Accueil{% endif %}</a></li>
+    {%- for n in names %}
+    <li>{% if forloop.last %}<span aria-current="page">{{ n }}</span>{% else %}<a href="{{ urls[forloop.index0] }}">{{ n }}</a>{% endif %}</li>
+    {%- endfor %}
+  </ol>
+</nav>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"{% if en %}Home{% else %}Accueil{% endif %}","item":"{{ site.url }}{% if en %}/en/{% else %}/{% endif %}"}{% for n in names %},{"@type":"ListItem","position":{{ forloop.index | plus: 1 }},"name":{{ n | strip_html | jsonify }},"item":"{{ site.url }}{{ urls[forloop.index0] }}"}{% endfor %}]}
+</script>

@@ -1,0 +1,11 @@
+{%- comment -%}
+  Bouton App Store. Tant que l'app n'est pas publiée (site.app_store_live: false), un
+  bouton désactivé « Bientôt sur l'App Store ». Pas de badge Apple tant qu'il n'y a rien
+  à télécharger (les règles d'Apple réservent le badge à une app disponible).
+{%- endcomment -%}
+{%- assign en = false -%}{%- if page.lang == 'en' -%}{%- assign en = true -%}{%- endif -%}
+{%- if site.app_store_live -%}
+<a class="store{% if include.light %} light{% endif %}" href="{{ site.app_store_url }}"><small>{% if en %}Download on the{% else %}Télécharger dans{% endif %}</small><b>l’App Store</b></a>
+{%- else -%}
+<span class="store is-soon{% if include.light %} light{% endif %}" aria-disabled="true"><small>{% if en %}Coming soon to the{% else %}Bientôt sur{% endif %}</small><b>{% if en %}App Store{% else %}l’App Store{% endif %}</b></span>
+{%- endif -%}

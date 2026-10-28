@@ -1,0 +1,21 @@
+{%- assign en = false -%}{%- if page.lang == 'en' -%}{%- assign en = true -%}{%- endif -%}
+<a class="skip" href="#main">{% if en %}Skip to content{% else %}Aller au contenu{% endif %}</a>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="{% if en %}/en/{% else %}/{% endif %}"><img src="/media/icon-64.png" alt="" width="34" height="34"><b>Ride<i>Kit</i></b><span class="sr">{% if en %}, home{% else %}, accueil{% endif %}</span></a>
+    <nav class="mainnav" aria-label="{% if en %}Main{% else %}Navigation principale{% endif %}">
+      {%- if en %}
+      <a href="/en/"{% if page.url == '/en/' %} aria-current="page"{% endif %}>RideKit</a>
+      <a href="/en/blog/"{% if page.url contains '/en/blog/' %} aria-current="page"{% endif %}>Guides</a>
+      <a href="/en/privacy/"{% if page.url == '/en/privacy/' %} aria-current="page"{% endif %}>Privacy</a>
+      <a href="/en/terms/"{% if page.url == '/en/terms/' %} aria-current="page"{% endif %}>Terms</a>
+      <a href="{{ page.alternate | default: '/' }}" hreflang="fr" lang="fr">Français</a>
+      {%- else %}
+      <a href="/fonctionnalites/"{% if page.section == 'fonctions' %} aria-current="page"{% endif %}>Fonctions</a>
+      <a href="/roadbook-moto/"{% if page.url contains '/roadbook-moto/' %} aria-current="page"{% endif %}>Roadbook</a>
+      <a href="/blog/"{% if page.url contains '/blog/' %} aria-current="page"{% endif %}>Blog</a>
+      <a href="/pro/"{% if page.url == '/pro/' %} aria-current="page"{% endif %}>Pro</a>
+      {%- endif %}
+    </nav>
+  </div>
+</header>

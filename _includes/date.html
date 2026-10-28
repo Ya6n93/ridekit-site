@@ -1,0 +1,5 @@
+{%- assign en = false -%}{%- if page.lang == 'en' -%}{%- assign en = true -%}{%- endif -%}
+{%- if en -%}{{ include.date | date: "%-d %B %Y" }}{%- else -%}
+{%- assign months = "janvier,février,mars,avril,mai,juin,juillet,août,septembre,octobre,novembre,décembre" | split: "," -%}
+{%- assign m = include.date | date: "%-m" | minus: 1 -%}{%- assign d = include.date | date: "%-d" -%}{{ d }}{% if d == "1" %}er{% endif %} {{ months[m] }} {{ include.date | date: "%Y" }}
+{%- endif -%}

@@ -1,0 +1,166 @@
+---
+layout: base
+---
+{%- comment -%}
+  Un road trip du Roadbook (collection _roadtrips, écrite par scripts/roadbook.py) : les
+  chiffres, la carte du tracé, les étapes, les cols, les communes, la trace GPX, et
+  l'attribution des données (Licence Ouverte 2.0, ODbL) et de la photo.
+{%- endcomment -%}
+{%- assign t = page -%}
+{%- capture regurl %}/roadbook-moto/{{ t.region_slug }}/{% endcapture -%}
+{%- capture depurl %}/roadbook-moto/{{ t.region_slug }}/{{ t.dept_slug }}/{% endcapture -%}
+{%- assign cols = t.highlights | where: "type", "col" -%}
+{%- assign views = t.highlights | where: "type", "viewpoint" -%}
+<main id="main" class="trip">
+  <section class="hero hero-trip">
+    <div class="wrap">
+      {%- if t.dept_slug %}
+      {% include crumbs.html n1="Roadbook" u1="/roadbook-moto/" n2=t.region u2=regurl n3=t.dept u3=depurl n4=t.title u4=t.url %}
+      {%- else %}
+      {% include crumbs.html n1="Roadbook" u1="/roadbook-moto/" n2=t.region u2=regurl n3=t.title u3=t.url %}
+      {%- endif %}
+      <p class="eyebrow">{{ t.kind_label }} moto · {{ t.dept | default: t.region }}</p>
+      <h1>{{ t.title }}</h1>
+      <p class="lede">{{ t.intro }}</p>
+      <dl class="stats">
+        <div><dt>Distance</dt><dd>{{ t.km }} km</dd></div>
+        <div><dt>{% if t.days > 1 %}Jours{% else %}Durée{% endif %}</dt><dd>{% if t.days > 1 %}{{ t.days }}{% else %}{{ t.duration }}{% endif %}</dd></div>
+        <div><dt>Sinuosité</dt><dd class="hot">{{ t.curv }}<small>/10</small></dd></div>
+        <div><dt>{% if cols.size > 0 %}Cols{% else %}Type{% endif %}</dt><dd>{% if cols.size > 0 %}{{ cols.size }}{% else %}{{ t.kind_label }}{% endif %}</dd></div>
+      </dl>
+      <div class="btns">
+        <a class="btn" href="{{ t.gpx }}" download>Trace GPX <small>({{ t.gpx_kb }} Ko)</small></a>
+        {% include store.html %}
+      </div>
+    </div>
+  </section>
+
+  <section class="section trip-main">
+    <div class="wrap trip-grid">
+      <div class="trip-map">
+        <figure class="map">
+          <svg viewBox="0 0 {{ t.svg.w }} {{ t.svg.h }}" role="img" aria-labelledby="map-t map-d">
+            <title id="map-t">Tracé : {{ t.title }}</title>
+            <desc id="map-d">{{ t.kind_label }} de {{ t.km }} km, de {{ t.start }} à {{ t.end }}{% if cols.size > 0 %}, par {{ cols | map: "name" | join: ", " }}{% endif %}.</desc>
+            {%- for d in t.svg.paths %}
+            <path class="tr-casing" d="{{ d }}"/>
+            {%- endfor %}
+            {%- for d in t.svg.paths %}
+            <path class="tr-line" d="{{ d }}"/>
+            {%- endfor %}
+            {%- for m in t.svg.marks %}
+            <g class="mk mk-{{ m.type }}" transform="translate({{ m.x }} {{ m.y }})"><title>{{ m.name }}{% if m.ele %} ({{ m.ele }} m){% endif %}</title>{% if m.type == 'col' %}<path d="M0 -8l7 12h-14z"/>{% else %}<circle r="5"/>{% endif %}</g>
+            {%- endfor %}
+            {%- for s in t.svg.stages %}
+            <g class="mk-stage" transform="translate({{ s.x }} {{ s.y }})"><circle r="11"/><text y="4">{{ s.n }}</text></g>
+            {%- endfor %}
+            {%- unless t.svg.loop %}
+            <g class="mk-end" transform="translate({{ t.svg.end[0] }} {{ t.svg.end[1] }})"><title>Arrivée : {{ t.end }}</title><rect x="-8" y="-8" width="16" height="16" rx="3"/></g>
+            {%- endunless %}
+            <g class="mk-start" transform="translate({{ t.svg.start[0] }} {{ t.svg.start[1] }})"><title>Départ : {{ t.start }}</title><circle r="9"/></g>
+            <g class="scale" transform="translate(18 {{ t.svg.h | minus: 18 }})"><path d="M0 -6V0H{{ t.svg.scale.px }}V-6"/><text x="{{ t.svg.scale.px | plus: 8 }}" y="0">{{ t.svg.scale.label }}</text></g>
+          </svg>
+          <figcaption>
+            <span class="lg lg-start">Départ{% if t.svg.loop %} et arrivée{% endif %} : {{ t.start }}</span>
+            {%- unless t.svg.loop %}<span class="lg lg-end">Arrivée : {{ t.end }}</span>{% endunless %}
+            {%- if cols.size > 0 %}<span class="lg lg-col">Col</span>{% endif %}
+            {%- if views.size > 0 %}<span class="lg lg-view">Point de vue</span>{% endif %}
+            <a href="https://www.openstreetmap.org/?minlon={{ t.bbox[0] }}&amp;minlat={{ t.bbox[1] }}&amp;maxlon={{ t.bbox[2] }}&amp;maxlat={{ t.bbox[3] }}" rel="noopener">Voir la zone sur OpenStreetMap ↗</a>
+          </figcaption>
+        </figure>
+      </div>
+      <div class="trip-side">
+        {%- if t.photo %}
+        <figure class="trip-photo">
+          <picture>
+            <source type="image/avif" srcset="{{ t.photo.base }}-480.avif 480w, {{ t.photo.base }}-960.avif 960w" sizes="(min-width: 900px) 400px, 92vw">
+            <source type="image/webp" srcset="{{ t.photo.base }}-480.webp 480w, {{ t.photo.base }}-960.webp 960w" sizes="(min-width: 900px) 400px, 92vw">
+            <img src="{{ t.photo.base }}-480.webp" width="480" height="320" alt="{% if t.photo.place %}{{ t.photo.place }}{% else %}Paysage{% endif %}, sur la route ou près de la route de « {{ t.title }} »" loading="lazy" decoding="async">
+          </picture>
+          <figcaption>{% if t.photo.place %}{{ t.photo.place }}. {% endif %}Photo {{ t.photo.author }}, <a href="{{ t.photo.link }}" rel="noopener">Wikimedia Commons</a>, {% if t.photo.licence_url %}<a href="{{ t.photo.licence_url }}" rel="license noopener">{{ t.photo.licence }}</a>{% else %}{{ t.photo.licence }}{% endif %}, recadrée.</figcaption>
+        </figure>
+        {%- endif %}
+        <div class="box">
+          <h2>Rouler ce road trip</h2>
+          <ul class="ticks">
+            <li><a href="{{ t.gpx }}" download>Télécharge la trace GPX</a> : elle s'ouvre dans RideKit, ton GPS ou ton app de navigation.</li>
+            <li>Dans RideKit, ce road trip est dans le <a href="/roadbook-moto/">Roadbook</a> : guidage vocal étape par étape, gratuit ; carte hors ligne avec <a href="/pro/">RideKit Pro</a>.</li>
+            <li>Avant de partir : la <a href="/meteo-moto/">météo moto</a> et le <a href="/prix-essence-moto/">prix de l'essence</a> autour du départ.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section trip-text">
+    <div class="wrap narrow prose">
+      {%- if t.paragraphs.size > 0 %}
+      <h2>Le parcours, par ceux qui le proposent</h2>
+      <div class="quote">
+        {%- for p in t.paragraphs %}
+        <p>{{ p }}</p>
+        {%- endfor %}
+        <p class="quote-src">Texte : {{ t.source.producer }}{% if t.source.provider == 'DATAtourisme' %}, via DATAtourisme{% endif %}{% if t.source.updated %}, mis à jour le {{ t.source.updated }}{% endif %}.</p>
+      </div>
+      {%- endif %}
+
+      <h2>{% if t.stages.size > 1 %}Les {{ t.stages.size }} étapes{% else %}L'itinéraire{% endif %}</h2>
+      <div class="tablewrap">
+      <table class="stages">
+        <thead><tr><th scope="col">{% if t.stages.size > 1 %}Étape{% else %}Trajet{% endif %}</th><th scope="col">Distance</th><th scope="col">Durée</th><th scope="col">Sinuosité</th></tr></thead>
+        <tbody>
+        {%- for s in t.stages %}
+          <tr><th scope="row">{% if t.stages.size > 1 %}{{ forloop.index }}. {% endif %}{{ s.start }}{% if s.end != s.start %} → {{ s.end }}{% else %} (boucle){% endif %}</th><td>{{ s.km | replace: ".", "," }} km</td><td>{{ s.duration }}</td><td>{{ s.curv }}/10</td></tr>
+        {%- endfor %}
+        </tbody>
+      </table>
+      </div>
+      <p class="muted">Durées à allure de balade, sans les pauses. La sinuosité, de 1,5 à 9,9, mesure combien la route tourne : c'est la mesure de l'app (vers 2,5 une traversée de ville, au-delà de 7 une montée en lacets).</p>
+
+      {%- if t.highlights.size > 0 %}
+      <h2>Cols et points de vue sur la route</h2>
+      <ul class="hl">
+        {%- for h in t.highlights %}
+        <li><span class="hl-type">{% if h.type == 'col' %}Col{% else %}Point de vue{% endif %}</span> {{ h.name }}{% if h.ele %} <span class="muted">· {{ h.ele }} m</span>{% endif %}</li>
+        {%- endfor %}
+      </ul>
+      {%- endif %}
+
+      {%- if t.communes.size > 1 %}
+      <h2>Communes sur le parcours</h2>
+      <p>{{ t.communes | join: " · " }}</p>
+      <p class="muted">Relevées tous les 3 km le long du tracé{% if t.depts.size > 1 %}, dans {{ t.depts.size }} départements : {{ t.depts | join: ", " }}{% endif %}.</p>
+      {%- endif %}
+    </div>
+  </section>
+
+  {%- if t.nearby.size > 0 %}
+  <section class="section band" aria-labelledby="near-title">
+    <div class="wrap">
+      <h2 id="near-title">Road trips au départ tout près</h2>
+      <div class="trip-cards">
+        {%- for n in t.nearby %}
+        <a class="trip-card" href="{{ n.url }}">
+          <svg viewBox="0 0 120 84" aria-hidden="true" focusable="false"><path d="{{ n.mini }}"/></svg>
+          <span class="tc-body"><span class="tc-meta">Départ à {{ n.km_away }} km · {{ n.kind }}</span><strong>{{ n.title }}</strong><span class="tc-stats">{{ n.km }} km</span></span>
+        </a>
+        {%- endfor %}
+      </div>
+      <p class="more-links"><a href="{{ regurl }}">Tous les road trips {{ t.region }} →</a>{% if t.dept_slug %} <a href="{{ depurl }}">{{ t.dept }} →</a>{% endif %}</p>
+    </div>
+  </section>
+  {%- endif %}
+
+  <section class="section">
+    <div class="wrap narrow">
+      <div class="attrib">
+        <h2>Sources et licences</h2>
+        <p>Itinéraire et texte : {{ t.source.producer }}{% if t.source.provider == 'DATAtourisme' %}, diffusés par <a href="https://www.datatourisme.fr" rel="noopener">DATAtourisme</a> (<a href="{{ t.source.url }}" rel="noopener">fiche source</a>){% elsif t.source.url %} (<a href="{{ t.source.url }}" rel="noopener">data.gouv.fr</a>){% endif %}{% if t.source.updated %}, mise à jour du {{ t.source.updated }}{% endif %}, sous <a href="{{ t.source.licence_url }}" rel="license noopener">Licence Ouverte 2.0 (Etalab)</a>, repris le {% include date.html date=t.source.retrieved %}.
+          {% if t.source.routed %}Tracé recalculé avec OSRM. {% endif %}Cols, points de vue{% if t.source.routed %} et routes{% endif %} : © les contributeurs d'<a href="https://www.openstreetmap.org/copyright" rel="noopener">OpenStreetMap</a> (ODbL).
+          Communes : <a href="https://geo.api.gouv.fr" rel="noopener">API Géo</a> de l'État, Licence Ouverte 2.0. Distances, durées, sinuosité, carte et trace GPX : calculées par RideKit à partir de ces données.</p>
+        <p class="muted">Le Code de la route et la signalisation priment : une route peut être fermée, en travaux ou interdite à certaines heures. Vérifie sur place.</p>
+      </div>
+      {% include cta.html title="Ce road trip, guidé étape par étape" text="Dans RideKit, le Roadbook te guide à la voix sur chaque étape, avec les cols et les stations sur ta route. Gratuit ; carte hors ligne avec RideKit Pro." %}
+    </div>
+  </section>
+</main>

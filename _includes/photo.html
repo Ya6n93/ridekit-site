@@ -1,0 +1,14 @@
+{%- comment -%}
+  Une photo libre de droits, servie par le site (AVIF puis WebP), avec son crédit.
+  include.name : base dans assets/img/photos ; include.w1/include.w2 : les deux largeurs ;
+  include.h1 : hauteur de la petite ; include.alt, include.credit (HTML).
+{%- endcomment -%}
+{%- assign b = '/assets/img/photos/' | append: include.name -%}
+<figure class="photo{% if include.class %} {{ include.class }}{% endif %}">
+  <picture>
+    <source type="image/avif" srcset="{{ b }}-{{ include.w1 }}.avif {{ include.w1 }}w, {{ b }}-{{ include.w2 }}.avif {{ include.w2 }}w" sizes="{{ include.sizes | default: '(min-width: 1120px) 1072px, 100vw' }}">
+    <source type="image/webp" srcset="{{ b }}-{{ include.w1 }}.webp {{ include.w1 }}w, {{ b }}-{{ include.w2 }}.webp {{ include.w2 }}w" sizes="{{ include.sizes | default: '(min-width: 1120px) 1072px, 100vw' }}">
+    <img src="{{ b }}-{{ include.w1 }}.webp" width="{{ include.w1 }}" height="{{ include.h1 }}" alt="{{ include.alt | escape }}" loading="lazy" decoding="async">
+  </picture>
+  <figcaption>{{ include.credit }}</figcaption>
+</figure>

@@ -1,0 +1,10 @@
+{%- comment -%} Encadré « télécharger l'app » : include.title, include.text facultatifs. {%- endcomment -%}
+{%- assign en = false -%}{%- if page.lang == 'en' -%}{%- assign en = true -%}{%- endif -%}
+<aside class="cta" aria-label="{% if en %}Get the app{% else %}L'app RideKit{% endif %}">
+  <img src="/media/icon-180.png" alt="" width="64" height="64" loading="lazy">
+  <div>
+    <p class="cta-title">{{ include.title | default: "RideKit, l'app moto pour iPhone" }}</p>
+    <p>{{ include.text | default: "Ta balade en un tap, tes potes sur la carte, la météo pour rouler et 97 road trips en France. Gratuite, sans compte, sans publicité." }}</p>
+    <div class="cta-actions">{% include store.html %}{% unless include.nolink %}<a class="link-more" href="/fonctionnalites/">Toutes les fonctions →</a>{% endunless %}</div>
+  </div>
+</aside>

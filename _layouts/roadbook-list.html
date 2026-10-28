@@ -1,0 +1,89 @@
+---
+layout: base
+---
+{%- comment -%}
+  Road trips d'une région ou d'un département (pages écrites par scripts/roadbook.py) :
+  la carte de tous les tracés, les départements, les road trips du plus sinueux au moins.
+{%- endcomment -%}
+{%- capture regurl %}/roadbook-moto/{{ page.region_slug }}/{% endcapture -%}
+{%- if page.scope == 'dept' -%}
+  {%- assign trips = site.roadtrips | where: "region_slug", page.region_slug | where: "dept_slug", page.dept_slug | sort: "curv_value" | reverse -%}
+  {%- assign guide_key = page.dept_slug -%}
+{%- else -%}
+  {%- assign trips = site.roadtrips | where: "region_slug", page.region_slug | sort: "curv_value" | reverse -%}
+  {%- assign guide_key = page.region_slug -%}
+{%- endif -%}
+{%- assign reg = site.data.roadbook.regions | where: "slug", page.region_slug | first -%}
+<main id="main">
+  <section class="hero hero-slim">
+    <div class="wrap">
+      {%- if page.scope == 'dept' %}
+      {% include crumbs.html n1="Roadbook" u1="/roadbook-moto/" n2=page.region u2=regurl n3=page.dept u3=page.url %}
+      {%- else %}
+      {% include crumbs.html n1="Roadbook" u1="/roadbook-moto/" n2=page.region u2=page.url %}
+      {%- endif %}
+      <p class="eyebrow">Roadbook moto · {{ page.count }} road trip{% if page.count > 1 %}s{% endif %}</p>
+      <h1>{{ page.title }}</h1>
+      <p class="lede">{{ page.intro }}</p>
+      {%- if page.scope != 'dept' and reg.depts.size > 1 %}
+      <nav class="chips" aria-label="Départements">
+        {%- for d in reg.depts %}
+        <a href="{{ d.url }}">{{ d.name }} <small>{{ d.count }}</small></a>
+        {%- endfor %}
+      </nav>
+      {%- elsif page.scope == 'dept' %}
+      <nav class="chips" aria-label="Région">
+        <a href="{{ regurl }}">← Tout {{ page.region }}</a>
+        {%- for d in reg.depts %}{% unless d.slug == page.dept_slug %}
+        <a href="{{ d.url }}">{{ d.name }} <small>{{ d.count }}</small></a>
+        {%- endunless %}{% endfor %}
+      </nav>
+      {%- endif %}
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap list-grid">
+      <figure class="map map-overview">
+        <svg viewBox="0 0 {{ page.overview.w }} {{ page.overview.h }}" role="img" aria-labelledby="ov-t">
+          <title id="ov-t">Carte des {{ page.count }} tracés {{ page.title | remove: "Road trips moto " }}</title>
+          {%- for o in page.overview.trips %}
+          <a href="{{ o.url }}"><title>{{ o.title }}</title><path class="ov-hit" d="{{ o.d }}"/><path class="ov-line" d="{{ o.d }}"/><circle class="ov-start" cx="{{ o.start[0] }}" cy="{{ o.start[1] }}" r="4"/></a>
+          {%- endfor %}
+        </svg>
+        <figcaption>Chaque trait est un road trip : touche-le pour l'ouvrir. Points : les départs.</figcaption>
+      </figure>
+      <div>
+        {%- assign guides = site.data.guides[guide_key] -%}
+        {%- if guides %}
+        <div class="box">
+          <h2>Le guide</h2>
+          {%- for g in guides %}{% assign gp = site.posts | where: "url", g | first %}{% if gp %}
+          <p><a href="{{ gp.url }}">{{ gp.title }}</a></p>
+          {%- endif %}{% endfor %}
+        </div>
+        {%- endif %}
+        <div class="box">
+          <h2>Comment lire ces fiches</h2>
+          <p>Distances et durées à allure de balade, sans les pauses. La sinuosité va de 1,5 (tout droit) à 9,9 (lacets). Chaque fiche a sa trace GPX gratuite, et le road trip se suit étape par étape dans <a href="/roadbook-moto/">le Roadbook de RideKit</a>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section band" aria-labelledby="all-title">
+    <div class="wrap">
+      <h2 id="all-title">{% if page.count > 1 %}Les {{ page.count }} road trips, du plus sinueux au plus roulant{% else %}Le road trip{% endif %}</h2>
+      <div class="trip-cards">
+        {%- for t in trips %}{% include trip-card.html trip=t %}{% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap narrow">
+      <p class="muted attrib-line">Itinéraires : DATAtourisme et ses producteurs (offices de tourisme, départements) et Département de l'Hérault, <a href="https://www.etalab.gouv.fr/licence-ouverte-open-licence/" rel="license noopener">Licence Ouverte 2.0</a> ; tracés recalculés, cols et points de vue © les contributeurs d'<a href="https://www.openstreetmap.org/copyright" rel="noopener">OpenStreetMap</a> (ODbL) ; communes : API Géo. Le détail est sur chaque fiche.</p>
+      {% include cta.html title="Le Roadbook dans ta poche" text="Les 97 road trips du Roadbook, guidés à la voix étape par étape, dans RideKit. Gratuit ; cartes hors ligne avec RideKit Pro." %}
+    </div>
+  </section>
+</main>

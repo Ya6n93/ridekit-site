@@ -1,0 +1,11 @@
+<!doctype html>
+<html lang="{{ page.lang | default: 'fr' }}">
+<head>
+{% include head.html %}
+</head>
+<body class="{{ page.body_class }}">
+{% include header.html %}
+{{ content }}
+{% include footer.html %}
+</body>
+</html>

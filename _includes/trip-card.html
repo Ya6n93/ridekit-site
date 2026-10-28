@@ -1,0 +1,14 @@
+{%- comment -%}
+  Carte d'un road trip du Roadbook. include.url (son adresse) ou include.trip (le document).
+{%- endcomment -%}
+{%- if include.trip -%}{%- assign t = include.trip -%}{%- else -%}{%- assign t = site.roadtrips | where: "url", include.url | first -%}{%- endif -%}
+{%- if t -%}
+<div class="tc-wrap"><a class="trip-card" href="{{ t.url }}">
+  <svg viewBox="0 0 120 84" aria-hidden="true" focusable="false"><path d="{{ t.mini }}"/></svg>
+  <span class="tc-body">
+    <span class="tc-meta">{{ t.dept | default: t.region }} · {{ t.kind_label }}</span>
+    <strong>{{ t.title }}</strong>
+    <span class="tc-stats">{{ t.km }} km · {% if t.days > 1 %}{{ t.days }} jours{% else %}{{ t.duration }}{% endif %} · sinuosité {{ t.curv }}/10</span>
+  </span>
+</a></div>
+{%- endif -%}

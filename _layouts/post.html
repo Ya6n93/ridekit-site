@@ -1,0 +1,52 @@
+---
+layout: base
+---
+{%- assign en = false -%}{%- if page.lang == 'en' -%}{%- assign en = true -%}{%- endif -%}
+{%- assign cat = site.data.categories[page.category] -%}
+{%- assign words = content | strip_html | number_of_words -%}
+{%- assign minutes = words | divided_by: 220 | at_least: 2 -%}
+<main id="main" class="article">
+  <div class="wrap narrow">
+    {%- if en %}
+    {% include crumbs.html n1="Guides" u1="/en/blog/" n2=page.title u2=page.url %}
+    {%- else %}
+    {%- capture caturl %}/blog/{{ page.category }}/{% endcapture %}
+    {% include crumbs.html n1="Blog" u1="/blog/" n2=cat.name u2=caturl n3=page.title u3=page.url %}
+    {%- endif %}
+    <header class="art-head">
+      {%- unless en %}<a class="art-cat" href="/blog/{{ page.category }}/">{{ cat.name }}</a>{% endunless %}
+      <h1>{{ page.title }}</h1>
+      {%- if page.lede %}<p class="art-lede">{{ page.lede }}</p>{% endif %}
+      <p class="art-meta">{% if en %}By RideKit · {% include date.html date=page.date %} · {{ minutes }} min read{% else %}Par l'équipe RideKit · publié le {% include date.html date=page.date %}{% if page.last_modified_at and page.last_modified_at != page.date %} · mis à jour le {% include date.html date=page.last_modified_at %}{% endif %} · {{ minutes }} min de lecture{% endif %}</p>
+    </header>
+    <div class="prose art-body">
+{{ content }}
+    </div>
+    {%- if page.faq %}{% include faq.html %}{% endif %}
+    {%- if page.sources %}
+    <section class="sources" aria-labelledby="sources-title">
+      <h2 id="sources-title">{% if en %}Sources{% else %}Sources{% endif %}</h2>
+      <ol>
+        {%- for s in page.sources %}
+        <li><a href="{{ s.url }}" rel="noopener">{{ s.title }}</a>{% if s.publisher %}, {{ s.publisher }}{% endif %}</li>
+        {%- endfor %}
+      </ol>
+      {%- assign checked = page.last_modified_at | default: page.date -%}
+      <p class="muted">{% if en %}Checked on {% include date.html date=page.date %}. Rules and prices change: check the official source before you ride.{% else %}Vérifiées le {% include date.html date=checked %}. Règles et prix évoluent : vérifie la source officielle avant de partir.{% endif %}</p>
+    </section>
+    {%- endif %}
+    {% if en %}{% include cta.html title="RideKit, the motorcycle app for iPhone" text="A loop in one tap, your friends on the map, a loved one told by text if you crash. In French, in France for now." nolink=true %}{% else %}{% include cta.html %}{% endif %}
+  </div>
+  {%- unless en %}
+  {%- assign related = site.posts | where: "category", page.category | where_exp: "p", "p.url != page.url" -%}
+  {%- if related.size < 3 -%}{%- assign more = site.posts | where_exp: "p", "p.url != page.url" | where_exp: "p", "p.category != page.category" -%}{%- assign related = related | concat: more -%}{%- endif -%}
+  <section class="section" aria-labelledby="more-title">
+    <div class="wrap">
+      <h2 id="more-title">À lire aussi</h2>
+      <div class="post-grid">
+        {%- for p in related limit: 3 %}{% include post-card.html post=p %}{% endfor %}
+      </div>
+    </div>
+  </section>
+  {%- endunless %}
+</main>

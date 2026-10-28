@@ -1,0 +1,42 @@
+---
+layout: base
+---
+{%- comment -%}
+  Page d'une fonction : bandeau avec la capture, le contenu (sections .frow écrites dans
+  la page), la FAQ (page.faq), les autres fonctions, l'appel à télécharger.
+{%- endcomment -%}
+<main id="main">
+  <section class="hero hero-feature">
+    <div class="wrap hero-grid">
+      <div class="hero-text">
+        {% include crumbs.html items=page.crumbs %}
+        <p class="eyebrow">{{ page.eyebrow }}{% if page.pro_badge %} <span class="tag-pro">{{ page.pro_badge }}</span>{% endif %}</p>
+        <h1>{{ page.h1 | default: page.title }}</h1>
+        <p class="lede">{{ page.lede }}</p>
+        <div class="btns">{% include store.html %}{% if page.hero_link %}<a class="btn ghost" href="{{ page.hero_link.url }}">{{ page.hero_link.text }}</a>{% endif %}</div>
+        {%- if page.hero_note %}<p class="soon">{{ page.hero_note }}</p>{% endif %}
+      </div>
+      {%- if page.hero_shot %}
+      <div class="hero-shot">{% include shot.html name=page.hero_shot eager=true sizes="(min-width: 900px) 300px, 64vw" %}</div>
+      {%- endif %}
+    </div>
+  </section>
+{{ content }}
+  {%- if page.faq %}
+  <div class="wrap narrow">{% include faq.html %}</div>
+  {%- endif %}
+  <section class="section related" aria-labelledby="related-title">
+    <div class="wrap">
+      <h2 id="related-title">Les autres fonctions</h2>
+      <div class="feat-links">
+        {%- for f in site.data.features %}{% unless f.url == page.url %}
+        <a href="{{ f.url }}"><strong>{{ f.name }}</strong><span>{{ f.text }}</span></a>
+        {%- endunless %}{% endfor %}
+        {%- unless page.url == '/pro/' %}
+        <a href="/pro/"><strong>RideKit Pro</strong><span>Ce qui est inclus, les prix, l'essai de {{ site.pro_trial_days }} jours.</span></a>
+        {%- endunless %}
+      </div>
+    </div>
+  </section>
+  <div class="wrap">{% include cta.html nolink=true %}</div>
+</main>
