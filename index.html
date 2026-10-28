@@ -13,6 +13,29 @@ body_class: home
   28 octobre 2026) : une fonction qui n'existe pas encore n'a rien à faire ici. Les
   fonctions dans l'ordre du fondateur. Aucune ressource tierce.
 {%- endcomment -%}
+<script>
+/* The intro, once per visit (like the app's launch: its logo revs up, then the ride starts): set before the first
+   paint so nothing flashes. Not with reduced motion; « ?intro » plays it again. */
+(function(){var d=document.documentElement,f=/(^|[?&#])intro(=|&|$)/.test(location.search+location.hash),s=false;
+try{s=sessionStorage.getItem('rk-intro')==='1';}catch(e){}
+if(f||(!s&&!(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)))d.classList.add('pre');})();
+</script>
+<style>
+.rk-splash{display:none}
+.pre .rk-splash{display:flex;position:fixed;inset:0;z-index:60;align-items:center;justify-content:center;background:#0B0B0B;pointer-events:none}
+.pre .rk-splash.out{background:transparent;transition:background-color .7s ease}
+.rk-splash .rk-mark{width:min(52vw,260px);height:auto;opacity:0;transform:scale(.9);animation:rk-appear .35s cubic-bezier(.2,.8,.3,1) forwards;will-change:transform}
+.rk-sweep{stroke-dashoffset:703.7;animation:rk-sweep 1.2s cubic-bezier(.65,0,.35,1) .3s forwards}
+.rk-needle{transform-box:view-box;transform-origin:165px 172px;transform:rotate(-225deg);animation:rk-needle 1.2s cubic-bezier(.65,0,.35,1) .3s forwards}
+.rk-glow{stroke-opacity:0;opacity:0;animation:rk-glow .68s ease 1.45s forwards}
+@keyframes rk-appear{to{opacity:1;transform:scale(1)}}
+@keyframes rk-sweep{to{stroke-dashoffset:180}}
+@keyframes rk-needle{to{transform:rotate(40.5deg)}}
+@keyframes rk-glow{26%{opacity:.35}to{opacity:.14}}
+.pre header.top,.pre .hero-home .eyebrow,.pre .hero-home h1,.pre .hero-home .lede,.pre .hero-home .btns,.pre .hero-home .proof,.pre .hero-home .hero-shot,.pre .hero-home .credit{opacity:0}
+.hero-home h1{will-change:transform}
+</style>
+<div class="rk-splash" aria-hidden="true">{% include splash-mark.html %}</div>
 <main id="main">
   <section class="hero hero-home" aria-labelledby="home-title">
     <div class="hero-media">
@@ -183,6 +206,53 @@ body_class: home
     {% include cta.html title="Bientôt sur l'App Store" text="RideKit sort sur iPhone, en France. Gratuite, sans compte, sans publicité." nolink=true %}
   </div>
 </main>
+<script>
+/* The intro — the app's launch on the web, after Slowcial's site: the logo revs up on black (the app's splash:
+   appear .35 s, sweep and needle 1.2 s from .3 s, red-zone glow at 1.45 s), then flies to the header's logo while
+   the ride's video shows through; the title comes up big in the middle, takes its place, and the rest appears.
+   Any touch, key or wheel ends it at once: nobody is held in front of an animation. Moves by transform only, so the
+   page's layout is the final one from the start (and stays readable by search engines). */
+(function(){
+  var root=document.documentElement;if(!root.classList.contains('pre'))return;
+  var splash=document.querySelector('.rk-splash'),mark=splash&&splash.querySelector('.rk-mark');
+  var header=document.querySelector('header.top'),icon=document.querySelector('header.top .brand img');
+  var h1=document.querySelector('.hero-home h1');
+  var rest=['.hero-home .eyebrow','.hero-home .lede','.hero-home .btns','.hero-home .proof','.hero-home .hero-shot','.hero-home .credit']
+    .map(function(q){return document.querySelector(q);}).filter(Boolean);
+  if(!splash||!mark||!icon||!h1){root.classList.remove('pre');return;}
+  var timers=[],done=false,EASE='cubic-bezier(.62,0,.24,1)';
+  var at=function(ms,fn){timers.push(setTimeout(fn,ms));};
+  function finish(){
+    if(done)return;done=true;timers.forEach(clearTimeout);
+    root.classList.remove('pre');splash.style.display='none';
+    [h1,header].concat(rest).forEach(function(el){el.style.transition='';el.style.transform='';el.style.opacity='';});
+    document.body.style.overflow='';
+    try{sessionStorage.setItem('rk-intro','1');}catch(e){}
+  }
+  document.body.style.overflow='hidden';
+  ['wheel','touchstart','keydown','pointerdown'].forEach(function(ev){addEventListener(ev,finish,{once:true,passive:true});});
+  var T1=2100,TRAVEL=900,T2=T1+TRAVEL,TITLE_IN=500,HOLD=650,T3=T2+TITLE_IN+HOLD,TITLE_TRAVEL=850,T4=T3+TITLE_TRAVEL,REST=500;
+  at(T1,function(){ /* the logo flies to the header's, the video shows through */
+    var m=mark.getBoundingClientRect(),i=icon.getBoundingClientRect();
+    var dx=(i.left+i.width/2)-(m.left+m.width/2),dy=(i.top+i.height/2)-(m.top+m.height/2),k=i.width/m.width;
+    mark.style.animation='none';mark.style.opacity='1';
+    mark.style.transition='transform '+TRAVEL+'ms '+EASE;
+    mark.style.transform='translate('+dx+'px,'+dy+'px) scale('+k+')';
+    splash.classList.add('out');
+  });
+  at(T2-150,function(){header.style.transition='opacity .4s ease';header.style.opacity='1';});
+  at(T2,function(){ /* the title, big in the middle */
+    splash.style.display='none';
+    var r=h1.getBoundingClientRect(),k=Math.min(1.35,(innerWidth-40)/r.width);
+    h1.style.transition='none';
+    h1.style.transform='translate('+(innerWidth/2-(r.left+r.width/2))+'px,'+(innerHeight/2-(r.top+r.height/2))+'px) scale('+k+')';
+    requestAnimationFrame(function(){h1.style.transition='opacity '+TITLE_IN+'ms ease';h1.style.opacity='1';});
+  });
+  at(T3,function(){h1.style.transition='transform '+TITLE_TRAVEL+'ms '+EASE;h1.style.transform='none';});
+  at(T4,function(){rest.forEach(function(el,n){el.style.transition='opacity '+REST+'ms ease '+(n*70)+'ms';el.style.opacity='1';});});
+  at(T4+REST+rest.length*70+150,finish);
+})();
+</script>
 <script>
 /* Mouvement réduit demandé : la vidéo reste sur son image. */
 (function(){var v=document.querySelector('.hero-home video');if(!v)return;
